@@ -1,0 +1,86 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.0.min.js" integrity="sha384-5Y+xuMRAbgBj/2WKUiL8yzV4fBFic1HJPo2hT3pq2IsEzbsJjj8kT2i0b1lZ7C2N" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.0.0.min.js" integrity="sha384-2ltAd1cQhavmLeBEZXGgnna8fjbw+FjvDq9m2dig4+8KVS8JcYFUQaALvLT//qHE" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="0f30e29e-313d-4b8e-8c9b-c4e81a684a98" data-root-id="1141"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1208">
+          {"cc7911ea-b978-4d3e-b7ad-13ff950aa912":{"roots":{"references":[{"attributes":{"axis":{"id":"1123"},"dimension":1,"ticker":null},"id":"1126","type":"Grid"},{"attributes":{},"id":"1144","type":"BasicTickFormatter"},{"attributes":{},"id":"1115","type":"LinearScale"},{"attributes":{"background":"#ffffff","max_width":600,"sizing_mode":"scale_both","text":"Each bar represents the total sum of U.S. imports from Canada in 2024 (through November) for an HS4 category. \nThe top 20 import categories are displayed. Hover your cursor over each bar to learn more.\n"},"id":"1140","type":"Div"},{"attributes":{},"id":"1111","type":"DataRange1d"},{"attributes":{},"id":"1117","type":"LinearScale"},{"attributes":{},"id":"1120","type":"BasicTicker"},{"attributes":{"formatter":{"id":"1144"},"major_label_text_font_size":"0pt","major_tick_line_color":null,"minor_tick_line_color":null,"ticker":{"id":"1120"}},"id":"1119","type":"LinearAxis"},{"attributes":{},"id":"1124","type":"BasicTicker"},{"attributes":{"end":90000000000,"start":0},"id":"1113","type":"DataRange1d"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","autohide":true,"tools":[{"id":"1127"},{"id":"1135"}]},"id":"1128","type":"Toolbar"},{"attributes":{"background_fill_alpha":0.75,"below":[{"id":"1119"}],"center":[{"id":"1122"},{"id":"1126"}],"left":[{"id":"1123"}],"max_height":500,"max_width":600,"min_height":125,"min_width":150,"outline_line_color":null,"plot_height":500,"renderers":[{"id":"1133"}],"sizing_mode":"scale_both","title":{"id":"1109"},"toolbar":{"id":"1128"},"toolbar_location":"below","x_range":{"id":"1111"},"x_scale":{"id":"1115"},"y_range":{"id":"1113"},"y_scale":{"id":"1117"}},"id":"1108","subtype":"Figure","type":"Plot"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"color"},"hatch_alpha":{"value":0.1},"hatch_pattern":{"value":" "},"line_alpha":{"value":0.1},"line_color":{"field":"color"},"top":{"field":"imports"},"width":{"value":0.6},"x":{"field":"position"}},"id":"1132","type":"VBar"},{"attributes":{"callback":null,"tooltips":"\n    &lt;div style=\"background-color:#F5F5F5; opacity: 0.95; border: 0px 0px 0px 0px\"&gt;\n        &lt;div style = \"text-align:left;\"&gt;\n            &lt;span style=\"font-size: 13px; font-weight: bold\"&gt;@name&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div style = \"text-align:left;\"&gt;\n            &lt;span style=\"font-size: 13px; font-weight: bold\"&gt;2024 Imports: $@hover_label Billion&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div style = \"text-align:left;\"&gt;\n            &lt;span style=\"font-size: 13px; font-weight: bold\"&gt;Share of Total: @hover_label_2%&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    "},"id":"1135","type":"HoverTool"},{"attributes":{"data":{"I_COMMODITY_SDESC":["CRUDE OIL FROM PETROLEUM AND BITUMINOUS MINERALS","MOTOR CARS &amp; VEHICLES FOR TRANSPORTING PERSONS","EXPTS OF REPAIRED IMPTS; IMPTS OF RETURNED EXPTS","OIL (NOT CRUDE) FROM PETROL &amp; BITUM MINERAL ETC.","PARTS &amp; ACCESS FOR MOTOR VEHICLES (HEAD 8701-8705)","PETROLEUM GASES &amp; OTHER GASEOUS HYDROCARBONS","ALUMINUM, UNWROUGHT","MOTOR VEHICLES FOR TRANSPORT OF GOODS","TURBOJETS, TURBOPROPELLERS &amp; OTH GAS TURBINES, PTS","AIRCRAFT, POWERED; SPACECRAFT &amp; LAUNCH VEHICLES","BREAD, PASTRY, CAKES ETC; COMM WAFRS, EMP CAPS ETC","WOOD SAWN OR CHIPPED LENGTH, SLICED ETC, OV6MM TH","MEDICAMENTS NESOI, MIXED OR NOT, IN DOSAGE ETC FM","RAPESEED, COLZA OR MUSTARD OIL ETC, NOT CHEM MODIF","GOLD (INCL PLAT PLATED), UNWR, SEMIMFR OR POWDER","POLYMERS OF ETHYLENE, IN PRIMARY FORMS","MINERAL OR CHEMICAL FERTILIZERS, POTASSIC","PETROLEUM COKE, PETROLEUM BITUMEN &amp; OTHER RESIDUES","FURNITURE NESOI AND PARTS THEREOF","SALVAGE;ESTIMATE OF LOW VALUED IMPORT TRANSACTIONS"],"color":["#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000","#ff0000"],"hover_label":["88.4","26.2","13.9","11.6","10.6","7.9","7.1","6.5","5.5","5.4","5.0","4.8","4.0","3.8","3.7","3.2","2.8","2.7","2.7","2.5"],"hover_label_2":["23.4","6.9","3.7","3.1","2.8","2.1","1.9","1.7","1.5","1.4","1.3","1.3","1.1","1.0","1.0","0.8","0.7","0.7","0.7","0.7"],"hs-code":["2709","8703","9801","2710","8708","2711","7601","8704","8411","8802","1905","4407","3004","1514","7108","3901","3104","2713","9403","9999"],"hs2":["2709","8703","9801","2710","8708","2711","7601","8704","8411","8802","1905","4407","3004","1514","7108","3901","3104","2713","9403","9999"],"imports":{"__ndarray__":"AACHk3aVNEIAALRBs14YQgAAcPr99glCAACw7wWxBUIAALh6+7EDQgAA4AMnVf1BAABAZ/Jp+kEAAIBDvA/4QQAAQMaqivRBAAAgvss59EEAAPBKa3nyQQAAcFmSCfJBAAAg1uka7kEAAABfM4XsQQAAIJaXg+tBAAAguPeM50EAAMBhV7LkQQAAYDdzduRBAABgEIgX5EEAAICJjebiQQ==","dtype":"float64","shape":[20]},"name":["HS4 2709: CRUDE OIL FROM PETROLEUM AND B","HS4 8703: MOTOR CARS &amp; VEHICLES FOR TRAN","HS4 9801: EXPTS OF REPAIRED IMPTS; IMPTS","HS4 2710: OIL (NOT CRUDE) FROM PETROL &amp; ","HS4 8708: PARTS &amp; ACCESS FOR MOTOR VEHIC","HS4 2711: PETROLEUM GASES &amp; OTHER GASEOU","HS4 7601: ALUMINUM, UNWROUGHT","HS4 8704: MOTOR VEHICLES FOR TRANSPORT O","HS4 8411: TURBOJETS, TURBOPROPELLERS &amp; O","HS4 8802: AIRCRAFT, POWERED; SPACECRAFT ","HS4 1905: BREAD, PASTRY, CAKES ETC; COMM","HS4 4407: WOOD SAWN OR CHIPPED LENGTH, S","HS4 3004: MEDICAMENTS NESOI, MIXED OR NO","HS4 1514: RAPESEED, COLZA OR MUSTARD OIL","HS4 7108: GOLD (INCL PLAT PLATED), UNWR,","HS4 3901: POLYMERS OF ETHYLENE, IN PRIMA","HS4 3104: MINERAL OR CHEMICAL FERTILIZER","HS4 2713: PETROLEUM COKE, PETROLEUM BITU","HS4 9403: FURNITURE NESOI AND PARTS THER","HS4 9999: SALVAGE;ESTIMATE OF LOW VALUED"],"position":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],"share":{"__ndarray__":"OUB4e7cBzj/hOfFOU8OxP+DTodzs7KI/17xoshWfnz+XUI2JGbacP1lbElxYYZU/wYJh8bZAkz8ch/7NxImRPw4syXf68Y0/tdLqARZ8jT+UJo+Pc+6KPwmlKAlnS4o/NbixvH3xhT+YQw9wxcmEP5CV5cMADoQ/6mAjF3QqgT8hj4WQ0Ct+Px6r5KSB1H0/Rgb31CJKfT8IbyBei417Pw==","dtype":"float64","shape":[20]}},"selected":{"id":"1146"},"selection_policy":{"id":"1147"}},"id":"1107","type":"ColumnDataSource"},{"attributes":{},"id":"1146","type":"Selection"},{"attributes":{"text":"Top US Imports from Canada at HS4-level","text_font_size":{"value":"13pt"}},"id":"1109","type":"Title"},{"attributes":{"formatter":{"id":"1137"},"minor_tick_line_color":null,"ticker":{"id":"1124"}},"id":"1123","type":"LinearAxis"},{"attributes":{"axis":{"id":"1119"},"grid_line_color":null,"ticker":null},"id":"1122","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.65},"fill_color":{"field":"color"},"hatch_alpha":{"value":0.1},"hatch_pattern":{"value":" "},"line_alpha":{"value":0.65},"line_color":{"field":"color"},"top":{"field":"imports"},"width":{"value":0.6},"x":{"field":"position"}},"id":"1131","type":"VBar"},{"attributes":{"children":[{"id":"1108"},{"id":"1140"}],"sizing_mode":"scale_both"},"id":"1141","type":"Column"},{"attributes":{"source":{"id":"1107"}},"id":"1134","type":"CDSView"},{"attributes":{"format":"($0. a)"},"id":"1137","type":"NumeralTickFormatter"},{"attributes":{"data_source":{"id":"1107"},"glyph":{"id":"1131"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1132"},"selection_glyph":null,"view":{"id":"1134"}},"id":"1133","type":"GlyphRenderer"},{"attributes":{},"id":"1127","type":"ResetTool"},{"attributes":{},"id":"1147","type":"UnionRenderers"}],"root_ids":["1141"]},"title":"Bokeh Application","version":"2.0.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1208').textContent;
+                  var render_items = [{"docid":"cc7911ea-b978-4d3e-b7ad-13ff950aa912","root_ids":["1141"],"roots":{"1141":"0f30e29e-313d-4b8e-8c9b-c4e81a684a98"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
