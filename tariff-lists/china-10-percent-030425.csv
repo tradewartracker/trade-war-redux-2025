@@ -1,0 +1,691 @@
+1,10071000,Seed Corn
+2,10079000,Non-seed Corn
+3,12019011,"Non-seed, Non-GMO Soybeans"
+4,12019019,"Non-seed, Other Yellow Soybeans"
+5,2031110,Fresh or Chilled Whole or Half Carcass Pig
+6,2031190,Other Fresh or Chilled Whole or Half Pig
+7,2031200,"Fresh or Chilled Bone-in Front Leg, Hind Leg, and Other Pork Cuts"
+8,2031900,Other Fresh or Chilled Pork
+9,2032110,Frozen Whole or Half Carcass Pig
+10,2032190,Other Frozen Whole or Half Pig
+11,2032200,"Frozen Bone-in Front Leg, Hind Leg, and Other Pork Cuts"
+12,2032900,Other Frozen Pork
+13,2063000,Fresh or Chilled Pork Offal
+14,2064100,Frozen Pork Liver
+15,2064900,Other Frozen Pork Offal
+16,2101110,"Dried, Smoked, or Salted Bone-in Pork Front Leg"
+17,2101190,"Dried, Smoked, or Salted Bone-in Pork Hind Leg"
+18,2101200,"Dried, Smoked, or Salted Pork Belly"
+19,2101900,"Dried, Smoked, or Salted Other Pork Meat"
+20,16024100,Processed or Preserved Pork Hind Leg and Cuts
+21,16024200,Processed or Preserved Pork Front Leg and Cuts
+22,16024910,Other Processed or Preserved Pork Meat or Offal – Pig Heads
+23,16024990,"Other Processed or Preserved Pork Meat, Miscellaneous Cuts, and Blood"
+24,2011000,Fresh or Chilled Whole or Half Carcass Beef
+25,2012000,Fresh or Chilled Bone-in Beef
+26,2013000,Fresh or Chilled Boneless Beef
+27,2021000,Frozen Whole or Half Carcass Beef
+28,2022000,Frozen Bone-in Beef
+29,2023000,Frozen Boneless Beef
+30,2061000,Fresh or Chilled Beef Offal
+31,2062100,Frozen Beef Tongue
+32,2062200,Frozen Beef Liver
+33,2062900,Other Frozen Beef Offal
+34,2102000,"Dried, Smoked, or Salted Beef"
+35,16025010,Beef Meat and Offal – Heads
+36,16025090,"Other Processed or Preserved Beef Meat, Offal, Miscellaneous Cuts, and Blood"
+37,3011100,Freshwater Ornamental Live Fish
+38,3011900,Other Ornamental Live Fish
+39,3019100,Eel Fry
+40,3019190,Live Eel
+41,3019210,Eel Fry
+42,3019290,Live Eel
+43,3019310,Carp Fry
+44,3019390,Live Carp
+45,3019410,Western and Pacific Bluefin Tuna Fry
+46,3019491,Live Western Bluefin Tuna
+47,3019492,Live Pacific Bluefin Tuna
+48,3019510,Southern Bluefin Tuna Fry
+49,3019590,Live Southern Bluefin Tuna
+50,3019911,Salmon Fry
+51,3019912,Trout Fry
+52,3019919,Other Fish Fry
+53,3019991,Live Tilapia
+54,3019992,Live Catfish
+55,3019993,Other Live Carp Species
+56,3019999,Other Live Fish
+57,3021100,Fresh or Chilled Trout
+58,3021300,Fresh or Chilled Atlantic Salmon
+59,3021410,Fresh or Chilled Western Salmon
+60,3021420,Fresh or Chilled Coho Salmon
+61,3021900,Other Fresh or Chilled Salmon
+62,3022100,Fresh or Chilled Plaice
+63,3022200,Fresh or Chilled Sole
+64,3022300,Fresh or Chilled Catfish
+65,3022400,Fresh or Chilled Bighead Carp
+66,3022900,Other Fresh or Chilled Billfish
+67,3023100,Fresh or Chilled Albacore Tuna
+68,3023200,Fresh or Chilled Yellowfin Tuna
+69,3023300,Fresh or Chilled Skipjack Tuna
+70,3023400,Fresh or Chilled Bigeye Tuna
+71,3023510,Fresh or Chilled Western Bluefin Tuna
+72,3023520,Fresh or Chilled Pacific Bluefin Tuna
+73,3023600,Fresh or Chilled Southern Bluefin Tuna
+74,3023900,Other Fresh or Chilled Tuna
+75,3024100,Fresh or Chilled Herrings
+76,3024200,Fresh or Chilled Cod
+77,3024300,Fresh or Chilled Sandfish
+78,3024400,Fresh or Chilled Mackerel
+79,3024500,Fresh or Chilled Barramundi
+80,3024600,Fresh or Chilled Escolar
+81,3024700,Fresh or Chilled Swordfish
+82,3024910,Fresh or Chilled Silver Pomfret (Carangidae)
+83,3024990,"Fresh or Chilled Indian Mackerel, Maaji Fish, etc."
+84,3025100,Fresh or Chilled Sardines
+85,3025200,Fresh or Chilled Black Striped Sardines
+86,3025300,Fresh or Chilled Greenfin Sardines
+87,3025400,Fresh or Chilled Dogtooth Tuna
+88,3025500,Fresh or Chilled Atlantic Mackerel
+89,3025600,Fresh or Chilled Blue Mackerel
+90,3025900,Fresh or Chilled Other Mackerel Species
+91,3027100,Fresh or Chilled Tilapia
+92,3027200,Fresh or Chilled Catfish
+93,3027300,Fresh or Chilled Carp
+94,3027400,Fresh or Chilled Eel
+95,3027900,Fresh or Chilled Nile Perch and Blackfish
+96,3028100,Fresh or Chilled Anglerfish and Other Monkfish
+97,3028200,Fresh or Chilled Grouper and Snapper
+98,3028300,Fresh or Chilled Antarctic Toothfish
+99,3028400,Fresh or Chilled Escolar
+100,3028500,Fresh or Chilled John Dory
+101,3028910,Fresh or Chilled Ribbonfish
+102,3028920,Fresh or Chilled Yellow Croaker
+103,3028930,Fresh or Chilled Snapper
+104,3028940,Fresh or Chilled Catfish
+105,3028990,Fresh or Chilled Other Fish
+106,3029100,"Fresh or Chilled Fish Liver, Fish Roe, and Fish Milt"
+107,3029200,Fresh or Chilled Fish Heads
+108,3029900,Fresh or Chilled Fish and Fish Waste
+109,3031100,Frozen Atlantic Salmon
+110,3031200,Frozen Other Salmonids
+111,3031310,Frozen Western Salmon
+112,3031320,Frozen Coho Salmon
+113,3031400,Frozen Trout
+114,3031900,Frozen Other Salmonids
+115,3032100,Frozen Tilapia
+116,3032200,Frozen Catfish
+117,3032500,Frozen Carp
+118,3032600,Frozen Eel
+119,3032900,Frozen Nile Perch and Blackfish
+120,3033110,Frozen Haddock (Melanogrammus aeglefinus)
+121,3033190,Frozen Pollock
+122,3033200,Frozen Cod
+123,3033300,Frozen Hake
+124,3033400,Frozen Bighead Carp
+125,3033900,Other Frozen Billfish
+126,3034100,Frozen Albacore Tuna
+127,3034200,Frozen Yellowfin Tuna
+128,3034300,Frozen Skipjack Tuna
+129,3034400,Frozen Bigeye Tuna
+130,3034510,Frozen Western Bluefin Tuna
+131,3034520,Frozen Pacific Bluefin Tuna
+132,3034600,Frozen Southern Bluefin Tuna
+133,3034900,Other Frozen Tuna
+134,3035100,Frozen Herring
+135,3035300,Frozen Sandfish
+136,3035400,Frozen Mackerel
+137,3035500,Frozen Barramundi
+138,3035600,Frozen Escolar
+139,3035700,Frozen Swordfish
+140,3035910,Frozen Silver Pomfret (Carangidae)
+141,3035990,"Frozen Indian Mackerel, Maaji Fish, etc."
+142,3036300,"Frozen Tuna (Western Tuna, Haddock, Pacific Tuna)"
+143,3036400,Frozen Black Striped Sardines
+144,3036500,Frozen Greenfin Sardines
+145,3036600,Frozen Dogtooth Tuna
+146,3036700,Frozen Atlantic Mackerel
+147,3036800,Frozen Blue Mackerel
+148,3036900,Other Frozen Mackerel
+149,3038100,Frozen Anglerfish and Other Monkfish
+150,3038200,Frozen Grouper and Snapper
+151,3038300,Frozen Antarctic Toothfish
+152,3038400,Frozen Escolar
+153,3038910,Frozen Ribbonfish
+154,3038920,Frozen Yellow Croaker
+155,3038930,Frozen Snapper (Excluding Silver Snapper)
+156,3038990,Other Frozen Fish
+157,3039100,"Frozen Fish Liver, Fish Roe, and Fish Milt"
+158,3039200,Frozen Fish Heads
+159,3039900,Frozen Fish and Fish Waste
+160,3043100,Fresh or Chilled Tilapia Fillet
+161,3043200,Fresh or Chilled Catfish Fillet
+162,3043300,Fresh or Chilled Nile Perch Fillet
+163,3043900,"Fresh or Chilled Carp, Eel, and Blackfish Fillet"
+164,3044100,Fresh or Chilled Atlantic Salmon Fillet
+165,3044200,Fresh or Chilled Trout Fillet
+166,3044300,Fresh or Chilled Billfish Fillet
+167,3044400,Fresh or Chilled Other Mackerel Fillet
+168,3044500,Fresh or Chilled Swordfish Fillet
+169,3044600,Fresh or Chilled Antarctic Toothfish Fillet
+170,3044700,Fresh or Chilled Anglerfish and Other Monkfish Fillet
+171,3044800,Fresh or Chilled Grouper and Snapper Fillet
+172,3044900,Fresh or Chilled Other Fish Fillet
+173,3045100,Fresh or Chilled Tilapia and Similar Fish Meat
+174,3045200,Fresh or Chilled Carp Meat
+175,3045300,Fresh or Chilled Thick-lipped Mullet and Other Mullet Meat
+176,3045400,Fresh or Chilled Swordfish Meat
+177,3045500,Fresh or Chilled Antarctic Toothfish Meat
+178,3045600,Fresh or Chilled Anglerfish and Other Monkfish Meat
+179,3045700,Fresh or Chilled Grouper and Snapper Meat
+180,3045900,Fresh or Chilled Other Fish Meat
+181,3046100,Fresh or Chilled Tilapia and Similar Fish Fillet
+182,3046211,Frozen Spotted or Striped Grouper Fillet
+183,3046219,Other Frozen Grouper Fillet
+184,3046290,Other Frozen Carp Fillet
+185,3046300,Frozen Nile Perch Fillet
+186,3046900,"Frozen Carp, Eel, and Blackfish Fillet"
+187,3047100,Frozen Herring Fillet
+188,3047200,Frozen Black Striped Sardine Fillet
+189,3047300,Frozen Greenfin Sardine Fillet
+190,3047400,Frozen Dogtooth Tuna Fillet
+191,3047500,Frozen Atlantic Mackerel Fillet
+192,3047900,Frozen Other Mackerel Fillet
+193,3048100,"Frozen Atlantic Salmon, Western Salmon, and Coho Salmon Fillet"
+194,3048200,Frozen Trout Fillet
+195,3048300,Frozen Billfish Fillet
+196,3048400,Frozen Swordfish Fillet
+197,3048500,Frozen Antarctic Toothfish Fillet
+198,3048600,Frozen Snapper Fillet
+199,3048700,Frozen Tuna and Eel Fillet
+200,3048800,"Frozen Anglerfish, Other Monkfish, Grouper, and Snapper Fillet"
+201,3048900,Frozen Other Fish Fillet
+202,3049100,Frozen Swordfish Meat
+203,3049200,Frozen Antarctic Toothfish Meat
+204,3049300,Frozen Tilapia and Similar Fish Meat
+205,3049400,Frozen Atlantic Mackerel Meat
+206,3049500,Frozen Thick-lipped Mullet and Other Mullet Meat
+207,3049600,Frozen Anglerfish and Other Monkfish Meat
+208,3049700,Frozen Grouper and Snapper Meat
+209,3049900,Other Frozen Fish Meat
+210,3052000,"Dried, Smoked, or Salted Fish Liver, Fish Roe, and Fish Milt"
+211,3053100,Dried or Salted Tilapia and Similar Fish Fillet
+212,3053200,Dried or Salted Thick-lipped Mullet and Other Mullet Fillet
+213,3053900,Dried or Salted Other Fish Fillet
+214,3054110,Smoked Western Salmon
+215,3054120,Smoked Atlantic Salmon and Coho Salmon
+216,3054200,Smoked Trout
+217,3054300,Smoked Mackerel
+218,3054400,"Smoked Tilapia, Catfish, Carp, and Eel"
+219,3054900,Other Smoked Fish
+220,3055100,Dried Cod
+221,3055200,"Dried Tilapia, Catfish, Carp, and Eel"
+222,3055300,Dried Thick-lipped Mullet and Other Mullet
+223,3055410,Dried Silver Pomfret (Carangidae)
+224,3055490,"Dried Snapper, Tuna, Sandfish, etc."
+225,3055910,"Dried Seahorse, Dried Shrimp"
+226,3055990,Other Dried Fish
+227,3056100,Salted Herring
+228,3056200,Salted Mackerel
+229,3056300,Salted Cod
+230,3056400,"Salted Tilapia, Catfish, and Other Carp"
+231,3056910,Salted Ribbonfish
+232,3056920,Salted Yellow Croaker
+233,3056930,Salted Snapper (Excluding Silver Snapper)
+234,3056990,Other Salted Fish
+235,3057100,"Dried, Smoked, or Salted Fish Heads"
+236,3057200,"Dried, Smoked, or Salted Fish Heads, Tails, and Scales"
+237,3057900,"Dried, Smoked, or Salted Fish and Fish Waste"
+238,3061100,Frozen Rock Lobster and Other Lobsters
+239,3061200,Frozen Spiny Lobster
+240,3061410,Frozen King Crab
+241,3061490,Other Frozen Crabs
+242,3061500,Frozen Krill
+243,3061630,"Frozen Freshwater Prawns and Shrimps (Macrobrachium, Cherax) – Shrimp Meat"
+244,3061640,Frozen Northern Prawns
+245,3061690,"Other Frozen Freshwater Prawns and Shrimps (Macrobrachium, Cherax)"
+246,3061730,Other Frozen Shrimp Meat
+247,3061790,Other Frozen Shrimps and Prawns
+248,3061911,Frozen Freshwater Crayfish
+249,3061919,Frozen Cooked Freshwater Crayfish
+250,3061990,Other Frozen Crustaceans
+251,3063110,Rock Lobster and Other Lobster Seedlings
+252,3063210,"Live, Fresh, or Chilled Rock Lobster and Other Lobsters"
+253,3063210,Spiny Lobster Seedlings
+254,3063290,"Live, Fresh, or Chilled Spiny Lobster"
+255,3063310,Crab Seedlings
+256,3063391,"Live, Fresh, or Chilled Chinese Mitten Crab"
+257,3063392,"Live, Fresh, or Chilled King Crab"
+258,3063399,"Live, Fresh, or Chilled Other Crabs"
+259,3063410,Krill Seedlings
+260,3063490,"Live, Fresh, or Chilled Krill"
+261,3063510,Cold-Water Shrimp and Prawn Seedlings
+262,3063590,"Live, Fresh, or Chilled Cold-Water Shrimps"
+263,3063690,"Live, Fresh, or Chilled Other Shrimps"
+264,3063910,Other Edible Crustacean Seedlings
+265,3063990,"Other Live, Fresh, or Chilled Crustaceans"
+266,3069100,"Dried, Salted, or Smoked Rock Lobster and Other Lobsters"
+267,3069200,"Dried, Salted, or Smoked Spiny Lobster"
+268,3069310,"Dried, Salted, or Smoked Chinese Mitten Crab"
+269,3069320,"Dried, Salted, or Smoked King Crab"
+270,3069390,"Dried, Salted, or Smoked Other Crabs"
+271,3069400,"Dried, Salted, or Smoked Krill"
+272,3069510,"Dried, Salted, or Smoked Cold-Water Shrimp and Prawns"
+273,3069590,"Dried, Salted, or Smoked Shrimps and Prawns"
+274,3069900,Other Dried Crustaceans
+275,3071110,Oyster Seedlings
+276,3071190,"Live, Fresh, or Chilled Oysters"
+277,3071200,Frozen Oysters
+278,3071900,"Dried, Salted, or Smoked Oysters"
+279,3072110,"Live, Fresh, or Chilled Scallops and Other Bivalve Mollusk Seedlings"
+280,3072191,"Live, Fresh, or Chilled Scallops"
+281,3072199,"Live, Fresh, or Chilled Other Bivalve Mollusks"
+282,3072210,Frozen Scallops
+283,3072290,Frozen Other Bivalve Mollusks
+284,3072910,"Other Live, Fresh, or Chilled Scallops"
+285,3072990,"Other Live, Fresh, or Chilled Bivalve Mollusks"
+286,3073110,Clam Seedlings
+287,3073190,"Live, Fresh, or Chilled Clams"
+288,3073200,Frozen Clams
+289,3073900,"Dried, Salted, or Smoked Clams"
+290,3074210,Squid and Cuttlefish Seedlings
+291,3074291,"Live, Fresh, or Chilled Squid and Cuttlefish"
+292,3074299,"Live, Fresh, or Chilled Other Squid and Cuttlefish"
+293,3074310,Frozen Squid and Cuttlefish
+294,3074390,Frozen Other Squid and Cuttlefish
+295,3074910,"Dried, Salted, or Smoked Squid and Cuttlefish"
+296,3074990,"Dried, Salted, or Smoked Other Squid and Cuttlefish"
+297,3075100,"Live, Fresh, or Chilled Octopus"
+298,3075200,Frozen Octopus
+299,3075900,"Dried, Salted, or Smoked Octopus"
+300,3076100,Snail and Whelk Seedlings (Excluding Sea Snails)
+301,3076900,Snails and Whelks
+302,3077110,"Snail, Whelk, and Bivalve Seedlings"
+303,3077191,"Live, Fresh, or Chilled Snails"
+304,3077199,"Live, Fresh, or Chilled Whelks and Ark Shells"
+305,3077200,Frozen Whelks and Ark Shells
+306,3077900,"Dried, Salted, or Smoked Whelks and Ark Shells"
+307,3078110,Abalone Seedlings
+308,3078190,"Live, Fresh, or Chilled Abalone"
+309,3078210,Conch Seedlings
+310,3078290,"Live, Fresh, or Chilled Conch"
+311,3078300,Frozen Abalone
+312,3078400,Frozen Conch
+313,3078700,"Dried, Salted, or Smoked Abalone"
+314,3078800,"Dried, Salted, or Smoked Conch"
+315,3079110,Other Mollusk Seedlings
+316,3079190,"Live, Fresh, or Chilled Other Mollusks"
+317,3079200,Frozen Other Mollusks
+318,3079900,Other Mollusks
+319,3081110,Sea Cucumber Seedlings
+320,3081190,"Live, Fresh, or Chilled Sea Cucumber"
+321,3081200,Frozen Sea Cucumber
+322,3081900,"Dried, Salted, or Smoked Sea Cucumber"
+323,3082110,Sea Urchin Seedlings
+324,3082190,"Live, Fresh, or Chilled Sea Urchin"
+325,3082200,Frozen Sea Urchin
+326,3082900,"Dried, Salted, or Pickled Sea Urchin"
+327,3083110,Coral Seedlings
+328,3083190,"Live, Fresh, or Chilled Coral"
+329,3083900,"Frozen, Dried, Salted, or Smoked Coral"
+330,3089011,Other Aquatic Invertebrate Seedlings
+331,3089012,"Live, Fresh, or Chilled Sand Dollars"
+332,3089019,"Live, Fresh, or Chilled Other Aquatic Invertebrates"
+333,3089090,Other Aquatic Invertebrates
+334,3090010,Edible Fish Meal and Pellets
+335,3090020,Edible Crustacean and Mollusk Powder and Pellets
+336,5080010,"Coral and Aquatic Products - Shell, Bone Powder, and Waste"
+337,5080090,Coral and Aquatic Products - Bone
+338,5119119,Other Fish Products
+339,5119190,Other Listed Aquatic Products; Dead Aquatic Products
+340,15041000,Fish Liver Oil and Its Fractions
+341,15042000,"Other Fish Oils, Fats, and Their Fractions"
+342,16030000,Extracts and Juices of Meat and Aquatic Products
+343,16041110,Prepared or Preserved Western Salmon (Whole or Cut)
+344,16041190,Prepared or Preserved Other Salmon (Whole or Cut)
+345,16041200,Prepared or Preserved Herring (Whole or Cut)
+346,16041300,Prepared or Preserved Sardines (Whole or Cut)
+347,16041400,"Prepared or Preserved Tuna, Skipjack, and Bonito (Whole or Cut)"
+348,16041500,Prepared or Preserved Mackerel (Whole or Cut)
+349,16041600,Prepared or Preserved Anchovies (Whole or Cut)
+350,16041700,Prepared or Preserved Eel (Whole or Cut)
+351,16041800,Prepared or Preserved Catfish (Whole or Cut)
+352,16041920,Prepared or Preserved Tilapia (Whole or Cut)
+353,16041931,Prepared or Preserved Spotted or Striped Grouper (Whole or Cut)
+354,16041939,Prepared or Preserved Other Grouper (Whole or Cut)
+355,16041991,Prepared or Preserved Other Fish (Whole or Cut)
+356,16042011,Minced Fish
+357,16042019,Other Prepared or Preserved Fish Heads
+358,16042091,Other Prepared or Preserved Minced Fish
+359,16042099,Other Prepared or Preserved Fish
+360,16043100,Fish Roe Sauce
+361,16043200,Fish Roe Sauce Substitutes
+362,16051000,Prepared or Preserved Crab
+363,16052100,Non-Hermetically Sealed Prepared or Preserved Shrimp and Prawns
+364,16052900,Other Prepared or Preserved Shrimp and Prawns
+365,16053000,Prepared or Preserved Lobster
+366,16054011,Prepared or Preserved Freshwater Crayfish Meat
+367,16054019,Prepared or Preserved Cooked Freshwater Crayfish
+368,16054090,Prepared or Preserved Other Crustaceans
+369,16055100,Prepared or Preserved Oysters
+370,16055200,"Prepared or Preserved Scallops, Including Sea Scallops"
+371,16055300,Prepared or Preserved Clams
+372,16055400,Prepared or Preserved Cuttlefish and Squid
+373,16055500,Prepared or Preserved Octopus
+374,16055610,Prepared or Preserved Clams
+375,16055620,Prepared or Preserved Cockles and Ark Shells
+376,16055700,Prepared or Preserved Abalone
+377,16055800,Prepared or Preserved Snails and Escargots (Excluding Sea Snails)
+378,16055900,Prepared or Preserved Other Mollusks
+379,16056100,Prepared or Preserved Sea Cucumbers
+380,16056200,Prepared or Preserved Sea Urchins
+381,16056300,Prepared or Preserved Jellyfish
+382,16056900,Prepared or Preserved Other Aquatic Invertebrates
+383,8011100,Dried Coconut
+384,8011200,Fresh Coconut with Inner Shell Intact
+385,8011910,Seed Coconut
+386,8011990,Other Fresh Non-Seed Coconuts
+387,8012100,"Fresh or Dried Brazil Nuts, In Shell"
+388,8012200,"Fresh or Dried Brazil Nuts, Shelled"
+389,8013100,"Fresh or Dried Cashews, In Shell"
+390,8013200,"Fresh or Dried Cashews, Shelled"
+391,8021100,Fresh or Dried Almond Shells
+392,8021200,"Fresh or Dried Almonds, Shelled"
+393,8022100,"Fresh or Dried Hazelnuts, In Shell"
+394,8022200,"Fresh or Dried Hazelnuts, Shelled"
+395,8023100,"Fresh or Dried Walnuts, In Shell"
+396,8023200,"Fresh or Dried Walnuts, Shelled"
+397,8024110,"Fresh or Dried Chestnuts, In Shell"
+398,8024190,"Fresh or Dried Other Chestnuts, In Shell"
+399,8024210,"Fresh or Dried Chestnuts, Shelled"
+400,8024290,"Fresh or Dried Other Chestnuts, Shelled"
+401,8025100,Fresh or Dried In‑Shell Ayuehunzi Nuts
+402,8025200,Fresh or Dried Shelled Ayuehunzi Nuts
+403,8026110,Fresh or Dried In‑Shell Seed Macadamia Nuts
+404,8026190,Fresh or Dried In‑Shell Non‑Seed Macadamia Nuts
+405,8026200,Fresh or Dried Shelled Macadamia Nuts
+406,8027000,Fresh or Dried Kola Nut Fruit
+407,8028000,Fresh or Dried Betel Nut Fruit
+408,8029100,Fresh or Dried Unhulled Pine Nuts
+409,8029200,Fresh or Dried Hulled Pine Nuts
+410,8029910,Fresh or Dried Ginkgo Nut
+411,8029990,Other Fresh or Dried Nuts
+412,8031000,Fresh or Dried Plantain
+413,8039000,Fresh or Dried Other Bananas
+414,8041000,Fresh or Dried Dates
+415,8042000,Fresh or Dried Figs
+416,8043000,Fresh or Dried Pineapple
+417,8044000,Fresh or Dried Avocado
+418,8045010,Fresh or Dried Guava
+419,8045020,Fresh or Dried Mango
+420,8045030,Fresh or Dried Starfruit
+421,8051000,Fresh or Dried Orange
+422,8052110,Fresh or Dried Tangerine
+423,8052190,Fresh or Dried Other Citrus Fruits
+424,8052200,Fresh or Dried Clementines
+425,8052900,Other Fresh or Dried Hybrid Citrus Fruits
+426,8054000,"Fresh or Dried Grapefruit, including Pomelos"
+427,8055000,Fresh or Dried Lemons and Limes
+428,8059000,Other Fresh or Dried Citrus Fruits
+429,8061000,Fresh Grapes
+430,8062000,Raisins
+431,8071100,Fresh Watermelon
+432,8071910,Fresh Hami Melon
+433,8071920,Fresh Roma Melon and Caribbean Melon
+434,8071990,Other Fresh Melons
+435,8072000,Fresh Papaya
+436,8081000,Fresh Apples
+437,8083010,Fresh Pears (Duck Pear and Snow Pear)
+438,8083020,Fresh Fragrant Pear
+439,8083090,Other Fresh Pears
+440,8084000,Fresh Loquat
+441,8091000,Fresh Apricots
+442,8092100,Fresh European Sour Cherries
+443,8092900,Other Fresh Cherries
+444,8093000,"Fresh Peaches, including Nectarines"
+445,8094000,Fresh Plums and Damsons
+446,8101000,Fresh Strawberries
+447,8102000,"Fresh Raspberries, Blackberries, Mulberries, and Loganberries"
+448,8103000,Fresh Currants and Gooseberries
+449,8104000,Fresh Cranberries and Other Vaccinium Fruits
+450,8105000,Fresh Kiwifruit
+451,8106000,Fresh Durian
+452,8107000,Fresh Persimmons
+453,8109010,Fresh Lychee
+454,8109030,Fresh Longan
+455,8109040,Fresh Rambutan
+456,8109050,Fresh Imported Lychee
+457,8109060,Fresh Carambola (Starfruit)
+458,8109070,Fresh Wax Apple
+459,8109080,Fresh Pitaya (Dragon Fruit)
+460,8109090,Other Fresh Fruits
+461,8111000,Frozen Strawberries
+462,8112000,Frozen Other Berries
+463,8119010,"Frozen Chestnuts, Unpeeled"
+464,8119090,Other Frozen Fruits and Nuts
+465,8121000,Temporarily Preserved Cherries
+486,20081120,Roasted Peanuts (Baked Peanuts)
+487,20081130,Peanut Butter
+488,20081190,Other Peanuts Not Made with Vinegar
+489,20081910,Canned Walnut Kernels
+490,20081920,Other Canned Nuts
+491,20081991,Chestnut Kernels Not Made with Vinegar
+492,20081992,Sesame (Not Made with Vinegar)
+493,20081999,Other Nuts and Kernels Not Made with Vinegar
+494,20082010,Canned Pineapple
+495,20082090,Other Pineapple Products Not Made with Vinegar
+496,20083010,Canned Citrus Fruits
+497,20083090,Other Canned Citrus Fruits Not Made with Vinegar
+498,20084010,Canned Pears
+499,20084090,Other Canned Pears Not Made with Vinegar
+500,20085000,Canned Apricots Not Made with Vinegar
+501,20086010,Canned Cherries Not Made with Vinegar
+502,20086090,Other Canned Cherries Not Made with Vinegar
+503,20087010,Canned Peaches (Including Nectarines)
+504,20087090,Other Canned Peaches (Including Nectarines) Not Made with Vinegar
+505,20088000,Canned Strawberries Not Made with Vinegar
+506,20089100,Canned Palm Hearts Not Made with Vinegar
+507,20089300,Canned Cranberries/Similar Berries Not Made with Vinegar
+508,20089700,Canned Assorted Fruits (Not Made with Vinegar)
+509,20089910,Canned Lychee
+510,20089920,Canned Longan
+511,7011000,Seed Potatoes
+512,7019000,Fresh or Chilled Non‑seed Potatoes
+513,7020000,Fresh or Chilled Tomatoes
+514,7031010,Fresh or Chilled Onions
+515,7031020,Fresh or Chilled Green Onions
+516,7032010,Fresh or Chilled Garlic Bulbs
+517,7032020,Fresh or Chilled Garlic Sprouts and Scapes (Young Garlic)
+518,7032090,Other Fresh or Chilled Garlic
+519,7039010,Fresh or Chilled Leeks
+520,7039020,Fresh or Chilled Large Onions
+521,7039090,Other Fresh or Chilled Allium Vegetables
+522,7041010,Fresh or Chilled Cauliflower
+523,7041090,Fresh or Chilled Broccoli
+524,7042000,Fresh or Chilled Brussels Sprouts
+525,7049010,Fresh or Chilled Cabbage
+526,7049090,Other Fresh or Chilled Mustard Greens
+527,7051100,Fresh or Chilled Crisphead Lettuce
+528,7051900,Other Fresh or Chilled Lettuce
+529,7052100,Fresh or Chilled Endive/Witlof
+530,7052900,Other Fresh or Chilled Chicory
+531,7061000,Fresh or Chilled Carrots and Turnips
+532,7069000,Fresh or Chilled Radishes and Similar Roots
+533,7070000,Fresh or Chilled Cucumbers and Gherkins
+534,7081000,Fresh or Chilled Peas
+535,7082000,Fresh or Chilled Cowpeas and Green Beans
+536,7089000,Other Fresh or Chilled Leguminous Vegetables
+537,7092000,Fresh or Chilled Asparagus
+538,7093000,Fresh or Chilled Eggplant
+539,7094000,Fresh or Chilled Celery
+540,7095100,Fresh or Chilled Agaric Mushrooms
+541,7095200,Fresh or Chilled Porcini Mushrooms
+542,7095300,Fresh or Chilled Chicken Oil Mushrooms
+543,7095400,Fresh or Chilled Shiitake Mushrooms
+544,7095500,Fresh or Chilled Matsutake Mushrooms (Various Types)
+545,7095600,Fresh or Chilled Truffle Mushrooms (Tuber)
+546,7095910,Fresh or Chilled Other Matsutake Mushrooms
+547,7095930,Fresh or Chilled Enoki Mushrooms
+548,7095940,Fresh or Chilled Straw Mushrooms
+549,7095950,Fresh or Chilled Button Mushrooms
+550,7095960,Fresh or Chilled Other Truffle Mushrooms
+551,7095990,Fresh or Chilled Other Mushrooms
+552,7096000,Fresh or Chilled Chili/Multiflavor Fruit (Capsicum)
+553,7097000,Fresh or Chilled Spinach
+554,7099100,Fresh or Chilled Artichokes
+555,7099200,Fresh or Chilled Olives
+556,7099300,"Fresh or Chilled Pumpkins, Squash, and Gourds"
+557,7099910,Fresh or Chilled Bamboo Shoots
+558,7099990,Other Fresh or Chilled Vegetables
+559,7101000,Frozen Potatoes
+560,7102100,Frozen Peas
+561,7102210,Frozen Red Small Beans (Adzuki)
+562,7102290,Other Frozen Cowpeas and Beans
+563,7102900,Frozen Other Leguminous Vegetables
+564,7103000,Frozen Spinach
+565,7104000,Frozen Sweet Corn
+566,7108010,Frozen Matsutake Mushrooms
+567,7108020,Frozen Garlic Sprouts and Scapes
+568,7108030,Frozen Garlic Bulbs
+569,7108040,Frozen Porcini Mushrooms
+570,7108090,Frozen Unspecified Vegetables
+571,7109000,Frozen Mixed Vegetables
+572,7112000,Temporarily Preserved Olives
+573,7114000,Temporarily Preserved Cucumbers and Gherkins
+574,7115112,Salted White Mushrooms
+575,7115119,Salted Other Agaric Mushrooms
+576,7115190,Other Salted Agaric Mushrooms
+577,7115911,Salted Matsutake Mushrooms
+578,7115919,Salted Other Mushrooms and Mushroom Pieces
+579,7115990,Temporarily Preserved Other Mushrooms and Pieces
+580,7119031,Salted Bamboo Shoots
+581,7119034,Salted Garlic
+582,7119039,Salted Other Vegetables
+583,7119090,Temporarily Preserved Other Vegetables; Mixed Vegetables
+584,7122000,Dried Onions
+585,7123100,Dried Agaric Mushrooms
+586,7123200,Dried Wood Ear Mushrooms
+587,7123300,Dried Silver Ear Mushrooms
+588,7123400,Dried Shiitake Mushrooms
+589,7123920,Dried Golden Needle Mushrooms
+590,7123950,Dried Porcini Mushrooms
+591,7123991,Dried Morel Mushrooms
+592,7123999,Other Dried Mushrooms and Fungal Blocks
+593,7129010,Dried Bamboo Shoot Strips
+594,7129020,Dried Purple Sedge (Wei Cai)
+595,7129030,Dried Daylily Buds
+596,7129040,Dried Bracken Shoots
+597,7129050,Dried Garlic
+598,7129091,Dried Horseradish
+599,7129099,Other Dried Vegetables and Mixed Vegetables
+600,7131010,Dried Peas for Seeding
+601,7131090,Dried Peas (Non-seed)
+602,7132010,Seed Dried Chickpeas
+603,7132090,Non-seed Dried Chickpeas
+604,7133110,Seed Dried Mung Beans
+605,7133190,Non-seed Dried Mung Beans
+606,7133210,Seed Dried Red Adzuki Beans
+607,7133290,Non-seed Dried Red Adzuki Beans
+608,7133310,Seed Dried Kidney Beans
+609,7133390,Non-seed Dried Kidney Beans
+610,7133400,Dried Bambara Beans
+611,7133500,Dried Cowpeas
+612,7133900,Dried Cowpeas and Common Beans
+613,7134010,Seed Dried Lentils
+614,7134090,Non-seed Dried Lentils
+615,7135010,Seed Dried Fava Beans
+616,7135090,Non-seed Dried Fava Beans
+617,7136010,Seed Dried Hyacinth Beans
+618,7136090,Non-seed Dried Hyacinth Beans
+619,7139010,Other Seed Dried Beans
+620,7139090,Other Non-seed Dried Beans
+621,7141010,Fresh Cassava
+622,7141020,Dried Cassava
+623,7141030,Cold or Frozen Cassava
+624,7142011,Seed Fresh Sweet Potato
+625,7142019,Non-seed Fresh Sweet Potato
+626,7142020,Dried Sweet Potato
+627,7142030,Cold or Frozen Sweet Potato
+628,7143000,"Fresh, Dried, or Cold/Frozen Yam"
+629,7144000,"Fresh, Dried, or Cold/Frozen Taro"
+630,7145000,"Fresh, Dried, or Cold/Frozen Arrowleaf Taro"
+631,7149010,"Fresh, Dried, or Cold/Frozen Water Chestnut"
+632,7149021,"Fresh, Dried, or Cold/Frozen Seed Lotus Root"
+633,7149029,"Fresh, Dried, or Cold/Frozen Non-seed Lotus Root"
+634,7149090,"Fresh, Dried, or Cold/Frozen Other Starchy or Inulin-rich Tuberous Roots"
+635,11051000,"Potato Starch, Coarse Flour, and Powders"
+636,11052000,"Potato Flakes, Granules, and Pellets"
+637,11061000,Dry Bean Flour and Coarse Flour (Heading 07.13)
+638,11062000,"Powders from Wheat Stems, Roots, and Tuber Stems"
+639,19030000,Substitute for Precious Powder Made from Starch
+640,20011000,Cucumbers and Gherkins Preserved with Vinegar or Acetic Acid
+641,20019010,Garlic Preserved with Vinegar or Acetic Acid
+642,20019090,"Other Fruits, Vegetables, and Edible Plants Preserved with Vinegar or Acetic Acid"
+643,20021010,Whole or Sliced Tomato Cans Not Made with Vinegar
+644,20021090,Other Whole or Sliced Tomato Cans Not Made with Vinegar
+645,20029011,Tomato Paste Cans (Weight ≤5kg)
+646,20029019,Tomato Paste Cans (Weight >5kg)
+647,20029090,Minced Tomatoes Not Made with Vinegar
+648,20031011,Canned Small White Mushrooms Not Made with Vinegar
+649,20031019,Other Canned Umbelliferous Mushrooms Not Made with Vinegar
+650,20031090,Other Canned Umbelliferous Mushrooms Not Made with Vinegar
+651,20039011,Canned King Oyster Mushrooms Not Made with Vinegar
+652,20039019,Other Canned Mushrooms Not Made with Vinegar
+653,20039090,Other Canned Mushrooms Not Made with Vinegar
+654,20041000,Frozen Potatoes Not Made with Vinegar
+655,20049000,Other Frozen Vegetables and Mixed Vegetables Not Made with Vinegar
+656,20051000,Unfrozen Homogenized Vegetables Not Made with Vinegar
+657,20052000,Unfrozen Potatoes Not Made with Vinegar
+658,20054000,Unfrozen Peas Not Made with Vinegar
+659,20055111,Canned Red Bean Paste Not Made with Vinegar
+660,20055119,Other Canned Dehulled Cowpeas and Beans Not Made with Vinegar
+661,20055191,Unfrozen Red Bean Paste Not Made with Vinegar (Excluding Cans)
+662,20055199,Other Unfrozen Dehulled Cowpeas and Beans Not Made with Vinegar (Excluding Cans)
+663,20055910,Canned Cowpeas and Beans with Hull Not Made with Vinegar
+664,20055990,Other Unhulled Cowpeas and Beans Not Made with Vinegar
+665,20056010,Canned Asparagus Not Made with Vinegar
+666,20056090,Other Unfrozen Asparagus Not Made with Vinegar
+667,20057000,Unfrozen Olives Not Made with Vinegar
+668,20058000,Unfrozen Sweet Corn Not Made with Vinegar
+669,20059110,Canned Bamboo Shoots Not Made with Vinegar
+670,20059190,Other Unfrozen Bamboo Shoots Not Made with Vinegar
+671,20059920,Canned Fava Beans Not Made with Vinegar
+672,20059940,Unfrozen Preserved Mustard Greens Not Made with Vinegar
+673,20059950,Unfrozen Preserved Salty Fern Vegetables Not Made with Vinegar
+674,20059960,Unfrozen Preserved Salty Scallion Stalks Not Made with Vinegar
+675,20059970,Unfrozen Preserved Garlic Products Not Made with Vinegar
+676,20059991,Other Canned Vegetables and Mixed Vegetables Not Made with Vinegar
+677,20059999,Other Unfrozen Vegetables and Mixed Vegetables Not Made with Vinegar
+678,20089931,Seasoned Seaweed
+679,20089932,Salted Kelp
+680,20089933,Salted Wakame
+681,20089934,Roasted Seaweed
+682,20089939,Other Seaweed and Algae Products Not Made with Vinegar
+683,20089940,Canned Water Chestnut (Ma Ti)
+684,20089950,Ginger Products
+685,20089990,Other Edible Parts of Plants Preserved by Other Methods
+686,21032000,Tomato Sauce and Other Tomato Condiments
+687,4011000,"Non‑concentrated, Unsweetened Milk and Cream with Fat Content Not Exceeding 1%"
+688,4012000,"Non‑concentrated, Unsweetened Milk and Cream with Fat Content 1%-6%"
+689,4014000,"Non‑concentrated, Unsweetened Milk and Cream with Fat Content 6%-10%"
+690,4015000,"Non‑concentrated, Unsweetened Milk and Cream with Fat Content Over 10%"
+691,4021000,Solid Milk and Cream with Fat Content ≤1.5%
+692,4022100,Unsweetened Solid Milk and Cream with Fat Content Over 1.5%
+693,4022900,Sweetened Solid Milk and Cream with Fat Content Over 1.5%
+694,4029100,Concentrated but Unsweetened Liquid Milk and Cream
+695,4029900,Concentrated and Sweetened Liquid Milk and Cream
+696,4032010,"Fermented Milk Containing Only Sugar, Fruit, or Nuts, etc."
+697,4032090,Other Fermented Milk
+698,4039000,Buttermilk
+699,4049000,Other Natural Milk Products
+700,4051000,Butter
+701,4052000,Dairy Spread (Cream Cheese)
+702,4059000,Other Fats and Oils Extracted from Milk
+703,4061000,"Fresh Cheese, Curd"
+704,4062000,Grated or Powdered Cheese
+705,4063000,Other Processed Cheese
+706,4064000,Blue Cheese and Other Textured Cheeses Produced with Penicillium Roqueforti
+707,4069000,Other Cheeses
+708,21050000,Ice Cream and Other Frozen Confectionery (Whether or Not Containing Cocoa)
+709,35011000,Casein
+710,35019000,Casein Derivatives; Casein Glues
+711,35022000,"Whey Protein, Including Two or More Types of Whey Protein Concentrates"
