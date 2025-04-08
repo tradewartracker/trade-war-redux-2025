@@ -1,0 +1,86 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.0.min.js" integrity="sha384-5Y+xuMRAbgBj/2WKUiL8yzV4fBFic1HJPo2hT3pq2IsEzbsJjj8kT2i0b1lZ7C2N" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.0.0.min.js" integrity="sha384-2ltAd1cQhavmLeBEZXGgnna8fjbw+FjvDq9m2dig4+8KVS8JcYFUQaALvLT//qHE" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="214ae50b-6e0a-4a92-8ee0-76138014b3d9" data-root-id="4344"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="4411">
+          {"d3161805-be72-4144-9de0-debaf8b0432a":{"roots":{"references":[{"attributes":{},"id":"4347","type":"CategoricalTickFormatter"},{"attributes":{"axis":{"id":"4319"},"grid_line_color":null,"ticker":null},"id":"4321","type":"Grid"},{"attributes":{"text":"22.8%","text_font_size":"4em","text_font_style":"bold","x":400,"x_units":"screen","y":350,"y_units":"screen"},"id":"4338","type":"Label"},{"attributes":{"formatter":{"id":"4347"},"major_label_orientation":0.75,"major_label_text_font_size":"7pt","major_tick_line_color":null,"minor_tick_line_color":null,"ticker":{"id":"4320"}},"id":"4319","type":"CategoricalAxis"},{"attributes":{"data_source":{"id":"4307"},"glyph":{"id":"4330"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"4331"},"selection_glyph":null,"view":{"id":"4333"}},"id":"4332","type":"GlyphRenderer"},{"attributes":{},"id":"4315","type":"CategoricalScale"},{"attributes":{},"id":"4349","type":"UnionRenderers"},{"attributes":{"format":"(0. a)"},"id":"4339","type":"NumeralTickFormatter"},{"attributes":{"end":51.981710717938235,"start":0},"id":"4313","type":"DataRange1d"},{"attributes":{"axis":{"id":"4322"},"dimension":1,"ticker":null},"id":"4325","type":"Grid"},{"attributes":{},"id":"4317","type":"LinearScale"},{"attributes":{"text":"US Tariffs by Country of Origin, Sorted by US imports (Top 20)","text_font_size":{"value":"14pt"}},"id":"4309","type":"Title"},{"attributes":{},"id":"4323","type":"BasicTicker"},{"attributes":{"formatter":{"id":"4339"},"minor_tick_line_color":null,"ticker":{"id":"4323"}},"id":"4322","type":"LinearAxis"},{"attributes":{"background_fill_alpha":0.75,"below":[{"id":"4319"}],"center":[{"id":"4321"},{"id":"4325"},{"id":"4337"},{"id":"4338"}],"left":[{"id":"4322"}],"max_height":625,"max_width":750,"min_height":156,"min_width":187,"outline_line_color":null,"plot_height":625,"plot_width":750,"renderers":[{"id":"4332"}],"sizing_mode":"scale_both","title":{"id":"4309"},"toolbar":{"id":"4327"},"toolbar_location":"below","x_range":{"id":"4311"},"x_scale":{"id":"4315"},"y_range":{"id":"4313"},"y_scale":{"id":"4317"}},"id":"4308","subtype":"Figure","type":"Plot"},{"attributes":{"factors":["","EUROPEAN UNION","MEXICO","CHINA","CANADA","JAPAN","VIETNAM","KOREA, SOUTH","TAIWAN","INDIA","THAILAND","SWITZERLAND","MALAYSIA","INDONESIA","ISRAEL","SOUTH AFRICA","PHILIPPINES","CAMBODIA","BANGLADESH","IRAQ","NORWAY"]},"id":"4311","type":"FactorRange"},{"attributes":{},"id":"4326","type":"ResetTool"},{"attributes":{"source":{"id":"4307"}},"id":"4333","type":"CDSView"},{"attributes":{"fill_alpha":{"value":0.65},"fill_color":{"value":"red"},"hatch_alpha":{"value":0.1},"hatch_pattern":{"value":" "},"line_alpha":{"value":0.65},"line_color":{"value":"red"},"top":{"field":"effective tariff"},"width":{"value":0.6},"x":{"field":"country_name"}},"id":"4330","type":"VBar"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"red"},"hatch_alpha":{"value":0.1},"hatch_pattern":{"value":" "},"line_alpha":{"value":0.1},"line_color":{"value":"red"},"top":{"field":"effective tariff"},"width":{"value":0.6},"x":{"field":"country_name"}},"id":"4331","type":"VBar"},{"attributes":{"callback":null,"tooltips":"\n    &lt;div style=\"background-color:#F5F5F5; opacity: 0.95; border: 0px 0px 0px 0px\"&gt;\n        &lt;div style = \"text-align:left;\"&gt;\n            &lt;span style=\"font-size: 13px; font-weight: bold\"&gt;@country_name&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div style = \"text-align:left;\"&gt;\n            &lt;span style=\"font-size: 13px; font-weight: bold\"&gt;2024 Imports: $@hover_label Billion&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div style = \"text-align:left;\"&gt;\n            &lt;span style=\"font-size: 13px; font-weight: bold\"&gt;Applied Tariff: @hover_label_2%&lt;/span&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n    "},"id":"4335","type":"HoverTool"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_multi":null,"active_scroll":"auto","active_tap":"auto","autohide":true,"tools":[{"id":"4326"},{"id":"4335"}]},"id":"4327","type":"Toolbar"},{"attributes":{},"id":"4350","type":"Selection"},{"attributes":{"data":{"alu imports":[0.0,11809647077.0,21399351504.0,17860573753.0,10508257908.0,5180005371.0,2746060850.0,5591276568.0,3661916147.0,1556728755.0,1708186295.0,600814833.0,1364568186.0,154149783.0,535011366.0,52939759.0,246883673.0,86211806.0,3013678.0,9624.0,140037847.0],"auto imports":[0.0,69288585685.0,149979172522.0,32699634151.0,50990178340.0,55885071029.0,3917910374.0,49491063359.0,3217101173.0,2832788361.0,5875641822.0,396982724.0,1625919722.0,1350934948.0,127588611.0,2558557628.0,1422245289.0,729773569.0,2907965.0,203908.0,111025321.0],"country_name":["","EUROPEAN UNION","MEXICO","CHINA","CANADA","JAPAN","VIETNAM","KOREA, SOUTH","TAIWAN","INDIA","THAILAND","SWITZERLAND","MALAYSIA","INDONESIA","ISRAEL","SOUTH AFRICA","PHILIPPINES","CAMBODIA","BANGLADESH","IRAQ","NORWAY"],"effective tariff":[0.0,19.80255316048539,4.807734963089326,32.00062382833579,6.966286761389921,23.904052592005943,44.63631379910325,24.512315219134926,30.963803382880485,26.00815935437052,35.11489947928664,31.485507135061937,23.479248038513305,31.27884906735686,16.59372713933924,28.908841398559698,18.577482963292766,47.25610065267112,36.9849686397081,34.906554534588246,14.003250376270035],"expempt imports":[0.0,19189814054.0,8205315086.0,4015373708.0,90530905516.0,824272804.0,232904515.0,3593028538.0,472568240.0,2102493500.0,144128671.0,468160188.0,414491645.0,215210226.0,424672643.0,458442396.0,4218481.0,26586697.0,143600.0,797148966.0,834726524.0],"hover_label":["0.0","597.9","503.8","429.8","412.6","151.3","141.4","130.5","115.3","87.8","63.3","61.0","51.7","28.1","22.7","14.6","13.9","12.7","8.5","7.6","6.5"],"hover_label_2":["0.0","19.8","4.8","32.0","7.0","23.9","44.6","24.5","31.0","26.0","35.1","31.5","23.5","31.3","16.6","28.9","18.6","47.3","37.0","34.9","14.0"],"index":[0,13,58,9,57,21,54,45,49,17,50,47,30,18,20,44,42,6,2,19,40],"position":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],"steel imports":[0.0,4075410635.0,3622743519.0,7419241338.0,2654084614.0,694811056.0,493795767.0,1502899745.0,2162535337.0,1502742206.0,600135101.0,87150466.0,163651400.0,120012260.0,82675181.0,14829179.0,14283240.0,18432829.0,455336.0,10300.0,16632337.0],"total imports":[0.0,597906784683.0,503806119292.0,429753399481.0,412555790905.0,151290260357.0,141407132644.0,130471361727.0,115284322157.0,87793999313.0,63264525019.0,61019944937.0,51681688075.0,28137482235.0,22719409741.0,14613147810.0,13948768343.0,12744167459.0,8451804463.0,7595578821.0,6523062636.0]},"selected":{"id":"4350"},"selection_policy":{"id":"4349"}},"id":"4307","type":"ColumnDataSource"},{"attributes":{"children":[{"id":"4308"},{"id":"4343"}],"sizing_mode":"scale_both"},"id":"4344","type":"Column"},{"attributes":{"text":"US Average Tariff:","text_font_size":"1.2em","text_font_style":"bold","x":400,"x_units":"screen","y":420,"y_units":"screen"},"id":"4337","type":"Label"},{"attributes":{},"id":"4320","type":"CategoricalTicker"},{"attributes":{"background":"#ffffff","max_width":750,"sizing_mode":"scale_both","text":"Each bar represents the trade weighted, applied tariff for each country. Applied tariffs include the reciprocal tariffs, the steel and aluminum tariffs, and  auto tariffs. Canadian and Mexico tariffs are calculated\n           assuming all of autos are USMCA compliant and 65% of Canadian imports are USMCA compliant 82% of Mexican imports are USMCA compliant. \n           The average tariff is the trade weighted average of all tariffs plus the current 2.3% applied tariff as of February 2025.\n"},"id":"4343","type":"Div"}],"root_ids":["4344"]},"title":"Bokeh Application","version":"2.0.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('4411').textContent;
+                  var render_items = [{"docid":"d3161805-be72-4144-9de0-debaf8b0432a","root_ids":["4344"],"roots":{"4344":"214ae50b-6e0a-4a92-8ee0-76138014b3d9"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
