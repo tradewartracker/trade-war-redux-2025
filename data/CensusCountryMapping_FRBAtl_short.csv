@@ -1,0 +1,226 @@
+CTY_CODE,ISO3,country
+4271,AND,Andorra
+5200,ARE,United Arab Emirates
+5310,AFG,Afghanistan
+2484,ATG,Antigua and Barbuda
+2481,AIA,Anguilla
+4810,ALB,Albania
+4631,ARM,Armenia
+7620,AGO,Angola
+3570,ARG,Argentina
+4330,AUT,Austria
+6021,AUS,Australia
+2779,ABW,Aruba
+4632,AZE,Azerbaijan
+4793,BIH,Bosnia and Herzegovina
+2720,BRB,Barbados
+5380,BGD,Bangladesh
+4231,BEL,Belgium
+7600,BFA,Burkina Faso
+4870,BGR,Bulgaria
+5250,BHR,Bahrain
+7670,BDI,Burundi
+7610,BEN,Benin
+2320,BMU,Bermuda
+5610,BRN,Brunei Darussalam
+3350,BOL,Bolivia
+3510,BRA,Brazil
+2360,BHS,Bahamas
+5682,BTN,Bhutan
+7930,BWA,Botswana
+4622,BLR,Belarus
+2080,BLZ,Belize
+1220,CAN,Canada
+6023,CCK,Cocos (Keeling) Islands
+7660,COD,DR Congo
+7540,CAF,Central African Republic
+7630,COG,Congo Republic
+4419,CHE,Switzerland
+7480,CIV,Cote d'Ivoire
+6142,COK,Cook Islands
+3370,CHL,Chile
+7420,CMR,Cameroon
+5700,CHN,China
+3010,COL,Colombia
+2230,CRI,Costa Rica
+7643,CPV,Cabo Verde
+2777,CUW,Curacao
+6024,CXR,Christmas Island
+4910,CYP,Cyprus
+4351,CZE,Czechia
+4280,DEU,Germany
+7770,DJI,Djibouti
+4099,DNK,Denmark
+2486,DMA,Dominica
+2470,DOM,Dominican Republic
+7210,DZA,Algeria
+3310,ECU,Ecuador
+4470,EST,Estonia
+7290,EGY,Egypt
+7741,ERI,Eritrea
+4700,ESP,Spain
+7749,ETH,Ethiopia
+4050,FIN,Finland
+6863,FJI,Fiji
+3720,FLK,Falkland Islands
+6820,FSM,"Micronesia, Fed. Sts."
+4091,FRO,Faroe Islands
+4279,FRA,France
+7550,GAB,Gabon
+4120,GBR,United Kingdom
+2489,GRD,Grenada
+4633,GEO,Georgia
+3170,GUF,French Guiana
+7490,GHA,Ghana
+4720,GIB,Gibraltar
+1010,GRL,Greenland
+7500,GMB,Gambia
+7460,GIN,Guinea
+2831,GLP,Guadeloupe
+7380,GNQ,Equatorial Guinea
+4840,GRC,Greece
+2050,GTM,Guatemala
+7642,GNB,Guinea-Bissau
+3120,GUY,Guyana
+5820,HKG,Hong Kong
+2150,HND,Honduras
+4791,HRV,Croatia
+2450,HTI,Haiti
+4370,HUN,Hungary
+5600,IDN,Indonesia
+4190,IRL,Ireland
+5081,ISR,Israel
+5330,IND,India
+5050,IRQ,Iraq
+5070,IRN,Iran
+4000,ISL,Iceland
+4759,ITA,Italy
+2410,JAM,Jamaica
+5110,JOR,Jordan
+5880,JPN,Japan
+7790,KEN,Kenya
+4635,KGZ,Kyrgyz Republic
+5550,KHM,Cambodia
+6226,KIR,Kiribati
+7890,COM,Comoros
+2483,KNA,St. Kitts and Nevis
+5800,KOR,South Korea
+5130,KWT,Kuwait
+2440,CYM,Cayman Islands
+4634,KAZ,Kazakhstan
+5530,LAO,Laos
+5040,LBN,Lebanon
+2487,LCA,St. Lucia
+4411,LIE,Liechtenstein
+5420,LKA,Sri Lanka
+7650,LBR,Liberia
+7990,LSO,Lesotho
+4510,LTU,Lithuania
+4239,LUX,Luxembourg
+4490,LVA,Latvia
+7250,LBY,Libya
+7140,MAR,Morocco
+4272,MCO,Monaco
+4641,MDA,Moldova
+4804,MNE,Montenegro
+7880,MDG,Madagascar
+6810,MHL,Marshall Islands
+4794,MKD,North Macedonia
+7450,MLI,Mali
+5460,MMR,Myanmar
+5740,MNG,Mongolia
+5660,MAC,Macau
+2839,MTQ,Martinique
+7410,MRT,Mauritania
+2485,MSR,Montserrat
+4730,MLT,Malta
+7850,MUS,Mauritius
+5683,MDV,Maldives
+7970,MWI,Malawi
+2010,MEX,Mexico
+5570,MYS,Malaysia
+7870,MOZ,Mozambique
+7920,NAM,Namibia
+6412,NCL,New Caledonia
+7510,NER,Niger
+6022,NFK,Norfolk Island
+7530,NGA,Nigeria
+2190,NIC,Nicaragua
+4210,NLD,Netherlands
+4039,NOR,Norway
+5360,NPL,Nepal
+6862,NRU,Nauru
+6144,NIU,Niue
+6141,NZL,New Zealand
+5230,OMN,Oman
+2250,PAN,Panama
+3330,PER,Peru
+6414,PYF,French Polynesia
+6040,PNG,Papua New Guinea
+5650,PHL,Philippines
+5350,PAK,Pakistan
+4550,POL,Poland
+6225,PCN,Pitcairn
+,PSE,Palestine
+4710,PRT,Portugal
+6830,PLW,Palau
+3530,PRY,Paraguay
+5180,QAT,Qatar
+7904,REU,Reunion
+4850,ROU,Romania
+4801,SRB,Serbia
+4621,RUS,Russia
+7690,RWA,Rwanda
+5170,SAU,Saudi Arabia
+6223,SLB,Solomon Islands
+7800,SYC,Seychelles
+7321,SDN,Sudan
+4010,SWE,Sweden
+5590,SGP,Singapore
+7580,SHN,St. Helena
+4792,SVN,Slovenia
+4031,SJM,Svalbard and Jan Mayen Islands
+4359,SVK,Slovakia
+7470,SLE,Sierra Leone
+4751,SMR,San Marino
+7440,SEN,Senegal
+7700,SOM,Somalia
+3150,SUR,Suriname
+7323,SSD,South Sudan
+7644,STP,Sao Tome and Principe
+2110,SLV,El Salvador
+2774,SXM,Sint Maarten
+5020,SYR,Syria
+7950,SWZ,Eswatini
+2430,TCA,Turks and Caicos Islands
+7560,TCD,Chad
+7520,TGO,Togo
+5490,THA,Thailand
+4642,TJK,Tajikistan
+6143,TKL,Tokelau
+5601,TLS,Timor-Leste
+4643,TKM,Turkmenistan
+7230,TUN,Tunisia
+6864,TON,Tonga
+4890,TUR,Türkiye
+2740,TTO,Trinidad and Tobago
+6227,TUV,Tuvalu
+5830,TWN,Taiwan
+7830,TZA,Tanzania
+4623,UKR,Ukraine
+7780,UGA,Uganda
+3550,URY,Uruguay
+4644,UZB,Uzbekistan
+4752,VAT,Vatican
+2488,VCT,St. Vincent and the Grenadines
+3070,VEN,Venezuela
+2482,VGB,British Virgin Islands
+5520,VNM,Vietnam
+6224,VUT,Vanuatu
+6150,WSM,Samoa
+,XKX,Kosovo
+5210,YEM,Yemen
+7881,MYT,Mayotte
+7910,ZAF,South Africa
+7940,ZMB,Zambia
+7960,ZWE,Zimbabwe
