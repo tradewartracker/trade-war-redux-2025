@@ -16,3 +16,5 @@ The graphic plotting the long time series of applied tariffs uses the data set [
 
     The underlying data file produced is [daily-tariff-latest-data.csv](daily-tariff-latest-data.csv) and is then filled in the [tariff-summary.ipynb](tariff-summary.ipynb) notebook above.
 
+There is an additional notebook and data that may be of interest. The notebook [get-country-hs2-tariff.ipynb](get-country-hs2-tariff.ipynb) creates country by hs2 tariff rates for all 200+ countries in the world and creates country-specific files. The [data-hs2](./data-hs2) folder contains these files. 
+
