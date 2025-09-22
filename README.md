@@ -6,7 +6,7 @@ The ``.csv'' files discussed below will retain their naming conventions so they 
 
 There are two noteboks behind the results. 
 
-1. The file [make-tariff-by-country-by-time.ipynb](make-tariff-by-country-by-time.ipynb) builds a data set which constructs by time of announcement, by country, tariff rates. The underlying data file is ["daily-tariff-latest-data.csv"]("daily-tariff-latest-data.csv") for the tariff rates, by tme, for the top 50 trading partners of the U.S. 
+1. The file [make-tariff-by-country-by-time.ipynb](make-tariff-by-country-by-time.ipynb) builds a data set which constructs by time of announcement, by country, tariff rates. The underlying data file is ["daily-tariff-latest-data.csv"](daily-tariff-latest-data.csv) for the tariff rates, by tme, for the top 50 trading partners of the U.S. 
 
 
 2. The file [plot-tariff-by-country-by-time.ipynb](plot-tariff-by-country-by-time.ipynb) constructs the graphics on the website. The first tab is the aggregate, daily tariff rate. This starts from the base applied tariff rate for 2024 and estimates how the U.S. tariff rate has changed over time. The second tab are current tariff rates across different countries. The third tab is the historical series. 
