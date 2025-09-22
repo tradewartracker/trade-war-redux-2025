@@ -1,7 +1,7 @@
 ## Readme file for trade-war-redux-2025 
 
 <p float="left" align="middle">
-  <img src="tariff-fig.png" width="675" /> 
+  <img src="tariff-fig.png" width="875" /> 
 </p>
 
 
