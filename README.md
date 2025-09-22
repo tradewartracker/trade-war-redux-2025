@@ -1,5 +1,10 @@
 ## Readme file for trade-war-redux-2025 
 
+<p float="left" align="middle">
+  <img src="tariff-fig.png" width="475" /> 
+</p>
+
+
 **Updated on 9/22/25**: This readme outlines calculations that go into tracking the US tariff actions. 
 
 The ``.csv'' files discussed below will retain their naming conventions so they can be linked to directly for users purposes.
