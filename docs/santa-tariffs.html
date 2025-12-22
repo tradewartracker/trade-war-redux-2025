@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa's Tariff Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #0a0a2e 0%, #1a1a4e 40%, #2d1b4e 70%, #1a1a3e 100%);
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: 'Georgia', serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Stars */
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Moon */
+        .moon {
+            position: absolute;
+            top: 60px;
+            right: 100px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #fffde7, #ffd54f);
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(255, 253, 231, 0.5), 0 0 80px rgba(255, 213, 79, 0.3);
+        }
+
+        /* Title */
+        .title {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            color: #e8d5b7;
+            font-size: 28px;
+            font-weight: normal;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            position: absolute;
+            top: 70px;
+            left: 50px;
+            color: #a89070;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        /* Santa and Sleigh Container */
+        .santa-container {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            animation: flyAcross 14s linear infinite, bobbing 2s ease-in-out infinite;
+        }
+
+        @keyframes flyAcross {
+            0% { left: -450px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes bobbing {
+            0%, 100% { transform: translateY(-50%) rotate(1deg); }
+            50% { transform: translateY(calc(-50% + 12px)) rotate(-1deg); }
+        }
+
+        .sleigh-group {
+            position: relative;
+            width: 420px;
+            height: 160px;
+        }
+
+        /* Reindeer - now on the RIGHT side (front) */
+        .reindeer-team {
+            position: absolute;
+            right: 0;
+            top: 35px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .reindeer {
+            font-size: 45px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
+            transform: scaleX(-1); /* Flip to face right */
+            animation: reindeerRun 0.25s ease-in-out infinite alternate;
+        }
+
+        .reindeer:nth-child(2) {
+            animation-delay: 0.125s;
+        }
+
+        .reindeer:nth-child(3) {
+            animation-delay: 0.25s;
+        }
+
+        @keyframes reindeerRun {
+            0% { transform: scaleX(-1) translateY(0) rotate(-3deg); }
+            100% { transform: scaleX(-1) translateY(-4px) rotate(3deg); }
+        }
+
+        /* Reins - connecting sleigh to reindeer */
+        .reins-container {
+            position: absolute;
+            right: 85px;
+            top: 58px;
+            width: 100px;
+            height: 30px;
+        }
+
+        .rein {
+            position: absolute;
+            height: 2px;
+            background: #8b4513;
+            transform-origin: left center;
+        }
+
+        .rein-top {
+            width: 95px;
+            top: 5px;
+            transform: rotate(8deg);
+        }
+
+        .rein-bottom {
+            width: 90px;
+            top: 15px;
+            transform: rotate(-5deg);
+        }
+
+        /* Sleigh SVG - now facing right */
+        .sleigh-svg {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 250px;
+            height: 140px;
+        }
+
+        /* Santa figure - now on left side of sleigh */
+        .santa-figure {
+            position: absolute;
+            left: 55px;
+            top: -25px;
+            font-size: 75px;
+            filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
+            transform: scaleX(-1); /* Face right */
+        }
+
+        /* Gift particles trailing - now on left */
+        .gift-trail {
+            position: absolute;
+            left: -20px;
+            top: 80px;
+            font-size: 25px;
+            opacity: 0;
+            animation: dropGift 4s ease-out infinite;
+        }
+
+        .gift-trail:nth-child(2) { animation-delay: 1.3s; left: 0px; }
+        .gift-trail:nth-child(3) { animation-delay: 2.6s; left: 20px; }
+
+        @keyframes dropGift {
+            0% { opacity: 0; transform: translateY(0) rotate(0deg); }
+            10% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(250px) rotate(180deg); }
+        }
+
+        /* Tariff popup */
+        .tariff-popup {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transform-origin: center bottom;
+        }
+
+        .tariff-popup.show {
+            animation: tariffPop 2.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        @keyframes tariffPop {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(20px);
+            }
+            15% {
+                opacity: 1;
+                transform: scale(1.1) translateY(-10px);
+            }
+            30% {
+                transform: scale(1) translateY(-20px);
+            }
+            70% {
+                opacity: 1;
+                transform: scale(1) translateY(-40px);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.8) translateY(-80px);
+            }
+        }
+
+        .tariff-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 12px 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .tariff-country {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .tariff-flag {
+            font-size: 20px;
+        }
+
+        .tariff-amount {
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+
+        .tariff-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        .tariff-connector {
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(255,255,255,0));
+            margin-top: -2px;
+        }
+
+        /* Ground */
+        .ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+        }
+
+        /* Scrolling village */
+        .village {
+            position: absolute;
+            bottom: 30px;
+            width: 300%;
+            height: 120px;
+            animation: villageScroll 30s linear infinite;
+            z-index: 2;
+        }
+
+        @keyframes villageScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-66.67%); }
+        }
+
+        /* Snow base */
+        .snow-base {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            background: linear-gradient(to bottom, #b8d4e8, #d8ecf8, #e8f4fc, #ffffff);
+            z-index: 3;
+        }
+
+        /* Snow hills - scrolling bumps */
+        .snow-hills {
+            position: absolute;
+            bottom: 35px;
+            width: 300%;
+            height: 40px;
+            animation: villageScroll 30s linear infinite;
+            z-index: 3;
+        }
+
+        .snow-hill {
+            position: absolute;
+            bottom: 0;
+            border-radius: 50% 50% 0 0;
+            background: linear-gradient(to bottom, #d0e4f0, #e8f4fc);
+        }
+
+        /* Snow sparkles */
+        .snow-sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.5); }
+        }
+
+        /* Snowflakes */
+        .snowflake {
+            position: absolute;
+            color: white;
+            opacity: 0.6;
+            animation: snowfall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes snowfall {
+            0% { transform: translateY(-20px) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stars" id="stars"></div>
+        <div class="moon"></div>
+        
+        <h1 class="title">SANTA'S TARIFF JOURNEY</h1>
+        <p class="subtitle">The hidden cost of delivering joy worldwide</p>
+
+        <div class="santa-container" id="santa-container">
+            <div class="sleigh-group">
+                <!-- Gift trail - now on left (back) -->
+                <div class="gift-trail">🎁</div>
+                <div class="gift-trail">🎁</div>
+                <div class="gift-trail">🎁</div>
+                
+                <!-- Sleigh SVG - flipped to face right -->
+                <svg class="sleigh-svg" viewBox="0 0 250 140" style="transform: scaleX(-1);">
+                    <defs>
+                        <linearGradient id="sleighBody" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#d42c2c"/>
+                            <stop offset="50%" style="stop-color:#b01c1c"/>
+                            <stop offset="100%" style="stop-color:#8b0000"/>
+                        </linearGradient>
+                        <linearGradient id="goldTrim" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffd700"/>
+                            <stop offset="50%" style="stop-color:#ffec8b"/>
+                            <stop offset="100%" style="stop-color:#daa520"/>
+                        </linearGradient>
+                        <linearGradient id="runnerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#c9a227"/>
+                            <stop offset="100%" style="stop-color:#8b6914"/>
+                        </linearGradient>
+                        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Runner/Skid -->
+                    <path d="M15 105 
+                             Q5 105 5 95 
+                             Q5 85 20 82
+                             L200 75
+                             Q220 73 225 80
+                             Q232 88 228 98
+                             Q225 108 210 108
+                             L30 110
+                             Q15 110 15 105Z" 
+                          fill="url(#runnerGrad)" stroke="#6b4c0a" stroke-width="1.5" filter="url(#shadow)"/>
+                    
+                    <!-- Runner curl at front -->
+                    <path d="M5 95 Q0 80 15 70 Q25 63 35 68" 
+                          fill="none" stroke="url(#goldTrim)" stroke-width="6" stroke-linecap="round"/>
+                    
+                    <!-- Sleigh body -->
+                    <path d="M30 80 
+                             L45 35
+                             Q50 20 70 18
+                             L190 22
+                             Q210 24 215 40
+                             L220 75
+                             Q200 72 120 72
+                             Q50 75 30 80Z" 
+                          fill="url(#sleighBody)" stroke="#6b0000" stroke-width="2" filter="url(#shadow)"/>
+                    
+                    <!-- Sleigh back rest -->
+                    <path d="M45 35 
+                             Q38 20 45 8
+                             Q55 -2 75 2
+                             L85 18" 
+                          fill="url(#sleighBody)" stroke="#6b0000" stroke-width="2"/>
+                    
+                    <!-- Decorative back curl -->
+                    <circle cx="52" cy="5" r="6" fill="url(#goldTrim)" stroke="#8b6914" stroke-width="1"/>
+                    
+                    <!-- Gold trim line -->
+                    <path d="M48 32 Q60 28 100 26 L190 24" 
+                          stroke="url(#goldTrim)" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Side panel decoration -->
+                    <path d="M60 45 Q90 42 150 43 Q180 44 195 50" 
+                          stroke="url(#goldTrim)" stroke-width="2" fill="none"/>
+                    
+                    <!-- Scrollwork -->
+                    <path d="M70 60 Q85 55 100 60 Q115 65 130 60" 
+                          stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.7"/>
+                    
+                    <!-- Gifts -->
+                    <g filter="url(#shadow)">
+                        <rect x="100" y="28" width="28" height="24" fill="#1b5e20" rx="3"/>
+                        <rect x="97" y="37" width="34" height="5" fill="#ffd700"/>
+                        <rect x="111" y="26" width="5" height="28" fill="#ffd700"/>
+                        <path d="M108 28 Q114 22 120 28" stroke="#ffd700" stroke-width="2" fill="none"/>
+                        
+                        <rect x="132" y="32" width="24" height="20" fill="#1565c0" rx="3"/>
+                        <rect x="129" y="40" width="30" height="4" fill="#ff5252"/>
+                        <rect x="141" y="30" width="4" height="24" fill="#ff5252"/>
+                        
+                        <rect x="160" y="28" width="26" height="26" fill="#6a1b9a" rx="3"/>
+                        <rect x="157" y="38" width="32" height="5" fill="#ffeb3b"/>
+                        <rect x="170" y="26" width="5" height="30" fill="#ffeb3b"/>
+                        <circle cx="173" cy="28" r="4" fill="#ffeb3b"/>
+                        
+                        <rect x="140" y="18" width="18" height="14" fill="#c62828" rx="2"/>
+                        <rect x="137" y="23" width="24" height="3" fill="#81c784"/>
+                    </g>
+                    
+                    <ellipse cx="80" cy="50" rx="20" ry="8" fill="#8b0000" opacity="0.5"/>
+                </svg>
+                
+                <!-- Santa -->
+                <div class="santa-figure">🎅</div>
+                
+                <!-- Reins -->
+                <div class="reins-container">
+                    <div class="rein rein-top"></div>
+                    <div class="rein rein-bottom"></div>
+                </div>
+                
+                <!-- Reindeer team at front (right side) -->
+                <div class="reindeer-team">
+                    <div class="reindeer">🦌</div>
+                    <div class="reindeer">🦌</div>
+                    <div class="reindeer">🦌</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ground">
+            <!-- Scrolling village with houses and trees -->
+            <svg class="village" viewBox="0 0 3000 120" preserveAspectRatio="none">
+                <!-- Repeat pattern 3 times for seamless scroll -->
+                <g id="village-segment">
+                    <!-- House 1 - small cottage -->
+                    <g transform="translate(50, 0)">
+                        <rect x="0" y="50" width="60" height="50" fill="#5d4037"/>
+                        <polygon points="0,50 30,15 60,50" fill="#c62828"/>
+                        <rect x="22" y="70" width="16" height="30" fill="#ffcc80"/>
+                        <rect x="8" y="60" width="12" height="15" fill="#81d4fa"/>
+                        <rect x="40" y="60" width="12" height="15" fill="#81d4fa"/>
+                        <!-- Chimney -->
+                        <rect x="45" y="20" width="10" height="25" fill="#8d6e63"/>
+                        <!-- Smoke -->
+                        <circle cx="50" cy="15" r="4" fill="#cfd8dc" opacity="0.6"/>
+                        <circle cx="52" cy="8" r="3" fill="#cfd8dc" opacity="0.4"/>
+                    </g>
+                    
+                    <!-- Christmas Tree 1 -->
+                    <g transform="translate(130, 0)">
+                        <rect x="8" y="85" width="8" height="15" fill="#5d4037"/>
+                        <polygon points="12,30 -5,90 29,90" fill="#2e7d32"/>
+                        <polygon points="12,45 -2,85 26,85" fill="#388e3c"/>
+                        <polygon points="12,55 2,80 22,80" fill="#43a047"/>
+                        <circle cx="12" cy="30" r="4" fill="#ffd700"/>
+                        <!-- Ornaments -->
+                        <circle cx="6" cy="65" r="3" fill="#f44336"/>
+                        <circle cx="18" cy="72" r="3" fill="#2196f3"/>
+                        <circle cx="10" cy="80" r="3" fill="#ffd700"/>
+                    </g>
+                    
+                    <!-- House 2 - larger house -->
+                    <g transform="translate(180, 0)">
+                        <rect x="0" y="35" width="80" height="65" fill="#6d4c41"/>
+                        <polygon points="0,35 40,0 80,35" fill="#d32f2f"/>
+                        <rect x="30" y="60" width="20" height="40" fill="#a1887f"/>
+                        <rect x="8" y="50" width="18" height="20" fill="#bbdefb"/>
+                        <rect x="54" y="50" width="18" height="20" fill="#bbdefb"/>
+                        <rect x="8" y="75" width="18" height="20" fill="#bbdefb"/>
+                        <!-- Chimney -->
+                        <rect x="60" y="5" width="12" height="25" fill="#795548"/>
+                        <circle cx="66" cy="0" r="4" fill="#cfd8dc" opacity="0.5"/>
+                        <!-- Wreath -->
+                        <circle cx="40" cy="55" r="6" fill="none" stroke="#2e7d32" stroke-width="3"/>
+                        <circle cx="40" cy="50" r="2" fill="#f44336"/>
+                    </g>
+                    
+                    <!-- Christmas Tree 2 -->
+                    <g transform="translate(280, 0)">
+                        <rect x="10" y="80" width="10" height="20" fill="#5d4037"/>
+                        <polygon points="15,25 -8,85 38,85" fill="#1b5e20"/>
+                        <polygon points="15,40 -3,80 33,80" fill="#2e7d32"/>
+                        <polygon points="15,50 3,75 27,75" fill="#388e3c"/>
+                        <circle cx="15" cy="25" r="5" fill="#ffeb3b"/>
+                        <circle cx="8" cy="55" r="3" fill="#e91e63"/>
+                        <circle cx="22" cy="62" r="3" fill="#00bcd4"/>
+                        <circle cx="12" cy="70" r="3" fill="#ff9800"/>
+                    </g>
+                    
+                    <!-- House 3 - cottage with snow -->
+                    <g transform="translate(350, 0)">
+                        <rect x="0" y="45" width="55" height="55" fill="#4e342e"/>
+                        <polygon points="-5,45 27,10 60,45" fill="#b71c1c"/>
+                        <!-- Snow on roof -->
+                        <path d="M-5,45 Q10,40 27,43 Q45,40 60,45" fill="white" opacity="0.8"/>
+                        <rect x="18" y="65" width="18" height="35" fill="#d7ccc8"/>
+                        <rect x="5" y="55" width="12" height="15" fill="#b3e5fc"/>
+                        <rect x="38" y="55" width="12" height="15" fill="#b3e5fc"/>
+                        <rect x="40" y="15" width="10" height="25" fill="#6d4c41"/>
+                        <circle cx="45" cy="10" r="4" fill="#cfd8dc" opacity="0.6"/>
+                    </g>
+                    
+                    <!-- Small tree -->
+                    <g transform="translate(420, 20)">
+                        <rect x="5" y="65" width="6" height="15" fill="#5d4037"/>
+                        <polygon points="8,35 -3,70 19,70" fill="#388e3c"/>
+                        <polygon points="8,45 0,65 16,65" fill="#43a047"/>
+                    </g>
+                    
+                    <!-- House 4 -->
+                    <g transform="translate(470, 0)">
+                        <rect x="0" y="40" width="70" height="60" fill="#5d4037"/>
+                        <polygon points="0,40 35,5 70,40" fill="#c62828"/>
+                        <rect x="25" y="60" width="20" height="40" fill="#bcaaa4"/>
+                        <rect x="5" y="50" width="15" height="18" fill="#e3f2fd"/>
+                        <rect x="50" y="50" width="15" height="18" fill="#e3f2fd"/>
+                        <rect x="55" y="10" width="10" height="25" fill="#8d6e63"/>
+                        <circle cx="60" cy="5" r="3" fill="#cfd8dc" opacity="0.5"/>
+                        <circle cx="62" cy="0" r="2" fill="#cfd8dc" opacity="0.3"/>
+                    </g>
+                    
+                    <!-- Christmas Tree 3 - tall -->
+                    <g transform="translate(560, 0)">
+                        <rect x="12" y="82" width="12" height="18" fill="#4e342e"/>
+                        <polygon points="18,15 -5,88 41,88" fill="#1b5e20"/>
+                        <polygon points="18,30 0,82 36,82" fill="#2e7d32"/>
+                        <polygon points="18,42 5,75 31,75" fill="#388e3c"/>
+                        <circle cx="18" cy="15" r="6" fill="#ffc107"/>
+                        <circle cx="10" cy="50" r="3" fill="#f44336"/>
+                        <circle cx="26" cy="45" r="3" fill="#2196f3"/>
+                        <circle cx="14" cy="65" r="3" fill="#ffd700"/>
+                        <circle cx="24" cy="60" r="3" fill="#e91e63"/>
+                    </g>
+                    
+                    <!-- House 5 - church/tall building -->
+                    <g transform="translate(620, 0)">
+                        <rect x="10" y="30" width="40" height="70" fill="#6d4c41"/>
+                        <polygon points="10,30 30,0 50,30" fill="#d32f2f"/>
+                        <circle cx="30" cy="15" r="3" fill="#ffd700"/>
+                        <rect x="22" y="70" width="16" height="30" fill="#a1887f"/>
+                        <circle cx="30" cy="50" r="10" fill="#fff9c4" opacity="0.8"/>
+                    </g>
+                    
+                    <!-- Small trees cluster -->
+                    <g transform="translate(700, 15)">
+                        <rect x="5" y="60" width="5" height="12" fill="#5d4037"/>
+                        <polygon points="7,35 -2,65 16,65" fill="#388e3c"/>
+                    </g>
+                    <g transform="translate(720, 10)">
+                        <rect x="6" y="65" width="6" height="14" fill="#5d4037"/>
+                        <polygon points="9,30 -3,70 21,70" fill="#2e7d32"/>
+                    </g>
+                    
+                    <!-- House 6 -->
+                    <g transform="translate(780, 0)">
+                        <rect x="0" y="50" width="50" height="50" fill="#5d4037"/>
+                        <polygon points="0,50 25,20 50,50" fill="#b71c1c"/>
+                        <rect x="17" y="70" width="16" height="30" fill="#d7ccc8"/>
+                        <rect x="5" y="58" width="10" height="12" fill="#b3e5fc"/>
+                        <rect x="35" y="58" width="10" height="12" fill="#b3e5fc"/>
+                        <rect x="38" y="25" width="8" height="20" fill="#795548"/>
+                    </g>
+                    
+                    <!-- Christmas Tree 4 -->
+                    <g transform="translate(860, 0)">
+                        <rect x="8" y="85" width="8" height="15" fill="#5d4037"/>
+                        <polygon points="12,30 -5,90 29,90" fill="#2e7d32"/>
+                        <polygon points="12,45 -2,85 26,85" fill="#388e3c"/>
+                        <circle cx="12" cy="30" r="4" fill="#ffeb3b"/>
+                        <circle cx="7" cy="60" r="3" fill="#f44336"/>
+                        <circle cx="17" cy="70" r="3" fill="#03a9f4"/>
+                    </g>
+                    
+                    <!-- House 7 -->
+                    <g transform="translate(920, 0)">
+                        <rect x="0" y="38" width="65" height="62" fill="#4e342e"/>
+                        <polygon points="0,38 32,5 65,38" fill="#c62828"/>
+                        <rect x="22" y="60" width="20" height="40" fill="#a1887f"/>
+                        <rect x="5" y="48" width="14" height="16" fill="#e1f5fe"/>
+                        <rect x="46" y="48" width="14" height="16" fill="#e1f5fe"/>
+                        <rect x="50" y="10" width="10" height="23" fill="#6d4c41"/>
+                        <circle cx="55" cy="5" r="4" fill="#cfd8dc" opacity="0.5"/>
+                    </g>
+                </g>
+                
+                <!-- Copy segment 2 -->
+                <use href="#village-segment" transform="translate(1000, 0)"/>
+                
+                <!-- Copy segment 3 -->
+                <use href="#village-segment" transform="translate(2000, 0)"/>
+            </svg>
+            
+            <!-- Snow hills -->
+            <div class="snow-hills" id="snow-hills"></div>
+            
+            <div class="snow-base"></div>
+        </div>
+    </div>
+
+    <script>
+        // Create stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 150; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 60 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDuration = (2 + Math.random() * 2) + 's';
+            const size = Math.random() * 2 + 1;
+            star.style.width = size + 'px';
+            star.style.height = size + 'px';
+            starsContainer.appendChild(star);
+        }
+
+        // Create snow hills
+        const snowHillsContainer = document.getElementById('snow-hills');
+        let hillPosition = 0;
+        while (hillPosition < 4000) {
+            const hill = document.createElement('div');
+            hill.className = 'snow-hill';
+            const width = 60 + Math.random() * 100;
+            const height = 15 + Math.random() * 25;
+            hill.style.width = width + 'px';
+            hill.style.height = height + 'px';
+            hill.style.left = hillPosition + 'px';
+            snowHillsContainer.appendChild(hill);
+            hillPosition += width * 0.6;
+        }
+
+        // Create snowflakes
+        for (let i = 0; i < 50; i++) {
+            const snow = document.createElement('div');
+            snow.className = 'snowflake';
+            snow.innerHTML = '❄';
+            snow.style.left = Math.random() * 100 + '%';
+            snow.style.fontSize = (8 + Math.random() * 12) + 'px';
+            snow.style.animationDuration = (5 + Math.random() * 10) + 's';
+            snow.style.animationDelay = Math.random() * 10 + 's';
+            document.querySelector('.container').appendChild(snow);
+        }
+
+        // Create snow sparkles on the ground
+        const ground = document.querySelector('.ground');
+        for (let i = 0; i < 30; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'snow-sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.bottom = (5 + Math.random() * 25) + 'px';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            ground.appendChild(sparkle);
+        }
+
+        // Tariff data with colors
+        const tariffs = [
+            { country: 'China', flag: '🇨🇳', amount: '$2,847', color: '#e53935', rate: '145%' },
+            { country: 'European Union', flag: '🇪🇺', amount: '$1,245', color: '#1e88e5', rate: '20%' },
+            { country: 'Japan', flag: '🇯🇵', amount: '$892', color: '#e91e63', rate: '0%' },
+            { country: 'Mexico', flag: '🇲🇽', amount: '$1,567', color: '#43a047', rate: '25%' },
+            { country: 'Canada', flag: '🇨🇦', amount: '$734', color: '#d32f2f', rate: '25%' },
+            { country: 'Vietnam', flag: '🇻🇳', amount: '$2,103', color: '#ff9800', rate: '46%' },
+            { country: 'South Korea', flag: '🇰🇷', amount: '$445', color: '#3949ab', rate: '25%' },
+            { country: 'India', flag: '🇮🇳', amount: '$1,890', color: '#ff5722', rate: '26%' },
+            { country: 'Taiwan', flag: '🇹🇼', amount: '$1,456', color: '#00897b', rate: '32%' },
+            { country: 'Germany', flag: '🇩🇪', amount: '$1,122', color: '#fdd835', rate: '20%' },
+        ];
+
+        let tariffIndex = 0;
+
+        function createTariffPopup() {
+            const santa = document.getElementById('santa-container');
+            const santaRect = santa.getBoundingClientRect();
+            
+            // Only show popup if Santa is visible on screen
+            if (santaRect.left < -100 || santaRect.left > window.innerWidth - 100) {
+                return;
+            }
+
+            const popup = document.createElement('div');
+            popup.className = 'tariff-popup';
+            
+            const tariff = tariffs[tariffIndex];
+            
+            popup.innerHTML = `
+                <div class="tariff-card">
+                    <div class="tariff-country">
+                        <span class="tariff-flag">${tariff.flag}</span>
+                        <span>${tariff.country}</span>
+                    </div>
+                    <div class="tariff-amount" style="color: ${tariff.color}">${tariff.amount}</div>
+                    <div class="tariff-label">Tariff @ ${tariff.rate}</div>
+                </div>
+                <div class="tariff-connector"></div>
+            `;
+            
+            // Position above Santa (adjusted for new layout - Santa is now on left side)
+            popup.style.left = (santaRect.left + 80) + 'px';
+            popup.style.top = (santaRect.top - 60) + 'px';
+            
+            document.body.appendChild(popup);
+            
+            // Trigger animation
+            requestAnimationFrame(() => {
+                popup.classList.add('show');
+            });
+
+            // Remove after animation
+            setTimeout(() => {
+                popup.remove();
+            }, 2500);
+
+            tariffIndex = (tariffIndex + 1) % tariffs.length;
+        }
+
+        // Pop tariffs regularly
+        setInterval(createTariffPopup, 1800);
+        
+        // Initial popup
+        setTimeout(createTariffPopup, 1000);
+    </script>
+</body>
+</html>
