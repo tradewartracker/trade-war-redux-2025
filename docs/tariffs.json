@@ -2,140 +2,140 @@
   {
     "country": "China",
     "flag": "https://flagcdn.com/w40/cn.png",
-    "amount": "$39,196",
+    "amount": "$392",
     "color": "#DE2910",
     "rate": "39%"
   },
   {
     "country": "Brazil",
     "flag": "https://flagcdn.com/w40/br.png",
-    "amount": "$19,921",
+    "amount": "$199",
     "color": "#009B3A",
     "rate": "20%"
   },
   {
     "country": "India",
     "flag": "https://flagcdn.com/w40/in.png",
-    "amount": "$18,507",
+    "amount": "$185",
     "color": "#FF9933",
     "rate": "19%"
   },
   {
     "country": "Indonesia",
     "flag": "https://flagcdn.com/w40/id.png",
-    "amount": "$18,605",
+    "amount": "$186",
     "color": "#FF0000",
     "rate": "19%"
   },
   {
     "country": "Vietnam",
     "flag": "https://flagcdn.com/w40/vn.png",
-    "amount": "$16,318",
+    "amount": "$163",
     "color": "#DA251D",
     "rate": "16%"
   },
   {
     "country": "Korea, South",
     "flag": "https://flagcdn.com/w40/kr.png",
-    "amount": "$17,327",
+    "amount": "$173",
     "color": "#003478",
     "rate": "17%"
   },
   {
     "country": "Japan",
     "flag": "https://flagcdn.com/w40/jp.png",
-    "amount": "$16,722",
+    "amount": "$167",
     "color": "#BC002D",
     "rate": "17%"
   },
   {
     "country": "Thailand",
     "flag": "https://flagcdn.com/w40/th.png",
-    "amount": "$15,031",
+    "amount": "$150",
     "color": "#2D2A4A",
     "rate": "15%"
   },
   {
     "country": "Switzerland",
     "flag": "https://flagcdn.com/w40/ch.png",
-    "amount": "$9,431",
+    "amount": "$94",
     "color": "#FF0000",
     "rate": "9%"
   },
   {
     "country": "Germany",
     "flag": "https://flagcdn.com/w40/de.png",
-    "amount": "$13,248",
+    "amount": "$132",
     "color": "#FFCE00",
     "rate": "13%"
   },
   {
     "country": "Taiwan",
     "flag": "https://flagcdn.com/w40/tw.png",
-    "amount": "$9,442",
+    "amount": "$94",
     "color": "#000095",
     "rate": "9%"
   },
   {
     "country": "Italy",
     "flag": "https://flagcdn.com/w40/it.png",
-    "amount": "$11,230",
+    "amount": "$112",
     "color": "#009246",
     "rate": "11%"
   },
   {
     "country": "Malaysia",
     "flag": "https://flagcdn.com/w40/my.png",
-    "amount": "$9,234",
+    "amount": "$92",
     "color": "#CC0001",
     "rate": "9%"
   },
   {
     "country": "France",
     "flag": "https://flagcdn.com/w40/fr.png",
-    "amount": "$9,161",
+    "amount": "$92",
     "color": "#0055A4",
     "rate": "9%"
   },
   {
     "country": "Netherlands",
     "flag": "https://flagcdn.com/w40/nl.png",
-    "amount": "$7,040",
+    "amount": "$70",
     "color": "#FF6600",
     "rate": "7%"
   },
   {
     "country": "Canada",
     "flag": "https://flagcdn.com/w40/ca.png",
-    "amount": "$5,003",
+    "amount": "$50",
     "color": "#FF0000",
     "rate": "5%"
   },
   {
     "country": "Mexico",
     "flag": "https://flagcdn.com/w40/mx.png",
-    "amount": "$5,570",
+    "amount": "$56",
     "color": "#006847",
     "rate": "6%"
   },
   {
     "country": "United Kingdom",
     "flag": "https://flagcdn.com/w40/gb.png",
-    "amount": "$5,863",
+    "amount": "$59",
     "color": "#012169",
     "rate": "6%"
   },
   {
     "country": "Singapore",
     "flag": "https://flagcdn.com/w40/sg.png",
-    "amount": "$2,275",
+    "amount": "$23",
     "color": "#EE2737",
     "rate": "2%"
   },
   {
     "country": "Ireland",
     "flag": "https://flagcdn.com/w40/ie.png",
-    "amount": "$1,600",
+    "amount": "$16",
     "color": "#169B62",
     "rate": "2%"
   }
