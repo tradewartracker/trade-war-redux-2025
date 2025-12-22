@@ -253,7 +253,10 @@
         }
 
         .tariff-flag {
-            font-size: 20px;
+            width: 24px;
+            height: 18px;
+            object-fit: cover;
+            border-radius: 2px;
         }
 
         .tariff-amount {
@@ -711,16 +714,16 @@
 
         // Tariff data with colors
         const tariffs = [
-            { country: 'China', flag: '🇨🇳', amount: '$2,847', color: '#e53935', rate: '145%' },
-            { country: 'European Union', flag: '🇪🇺', amount: '$1,245', color: '#1e88e5', rate: '20%' },
-            { country: 'Japan', flag: '🇯🇵', amount: '$892', color: '#e91e63', rate: '0%' },
-            { country: 'Mexico', flag: '🇲🇽', amount: '$1,567', color: '#43a047', rate: '25%' },
-            { country: 'Canada', flag: '🇨🇦', amount: '$734', color: '#d32f2f', rate: '25%' },
-            { country: 'Vietnam', flag: '🇻🇳', amount: '$2,103', color: '#ff9800', rate: '46%' },
-            { country: 'South Korea', flag: '🇰🇷', amount: '$445', color: '#3949ab', rate: '25%' },
-            { country: 'India', flag: '🇮🇳', amount: '$1,890', color: '#ff5722', rate: '26%' },
-            { country: 'Taiwan', flag: '🇹🇼', amount: '$1,456', color: '#00897b', rate: '32%' },
-            { country: 'Germany', flag: '🇩🇪', amount: '$1,122', color: '#fdd835', rate: '20%' },
+            { country: 'China', flag: 'https://flagcdn.com/w40/cn.png', amount: '$2,847', color: '#e53935', rate: '145%' },
+            { country: 'European Union', flag: 'https://flagcdn.com/w40/eu.png', amount: '$1,245', color: '#1e88e5', rate: '20%' },
+            { country: 'Japan', flag: 'https://flagcdn.com/w40/jp.png', amount: '$892', color: '#e91e63', rate: '0%' },
+            { country: 'Mexico', flag: 'https://flagcdn.com/w40/mx.png', amount: '$1,567', color: '#43a047', rate: '25%' },
+            { country: 'Canada', flag: 'https://flagcdn.com/w40/ca.png', amount: '$734', color: '#d32f2f', rate: '25%' },
+            { country: 'Vietnam', flag: 'https://flagcdn.com/w40/vn.png', amount: '$2,103', color: '#ff9800', rate: '46%' },
+            { country: 'South Korea', flag: 'https://flagcdn.com/w40/kr.png', amount: '$445', color: '#3949ab', rate: '25%' },
+            { country: 'India', flag: 'https://flagcdn.com/w40/in.png', amount: '$1,890', color: '#ff5722', rate: '26%' },
+            { country: 'Taiwan', flag: 'https://flagcdn.com/w40/tw.png', amount: '$1,456', color: '#00897b', rate: '32%' },
+            { country: 'Germany', flag: 'https://flagcdn.com/w40/de.png', amount: '$1,122', color: '#fdd835', rate: '20%' },
         ];
 
         let tariffIndex = 0;
@@ -742,7 +745,7 @@
             popup.innerHTML = `
                 <div class="tariff-card">
                     <div class="tariff-country">
-                        <span class="tariff-flag">${tariff.flag}</span>
+                        <img class="tariff-flag" src="${tariff.flag}" alt="${tariff.country} flag">
                         <span>${tariff.country}</span>
                     </div>
                     <div class="tariff-amount" style="color: ${tariff.color}">${tariff.amount}</div>
