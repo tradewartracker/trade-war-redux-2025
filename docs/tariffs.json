@@ -85,9 +85,9 @@
   },
   {
     "country": "Malaysia",
-    "flag": NaN,
+    "flag": "https://flagcdn.com/w40/my.png",
     "amount": "$9,234",
-    "color": NaN,
+    "color": "#CC0001",
     "rate": "9%"
   },
   {
