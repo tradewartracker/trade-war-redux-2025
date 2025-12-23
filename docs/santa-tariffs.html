@@ -85,6 +85,11 @@
             animation: flyAcross 14s linear infinite, bobbing 2s ease-in-out infinite;
         }
 
+         /* Pause animation on hover */
+        .santa-container:hover {
+            animation-play-state: paused;
+        }
+
         @keyframes flyAcross {
             0% { left: -450px; }
             100% { left: 110%; }
@@ -297,6 +302,11 @@
             height: 120px;
             animation: villageScroll 30s linear infinite;
             z-index: 2;
+        }
+
+        .ground:hover .village,
+        .ground:hover .snow-hills {
+            animation-play-state: paused;
         }
 
         @keyframes villageScroll {
