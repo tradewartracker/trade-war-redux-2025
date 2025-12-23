@@ -484,7 +484,7 @@
                     <div class="reindeer">🦌</div>
                     <div class="reindeer">🦌</div>
                     <div class="reindeer">🦌</div>
-                    <div class="reindeer">🦌</div>
+                    <div class="reindeer" style="filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4)) drop-shadow(0 0 8px red);">🦌</div>
                 </div>
             </div>
         </div>
@@ -721,6 +721,9 @@
             try {
                 const response = await fetch('https://tradewartracker.github.io/trade-war-redux-2025/tariffs.json');
                 tariffs = await response.json();
+
+                // Randomize the order
+                tariffs.sort(() => Math.random() - 0.5);
                 
                 // Start the animation once data is loaded
                 setInterval(createTariffPopup, 1800);
