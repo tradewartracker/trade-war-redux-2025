@@ -104,14 +104,14 @@
         /* Reindeer - now on the RIGHT side (front) */
         .reindeer-team {
             position: absolute;
-            right: 0;
-            top: 35px;
+            right: -155px;
+            top: 20px;
             display: flex;
             gap: 5px;
         }
 
         .reindeer {
-            font-size: 45px;
+            font-size: 75px;
             filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.4));
             transform: scaleX(-1); /* Flip to face right */
             animation: reindeerRun 0.25s ease-in-out infinite alternate;
@@ -130,7 +130,7 @@
             100% { transform: scaleX(-1) translateY(-4px) rotate(3deg); }
         }
 
-        /* Reins - connecting sleigh to reindeer */
+        /* Reins - connecting sleigh to reindeer
         .reins-container {
             position: absolute;
             right: 85px;
@@ -156,23 +156,23 @@
             width: 90px;
             top: 15px;
             transform: rotate(-5deg);
-        }
+        } */
 
         /* Sleigh SVG - now facing right */
         .sleigh-svg {
             position: absolute;
             left: 0;
             top: 15px;
-            width: 250px;
-            height: 140px;
+            width: 187px;
+            height: 105px;
         }
 
         /* Santa figure - now on left side of sleigh */
         .santa-figure {
             position: absolute;
-            left: 55px;
-            top: -25px;
-            font-size: 75px;
+            left: 30px;
+            top: -30px;
+            font-size: 90px;
             filter: drop-shadow(2px 4px 8px rgba(0,0,0,0.5));
             transform: scaleX(-1); /* Face right */
         }
@@ -473,14 +473,15 @@
                 <!-- Santa -->
                 <div class="santa-figure">🎅</div>
                 
-                <!-- Reins -->
+                <!-- Reins
                 <div class="reins-container">
                     <div class="rein rein-top"></div>
                     <div class="rein rein-bottom"></div>
-                </div>
+                </div> -->
                 
                 <!-- Reindeer team at front (right side) -->
                 <div class="reindeer-team">
+                    <div class="reindeer">🦌</div>
                     <div class="reindeer">🦌</div>
                     <div class="reindeer">🦌</div>
                     <div class="reindeer">🦌</div>
