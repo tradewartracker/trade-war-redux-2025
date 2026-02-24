@@ -1,22 +1,43 @@
-## Readme file for trade-war-redux-2025 
+## trade-war-redux-2025
 
 <p float="left" align="middle">
-  <img src="tariff-fig.png" width="875" /> 
+  <img src="tariff-fig.png" width="875" />
 </p>
 
+Updated: 2026-02-24
 
-**Updated on 9/22/25**: This readme outlines calculations that go into tracking the US tariff actions. 
+This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
-The ``.csv'' files discussed below will retain their naming conventions so they can be linked to directly for users purposes.
+## Primary workflow
 
-There are two noteboks behind the results. 
+1. [make-tariff-by-country-by-time.ipynb](make-tariff-by-country-by-time.ipynb)
+   - Builds country/time tariff panel data.
+   - Writes [country-by-time.csv](country-by-time.csv) and [daily-tariff-latest-data.csv](daily-tariff-latest-data.csv).
 
-1. The file [make-tariff-by-country-by-time.ipynb](make-tariff-by-country-by-time.ipynb) builds a data set which constructs by time of announcement, by country, tariff rates. The underlying data file is [country-by-time.csv](country-by-time.csv) which is tariff rates, by time, by country for the top 50 trading partners of the U.S.  The file ["daily-tariff-latest-data.csv"](daily-tariff-latest-data.csv) is the daily, aggregate (trade weighted) average tariff rate.  
+2. [plot-tariff-by-country-by-time.ipynb](plot-tariff-by-country-by-time.ipynb)
+   - Reads the latest output files and produces website charts/tabs.
+   - Uses [federal-tax-duty.csv](federal-tax-duty.csv) and [NIPA-imports.csv](NIPA-imports.csv) for historical tariff calculations.
 
+3. [get-country-hs2-tariff.ipynb](get-country-hs2-tariff.ipynb)
+   - Generates country-by-HS2 tariff outputs in [data-hs2](data-hs2).
 
-2. The file [plot-tariff-by-country-by-time.ipynb](plot-tariff-by-country-by-time.ipynb) constructs the graphics on the website. The first tab is the aggregate, daily tariff rate. This starts from the base applied tariff rate for 2024 and estimates how the U.S. tariff rate has changed over time. The second tab are current tariff rates across different countries. The third tab is the historical series. 
+## Key folders
 
-There is an additional notebook and data that may be of interest. The notebook [get-country-hs2-tariff.ipynb](get-country-hs2-tariff.ipynb) creates country by hs2 tariff rates for all 200+ countries in the world and creates country-specific files. The [data-hs2](./data-hs2) folder contains these files. 
+- [data](data): source and helper data files.
+- [data-hs2](data-hs2): generated HS2 tariff output files.
+- [docs](docs): rendered HTML/chart outputs.
+- [tariff-lists](tariff-lists): input tariff schedule/list files.
+- [old-data](old-data): archived historical datasets not used by the main notebooks.
+- [old-code](old-code): archived notebooks and code no longer part of the main workflow.
+- [old-files](old-files): prior archive folder kept for backward compatibility.
 
-The graphic plotting the long time series of applied tariffs uses the data set [federal-tax-duty.csv](federal-tax-duty.csv).
+## Cleanup notes (2026-02-24)
+
+- Moved historical snapshots to [old-data](old-data):
+  - [tariff-summary-05-22-2025.csv](old-data/tariff-summary-05-22-2025.csv)
+  - [tariff-summary-06-03-2025.csv](old-data/tariff-summary-06-03-2025.csv)
+- Moved legacy notebooks to [old-code](old-code):
+  - [clean-aug7-list.ipynb](old-code/clean-aug7-list.ipynb)
+  - [make-tariff-by-country-by-time-new.ipynb](old-code/make-tariff-by-country-by-time-new.ipynb)
+  - [tariff-summary.ipynb](old-code/tariff-summary.ipynb)
 
