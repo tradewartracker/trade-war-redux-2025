@@ -4,7 +4,7 @@
   <img src="tariff-fig.png" width="875" />
 </p>
 
-Updated: 2026-02-24
+Updated: 2026-04-03
 
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
@@ -20,6 +20,16 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
 
 3. [get-country-hs2-tariff.ipynb](get-country-hs2-tariff.ipynb)
    - Generates country-by-HS2 tariff outputs in [data-hs2](data-hs2).
+
+## Standalone analysis notebooks
+
+4. [revenue-analysis.ipynb](revenue-analysis.ipynb)
+   - Estimates 2025 tariff revenue using Census import data and the tariff engine.
+   - Self-contained: includes its own copy of the tariff engine pipeline (masks, apply functions, action registry).
+
+5. [section-122-analysis.ipynb](section-122-analysis.ipynb)
+   - Analyzes Section 122 surcharge exemption coverage and the pre/post SCOTUS tariff shift.
+   - Reads [country-by-time.csv](country-by-time.csv) from the main notebook; must be run after (1).
 
 ## Key folders
 
@@ -67,6 +77,7 @@ The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS`
 | Dec 4, 2025 | Section 232 | ITA notice (90 FR 55964) | South Korea auto deal at 15% |
 | Feb 20, 2026 | Section 232 (surviving) | EO "Ending Certain Tariff Actions" — 232 preserved | Re-apply surviving 232 tariffs: steel/aluminum 50% (UK 25%), autos (25%, deal rates for UK/JP/EU/KR), copper 50% |
 | Feb 24, 2026 | Section 122 | Proclamation Annex I, subdivision (aa)(ii) | Product exemptions from surcharge: energy (Ch. 27), critical minerals, pharma, ag, electronics, fertilizers, semiconductors, etc. (~1,098 HS codes) |
+| Apr 6, 2026 | Section 232 | Proclamation "Strengthening Actions..." (Apr 2, 2026) | Metals tiered restructuring: Annex I-A 50% (UK 25%), Annex I-B 25% (UK 15%), Annex III ~15% temp (through 2027), Annex II exempt; Russian alu 200% |
 
 ### Actions not yet incorporated
 
@@ -89,4 +100,15 @@ The following Section 232 actions require product-level HS code lists not yet av
   - [clean-aug7-list.ipynb](old-code/clean-aug7-list.ipynb)
   - [make-tariff-by-country-by-time-new.ipynb](old-code/make-tariff-by-country-by-time-new.ipynb)
   - [tariff-summary.ipynb](old-code/tariff-summary.ipynb)
+
+## Cleanup notes (2026-04-03)
+
+- Extracted revenue analysis (2025 tariff revenue estimate) from the main notebook into [revenue-analysis.ipynb](revenue-analysis.ipynb).
+- Extracted Section 122 exemption and SCOTUS analysis from the main notebook into [section-122-analysis.ipynb](section-122-analysis.ipynb).
+- Added April 6, 2026 Section 232 metals tiered restructuring (Proclamation of Apr 2, 2026) to the tariff engine.
+- Added four new tariff list files for the metals restructuring:
+  - [metals-annex-IA.csv](tariff-lists/metals-annex-IA.csv) — 50% tier (279 HS codes)
+  - [metals-annex-IB.csv](tariff-lists/metals-annex-IB.csv) — 25% tier (388 HS codes)
+  - [metals-annex-II-removed.csv](tariff-lists/metals-annex-II-removed.csv) — removed from scope (165 HS codes)
+  - [metals-annex-III-temporary.csv](tariff-lists/metals-annex-III-temporary.csv) — temporary ~15% rate through 2027 (47 HS codes)
 
