@@ -4,7 +4,7 @@
   <img src="tariff-fig.png" width="875" />
 </p>
 
-Updated: 2026-07-20
+Updated: 2026-07-21
 
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
@@ -37,6 +37,14 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
    - Imports the tariff engine directly from the main notebook (executes its code cells
      up to `tariff_imports`), so it holds no duplicate copy of the masks or registry.
 
+7. [canada-338-analysis.ipynb](canada-338-analysis.ipynb)
+   - Coverage, incidence and rate impact of the three Aug 19, 2026 Section 338 actions
+     on Canada: what is hit, what is not, top products, and a decomposition of the
+     +1.85pp rate step against the +2.48pp naive figure.
+   - Quantifies both known biases (chapter 44 wood, the HS6 auto-parts mask).
+   - Writes figures to [figures](figures); must be run after (1).
+   - Imports the tariff engine from the main notebook, same as (6).
+
 ## Helper scripts
 
 - [extract-301-exemptions.py](extract-301-exemptions.py)
@@ -45,6 +53,23 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
   - Asserts the expected per-category code counts and fails loudly on a mismatch —
     update the counts in `SUBDIVISIONS` for each new notice.
   - Usage: `python extract-301-exemptions.py <notice.pdf> <out.csv>`
+
+- [extract-338-annex.py](extract-338-annex.py)
+  - Extracts the target basket of each Section 338 proclamation, plus the shared
+    civil-aircraft carve-out, into CSVs with `HTSUS` and `description` columns.
+  - Cross-checks Annex I (descriptive) against Annex II (HTSUS legal text). The two
+    restate the same codes, so disagreement means a bad parse. Unlike the hardcoded
+    counts in the 301 script, this guard needs no per-notice maintenance.
+  - Add a new action by appending to the `ACTIONS` table; no other change needed.
+  - Usage: `python extract-338-annex.py`
+
+- [validate-338.py](validate-338.py)
+  - Independent second opinion on the Section 338 lists: re-parses the annexes with a
+    different method, checks the lists against observed trade data, and asserts the
+    economic magnitudes quoted downstream so a silent list change cannot move the
+    published numbers unnoticed.
+  - Imports its config from `extract-338-annex.py` so the two cannot disagree.
+  - Usage: `python validate-338.py` (exits non-zero on failure)
 
 ## Key folders
 
@@ -58,7 +83,7 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
 
 ## Tariff events tracked in `make-tariff-by-country-by-time.ipynb`
 
-The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS` registry applied chronologically. Each action carries its effective date, legal authority, executive order/proclamation reference, and a short description. Actions are split into three phases: **Phase 1** resets country-level base rates (IEEPA / Section 122 layer); **Phase 2** stamps sector-specific tariffs and product exemptions on top; **Phase 3** applies Section 301 country actions, which *add* to the rate already in place rather than replacing it, and carve out goods already subject to Section 232.
+The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS` registry applied chronologically. Each action carries its effective date, legal authority, executive order/proclamation reference, and a short description. Actions are split into three phases: **Phase 1** resets country-level base rates (IEEPA / Section 122 layer); **Phase 2** stamps sector-specific tariffs and product exemptions on top; **Phase 3** applies stacked country actions (Section 301 and Section 338), which *add* to the rate already in place rather than replacing it, and carve out goods already subject to Section 232.
 
 ### Phase 1 — Country-level base rates
 
@@ -76,7 +101,7 @@ The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS`
 | Dec 4, 2025 | IEEPA | ITA notice (90 FR 55964) | South Korea deal: 15% reciprocal ceiling |
 | Feb 7, 2026 | IEEPA | EO suspending EO 14329; U.S.-India framework | India: Russian oil tariff removed, reciprocal reduced to 18% |
 | Feb 20, 2026 | Executive Order | EO "Ending Certain Tariff Actions" | Supreme Court rules IEEPA does not authorize tariffs (*V.O.S. Selections v. United States*, 6-3); all IEEPA ad valorem duties revoked; Section 232 and 301 preserved; base rates zeroed |
-| Feb 24, 2026 | Section 122 | Proclamation "Imposing a Temporary Import Surcharge" | 10% universal surcharge (150-day balance-of-payments emergency); Canada/Mexico USMCA-compliant goods exempt. Lapses after Jul 24, 2026 (`end_date`) |
+| Feb 24, 2026 | Section 122 | Proclamation "Imposing a Temporary Import Surcharge" | 10% universal surcharge (150-day balance-of-payments emergency); Canada/Mexico USMCA-compliant goods exempt. Annex I terminates the surcharge *at* 12:01 a.m. Jul 24, so the last covered day is Jul 23 (`end_date`) |
 
 ### Phase 2 — Sector overrides and product exemptions
 
@@ -94,18 +119,28 @@ The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS`
 | Feb 24, 2026 | Section 122 | Proclamation Annex I, subdivision (aa)(ii) | Product exemptions from surcharge: energy (Ch. 27), critical minerals, pharma, ag, electronics, fertilizers, semiconductors, etc. (~1,098 HS codes) |
 | Apr 6, 2026 | Section 232 | Proclamation "Strengthening Actions..." (Apr 2, 2026) | Metals tiered restructuring: Annex I-A 50% (UK 25%), Annex I-B 25% (UK 15%), Annex III ~15% temp (through 2027), Annex II exempt; Russian alu 200% |
 
-### Phase 3 — Section 301 country actions
+### Phase 3 — Stacked country actions (Section 301, Section 338)
 
-Section 301 (19 U.S.C. §§2411–20) is a separate legal layer from IEEPA and Section 232. It survived the Feb 20, 2026 SCOTUS ruling, and per U.S. note 50(a)(i) it **stacks** on top of other chapter 99 duties rather than replacing them. Goods already subject to Section 232 are carved out.
+Phase 3 holds country-level actions that **add** to the rate already in place rather than replacing it, and that carve out goods already subject to Section 232. Both properties require them to run after Phase 2. Two legal authorities sit here, and both survived the Feb 20, 2026 SCOTUS ruling on IEEPA:
 
-New 301 actions are added declaratively: extract the exemption list with [extract-301-exemptions.py](extract-301-exemptions.py), add the codes to `SECTION_301_EXEMPT_LISTS`, and append one entry to `SECTION_301_REGIMES`. No new logic is required.
+- **Section 301** (19 U.S.C. §§2411–20) — stacks per U.S. note 50(a)(i)
+- **Section 338** (19 U.S.C. §1338) — stacks per U.S. note 51(a); a dormant 1930 retaliation provision authorizing duties of up to 50% against a country that discriminates against U.S. commerce
+
+They differ in exactly one respect, captured by the `scope` field of `STACKED_REGIMES`: a 301 action covers **all** goods of a country except an exemption list, while a 338 action reaches only the codes **listed** in its annex. Every action in the phase is additive, so they commute and a country may carry several at once.
+
+New actions are added declaratively — extract the code list, register it in Section 2, and append one entry to `STACKED_REGIMES`. No new logic is required.
 
 | Date | Authority | Reference | Description |
 |------|-----------|-----------|-------------|
 | Jul 22, 2026 | Section 301 | USTR Notice of Action — Brazil (Jul 15, 2026) | 25% on all goods of Brazil; exemptions for 864 listed subheadings, 11 named articles, 546 civil-aircraft codes, 705 pharmaceutical-application codes, and all Section 232 sectors |
 | Jul 31, 2026 | Section 301 | USTR Notice Annex I.B — U.S. note 50(a)(vi)(8) | Patented pharmaceuticals added to the Brazil 232 carve-out (no effect — sector not modeled) |
+| Aug 19, 2026 | Section 338 | Proclamation on Canadian alcoholic beverages (Jul 20, 2026), heading 9903.03.12 | 50% on 63 enumerated Canadian codes (beverages, some wood and paper) |
+| Aug 19, 2026 | Section 338 | Proclamation on Canadian dairy (Jul 20, 2026), heading 9903.03.13 | 50% on 52 enumerated Canadian codes (milk products, sugars, caseins) |
+| Aug 19, 2026 | Section 338 | Proclamation on Canadian motor vehicles (Jul 20, 2026), heading 9903.03.14 | 50% on 439 enumerated Canadian codes across 56 chapters |
 
-Because Section 122 runs through Jul 24 and the Brazil 301 action begins Jul 22, the two overlap for three days. All start and end dates are modeled literally, so Brazil shows a brief spike (≈17.5%) on Jul 22–24 before settling at ≈13.3%.
+Because Section 122 runs through Jul 23 and the Brazil 301 action begins Jul 22, the two overlap for two days. All start and end dates are modeled literally, so Brazil shows a brief spike (≈17.5%) on Jul 22–23 before settling at ≈13.3%.
+
+The three Section 338 actions were issued the same day against Canada, all at 50%, all effective Aug 19, 2026, and all sharing a single U.S. note 51. Each retaliates for a distinct Canadian practice — provincial liquor-board bans, cheese TRQ allocation, and motor-vehicle tariffs and quotas — but the baskets deliberately target goods *other* than the offending sector, and are disjoint from one another. The civil-aircraft carve-out of note 51(d) (heading 9903.03.16, 554 codes) is enumerated once and shared by all three, so it is modeled as one exemption list referenced by three regimes. Neither the proclamations nor note 51 provide an in-transit grace window. Combined effect on Canada: **+1.85 pp** (5.64% → 7.49%), against +2.49 pp before carve-outs.
 
 ### Actions not yet incorporated
 
@@ -118,15 +153,46 @@ The following Section 232 actions require product-level HS code lists not yet av
 | Jan 15, 2026 | Section 232 | Proclamation 11002 | Semiconductors: 25% on narrow set of advanced chips |
 | — | Section 232 | Headings 9903.04.60–.66 | Patented pharmaceuticals |
 
-These omissions now have a second-order effect. Section 301 country actions exempt goods already subject to Section 232, so goods in these four unmodeled sectors receive the **full 301 rate when they should be exempt**, biasing the affected country's effective rate upward. This applies to every 301 action carrying the same carve-out, not just Brazil.
+These omissions now have a second-order effect. Every Phase 3 action exempts goods already subject to Section 232 — Section 301 via U.S. note 50(a)(vi), Section 338 via note 51(c) — so goods in these four unmodeled sectors receive the **full stacked rate when they should be exempt**, biasing the affected country's effective rate upward.
+
+For the Section 338 Canada baskets this is concentrated and locatable: note 51(c)(4) exempts wood products under headings 9903.76.01–.24, and **chapter 44 is the most-represented chapter in the autos basket — 64 of 439 codes, ~$1.2B of 2025 Canadian imports, 6% of that basket**. Resolving it requires the Proclamation 10976 code list, which is what blocks modeling the timber sector generally; fixing one fixes both. Deferred as of Jul 21, 2026.
 
 ### Modeling limitations
 
 - **End-use conditional exemptions are applied flat.** The Brazil 301 civil-aircraft exemption is conditional on meeting HTSUS general note 6, and the pharmaceutical exemption applies only to pharmaceutical end uses. Neither is resolvable from HS10 import data, so both are applied to every listed code. This **over-exempts**, partially offsetting the upward bias described above.
 - **In-transit relief is ignored.** Heading 9903.05.02 exempts goods loaded before Jul 22, 2026 and entered before Jul 29, 2026. Given Brazil–U.S. transit times, most goods entering that week are exempt in practice, so the modeled Jul 22 step overstates the rate for its first week. Consistent with prior actions carrying similar grace windows, none of which are modeled.
-- **Annex II interaction.** Products removed from Section 232 scope by the Apr 6, 2026 metals Annex II are no longer provided for in the 9903.82 headings, so they do *not* qualify for the 301 Section 232 carve-out. The model handles this explicitly (21 products, ~0.03% of U.S. imports from Brazil).
+- **Annex II interaction.** Products removed from Section 232 scope by the Apr 6, 2026 metals Annex II are no longer provided for in the 9903.82 headings, so they do *not* qualify for the Section 232 carve-out in either Phase 3 authority. The model handles this explicitly (21 products, ~0.03% of U.S. imports from Brazil).
+- **The auto-parts mask is coarse, and it now over-exempts.** `_mask_auto` matches part of the Proclamation 10908 list at HS6, including `853710`. Because Phase 3 carves out Section 232 goods, every good under HS8 8537.10.91 — industrial switchgear, panelboards and programmable controllers — is treated as an exempt auto part and escapes the Section 338 duty. That is **$1.6B of 2025 Canadian imports, and it removes 0.19 pp** from Canada's post-Aug 19 rate. Note 51(c)(3) exempts only parts *of passenger vehicles and light trucks*, so most of this value should be dutiable. The HS6 approximation predates the Section 338 work; it had little consequence while the auto list only ever *set* a rate, and became material once Phase 3 began reading it as an exemption.
 
 ---
+
+## Update notes (2026-07-21)
+
+- Generalized Phase 3 from "Section 301 country actions" into a **stacked country action**
+  layer covering both Section 301 and Section 338. `SECTION_301_REGIMES` became
+  `STACKED_REGIMES`, gaining `authority` and `scope` fields; `_mask_301_exempt` became
+  `_mask_stacked_exempt`, joined by a new `_mask_stacked_include` for inclusion-scoped
+  actions. The Section 232 carve-out logic was reused unchanged — notes 50(a)(vi) and
+  51(c) reference the same 9903.82 headings.
+- Exemption and include lists are now keyed by **list name rather than by regime**, so
+  several regimes can share one list. The three Section 338 actions share a single
+  civil-aircraft carve-out.
+- Added the three Section 338 Canada actions (alcohol, dairy, motor vehicles), all
+  effective Aug 19, 2026 at 50%.
+- Added four list files extracted from the proclamation annexes:
+  - [canada-338-alcohol.csv](tariff-lists/canada-338-alcohol.csv) — 63 codes
+  - [canada-338-dairy.csv](tariff-lists/canada-338-dairy.csv) — 52 codes
+  - [canada-338-autos.csv](tariff-lists/canada-338-autos.csv) — 439 codes
+  - [canada-338-aircraft-exempt.csv](tariff-lists/canada-338-aircraft-exempt.csv) — 554
+    codes, shared carve-out
+- Added [extract-338-annex.py](extract-338-annex.py) and [validate-338.py](validate-338.py).
+- **Fixed the Section 122 end-date off-by-one.** Annex I terminates the surcharge *at*
+  12:01 a.m. Jul 24, 2026, so the last covered day is Jul 23; the registry previously
+  carried `end_date: 2026-07-24` and the engine tests `date <= end_date`, applying the
+  surcharge one day too long. Rates are unaffected — only the width of the Brazil
+  overlap spike, now correctly Jul 22–23.
+- Documented two biases newly visible in the Section 338 results: the deferred chapter 44
+  wood carve-out (upward bias) and the coarse HS6 auto-parts mask (downward bias, 0.19 pp).
 
 ## Cleanup notes (2026-02-24)
 
