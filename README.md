@@ -57,7 +57,9 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
      charged 10%. It also redistributes sharply — 12.5%-tier countries pay more, while the
      10% tier, USMCA (Canada/Mexico), and the flat CAFTA-DR textile carve-out leave others
      lighter. Both regimes are compared on the same exemption basis (see the aircraft note
-     in the provisional-actions section).
+     in the forced-labor detail section). Note: this notebook models the **provisional**
+     Jun 5 proposal; the final Notice of Action (now live) is lighter (national step +0.5pp,
+     see the forced-labor detail) — a dedicated provisional-vs-final comparison is planned.
    - Writes figures to [figures](figures); must be run after (1).
 
 ## Helper scripts
@@ -164,34 +166,33 @@ New actions are added declaratively — extract the code list, register it in Se
 | Aug 19, 2026 | Section 338 | Proclamation on Canadian alcoholic beverages (Jul 20, 2026), heading 9903.03.12 | 50% on 63 enumerated Canadian codes (beverages, some wood and paper) |
 | Aug 19, 2026 | Section 338 | Proclamation on Canadian dairy (Jul 20, 2026), heading 9903.03.13 | 50% on 52 enumerated Canadian codes (milk products, sugars, caseins) |
 | Aug 19, 2026 | Section 338 | Proclamation on Canadian motor vehicles (Jul 20, 2026), heading 9903.03.14 | 50% on 439 enumerated Canadian codes across 56 chapters |
+| Jul 24, 2026 | Section 301 | USTR Notice of Actions — forced labor (Docket USTR–2026–0265/0266, Jul 23 2026) | 12.5% (10% for 18 economies) on all goods of 50 tracked economies; Annex II Part A (unconditional + pharmaceutical codes) and all Section 232 sectors exempt. Effective the day the Section 122 surcharge lapses. See the forced-labor detail below. |
 
 Because Section 122 runs through Jul 23 and the Brazil 301 action begins Jul 22, the two overlap for two days. All start and end dates are modeled literally, so Brazil shows a brief spike (≈17.5%) on Jul 22–23 before settling at ≈13.3%.
 
 The three Section 338 actions were issued the same day against Canada, all at 50%, all effective Aug 19, 2026, and all sharing a single U.S. note 51. Each retaliates for a distinct Canadian practice — provincial liquor-board bans, cheese TRQ allocation, and motor-vehicle tariffs and quotas — but the baskets deliberately target goods *other* than the offending sector, and are disjoint from one another. The civil-aircraft carve-out of note 51(d) (heading 9903.03.16, 554 codes) is enumerated once and shared by all three, so it is modeled as one exemption list referenced by three regimes. Neither the proclamations nor note 51 provide an in-transit grace window. Combined effect on Canada: **+1.85 pp** (5.82% → 7.67%), against +2.49 pp before carve-outs. (The 5.82%/7.67% levels sit ~0.18 pp above the pre-timber figures of 5.64%/7.49%, since the Section 232 timber action lifts Canada's whole curve from Oct 14 2025; the *step* is essentially unchanged.)
 
-### Provisional / staged actions (built but not in published output)
+#### Section 301 forced-labor action — detail
 
-Some actions are modeled ahead of taking legal effect so that the eventual final action is a diff, not a rebuild. These are wired into the engine but **staged off** behind a flag, so they do **not** change `country-by-time.csv` or `daily-tariff-latest-data.csv` until deliberately activated.
+Effective **Jul 24, 2026** (Docket USTR–2026–0265/0266, issued Jul 23 2026), the day the Section 122 surcharge lapses. USTR determined that 60 investigated economies failed to impose and/or effectively enforce a forced-labor import prohibition, and imposes additional duties on all their goods with exemptions. 50 of the 60 economies are in the panel's country universe (32 at 12.5%, 18 at 10%).
 
-| Date | Authority | Reference | Status |
-|------|-----------|-----------|--------|
-| TBD (placeholder 2026-09-01) | Section 301 | USTR Notice of *Determinations*, forced labor (FR Doc 2026-11296, Jun 5 2026) | **Provisional** — proposed action only |
+Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economies-FINAL.csv](tariff-lists/301-labor-economies-FINAL.csv), one per tracked economy, `scope="all"`, carving out Section 232 goods per U.S. note 50(a)(vi) — identical mechanics to the Brazil 301 action, gated live by `LABOR_301_LIVE = True`. Aggregate effect: the national import-weighted average rises **+0.50 pp** on Jul 24 (10.89% → 11.39%) as the 10% Section 122 surcharge is replaced by the labor duty — the labor action slightly more than replaces the surcharge.
 
-The forced-labor notice is a determination plus a *proposed* action and request for comments/hearings — no effective date, no 9903 heading, no final rate. USTR determined 60 investigated economies failed to impose and effectively enforce a forced-labor import prohibition, and proposes additional duties of **12.5%** on their goods, reduced to **10%** for economies with commitments or a partial regime (Argentina, Bangladesh, Cambodia, Ecuador, El Salvador, Guatemala, Indonesia, Malaysia, Taiwan, and the United Kingdom), except goods in Annex A. It is a near-universal action: 50 of the 60 economies are in the panel's country universe (40 at 12.5%, 10 at 10%).
+**Rate tiers.**
 
-Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economies.csv](tariff-lists/301-labor-economies.csv), one per tracked economy, `scope="all"`, carving out Section 232 goods per U.S. note 50(a)(vi) — identical mechanics to the Brazil 301 action. The `LABOR_301_LIVE` flag in the notebook gates whether they are applied; while `False` the published panel is byte-identical. Activation, once a Notice of Action issues: run `validate-301-labor.py` in diff mode, set the real effective date, add it to `date_strings`, and flip the flag.
+- **10%** on 18 tracked economies (imposed a prohibition or made ART/commitments): Argentina, Bangladesh, Cambodia, Canada, Ecuador, El Salvador, EU, Guatemala, Honduras, India, Indonesia, Malaysia, Mexico, Pakistan, Sri Lanka, Taiwan, Trinidad & Tobago, United Kingdom.
+- **12.5%** on the remaining 32 tracked economies.
+- **Net-of-MFN cap, modeled flat (MFN = 0).** For the EU and Taiwan (10% cap) and Japan, Korea and Switzerland (12.5% cap), the notice sets the 301 rate *net of MFN* — 301 = max(0, cap − MFN) — so total duty is capped at the tier. The engine has no per-HS MFN column and has never netted such caps, so it treats MFN as 0 and applies the cap flat. This is a modest **upward** bias for those five (exact on the many zero-MFN lines; it ignores the MFN offset that would reduce the duty on positive-MFN goods and zero it where MFN ≥ the cap).
 
-Two data findings shape the model:
+**Exemptions.** Come from **Annex II Part A** ("Goods of Any Investigated Economy"), the base list applying to every economy, extracted to [301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv) (2,113 codes) directly from the notice's machine-readable tables. Scope flags: `''` unconditional (856), `pharma` (700), `aircraft` (541), `ex` (16).
 
-- **Annex A is the Section 122 exemption list.** The 1,655-code Annex A ([301-labor-exemptions.csv](tariff-lists/301-labor-exemptions.csv)) is bit-for-bit identical to the combined Section 122 exemption lists (product + aircraft + specific): the labor notice reuses the surcharge carve-out universe. The engine reuses the same exemption codes, and `validate-301-labor.py` re-verifies the equality so the two cannot silently diverge when the final action lands.
-- **Aircraft exemption treated as under Section 122.** The engine applies only the 1,098 *product* exemption codes to the labor duty, ignoring the 546 civil-aircraft (GN 6, conditional) codes and the 11 Ex-scoped codes — exactly as `_mask_s122_exempt` ignores the Section 122 aircraft exemption. This keeps the labor duty and the surcharge on the same exemption basis so the two are directly comparable; applying the aircraft carve-out to only one regime would understate the labor rate for aircraft exporters (chiefly the UK and EU). The full 1,655-code Annex A stays recorded in the CSV for provenance. If the Section 122 model is ever changed to apply its aircraft exemption, the labor regime should change with it.
-- Annex A was extracted from the notice's scanned annex pages via OCR and validated against the official USITC HTS export; the `Ex` (subheading limited by description) and `Aircraft` (civil-aircraft, GN 6 only) scope limitations are preserved as flags.
+- **Pharma codes exempted flat; aircraft and Ex taxed (modeling choice "C").** The `pharma` codes (pharmaceutical-application conditional; 82% chapter-29 organic chemicals) are exempted — matching the Section 122 model, which already exempts 363 of these same codes as unconditional products, and following the standing flat-exemption convention for end-use carve-outs. The `aircraft` (civil-aircraft GN 6, conditional) and `ex` codes are **not** exempted, exactly as `_mask_s122_exempt` ignores the Section 122 aircraft exemption, keeping the labor duty and the surcharge on the same exemption basis. Both choices are flat because the end-use split is not resolvable from HS10 data: exempting pharma **over-exempts** its non-pharma use (a modest downward bias, smallest for the pharma-heavy exporters — EU, Switzerland, India — it mainly touches), and taxing aircraft **over-taxes** the civil-aircraft slice (small, since these are general industrial goods across 18 chapters where aircraft use is a minority).
+- **Country-specific exemptions (Annex II Parts B–N) and the CAFTA/Jordan textile Part O are not modeled.** These add narrower carve-outs for the 13 ART/commitment economies; omitting them is a small **upward** bias on those economies. The Part O CAFTA textile relief is partly covered by the flat CAFTA-DR chapter 50–63 exemption below.
+- **USMCA-compliant Canada/Mexico goods are exempt** (Annex I general notes ¶g/¶h). The model treats all Canada and Mexico imports as USMCA-eligible (same simplification as the Section 122 base), so the action nets to **~0% on both**. Flagged for revisit — real USMCA compliance is below 100%.
+- **CAFTA-DR duty-free textiles/apparel** (Costa Rica, Dominican Republic, El Salvador, Guatemala, Honduras, Nicaragua; Annex I ¶i, GN 29(d)(v)) are exempt. Applied as a flat exemption of HTSUS chapters 50–63 for those six economies, which **over-exempts** — it also frees textile trade that entered under MFN or another program.
+- The **textile mechanism** (three-year TRQs for Bangladesh, Cambodia, Indonesia and Malaysia tied to their U.S. cotton/textile imports; 10% applies until established) is not modeled — a volume-based allowance not resolvable from HS10 data. The FTZ "privileged foreign status" requirement and text-only exclusions (informational materials, donations, accompanied baggage) are likewise unmodeled and negligible.
 
-Additional modeling choices for this action, both applied flat because the conditions are not resolvable from HS10 import data:
-
-- **USMCA-compliant Canada/Mexico goods are exempt.** The model treats all Canada and Mexico imports as USMCA-eligible (the same simplification used for the Section 122 base), so the action currently nets to **~0% on both**. Flagged for revisit — real USMCA compliance is below 100%.
-- **CAFTA-DR duty-free textiles/apparel** (Costa Rica, Dominican Republic, El Salvador, Guatemala, Honduras, Nicaragua) are exempt. Applied as a flat exemption of HTSUS chapters 50–63 for those six economies, which **over-exempts** — it also frees textile trade that entered under MFN or another program.
-- The proposed **textile mechanism** (a volume-based reduced rate tied to the partner's U.S. cotton imports) is not modeled; it is a TRQ-style allowance not resolvable from HS10 data. The text-only exclusions for informational materials, donations and accompanied baggage are likewise unmodeled and negligible.
+The provisional Jun 5, 2026 files — [301-labor-economies.csv](tariff-lists/301-labor-economies.csv) and the 1,655-code [301-labor-exemptions.csv](tariff-lists/301-labor-exemptions.csv) — are retained as the archived baseline for `validate-301-labor.py` and the provisional-vs-final comparison. Running `validate-301-labor.py --diff-economies tariff-lists/301-labor-economies-FINAL.csv --diff-exemptions tariff-lists/301-labor-part-a.csv` reports the delta the final action introduced.
 
 ### Actions not yet incorporated
 
@@ -218,6 +219,24 @@ The Section 338 Canada baskets are barely touched by this. Note 51(c)(4) exempts
 
 ## Update notes (2026-07-23)
 
+- **Section 301 forced-labor action went LIVE** with its final Notice of Actions
+  (Docket USTR–2026–0265/0266), effective Jul 24, 2026 — the day the Section 122
+  surcharge lapses. Flipped `LABOR_301_LIVE = True`; the action now moves
+  `country-by-time.csv` and `daily-tariff-latest-data.csv`. National import-weighted
+  average steps **+0.50pp** on Jul 24 (10.89% → 11.39%). Rates repointed to
+  [301-labor-economies-FINAL.csv](tariff-lists/301-labor-economies-FINAL.csv);
+  vs the provisional, five economies dropped 12.5→10 (Honduras, India, Pakistan,
+  Sri Lanka, Trinidad & Tobago) plus EU 12.5→10, and EU/Taiwan/Japan/Korea/Switzerland
+  moved to a net-of-MFN cap modeled flat (MFN = 0).
+- Exemptions now come from **Annex II Part A** ([301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv),
+  2,113 codes), parsed directly from the notice's machine-readable tables (no OCR).
+  Modeling choice **C**: `pharma`-flagged codes (700) are exempted flat, `aircraft`
+  (541) and `ex` (16) are taxed — see the forced-labor detail section. Country-specific
+  Annex II Parts B–O are not modeled (documented as a small upward bias).
+- Provisional Jun 5 files ([301-labor-economies.csv](tariff-lists/301-labor-economies.csv),
+  [301-labor-exemptions.csv](tariff-lists/301-labor-exemptions.csv)) retained as the
+  archived baseline for `validate-301-labor.py` diff mode and the planned
+  provisional-vs-final comparison notebook.
 - Added the **Section 232 timber/lumber action** (Proclamation 10976, effective
   Oct 14, 2025) as a Phase-2 sector override. Rates: softwood timber/lumber 10%
   (all countries), upholstered wooden furniture and completed kitchen
