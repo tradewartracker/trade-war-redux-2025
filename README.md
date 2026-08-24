@@ -4,7 +4,7 @@
   <img src="tariff-fig.png" width="875" />
 </p>
 
-Updated: 2026-07-22
+Updated: 2026-08-24
 
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
@@ -38,7 +38,7 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
      up to `tariff_imports`), so it holds no duplicate copy of the masks or registry.
 
 7. [canada-338-analysis.ipynb](canada-338-analysis.ipynb)
-   - Coverage, incidence and rate impact of the three Aug 19, 2026 Section 338 actions
+   - Coverage, incidence and rate impact of the three Aug 22, 2026 Section 338 actions (originally Aug 19)
      on Canada: what is hit, what is not, top products, and a decomposition of the
      +1.85pp rate step against the +2.49pp naive figure.
    - Quantifies the one real bias (the HS6 auto-parts mask, ~0.19pp down) and shows
@@ -59,8 +59,18 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
      lighter. Both regimes are compared on the same exemption basis (see the aircraft note
      in the forced-labor detail section). Note: this notebook models the **provisional**
      Jun 5 proposal; the final Notice of Action (now live) is lighter (national step +0.5pp,
-     see the forced-labor detail) — a dedicated provisional-vs-final comparison is planned.
+     see the forced-labor detail) — a dedicated provisional-vs-final comparison is in (9).
    - Writes figures to [figures](figures); must be run after (1).
+
+9. [section301-labor-overview.ipynb](section301-labor-overview.ipynb)
+   - Overview of the **final, live** forced-labor action in two parts: (1) the Section 122
+     → labor transition (national step **+0.50pp**, plus the supplier-level redistribution),
+     and (2) the **proposal → final** change, decomposed into a **rate effect** (−0.26pp,
+     six economies cut 12.5→10) and an **exemption effect** (−0.10pp, the new 700-code pharma
+     carve-out) — the final action is ~0.4pp lighter than the June 5 proposal. Recomputes the
+     provisional scenario in-engine (provisional rates + 1,098-code Annex A) alongside the
+     live final series. Figures `figures/overview-*.png`.
+   - Imports the tariff engine from the main notebook (1); must be run after it.
 
 ## Helper scripts
 
@@ -163,14 +173,15 @@ New actions are added declaratively — extract the code list, register it in Se
 |------|-----------|-----------|-------------|
 | Jul 22, 2026 | Section 301 | USTR Notice of Action — Brazil (Jul 15, 2026) | 25% on all goods of Brazil; exemptions for 864 listed subheadings, 11 named articles, 546 civil-aircraft codes, 705 pharmaceutical-application codes, and all Section 232 sectors |
 | Jul 31, 2026 | Section 301 | USTR Notice Annex I.B — U.S. note 50(a)(vi)(8) | Patented pharmaceuticals added to the Brazil 232 carve-out (no effect — sector not modeled) |
-| Aug 19, 2026 | Section 338 | Proclamation on Canadian alcoholic beverages (Jul 20, 2026), heading 9903.03.12 | 50% on 63 enumerated Canadian codes (beverages, some wood and paper) |
-| Aug 19, 2026 | Section 338 | Proclamation on Canadian dairy (Jul 20, 2026), heading 9903.03.13 | 50% on 52 enumerated Canadian codes (milk products, sugars, caseins) |
-| Aug 19, 2026 | Section 338 | Proclamation on Canadian motor vehicles (Jul 20, 2026), heading 9903.03.14 | 50% on 439 enumerated Canadian codes across 56 chapters |
+| Aug 22, 2026 | Section 338 | Proclamation 11046 on Canadian alcoholic beverages (Jul 20, 2026), heading 9903.03.12; effective date amended by Proclamation 11056 | 50% on 63 enumerated Canadian codes (beverages, some wood and paper) |
+| Aug 22, 2026 | Section 338 | Proclamation 11047 on Canadian dairy (Jul 20, 2026), heading 9903.03.13; effective date amended by Proclamation 11056 | 50% on 52 enumerated Canadian codes (milk products, sugars, caseins) |
+| Aug 22, 2026 | Section 338 | Proclamation 11048 on Canadian motor vehicles (Jul 20, 2026), heading 9903.03.14; effective date amended by Proclamation 11056 | 50% on 439 enumerated Canadian codes across 56 chapters |
+| Aug 19–21, 2026 | Section 338 | Proclamation 11056 (Aug 18, 2026), FR Doc 2026‑17294 | 3‑day suspension of the three Canada actions during negotiations; Annex II chapeau of Procs 11046/11047/11048 amended from Aug 19 to Aug 22. Negotiations failed; duties took effect Aug 22 (no-op row — encoded as the regimes' effective date) |
 | Jul 24, 2026 | Section 301 | USTR Notice of Actions — forced labor (Docket USTR–2026–0265/0266, Jul 23 2026) | 12.5% (10% for 18 economies) on all goods of 50 tracked economies; Annex II Part A (unconditional + pharmaceutical codes) and all Section 232 sectors exempt. Effective the day the Section 122 surcharge lapses. See the forced-labor detail below. |
 
 Because Section 122 runs through Jul 23 and the Brazil 301 action begins Jul 22, the two overlap for two days. All start and end dates are modeled literally, so Brazil shows a brief spike (≈17.5%) on Jul 22–23 before settling at ≈13.3%.
 
-The three Section 338 actions were issued the same day against Canada, all at 50%, all effective Aug 19, 2026, and all sharing a single U.S. note 51. Each retaliates for a distinct Canadian practice — provincial liquor-board bans, cheese TRQ allocation, and motor-vehicle tariffs and quotas — but the baskets deliberately target goods *other* than the offending sector, and are disjoint from one another. The civil-aircraft carve-out of note 51(d) (heading 9903.03.16, 554 codes) is enumerated once and shared by all three, so it is modeled as one exemption list referenced by three regimes. Neither the proclamations nor note 51 provide an in-transit grace window. Combined effect on Canada: **+1.85 pp** (5.82% → 7.67%), against +2.49 pp before carve-outs. (The 5.82%/7.67% levels sit ~0.18 pp above the pre-timber figures of 5.64%/7.49%, since the Section 232 timber action lifts Canada's whole curve from Oct 14 2025; the *step* is essentially unchanged.)
+The three Section 338 actions (Proclamations 11046, 11047, 11048) were issued the same day against Canada, all at 50%, all originally effective Aug 19, 2026, and all sharing a single U.S. note 51. On Aug 18, Proclamation 11056 suspended them for three days while Canada negotiated on a "commitment to remove" the discriminations, moving the effective date to **Aug 22, 2026**; the talks failed and the duties took effect on that date. Nothing else in the three proclamations changed. Each retaliates for a distinct Canadian practice — provincial liquor-board bans, cheese TRQ allocation, and motor-vehicle tariffs and quotas — but the baskets deliberately target goods *other* than the offending sector, and are disjoint from one another. The civil-aircraft carve-out of note 51(d) (heading 9903.03.16, 554 codes) is enumerated once and shared by all three, so it is modeled as one exemption list referenced by three regimes. Neither the proclamations nor note 51 provide an in-transit grace window. Combined effect on Canada: **+1.85 pp** (5.82% → 7.67%), against +2.49 pp before carve-outs. (The 5.82%/7.67% levels sit ~0.18 pp above the pre-timber figures of 5.64%/7.49%, since the Section 232 timber action lifts Canada's whole curve from Oct 14 2025; the *step* is essentially unchanged.)
 
 #### Section 301 forced-labor action — detail
 
@@ -182,12 +193,12 @@ Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economi
 
 - **10%** on 18 tracked economies (imposed a prohibition or made ART/commitments): Argentina, Bangladesh, Cambodia, Canada, Ecuador, El Salvador, EU, Guatemala, Honduras, India, Indonesia, Malaysia, Mexico, Pakistan, Sri Lanka, Taiwan, Trinidad & Tobago, United Kingdom.
 - **12.5%** on the remaining 32 tracked economies.
-- **Net-of-MFN cap, modeled flat (MFN = 0).** For the EU and Taiwan (10% cap) and Japan, Korea and Switzerland (12.5% cap), the notice sets the 301 rate *net of MFN* — 301 = max(0, cap − MFN) — so total duty is capped at the tier. The engine has no per-HS MFN column and has never netted such caps, so it treats MFN as 0 and applies the cap flat. This is a modest **upward** bias for those five (exact on the many zero-MFN lines; it ignores the MFN offset that would reduce the duty on positive-MFN goods and zero it where MFN ≥ the cap).
+- **Net-of-MFN cap.** For the EU and Taiwan (10% cap) and Japan, Korea and Switzerland (12.5% cap), the notice sets the 301 rate *net of a product's column-1 MFN* — "the sum of the MFN tariff and the section 301 tariff" equals the cap, and the 301 is zero where MFN ≥ the cap. The model implements this as `301 = max(0, cap − MFN)` per HS10, using the statutory column-1 rate in [mfn-per-code.csv](tariff-lists/mfn-per-code.csv) (HTS statutory where the rate is a clean ad valorem, pooled 2024 customs AVE as a fallback for specific/compound duties; built in [mfn-per-code-comparison.ipynb](mfn-per-code-comparison.ipynb)). Applied to the four **non-FTA** economies (EU, Taiwan, Japan, Switzerland). **Korea is deliberately left on the flat cap:** the HTS headings set both the general and special column-1 rate to the flat cap (9903.05.71 = "12.5% / 12.5%"), so a KORUS claim is overridden to the flat rate, and against Korea's ~0 FTA-preferenced 2024 baseline the full cap *is* the added tariff — netting would understate it. A small residual **upward** bias remains only on codes absent from the MFN table (treated as MFN = 0 = full cap).
 
 **Exemptions.** Come from **Annex II Part A** ("Goods of Any Investigated Economy"), the base list applying to every economy, extracted to [301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv) (2,113 codes) directly from the notice's machine-readable tables. Scope flags: `''` unconditional (856), `pharma` (700), `aircraft` (541), `ex` (16).
 
 - **Pharma codes exempted flat; aircraft and Ex taxed (modeling choice "C").** The `pharma` codes (pharmaceutical-application conditional; 82% chapter-29 organic chemicals) are exempted — matching the Section 122 model, which already exempts 363 of these same codes as unconditional products, and following the standing flat-exemption convention for end-use carve-outs. The `aircraft` (civil-aircraft GN 6, conditional) and `ex` codes are **not** exempted, exactly as `_mask_s122_exempt` ignores the Section 122 aircraft exemption, keeping the labor duty and the surcharge on the same exemption basis. Both choices are flat because the end-use split is not resolvable from HS10 data: exempting pharma **over-exempts** its non-pharma use (a modest downward bias, smallest for the pharma-heavy exporters — EU, Switzerland, India — it mainly touches), and taxing aircraft **over-taxes** the civil-aircraft slice (small, since these are general industrial goods across 18 chapters where aircraft use is a minority).
-- **Country-specific exemptions (Annex II Parts B–N) and the CAFTA/Jordan textile Part O are not modeled.** These add narrower carve-outs for the 13 ART/commitment economies; omitting them is a small **upward** bias on those economies. The Part O CAFTA textile relief is partly covered by the flat CAFTA-DR chapter 50–63 exemption below.
+- **Country-specific exemptions (Annex II Parts B–N) and the CAFTA/Jordan textile Part O are not modeled** — a documented limitation to revisit. They add narrower carve-outs for the 13 ART/commitment economies; omitting them is a small **upward** bias, quantified (2024 weights) at **~0.03pp nationally**. It is negligible for all but two economies: **Indonesia +0.92pp** (Part L exempts palm oil and palm oleochemicals — HS 1511.90, 1513.29, 3823.19/70) and **Ecuador +0.78pp** (Part M exempts fresh cut flowers — HS 0603.11/19); every other economy is < 0.35pp, most < 0.1pp. The giant Part O textile list (1,736 codes) is essentially redundant with the flat CAFTA-DR chapter 50–63 exemption below — it adds only +0.13pp (El Salvador) / +0.07pp (Guatemala). The extracted code lists are preserved in [301-labor-parts-BO.csv](tariff-lists/301-labor-parts-BO.csv) for a future revisit; modeling Parts L and M alone would remove nearly all the bias.
 - **USMCA-compliant Canada/Mexico goods are exempt** (Annex I general notes ¶g/¶h). The model treats all Canada and Mexico imports as USMCA-eligible (same simplification as the Section 122 base), so the action nets to **~0% on both**. Flagged for revisit — real USMCA compliance is below 100%.
 - **CAFTA-DR duty-free textiles/apparel** (Costa Rica, Dominican Republic, El Salvador, Guatemala, Honduras, Nicaragua; Annex I ¶i, GN 29(d)(v)) are exempt. Applied as a flat exemption of HTSUS chapters 50–63 for those six economies, which **over-exempts** — it also frees textile trade that entered under MFN or another program.
 - The **textile mechanism** (three-year TRQs for Bangladesh, Cambodia, Indonesia and Malaysia tied to their U.S. cotton/textile imports; 10% applies until established) is not modeled — a volume-based allowance not resolvable from HS10 data. The FTZ "privileged foreign status" requirement and text-only exclusions (informational materials, donations, accompanied baggage) are likewise unmodeled and negligible.
@@ -213,9 +224,26 @@ The Section 338 Canada baskets are barely touched by this. Note 51(c)(4) exempts
 - **End-use conditional exemptions are applied flat.** The Brazil 301 civil-aircraft exemption is conditional on meeting HTSUS general note 6, and the pharmaceutical exemption applies only to pharmaceutical end uses. Neither is resolvable from HS10 import data, so both are applied to every listed code. This **over-exempts**, partially offsetting the upward bias described above.
 - **In-transit relief is ignored.** Heading 9903.05.02 exempts goods loaded before Jul 22, 2026 and entered before Jul 29, 2026. Given Brazil–U.S. transit times, most goods entering that week are exempt in practice, so the modeled Jul 22 step overstates the rate for its first week. Consistent with prior actions carrying similar grace windows, none of which are modeled.
 - **Annex II interaction.** Products removed from Section 232 scope by the Apr 6, 2026 metals Annex II are no longer provided for in the 9903.82 headings, so they do *not* qualify for the Section 232 carve-out in either Phase 3 authority. The model handles this explicitly (21 products, ~0.03% of U.S. imports from Brazil).
-- **The auto-parts mask is coarse, and it now over-exempts.** `_mask_auto` matches part of the Proclamation 10908 list at HS6, including `853710`. Because Phase 3 carves out Section 232 goods, every good under HS8 8537.10.91 — industrial switchgear, panelboards and programmable controllers — is treated as an exempt auto part and escapes the Section 338 duty. That is **$1.6B of 2025 Canadian imports, and it removes 0.19 pp** from Canada's post-Aug 19 rate. Note 51(c)(3) exempts only parts *of passenger vehicles and light trucks*, so most of this value should be dutiable. The HS6 approximation predates the Section 338 work; it had little consequence while the auto list only ever *set* a rate, and became material once Phase 3 began reading it as an exemption.
+- **The auto-parts mask is coarse, and it now over-exempts.** `_mask_auto` matches part of the Proclamation 10908 list at HS6, including `853710`. Because Phase 3 carves out Section 232 goods, every good under HS8 8537.10.91 — industrial switchgear, panelboards and programmable controllers — is treated as an exempt auto part and escapes the Section 338 duty. That is **$1.6B of 2025 Canadian imports, and it removes 0.19 pp** from Canada's post-Aug 22 rate. Note 51(c)(3) exempts only parts *of passenger vehicles and light trucks*, so most of this value should be dutiable. The HS6 approximation predates the Section 338 work; it had little consequence while the auto list only ever *set* a rate, and became material once Phase 3 began reading it as an exemption.
 
 ---
+
+## Update notes (2026-08-24)
+
+- **Section 338 Canada actions deferred three days by Proclamation 11056** (Aug 18, 2026;
+  FR Doc 2026‑17294, [338-pause-2026-17294.pdf](tariff-lists/338-pause-2026-17294.pdf)).
+  The proclamation suspended the alcohol, dairy and motor-vehicle duties for 3 days pending
+  negotiations and amended the effective date in each Annex II chapeau from Aug 19 to
+  **Aug 22, 2026**. Negotiations failed at the last minute, so the duties are in force from
+  Aug 22. Baskets, the 50% rate and the note 51 carve-outs are unchanged.
+- Modeled purely as a date change: the three `Canada-338-*` regimes' `effective_date` moved
+  to `2026-08-22`, the `date_strings` panel point moved with it, and a no-op registry row for
+  Proclamation 11056 keeps the action timeline a faithful record. Canada's +1.85pp step
+  (5.82% → 7.67%) is unchanged in size; only Aug 19–21 differ, where Canada (and the national
+  average) now sit at the pre‑338 level.
+- Also fixed the stale `_make_stacked_apply` docstring, which still described timber as an
+  unmodeled Section 232 sector and cited the chapter‑44 carve-out misdiagnosis corrected Jul 23.
+- Refreshed `canada-338-analysis.ipynb` to the Aug 22 step date.
 
 ## Update notes (2026-07-23)
 
@@ -223,11 +251,16 @@ The Section 338 Canada baskets are barely touched by this. Note 51(c)(4) exempts
   (Docket USTR–2026–0265/0266), effective Jul 24, 2026 — the day the Section 122
   surcharge lapses. Flipped `LABOR_301_LIVE = True`; the action now moves
   `country-by-time.csv` and `daily-tariff-latest-data.csv`. National import-weighted
-  average steps **+0.50pp** on Jul 24 (10.89% → 11.39%). Rates repointed to
+  average steps **+0.33pp** on Jul 24 (10.89% → 11.22%). Rates repointed to
   [301-labor-economies-FINAL.csv](tariff-lists/301-labor-economies-FINAL.csv);
   vs the provisional, five economies dropped 12.5→10 (Honduras, India, Pakistan,
   Sri Lanka, Trinidad & Tobago) plus EU 12.5→10, and EU/Taiwan/Japan/Korea/Switzerland
-  moved to a net-of-MFN cap modeled flat (MFN = 0).
+  moved to a net-of-MFN cap. The cap now nets against each product's statutory column-1
+  MFN (`301 = max(0, cap − MFN)` per HS10) for the four non-FTA economies (EU, Taiwan,
+  Japan, Switzerland); Korea stays on the flat cap because KORUS is overridden to the
+  flat rate. Netting the four lowers their Jul-24 effective tariff (EU −0.66, Switzerland
+  −0.70, Taiwan −0.43, Japan −0.40 pp) and the national step from +0.50 to **+0.33pp**;
+  the EU now *falls* across the §122 lapse (8.95% → 8.40%) rather than rising.
 - Exemptions now come from **Annex II Part A** ([301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv),
   2,113 codes), parsed directly from the notice's machine-readable tables (no OCR).
   Modeling choice **C**: `pharma`-flagged codes (700) are exempted flat, `aircraft`
