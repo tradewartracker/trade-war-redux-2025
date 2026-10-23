@@ -4,7 +4,7 @@
   <img src="tariff-fig.png" width="875" />
 </p>
 
-Updated: 2026-08-24
+Updated: 2026-10-23
 
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
@@ -58,19 +58,30 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
      10% tier, USMCA (Canada/Mexico), and the flat CAFTA-DR textile carve-out leave others
      lighter. Both regimes are compared on the same exemption basis (see the aircraft note
      in the forced-labor detail section). Note: this notebook models the **provisional**
-     Jun 5 proposal; the final Notice of Action (now live) is lighter (national step +0.5pp,
+     Jun 5 proposal; the final Notice of Action (now live) is lighter (national step +0.33pp,
      see the forced-labor detail) — a dedicated provisional-vs-final comparison is in (9).
    - Writes figures to [figures](figures); must be run after (1).
 
 9. [section301-labor-overview.ipynb](section301-labor-overview.ipynb)
    - Overview of the **final, live** forced-labor action in two parts: (1) the Section 122
-     → labor transition (national step **+0.50pp**, plus the supplier-level redistribution),
+     → labor transition (national step **+0.33pp**, plus the supplier-level redistribution),
      and (2) the **proposal → final** change, decomposed into a **rate effect** (−0.26pp,
-     six economies cut 12.5→10) and an **exemption effect** (−0.10pp, the new 700-code pharma
-     carve-out) — the final action is ~0.4pp lighter than the June 5 proposal. Recomputes the
+     six economies cut 12.5→10), a **net-of-MFN cap effect** (−0.18pp, EU, Taiwan, Japan and
+     Switzerland) and an **exemption effect** (−0.09pp, the new 700-code pharma carve-out) —
+     the final action is ~0.5pp lighter than the June 5 proposal (11.75% → 11.22%). Recomputes the
      provisional scenario in-engine (provisional rates + 1,098-code Annex A) alongside the
      live final series. Figures `figures/overview-*.png`.
    - Imports the tariff engine from the main notebook (1); must be run after it.
+
+10. [china-30for30-analysis.ipynb](china-30for30-analysis.ipynb)
+   - What happens to China's rate if the Sep 27, 2026 U.S.-China **"30-for-30"** U.S.
+     import list is excluded from the 12.5% forced-labor Section 301 duty — the list's only
+     modeled duty — i.e. returned to its 2024 tariff level. Coverage of the 77-code list
+     (~$30B of 2024 imports, 6.9% of China's), the China step (**−0.86pp**, 11.94% → 11.07%),
+     the national effect (**−0.12pp**), a product-group decomposition, and the legacy-301
+     residual the list would still carry. The reduction is **announced, not enacted**; the
+     notebook activates the staged-off regime by hand (see the announced-actions section).
+   - Writes figures to [figures](figures); imports the engine from (1), must be run after it.
 
 ## Helper scripts
 
@@ -108,6 +119,44 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
     deltas against the committed provisional baseline, and re-checks the Section 122
     equality. It is the punch list for turning the provisional model into the real one.
   - Usage: `python validate-301-labor.py` (exits non-zero on failure)
+
+- [extract-china-30for30.py](extract-china-30for30.py)
+  - Extracts the U.S. import list of the Sep 27, 2026 U.S.-China "30-for-30" framework
+    ([china-USimports-Public-List.pdf](tariff-lists/china-USimports-Public-List.pdf)) into
+    [china-30for30-us-import-list.csv](tariff-lists/china-30for30-us-import-list.csv) (the
+    77 HTS8 codes as printed, with the `Ex-Out` flag) and
+    [china-30for30-model-list.csv](tariff-lists/china-30for30-model-list.csv) (the engine
+    form: 70 HS8 codes plus the 13 HTS10 statistical lines that resolve the seven
+    juvenile-furniture ex-outs to exactly the products their descriptions name).
+  - Usage: `python extract-china-30for30.py`
+
+- [validate-china-30for30.py](validate-china-30for30.py)
+  - Guardrail for the 30-for-30 list, in the style of `validate-timber.py`: the raw list
+    matches the PDF (77 codes, 8 ex-outs, valid HTS), the model list is the raw list with
+    the juvenile ex-outs resolved (every resolved HTS10 label names a listed product), the
+    resolved list covers **$29.6B** of 2024 China imports (the Terms of Reference say
+    "roughly $30 billion" at 2024 values; the flat-HS8 figure is $32.5B), no listed code is
+    in a modeled Section 232 list or an active labor Part A exemption (why reversing the
+    labor duty nets the list to exactly zero), and the China step is −0.86pp.
+  - Usage: `python validate-china-30for30.py` (exits non-zero on failure)
+
+- [extract-china-30for30-exports.py](extract-china-30for30-exports.py)
+  - The other half of the framework: extracts **China's** import list of US goods
+    ([Usexports-China-Import-List.pdf](tariff-lists/Usexports-China-Import-List.pdf), Chinese
+    only) into [china-30for30-china-import-list.csv](tariff-lists/china-30for30-china-import-list.csv)
+    — 1,619 lines of China's 2026 tariff schedule (8 digits) in 51 chapters, 1,061 HS6. Chinese
+    8-digit lines and US Schedule B agree only at HS6, so each HS6 carries a `match` score from
+    the list's own structure (China's full schedule is not loaded): `whole` (a listed line is
+    xxxxxx00, 742), `residual` (China splits the HS6 and its 90/99 "other" line is listed, 277)
+    or `partial` (only some splits listed, 42 — US export data for these is a ceiling). Not
+    modeled in the engine (it is a Chinese tariff); consumed by the trade-miner's
+    `miner/china_30for30.py` cards. On US export statistics the list is **$25.0B** of 2024
+    exports to China (17.5%), against the stated ~$30B — the gap is CIF/origin-based Chinese
+    import statistics vs FAS US export statistics, not the HS6 match, which can only overstate.
+    Notably absent: commercial soybeans (only seed soybeans 1201.10 are listed), crude oil, LPG,
+    LNG, civil aircraft, semiconductors and passenger cars — the eight biggest US exports to China
+    in 2024 are all off it.
+  - Usage: `python extract-china-30for30-exports.py`
 
 ## Key folders
 
@@ -187,7 +236,7 @@ The three Section 338 actions (Proclamations 11046, 11047, 11048) were issued th
 
 Effective **Jul 24, 2026** (Docket USTR–2026–0265/0266, issued Jul 23 2026), the day the Section 122 surcharge lapses. USTR determined that 60 investigated economies failed to impose and/or effectively enforce a forced-labor import prohibition, and imposes additional duties on all their goods with exemptions. 50 of the 60 economies are in the panel's country universe (32 at 12.5%, 18 at 10%).
 
-Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economies-FINAL.csv](tariff-lists/301-labor-economies-FINAL.csv), one per tracked economy, `scope="all"`, carving out Section 232 goods per U.S. note 50(a)(vi) — identical mechanics to the Brazil 301 action, gated live by `LABOR_301_LIVE = True`. Aggregate effect: the national import-weighted average rises **+0.50 pp** on Jul 24 (10.89% → 11.39%) as the 10% Section 122 surcharge is replaced by the labor duty — the labor action slightly more than replaces the surcharge.
+Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economies-FINAL.csv](tariff-lists/301-labor-economies-FINAL.csv), one per tracked economy, `scope="all"`, carving out Section 232 goods per U.S. note 50(a)(vi) — identical mechanics to the Brazil 301 action, gated live by `LABOR_301_LIVE = True`. Aggregate effect: the national import-weighted average rises **+0.33 pp** on Jul 24 (10.89% → 11.22%) as the 10% Section 122 surcharge is replaced by the labor duty — the labor action slightly more than replaces the surcharge.
 
 **Rate tiers.**
 
@@ -204,6 +253,63 @@ Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economi
 - The **textile mechanism** (three-year TRQs for Bangladesh, Cambodia, Indonesia and Malaysia tied to their U.S. cotton/textile imports; 10% applies until established) is not modeled — a volume-based allowance not resolvable from HS10 data. The FTZ "privileged foreign status" requirement and text-only exclusions (informational materials, donations, accompanied baggage) are likewise unmodeled and negligible.
 
 The provisional Jun 5, 2026 files — [301-labor-economies.csv](tariff-lists/301-labor-economies.csv) and the 1,655-code [301-labor-exemptions.csv](tariff-lists/301-labor-exemptions.csv) — are retained as the archived baseline for `validate-301-labor.py` and the provisional-vs-final comparison. Running `validate-301-labor.py --diff-economies tariff-lists/301-labor-economies-FINAL.csv --diff-exemptions tariff-lists/301-labor-part-a.csv` reports the delta the final action introduced.
+
+### Announced, not enacted — U.S.-China "30-for-30" list (staged off)
+
+On Sep 27, 2026 the White House released the working procedures of a U.S.-China **Board of
+Trade** and the terms of reference of its **"30-for-30" framework**
+([US-China-Board-of-Trade-Working-Procedures.pdf](tariff-lists/US-China-Board-of-Trade-Working-Procedures.pdf),
+[Terms-of-Reference-for-30-for-30-Framework.pdf](tariff-lists/Terms-of-Reference-for-30-for-30-Framework.pdf)):
+the two sides approved comparably valued lists of goods, roughly $30B each at calendar-2024
+trade values, "with a view toward providing reduced tariff treatment to those goods in a
+reciprocal manner." The U.S. import list
+([china-USimports-Public-List.pdf](tariff-lists/china-USimports-Public-List.pdf)) names
+**77 HTS8 codes** of Chinese consumer goods — toys ($13.5B alone), plastic tableware, small
+kitchen appliances, home textiles, juvenile furniture and car seats, sporting goods,
+Christmas articles, fishing tackle, vacuum flasks (chapters 36, 39, 63, 66, 67, 84, 85, 94,
+95, 96).
+
+**This is a framework, not a tariff action.** The terms of reference say future tariff
+reductions "will be determined and implemented in accordance with each side's domestic legal
+processes": there is no rate, effective date, legal authority, chapter 99 heading or Federal
+Register notice. Nothing is in force, so nothing enters the published series. The list is
+extracted, validated and wired as a **staged-off** Phase-3 regime (`CHINA_30FOR30_LIVE =
+False`, placeholder date) so going live is a flag flip when the implementing notice lands.
+
+- **Extraction.** [china-30for30-us-import-list.csv](tariff-lists/china-30for30-us-import-list.csv)
+  is the list as printed. Eight rows carry an "Ex-Out" limiting the line to its description.
+  Seven are juvenile furniture (highchairs/boosters, infant walkers, bouncers, swings, child
+  safety seats, play yards) whose HTS10 statistical suffixes isolate exactly those products,
+  so, unlike the aircraft and pharma carve-outs, they are resolved rather than applied flat:
+  [china-30for30-model-list.csv](tariff-lists/china-30for30-model-list.csv) swaps the seven
+  HS8 lines for 13 HTS10 lines. Resolving them moves the 2024 value covered from $32.5B
+  (flat HS8) to **$29.6B**, which is what lands on "roughly $30 billion." The eighth ex-out,
+  9503.00.00 toys excluding items "enabled with radio frequency, Wi-Fi, Ethernet, or
+  Bluetooth", is not resolvable at HTS10 and is applied flat (a small over-inclusion when live).
+- **What the list carries today.** Every listed code carries exactly one modeled duty for
+  China: the 12.5% forced-labor Section 301 (Jul 24, 2026). None is in a modeled Section 232
+  sector (9401.71/.79 left steel/aluminum derivative scope on Apr 6, 2026) and none is an
+  active labor Part A exemption. The legacy 2018-19 China 301 lists barely touch the basket:
+  toys were List 4B, never imposed, and only ~$2.7B carries List 3/4A duties, which in any
+  case sit in the 2024 baseline, not the engine. IEEPA and Section 122 are gone and MFN cuts
+  need Congress, so a meaningful reduction almost has to arrive as a **USTR Section 301
+  modification** excluding the list from the labor action.
+- **Staged model.** A dated *reversal* of the labor duty on the listed codes: a Phase-3
+  `scope="listed"` regime for China with a **negative rate** (−12.5) that mirrors the labor
+  regime's own carve-outs (232, Part A), so it undoes exactly the labor duty and the list
+  returns to its 2024 tariff level. `_make_stacked_apply` now floors the result at zero, a
+  no-op for every positive regime. A dated regime, rather than adding the list to the China
+  labor regime's exemptions, keeps the Jul 24 → go-live rows correct. Hong Kong is not
+  covered (the list is of "Chinese products"; HK exposure ~$0.09B).
+- **Size if enacted as a full exclusion** (2024 weights): China **11.94% → 11.07% (−0.86pp)**,
+  national **−0.12pp**. A partial reduction scales linearly; a companion cut to the legacy
+  301 lists would add only −0.04pp to China. Detail in
+  [china-30for30-analysis.ipynb](china-30for30-analysis.ipynb).
+- **Go-live checklist.** Confirm the mechanism (labor exclusion, legacy-301 modification, or
+  both), the rate (zero or partial), the effective date and Hong Kong; diff the notice's code
+  list against the saved CSV; check whether the ex-outs are by description or new statistical
+  suffixes; then set `CHINA_30FOR30_EFFECTIVE_DATE`, flip `CHINA_30FOR30_LIVE`, add the date
+  to `date_strings`, re-run the main notebook, refresh the downstream TRI-tracker.
 
 ### Actions not yet incorporated
 
@@ -227,6 +333,47 @@ The Section 338 Canada baskets are barely touched by this. Note 51(c)(4) exempts
 - **The auto-parts mask is coarse, and it now over-exempts.** `_mask_auto` matches part of the Proclamation 10908 list at HS6, including `853710`. Because Phase 3 carves out Section 232 goods, every good under HS8 8537.10.91 — industrial switchgear, panelboards and programmable controllers — is treated as an exempt auto part and escapes the Section 338 duty. That is **$1.6B of 2025 Canadian imports, and it removes 0.19 pp** from Canada's post-Aug 22 rate. Note 51(c)(3) exempts only parts *of passenger vehicles and light trucks*, so most of this value should be dutiable. The HS6 approximation predates the Section 338 work; it had little consequence while the auto list only ever *set* a rate, and became material once Phase 3 began reading it as an exemption.
 
 ---
+
+## Update notes (2026-10-23)
+
+- Re-ran the main notebook so the daily series again runs `BUFFER_DAYS` (60) past the run
+  date; the Aug 24 run ended on Oct 23. No rates changed: `country-by-time.csv` is
+  byte-identical, and `daily-tariff-latest-data.csv` is identical through Oct 23 and
+  forward-filled at 11.46% to Dec 22, 2026.
+- Corrected figures left over from before the net-of-MFN cap fix: the Jul 24 national step
+  is **+0.33pp** (10.89% → 11.22%), not +0.50pp, in the forced-labor detail and notebook
+  entries 8 and 9, and the proposal → final change is now split three ways (rates −0.26,
+  net-of-MFN cap −0.18, pharma −0.09pp).
+- Committed the five input lists the main notebook reads but that were never tracked
+  ([301-labor-economies-FINAL.csv](tariff-lists/301-labor-economies-FINAL.csv),
+  [301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv),
+  [mfn-per-code.csv](tariff-lists/mfn-per-code.csv),
+  [timber-232.csv](tariff-lists/timber-232.csv),
+  [china-30for30-model-list.csv](tariff-lists/china-30for30-model-list.csv)), so a fresh
+  clone can run it.
+
+## Update notes (2026-09-28)
+
+- **U.S.-China "30-for-30" list reviewed and staged off.** The Sep 27, 2026 Board of Trade
+  release is a framework with an approved 77-code U.S. import list but no rate, date or
+  instrument, so nothing enters the published series (`country-by-time.csv` and
+  `daily-tariff-latest-data.csv` are unchanged). See the new "Announced, not enacted"
+  section above.
+- Added [extract-china-30for30.py](extract-china-30for30.py), which writes two CSVs to
+  `tariff-lists/` (the list as printed; the engine form with the seven juvenile-furniture
+  ex-outs resolved to 13 HTS10 lines), and [validate-china-30for30.py](validate-china-30for30.py),
+  which pins the list to the PDF, the $29.6B 2024 coverage, the disjointness from the 232
+  and labor Part A lists, and the −0.86pp China step.
+- Main notebook: the list is loaded as `STACKED_INCLUDE_LISTS["China-30for30"]`; a staged
+  regime `China-30for30` (Section 301, `scope="listed"`, rate −12.5, labor carve-outs
+  mirrored) is appended to `STACKED_REGIMES` only when `CHINA_30FOR30_LIVE` is True (default
+  False). `_make_stacked_apply` floors the stacked result at zero so a negative-rate
+  regime models a dated reduction; positive regimes are unaffected. Smoke-tested: flag off
+  reproduces the published China figure bit-for-bit; flag on moves only the 124 listed
+  HTS10 lines, each from 12.5 to 0.
+- Added [china-30for30-analysis.ipynb](china-30for30-analysis.ipynb): what China's rate does
+  if the list is excluded from the labor 301 (−0.86pp China, −0.12pp national), by product
+  group, with the legacy-301 residual.
 
 ## Update notes (2026-08-24)
 

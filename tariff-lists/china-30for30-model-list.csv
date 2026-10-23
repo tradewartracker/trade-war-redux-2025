@@ -1,0 +1,84 @@
+HTSUS,list_hts8,no,ex_out,resolution,description
+36041090,36041090,1,,hs8,"Fireworks, nesoi"
+39241020,39241020,2,,hs8,"Plates, cups, saucers, soup bowls, cereal bowls, sugar bowls, creamers, gravy boats, serving dishes and platters, of plastics"
+39241040,39241040,3,,hs8,"Tableware and kitchenware articles, nesoi, of plastics"
+39269035,39269035,4,,hs8,"Beads, bugles and spangles, not strung or set; articles thereof, nesoi, of plastics"
+63011000,63011000,5,,hs8,Electric blankets
+63012000,63012000,6,,hs8,"Blankets (other than electric blankets) and traveling rugs, of wool or fine animal hair"
+63022900,63022900,7,,hs8,"Bed linen, not knitted or crocheted, printed, of textile materials nesoi"
+63023900,63023900,8,,hs8,"Bed linen, not knitted or crocheted, not printed, of textile materials nesoi"
+63024020,63024020,9,,hs8,"Table linen, knitted or crocheted, nesoi"
+63025910,63025910,10,,hs8,"Tablecloths and napkins of flax, not knitted or crocheted"
+63025920,63025920,11,,hs8,"Table linen of flax, other than tablecloths and napkins, not knitted or crocheted"
+63025930,63025930,12,,hs8,"Table linen, of textile materials other than of cotton, flax or man- made fibers, not knitted or crocheted"
+63029910,63029910,13,,hs8,"Toilet and kitchen linen of textile materials nesoi, containing 85% or more by weight of silk or silk waste"
+63029915,63029915,14,,hs8,Toilet and kitchen linen of flax
+63029920,63029920,15,,hs8,"Toilet and kitchen linen of textile materials nesoi, containing less than 85% by weight of silk or silk waste"
+63031921,63031921,16,,hs8,"Curtains (including drapes),interior blinds and valances of textile materials other than of cotton or synthetic fibers, knitted or crocheted"
+63049910,63049910,17,,hs8,"Wall hangings, not knitted or crocheted, of wool or fine animal hair, the foregoing certified hand-loomed and folklore products"
+63049915,63049915,18,,hs8,"Wall hangings, not knitted or crocheted, of wool or fine animal hair, nesoi"
+63049925,63049925,19,,hs8,"Wall hangings of jute, excluding those of heading 9404"
+63049935,63049935,20,,hs8,"Furnishing articles (excl. those of heading 9404 and other than bedspreads and jute wall hangings) of veg. fibers (excl. cotton), not k/c"
+63049940,63049940,21,,hs8,"Certified hand-loomed and folklore pillow covers of wool or fine animal hair, not knitted or crocheted"
+66011000,66011000,22,,hs8,Garden or similar umbrellas
+67029010,67029010,23,,hs8,"Artificial flowers/foliage/fruit & pts thereof; articles of artif. flowers, etc.; all the foregoing of feathers"
+67029065,67029065,24,,hs8,"Artificial flowers/foliage/fruit & pts thereof; articles of artif. flowers, etc.; all the foregoing of materials o/than plast./feath./mmf"
+84231000,84231000,25,,hs8,"Personal weighing machines, including baby scales; household scales"
+85094000,85094000,26,,hs8,"Electromechanical food grinders, processors, mixers, fruit or vegetable juice extractors, w self-contained electric motor, for domestic uses"
+85098010,85098010,27,,hs8,"Electromechanical floor polishers, with self-contained electric motor, for domestic uses"
+85098050,85098050,28,,hs8,"Electromechanical domestic appliances nesoi, with self-contained electric motor"
+85101000,85101000,29,,hs8,"Shavers, with self-contained electric motor"
+85103000,85103000,30,,hs8,Hair-removing appliances with self-contained electric motor
+85131020,85131020,31,,hs8,Flashlights
+85164020,85164020,32,,hs8,"Electric flatirons, travel type"
+85164040,85164040,33,,hs8,"Electric flatirons, other than travel type"
+85165000,85165000,34,,hs8,Microwave ovens of a kind used for domestic purposes
+85167100,85167100,35,,hs8,"Electrothermic coffee or tea makers, for domestic purposes"
+85167200,85167200,36,,hs8,"Electrothermic toasters, for domestic purposes"
+85167900,85167900,37,,hs8,"Electrothermic appliances nesoi, of a kind used for domestic purposes"
+85392240,85392240,38,,hs8,"Electrical filament Christmas-tree lamps, of a power not exceeding 200 W and for a voltage exceeding 100 V"
+85392910,85392910,39,,hs8,"Electrical filament Christmas-tree lamps, designed for a voltage not exceeding 100 V"
+9401710001,94017100,40,X,hs10,"HIGHCHAIRS, BOOSTER SEATS UPHOLSTERED METAL FRAMES"
+9401710005,94017100,40,X,hs10,"INFANT WALKERS, UPHOLSTERED, WITH METAL FRAMES"
+9401710006,94017100,40,X,hs10,"BOUNCERS WITH SEATS, UPHOLSTERED WITH METAL FRAMES"
+9401790001,94017900,41,X,hs10,HIGHCHAIRS AND BOOSTER SEATS W/ METAL FRAMES NESOI
+9401790002,94017900,41,X,hs10,"INFANT WALKERS WITH METAL FRAMES, NESOI"
+9401790003,94017900,41,X,hs10,"BOUNCERS WITH SEATS, WITH METAL FRAMES, NESOI"
+9401790004,94017900,41,X,hs10,"SWINGS FOR CHILDREN, WITH METAL FRAMES, NESOI"
+9401802001,94018020,42,X,hs10,CHILDREN'S SEATS ETC REINFORCED/LAMINATED PLASTICS
+9401804001,94018040,43,X,hs10,"CHILDREN'S SEATS, ETC OF RUBBER OR PLASTICS, NESOI"
+9401806021,94018060,44,X,hs10,CHILD SAFETY SEATS WITH DETACHABLE HARD-SHELL SEAT
+9401806023,94018060,44,X,hs10,"CHILD SAFETY SEATS, NESOI"
+9403704003,94037040,45,X,hs10,PLAY YARDS ETC OF REINFORCED OR LAMINATED PLASTICS
+9403708003,94037080,46,X,hs10,"PLAY YARDS AND OTHER ENCLOSURES OF PLASTICS, NESOI"
+94043080,94043080,47,,hs8,"Sleeping bags, not containing 20% or more by weight of feathers and/or down"
+94049020,94049020,48,,hs8,"Pillows, cushions and similar furnishings, other than of cotton"
+95030000,95030000,49,X,flat,"Toys (Tricycles, scooters, pedal cars and similar wheeled toys; dollsʼ carriages; dolls, other toys; reduced-scale (“scaleˮ) models and similar recreational models, working or not; puzzles of all kinds; parts and accessories thereof) excluding items enabled with radio frequency, Wi-Fi, Ethernet, or Bluetooth"
+95042020,95042020,50,,hs8,"Balls, for billiards"
+95042040,95042040,51,,hs8,"Chalk, for billiards"
+95042060,95042060,52,,hs8,"Tables, for billiards"
+95042080,95042080,53,,hs8,"Articles nesoi and parts and accessories, for billiards"
+95043000,95043000,54,,hs8,"Coin- or token-operated games for arcade, table or parlor (o/than bowling alley equipment) nesoi and parts and accessories thereof"
+95044000,95044000,55,,hs8,Playing cards
+95049090,95049090,56,,hs8,"Articles nesoi for arcade, table or parlor games & parts & access.; automatic bowling alley equipment & parts and accessories thereof"
+95051010,95051010,57,,hs8,"Arts. for Christmas festivities, ornaments of glass"
+95051015,95051015,58,,hs8,"Arts. for Christmas festivities, ornaments of wood"
+95051030,95051030,59,,hs8,"Arts. for Christmas festivities, nativity scenes and figures thereof"
+95059020,95059020,60,,hs8,"Magic tricks and practical joke articles, and parts & accessories thereof nesoi"
+95065980,95065980,61,,hs8,Rackets for games (o/than for lawn-tennis or badminton) and parts & accessories thereof
+95066100,95066100,62,,hs8,Lawn-tennis balls
+95066240,95066240,63,,hs8,Inflatable footballs and soccer balls
+95066280,95066280,64,,hs8,Inflatable balls (o/than footballs and soccer balls) nesoi
+95066920,95066920,65,,hs8,Baseballs and softballs
+95066940,95066940,66,,hs8,"Noninflatable hollow balls nesoi, w/diameter of 19 cm or less"
+95066960,95066960,67,,hs8,Noninflatable balls nesoi
+95069930,95069930,68,,hs8,"Lawn-tennis articles and equipment (o/than balls and rackets), and parts & accessories thereof"
+95069935,95069935,69,,hs8,Skeet targets
+95072040,95072040,70,,hs8,"Fish hooks, snelled"
+95072080,95072080,71,,hs8,"Fish hooks, not snelled"
+95079020,95079020,72,,hs8,"Fishing line, put up and packaged for retail sale"
+95079040,95079040,73,,hs8,Fishing casts or leaders
+96033020,96033020,74,,hs8,"Artists' brushes, writing brushes and similar brushes for the application of cosmetics, valued n/o 5 cents each"
+96033040,96033040,75,,hs8,"Artists' brushes, writing brushes and similar brushes for the application of cosmetics, valued o/5 cents but n/o 10 cents each"
+96170010,96170010,76,,hs8,"Vacuum flasks and vessels, complete with cases, w/capacity n/o 1 liter"
+96170040,96170040,77,,hs8,"Vacuum flasks and vessels, complete with cases, w/capacity o/2 liters"
