@@ -4,7 +4,7 @@
   <img src="tariff-fig.png" width="875" />
 </p>
 
-Updated: 2026-10-26
+Updated: 2026-10-27
 
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
@@ -96,6 +96,21 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
   - Asserts the expected per-category code counts and fails loudly on a mismatch —
     update the counts in `SUBDIVISIONS` for each new notice.
   - Usage: `python extract-301-exemptions.py <notice.pdf> <out.csv>`
+
+- [extract-annex-ii.py](extract-annex-ii.py)
+  - Extracts the IEEPA product-exemption lists from their source PDFs:
+    - EO 14257 Annex II ([data/Annex-II.pdf](data/Annex-II.pdf)) into
+      [annex-II-exemptions.csv](tariff-lists/annex-II-exemptions.csv): 1,039 HS8
+      subheadings. The annex covers every product in a listed 8-digit subheading, so the
+      engine matches on HS8.
+    - EO 14361 Annex II ([brazil-EO14361-annexes.pdf](tariff-lists/brazil-EO14361-annexes.pdf))
+      into [brazil-ag-exemptions-nov13.csv](tariff-lists/brazil-ag-exemptions-nov13.csv):
+      the 238 agricultural subheadings and 11 described articles taken out of the Brazil
+      40% duty from Nov 13, 2025.
+  - Asserts the counts, and that every code in the pre-correction list
+    ([annex-II-exemptions-legacy.csv](tariff-lists/annex-II-exemptions-legacy.csv)) is in
+    Annex II. Both PDFs are read with pdfplumber; pypdf scrambles the Annex II layout.
+  - Usage: `python extract-annex-ii.py`
 
 - [extract-338-annex.py](extract-338-annex.py)
   - Extracts the target basket of each Section 338 proclamation, plus the shared
@@ -196,9 +211,9 @@ The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS`
 |------|-----------|-----------|-------------|
 | Feb 4, 2025 | IEEPA | EO 14193/14194/14195 | Fentanyl emergency: 20% on China and Hong Kong; Canada (EO 14193) and Mexico (EO 14194) also included but immediately paused |
 | Mar 6, 2025 | IEEPA | Amendments to EO 14193/14194 | USMCA carve-out: Canada 8.75%, Mexico 4.5% |
-| Apr 5, 2025 | IEEPA | EO 14257 | Reciprocal tariffs activate: 10% global baseline, country-specific rates from Annex I |
-| Apr 8, 2025 | IEEPA | Amendment to EO 14257 | China/HK escalated to 84% reciprocal (+20% fentanyl = 104%) |
-| Apr 9, 2025 | IEEPA | Amendment to EO 14257 | 90-day pause: all countries reset to 10%; China/HK raised to 125% |
+| Apr 5, 2025 | IEEPA | EO 14257 | Reciprocal tariffs activate at the 10% global baseline (China/HK 30% with fentanyl). The Annex I country rates do not start until Apr 9 (s.3(a)) |
+| Apr 9, 2025 | IEEPA | EO 14257 s.3(a), EO 14259 | Annex I country rates take effect, for one day; China/HK escalated to 84% reciprocal (+20% fentanyl = 104%) |
+| Apr 10, 2025 | IEEPA | EO 14266 | 90-day pause: all countries reset to 10%; China/HK reciprocal raised to 125% (+20% fentanyl = 145%) |
 | May 12, 2025 | IEEPA | U.S.-China Joint Statement (Geneva) | China/HK reciprocal from 125% to 10% (+20% fentanyl = 30%) |
 | Aug 7, 2025 | IEEPA | EO 14326, EO 14323, EO 14325 | August country-specific rates from EO 14326; Brazil +40% (EO 14323); Canada fentanyl raised to 35% (EO 14325) |
 | Nov 1, 2025 | IEEPA | EO 14358, EO 14357 | China 1-year truce: fentanyl reduced to 10% (net 20%); Canada rate scaled up |
@@ -214,12 +229,13 @@ The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS`
 |------|-----------|-----------|-------------|
 | Mar 12, 2025 | Section 232 | Proclamation 10895 (aluminum), 10896 (steel) | Steel and aluminum tariffs at 25% globally |
 | Apr 3, 2025 | Section 232 | Proclamation 10908 | 25% tariff on automobiles and parts; Canada/Mexico treated as ~15% |
-| Apr 11, 2025 | IEEPA | Amendment to EO 14257 | Consumer electronics (phones, laptops, etc.) exempt from reciprocal tariffs |
-| Apr 11, 2025 | IEEPA | EO 14257 Annex II | Annex II product-level exemptions from reciprocal tariffs |
+| Apr 5, 2025 | IEEPA | EO 14257 s.3(b), Annex II | Annex II product exemptions from the reciprocal tariff: 1,039 HS8 subheadings, matched on HS8. Only the reciprocal duty is exempt, so China/HK still pay fentanyl and Brazil (from Aug 7) its 40%. Canada/Mexico are on hold: they keep the pre-correction list from Apr 11 (see [Needs attention](#needs-attention)) |
+| Apr 11, 2025 | IEEPA | Amendment to EO 14257 | Consumer electronics (phones, laptops, etc.) exempt from reciprocal tariffs; China/HK still pay fentanyl |
 | Jun 3, 2025 | Section 232 | Proclamation 10947 | Steel and aluminum tariffs raised to 50%; UK remains at 25% per bilateral deal |
-| Aug 7, 2025 | Section 232 / IEEPA | Proclamation 10962, Proc 10908 amendments, EO 14323 Annex | Copper at 50%; auto deal rates for Japan, EU, South Korea at 15%; Brazil-specific product exemptions |
+| Aug 7, 2025 | Section 232 / IEEPA | Proclamation 10962, Proc 10908 amendments, EO 14323 Annex | Copper at 50%; auto deal rates for Japan, EU, South Korea at 15%; Brazil exemptions. Brazil's two duties keep separate lists: Annex II and electronics remove only the 10% reciprocal, EO 14323's Annex I removes only the 40% |
 | Oct 14, 2025 | Section 232 | Proclamation 10976 | Timber/lumber: softwood 10% (all countries); upholstered wooden furniture and completed kitchen cabinets/vanities 25% (UK 10%, Japan 15%, EU 15%). Steps up Jan 1 2027 — furniture 30%, cabinets 50% (registered, not surfaced in `date_strings`). Autos take precedence per clause 6 |
-| Nov 14, 2025 | IEEPA | EO 14360 | Agricultural product exemptions; China phone fentanyl component reduced to 10% |
+| Nov 1, 2025 | IEEPA | EO 14357 | China/HK Annex II and electronics goods pay only the fentanyl duty, now 10% |
+| Nov 14, 2025 | IEEPA | EO 14360, EO 14361 | Annex II widened to agricultural goods; China/HK keep the 10% fentanyl duty on them; Brazil's 40% lifted on the EO 14361 list (238 subheadings + 11 described articles, retroactive to Nov 13) |
 | Dec 4, 2025 | Section 232 | ITA notice (90 FR 55964) | South Korea auto deal at 15% |
 | Feb 20, 2026 | Section 232 (surviving) | EO "Ending Certain Tariff Actions" — 232 preserved | Re-apply surviving 232 tariffs: steel/aluminum 50% (UK 25%), autos (25%, deal rates for UK/JP/EU/KR), copper 50% |
 | Feb 24, 2026 | Section 122 | Proclamation Annex I, subdivision (aa)(ii) | Product exemptions from surcharge: energy (Ch. 27), critical minerals, pharma, ag, electronics, fertilizers, semiconductors, etc. (~1,098 HS codes) |
@@ -381,7 +397,71 @@ The Oct 26, 2026 check of `auto-tariffs.csv` against Proclamation 10908 (the Apr
 2. **Three codes in `auto-tariffs.csv` are mistyped.** `86122020`, `86122040` and `882721` should be 8512.20.20 and 8512.20.40 (vehicle lighting) and 8527.21 (car radios). The typos match no goods, so about **$7.6B** of 2024 imports, mostly from Mexico, never takes the auto-parts rate.
 3. **Parts take effect a month early.** The parts duty began May 3, 2025 (CBP CSMS 64913145), but `_apply_auto_initial` applies the whole list, vehicles and parts, from Apr 3, 2025. This affects the five panel dates from Apr 3 to Apr 11, 2025.
 
+The Oct 27, 2026 Annex II correction left three items open. Fixing any of them also changes the published series back to 2025.
+
+1. **Canada and Mexico Annex II goods are on hold.** Annex II exempts goods only from the reciprocal tariff, which never applied to Canada or Mexico (EO 14257 s.3(d)–(e)). Under the model's USMCA-adjusted rates their Annex II goods would pay the same rate as their other goods, not 0%. Until that is decided they keep the pre-correction treatment, [annex-II-exemptions-legacy.csv](tariff-lists/annex-II-exemptions-legacy.csv) matched on HS10 from Apr 11 (`_apply_annex_ii_camx_legacy`), so their published rates do not move. Applying the USMCA-adjusted rate to those goods raises Canada by about 1.9 pp in May 2025 and 6.2 pp from Nov 14, 2025, mostly on energy. Non-USMCA Canadian energy and potash paid 10% under the fentanyl order rather than the full rate, so the natural refinement is 0.35 × 10% for those goods.
+2. **The electronics exemption starts on Apr 11, but it applied from Apr 5.** CBP applied the Apr 11 memorandum to entries from Apr 5, with refunds by post-summary correction. The model taxes those goods on the Apr 5 and Apr 9–10 panel dates.
+3. **The Geneva reduction takes effect May 12 in the model, but by law on May 14** (EO 14298). The model drops China from 145% to 30% two days early.
+
 ---
+
+## Update notes (2026-10-27)
+
+- **Annex II exemptions corrected (EO 14257).** The annex covers every product in a listed
+  8-digit subheading. The model padded each code to 10 digits and matched on HS10, so it
+  reached only statistical lines ending in 00 and missed most crude-oil and pharmaceutical
+  lines. The list also held only 720 of the annex's 1,039 subheadings; 108 of the missing
+  ones are chapter 29 chemicals.
+  - [annex-II-exemptions.csv](tariff-lists/annex-II-exemptions.csv) is now the full list,
+    built by the new [extract-annex-ii.py](extract-annex-ii.py) and matched on HS8.
+  - It starts on Apr 5, 2025, when Annex II took effect, instead of Apr 11.
+  - The Nov 14 list was already matched on HS8, so the error ran from Apr 11 to Nov 13, 2025.
+- **Annex II removes only the reciprocal duty** (EO 14257 s.3(b)), so other IEEPA duties now
+  stay on Annex II goods:
+  - **China/HK** pay the fentanyl duty: 20%, then 10% from a new Nov 1 action, which also
+    covers electronics. The Nov 14 agricultural goods now pay 10% (they were at 0%), and
+    Hong Kong electronics now pay the fentanyl duty like China's (they were at 0%).
+  - **Brazil's** 40% (EO 14323) applies to Annex II and electronics goods. Brazil's own
+    Annex I removes only the 40%, so its listed goods that are not in Annex II, such as civil
+    aircraft and orange juice, pay the 10% reciprocal duty.
+  - From Nov 14, Brazil's list also includes the 238 subheadings and 11 described articles
+    of EO 14361 (Nov 20, retroactive to Nov 13),
+    [brazil-ag-exemptions-nov13.csv](tariff-lists/brazil-ag-exemptions-nov13.csv). The
+    described articles are ex-outs, some for religious use only, and are applied flat by HS8.
+  - **India** is unchanged: heading 9903.01.86 exempts Annex II goods from the Russian-oil 25%.
+- **Canada and Mexico are on hold.** They keep the pre-correction list, renamed
+  [annex-II-exemptions-legacy.csv](tariff-lists/annex-II-exemptions-legacy.csv), from Apr 11,
+  so their rates are unchanged at every date. See [Needs attention](#needs-attention).
+- **April 2025 dates corrected.**
+  - EO 14257 s.3(a) starts the Annex I country rates on Apr 9, not Apr 5. Apr 5–8 was the 10%
+    baseline (China/HK 30% with fentanyl).
+  - The Apr 8 step moves to Apr 9: the country rates for one day, with China at 104%.
+  - The 90-day pause moves from Apr 9 to Apr 10, the date EO 14266 took effect.
+- **China/HK during the pause are at 145%, not 125%:** the 125% reciprocal rate plus the 20%
+  fentanyl duty.
+- Re-ran the main and plot notebooks.
+  - `country-by-time.csv` replaces its 2025-04-08 rows with 2025-04-10 and changes only the
+    dates from Apr 5, 2025 to Feb 7, 2026.
+  - Nothing from Feb 20, 2026 on moves, and Canada and Mexico are unchanged at every date.
+  - The daily series now runs to Dec 26, 2026.
+
+  | Date | National before | National after |
+  |---|---|---|
+  | Apr 5, 2025 | 25.51 | 14.48 |
+  | Apr 8, 2025 | 31.42 | 14.48 |
+  | Apr 9, 2025 | 27.10 | 28.27 |
+  | Apr 10, 2025 | 27.10 | 27.33 |
+  | Apr 11, 2025 | 22.61 | 22.76 |
+  | May 12, 2025 | 14.29 | 13.24 |
+  | Aug 7, 2025 | 18.89 | 17.07 |
+  | Nov 1, 2025 | 17.98 | 15.89 |
+  | Nov 14, 2025 | 14.77 | 14.84 |
+  | Feb 7, 2026 | 14.24 | 14.31 |
+
+  On Aug 7, 2025 Switzerland goes from 38.6% to 24.3%, India 43.0% → 33.6%, the EU
+  15.2% → 11.2%, Singapore 9.5% → 4.8% and Iraq 31.3% → 0.8%. Brazil goes up,
+  27.2% → 29.7%.
+- `revenue-analysis.ipynb` keeps its own copy of the older engine and was not updated.
 
 ## Update notes (2026-10-26)
 
