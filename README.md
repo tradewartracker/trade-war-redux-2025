@@ -6,6 +6,22 @@
 
 Updated: 2026-10-27
 
+> [!IMPORTANT]
+> **Major update, Oct 27, 2026: tariff rates for Apr 2025 – Feb 2026 have been revised.** The model applied the Annex II exemptions from the 2025 reciprocal tariffs (EO 14257) incorrectly. Correcting them lowers the national average for most of that period.
+>
+> - **What was wrong.** Annex II exempts every product in a listed 8-digit HTS subheading. The model matched its codes only at 10 digits, so most exempt imports, including much of crude oil and pharmaceuticals, were still charged the reciprocal tariff. The list was also missing 319 of the annex's 1,039 subheadings.
+> - **Fixed in the same update.** Annex II goods now keep the other IEEPA duties that still applied to them: China's fentanyl duty and Brazil's 40%. Apr 5–8, 2025 is now the 10% baseline, because the country-specific rates started on Apr 9. China's rate during the 90-day pause is now 145% (125% reciprocal plus 20% fentanyl), not 125%.
+> - **Effect on the national average.**
+>   - May 12 – Nov 13, 2025: down about 1–2 percentage points (Aug 7, 2025: 18.9% → 17.1%).
+>   - Apr 5–8, 2025: down 11–17 points.
+>   - Apr 9 – May 11, 2025: up by at most 1.2 points. The one-day country rates now fall on Apr 9, and China's pause rate is higher.
+>   - Nov 14, 2025 – Feb 19, 2026: up 0.07 points, from China's fentanyl duty and Brazil's 40% on Annex II goods.
+>   - Countries with large energy or pharmaceutical exports fall most; on Aug 7, 2025 Switzerland goes from 38.6% to 24.3%.
+>   - Rates from Feb 20, 2026 on, including today's, are unchanged.
+> - **Not yet changed.** Canada and Mexico keep the old Annex II treatment while their handling is reviewed.
+>
+> Details are in the [Oct 27 update notes](#update-notes-2026-10-27) and under [Needs attention](#needs-attention).
+
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
 ## Primary workflow
@@ -17,6 +33,9 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
 2. [plot-tariff-by-country-by-time.ipynb](plot-tariff-by-country-by-time.ipynb)
    - Reads the latest output files and produces website charts/tabs.
    - Uses [federal-tax-duty.csv](federal-tax-duty.csv) and [NIPA-imports.csv](NIPA-imports.csv) for historical tariff calculations.
+   - Writes [tariff-fig.png](tariff-fig.png), the chart at the top of this README. It is a
+     snapshot of the daily tariff chart taken with headless Chrome (or Edge), so re-run this
+     notebook after every run of (1).
 
 3. [get-country-hs2-tariff.ipynb](get-country-hs2-tariff.ipynb)
    - Generates country-by-HS2 tariff outputs in [data-hs2](data-hs2).
