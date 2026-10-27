@@ -4,7 +4,7 @@
   <img src="tariff-fig.png" width="875" />
 </p>
 
-Updated: 2026-10-23
+Updated: 2026-10-26
 
 This repository tracks U.S. tariff changes and produces data + charts used in the public tracker.
 
@@ -41,8 +41,13 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
    - Coverage, incidence and rate impact of the three Aug 22, 2026 Section 338 actions (originally Aug 19)
      on Canada: what is hit, what is not, top products, and a decomposition of the
      +1.85pp rate step against the +2.49pp naive figure.
-   - Quantifies the one real bias (the HS6 auto-parts mask, ~0.19pp down) and shows
+   - Quantifies the one real bias (the auto-parts list applied flat by HS code, ~0.19pp down) and shows
      why the chapter-44 wood in the basket is *not* a bias (hardwood/plywood, non-232).
+   - Section 7 breaks down the Sep 15, 2026 amendment. Dropping the Section 232 carve-out
+     for alcohol and autos adds 0.31pp to Canada's rate, from switchgear already in the
+     basket and from steel and aluminum structures added that day; the basket reshuffle
+     alone is −0.03pp. The section lists the products that now pay both duties.
+   - Section 8 covers Oct 30: which goods' tariffs fell and which are new.
    - Writes figures to [figures](figures); must be run after (1).
    - Imports the tariff engine from the main notebook, same as (6).
 
@@ -99,6 +104,13 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
     restate the same codes, so disagreement means a bad parse. Unlike the hardcoded
     counts in the 301 script, this guard needs no per-notice maintenance.
   - Add a new action by appending to the `ACTIONS` table; no other change needed.
+  - A later proclamation that amends a basket goes in the `AMENDMENTS` table. Its Annex II
+    deletions and insertions are applied to the basket in force the day before, and the
+    result is written as a dated version (e.g. `canada-338-autos-2026-10-30.csv`). Annex I
+    is reconciled with Annex II allowing for narrowings, where Annex II deletes an HS8 line
+    and re-inserts the HS10 lines that stay, while Annex I lists only the lines that leave.
+    Amending annexes are read with pdfplumber, because pypdf scrambles the reading order of
+    the Sep 8, 2026 autos Annex II.
   - Usage: `python extract-338-annex.py`
 
 - [validate-338.py](validate-338.py)
@@ -107,6 +119,12 @@ This repository tracks U.S. tariff changes and produces data + charts used in th
     economic magnitudes quoted downstream so a silent list change cannot move the
     published numbers unnoticed.
   - Imports its config from `extract-338-annex.py` so the two cannot disagree.
+  - For the dated versions it rebuilds each one from an order-free parse of its Annex II,
+    and checks that:
+    - every narrowing accounts for all HTS lines under the narrowed code;
+    - the note 51(c) wording matches each regime's Section 232 setting;
+    - the baskets in force on each date are disjoint;
+    - every code banned on Sep 29, 2026 is already in a basket.
   - Usage: `python validate-338.py` (exits non-zero on failure)
 
 - [validate-301-labor.py](validate-301-labor.py)
@@ -218,19 +236,40 @@ They differ in exactly one respect, captured by the `scope` field of `STACKED_RE
 
 New actions are added declaratively — extract the code list, register it in Section 2, and append one entry to `STACKED_REGIMES`. No new logic is required.
 
+An action that a later proclamation amends is split into dated versions. The existing entry gets an `end_date` (the last day it applies), and a new entry starts the next day with its own basket and carve-outs. Editing an entry in place would rewrite every earlier date in the panel.
+
 | Date | Authority | Reference | Description |
 |------|-----------|-----------|-------------|
 | Jul 22, 2026 | Section 301 | USTR Notice of Action — Brazil (Jul 15, 2026) | 25% on all goods of Brazil; exemptions for 864 listed subheadings, 11 named articles, 546 civil-aircraft codes, 705 pharmaceutical-application codes, and all Section 232 sectors |
 | Jul 31, 2026 | Section 301 | USTR Notice Annex I.B — U.S. note 50(a)(vi)(8) | Patented pharmaceuticals added to the Brazil 232 carve-out (no effect — sector not modeled) |
-| Aug 22, 2026 | Section 338 | Proclamation 11046 on Canadian alcoholic beverages (Jul 20, 2026), heading 9903.03.12; effective date amended by Proclamation 11056 | 50% on 63 enumerated Canadian codes (beverages, some wood and paper) |
+| Aug 22 – Sep 14, 2026 | Section 338 | Proclamation 11046 on Canadian alcoholic beverages (Jul 20, 2026), heading 9903.03.12; effective date amended by Proclamation 11056 | 50% on 63 enumerated Canadian codes (beverages, some wood and paper) |
 | Aug 22, 2026 | Section 338 | Proclamation 11047 on Canadian dairy (Jul 20, 2026), heading 9903.03.13; effective date amended by Proclamation 11056 | 50% on 52 enumerated Canadian codes (milk products, sugars, caseins) |
-| Aug 22, 2026 | Section 338 | Proclamation 11048 on Canadian motor vehicles (Jul 20, 2026), heading 9903.03.14; effective date amended by Proclamation 11056 | 50% on 439 enumerated Canadian codes across 56 chapters |
+| Aug 22 – Sep 14, 2026 | Section 338 | Proclamation 11048 on Canadian motor vehicles (Jul 20, 2026), heading 9903.03.14; effective date amended by Proclamation 11056 | 50% on 439 enumerated Canadian codes across 56 chapters |
 | Aug 19–21, 2026 | Section 338 | Proclamation 11056 (Aug 18, 2026), FR Doc 2026‑17294 | 3‑day suspension of the three Canada actions during negotiations; Annex II chapeau of Procs 11046/11047/11048 amended from Aug 19 to Aug 22. Negotiations failed; duties took effect Aug 22 (no-op row — encoded as the regimes' effective date) |
+| Sep 15, 2026 | Section 338 | Proclamation 11064 (Sep 8, 2026) modifying Proclamation 11046, heading 9903.03.12 | Alcohol basket −2 / +40 → 101 codes (cheese, hides, furskins, boats added; whisky and liqueurs over 4 liters leave). Now applies **in addition to** Section 232 |
+| Sep 15 – Oct 29, 2026 | Section 338 | Proclamation 11065 (Sep 8, 2026) modifying Proclamation 11048, heading 9903.03.14 | Autos basket −8 / +82 → 513 codes (steel and aluminum structures, furniture, lamps, golf carts added; salt, cement, refined lead leave). Now applies **in addition to** Section 232 |
+| Sep 29, 2026 | Section 338 | Proclamations 11061, 11062, 11063 (Sep 8, 2026) | Import bans on packaged beer, wine and spirits; whey, molasses and non-alcoholic beer; motorcycles over 800cc. Every banned code is already in a basket and is kept at the 50% basket rate (no-op row) |
+| Oct 30, 2026 | Section 338 | Proclamation of Oct 23, 2026 further modifying Proclamation 11048, heading 9903.03.14 | Autos basket −22 / +100 → 591 codes (cocoa powder, paints, soaps, carpets, fiberboard, freezers, valves added; plywood, packaging and some machinery leave). Still in addition to Section 232 |
 | Jul 24, 2026 | Section 301 | USTR Notice of Actions — forced labor (Docket USTR–2026–0265/0266, Jul 23 2026) | 12.5% (10% for 18 economies) on all goods of 50 tracked economies; Annex II Part A (unconditional + pharmaceutical codes) and all Section 232 sectors exempt. Effective the day the Section 122 surcharge lapses. See the forced-labor detail below. |
 
 Because Section 122 runs through Jul 23 and the Brazil 301 action begins Jul 22, the two overlap for two days. All start and end dates are modeled literally, so Brazil shows a brief spike (≈17.5%) on Jul 22–23 before settling at ≈13.3%.
 
-The three Section 338 actions (Proclamations 11046, 11047, 11048) were issued the same day against Canada, all at 50%, all originally effective Aug 19, 2026, and all sharing a single U.S. note 51. On Aug 18, Proclamation 11056 suspended them for three days while Canada negotiated on a "commitment to remove" the discriminations, moving the effective date to **Aug 22, 2026**; the talks failed and the duties took effect on that date. Nothing else in the three proclamations changed. Each retaliates for a distinct Canadian practice — provincial liquor-board bans, cheese TRQ allocation, and motor-vehicle tariffs and quotas — but the baskets deliberately target goods *other* than the offending sector, and are disjoint from one another. The civil-aircraft carve-out of note 51(d) (heading 9903.03.16, 554 codes) is enumerated once and shared by all three, so it is modeled as one exemption list referenced by three regimes. Neither the proclamations nor note 51 provide an in-transit grace window. Combined effect on Canada: **+1.85 pp** (5.82% → 7.67%), against +2.49 pp before carve-outs. (The 5.82%/7.67% levels sit ~0.18 pp above the pre-timber figures of 5.64%/7.49%, since the Section 232 timber action lifts Canada's whole curve from Oct 14 2025; the *step* is essentially unchanged.)
+The three Section 338 actions (Proclamations 11046, 11047, 11048) were issued the same day against Canada, all at 50%, all originally effective Aug 19, 2026, and all sharing a single U.S. note 51. On Aug 18, Proclamation 11056 suspended them for three days while Canada negotiated on a "commitment to remove" the discriminations, moving the effective date to **Aug 22, 2026**; the talks failed and the duties took effect on that date. Nothing else in the three proclamations changed. Each retaliates for a distinct Canadian practice — provincial liquor-board bans, cheese TRQ allocation, and motor-vehicle tariffs and quotas — but the baskets deliberately target goods *other* than the offending sector, and are disjoint from one another. The civil-aircraft carve-out of note 51(d) (heading 9903.03.16, 554 codes) is enumerated once and shared by all three, so it is modeled as one exemption list referenced by three regimes. Neither the proclamations nor note 51 provide an in-transit grace window. Combined effect on Canada: **+1.85 pp** (5.82% → 7.66%), against +2.49 pp before carve-outs. (The 5.82%/7.66% levels sit ~0.18 pp above the pre-timber figures of 5.64%/7.49%, since the Section 232 timber action lifts Canada's whole curve from Oct 14 2025; the *step* is essentially unchanged.)
+
+**Amendments.** Two later rounds changed the alcohol and autos baskets. Dairy was never amended.
+
+- **Sep 15, 2026 (Procs 11064 and 11065, signed Sep 8).** Both baskets were reshuffled, and note 51(c) was rewritten so that its Section 232 exemption names only the dairy heading (9903.03.13). From Sep 15 the alcohol and autos duties apply *in addition to* Section 232.
+- **Oct 30, 2026 (Proclamation of Oct 23, 2026; Federal Register number pending).** The autos basket changed again.
+- **Sep 29, 2026 (Procs 11061–11063, signed Sep 8).** Some basket goods were banned from importation. The model keeps them at 50%: every banned code is already in a basket, and 50% is the rate that applies if a ban is struck down.
+
+Each amended basket is a dated version that `extract-338-annex.py` builds from the amending Annex II.
+
+Effect on Canada: **+0.28 pp** on Sep 15 (7.66% → 7.94%) and **+0.02 pp** on Oct 30 (→ 7.97%). The national average goes 11.46% → 11.49% → 11.50%. The Sep 15 step breaks down as:
+- +0.20 pp from steel and aluminum structures (7308.90, 7604, 7608), new to the autos basket and now paying on top of Section 232;
+- +0.11 pp from goods the model treats as auto parts — mainly HS8 8537.10.91 switchgear (see the modeling limitations) — which the autos basket no longer exempts;
+- −0.03 pp from the reshuffle of other goods.
+
+The Oct 30 change is close to a swap. Tariffs fall from 50% to 0% on about $2.3B of 2024 Canadian imports, mostly packaging (plastic sacks, crates, corrugated cartons) and packing machinery. They rise from 0% to 50% on $2.5B, mostly chemicals and consumer products (lab reagents, detergents, shampoo, caulk, paints), surgical instruments, valves and paper. The carpets and cocoa powder the announcement led with barely register: carpets add $8M, and the cocoa-powder lines carried no 2024 imports.
 
 #### Section 301 forced-labor action — detail
 
@@ -323,16 +362,61 @@ The following Section 232 actions require product-level HS code lists not yet av
 
 These omissions now have a second-order effect. Every Phase 3 action exempts goods already subject to Section 232 — Section 301 via U.S. note 50(a)(vi), Section 338 via note 51(c) — so goods in these three unmodeled sectors receive the **full stacked rate when they should be exempt**, biasing the affected country's effective rate upward.
 
-The Section 338 Canada baskets are barely touched by this. Note 51(c)(4) exempts only wood in the Section 232 **timber** headings (9903.76.01–.24) — softwood lumber, upholstered furniture and completed cabinets/vanities — and of the modeled timber codes only a single cabinet line (9403.60.8093, ~$0.30B of 2025 Canadian imports) falls inside a 338 basket. Now that the timber sector is modeled it is correctly carved out (its rate moves from the 338 basket's 50% down to the timber 232 rate of 25%). The **64 chapter-44 codes in the autos basket are hardwood, plywood, fiberboard and builders' joinery (4401, 4402, 4408–4421)**, which Proclamation 10976 does *not* cover — they are not Section 232 goods and are correctly dutiable at 50%. An earlier note here treated those 64 codes as a deferred 232 carve-out bias; that was a misdiagnosis, corrected Jul 23, 2026 when the timber sector was modeled and the softwood headings (4403/4406/4407) were shown to be disjoint from the basket.
+The Section 338 Canada baskets are barely touched by this, and from Sep 15, 2026 only the dairy basket still carves out Section 232 goods, so for alcohol and autos it applies only through Sep 14. Note 51(c)(4) exempts only wood in the Section 232 **timber** headings (9903.76.01–.24) — softwood lumber, upholstered furniture and completed cabinets/vanities — and of the modeled timber codes only a single cabinet line (9403.60.8093, ~$0.30B of 2025 Canadian imports) falls inside a 338 basket. Now that the timber sector is modeled it is correctly carved out through Sep 14, 2026 (its rate moves from the 338 basket's 50% down to the timber 232 rate of 25%). It sits in the autos basket, so from Sep 15 it pays both. The **64 chapter-44 codes in the autos basket are hardwood, plywood, fiberboard and builders' joinery (4401, 4402, 4408–4421)**, which Proclamation 10976 does *not* cover — they are not Section 232 goods and are correctly dutiable at 50%. An earlier note here treated those 64 codes as a deferred 232 carve-out bias; that was a misdiagnosis, corrected Jul 23, 2026 when the timber sector was modeled and the softwood headings (4403/4406/4407) were shown to be disjoint from the basket.
 
 ### Modeling limitations
 
 - **End-use conditional exemptions are applied flat.** The Brazil 301 civil-aircraft exemption is conditional on meeting HTSUS general note 6, and the pharmaceutical exemption applies only to pharmaceutical end uses. Neither is resolvable from HS10 import data, so both are applied to every listed code. This **over-exempts**, partially offsetting the upward bias described above.
 - **In-transit relief is ignored.** Heading 9903.05.02 exempts goods loaded before Jul 22, 2026 and entered before Jul 29, 2026. Given Brazil–U.S. transit times, most goods entering that week are exempt in practice, so the modeled Jul 22 step overstates the rate for its first week. Consistent with prior actions carrying similar grace windows, none of which are modeled.
 - **Annex II interaction.** Products removed from Section 232 scope by the Apr 6, 2026 metals Annex II are no longer provided for in the 9903.82 headings, so they do *not* qualify for the Section 232 carve-out in either Phase 3 authority. The model handles this explicitly (21 products, ~0.03% of U.S. imports from Brazil).
-- **The auto-parts mask is coarse, and it now over-exempts.** `_mask_auto` matches part of the Proclamation 10908 list at HS6, including `853710`. Because Phase 3 carves out Section 232 goods, every good under HS8 8537.10.91 — industrial switchgear, panelboards and programmable controllers — is treated as an exempt auto part and escapes the Section 338 duty. That is **$1.6B of 2025 Canadian imports, and it removes 0.19 pp** from Canada's post-Aug 22 rate. Note 51(c)(3) exempts only parts *of passenger vehicles and light trucks*, so most of this value should be dutiable. The HS6 approximation predates the Section 338 work; it had little consequence while the auto list only ever *set* a rate, and became material once Phase 3 began reading it as an exemption.
+- **The auto-parts list is applied flat by HS code.** The Proclamation 10908 parts list (HTSUS chapter 99, U.S. note 33(g)) names 130 provisions, some at six or four digits, such as 8537.10 (control boards) and 8507.60 (lithium-ion batteries). The 232 duty reaches only the goods in those provisions that are *parts of passenger vehicles and light trucks*; note 33(h) sends everything else, along with USMCA-qualifying parts, to heading 9903.94.06. Whether a good is a car part cannot be resolved from HS10 data, so `_mask_auto` applies the list to every good in a listed provision, the same convention as the end-use exemptions above. `auto-tariffs.csv` matches the list's own granularity — checked Oct 26, 2026 against the Apr 2025 annex and HTSUS 2026 Revision 21 — so the mask is not coarser than the law. The flat rule cuts both ways:
+  - It charges the auto-parts rate on non-automotive goods in listed provisions. The largest are lithium-ion batteries (8507.60, $22B of 2024 imports from the partners the model tracks) and control boards (8537.10, $18B).
+  - It carves the same goods out of any Phase 3 action that exempts Section 232 goods. In the Section 338 autos basket this exempts all of HS8 8537.10.91 — industrial switchgear, panelboards and programmable controllers, **$1.6B of 2024 Canadian imports, 0.19 pp** of Canada's rate from Aug 22 to Sep 14, 2026 — although note 51(c)(3) exempts only parts of passenger vehicles and light trucks. This only became material once Phase 3 began reading the list as an exemption; before that it only ever *set* a rate. From Sep 15 the autos basket applies on top of Section 232, so these goods pay the 338 duty as well.
+
+### Needs attention
+
+The Oct 26, 2026 check of `auto-tariffs.csv` against Proclamation 10908 (the Apr 2025 annex and HTSUS 2026 Revision 21, U.S. note 33) found three problems that are not yet corrected. Fixing any of them changes the published series back to 2025.
+
+1. **Canada and Mexico auto parts are charged 15%.** Note 33(h)(i) sends USMCA-qualifying parts to heading 9903.94.06, which carries no Section 232 duty, and elsewhere the model treats all Canadian and Mexican imports as USMCA-qualifying. The 15% on parts adds about **0.68 pp** to Canada's rate and **2.12 pp** to Mexico's (2024 weights).
+2. **Three codes in `auto-tariffs.csv` are mistyped.** `86122020`, `86122040` and `882721` should be 8512.20.20 and 8512.20.40 (vehicle lighting) and 8527.21 (car radios). The typos match no goods, so about **$7.6B** of 2024 imports, mostly from Mexico, never takes the auto-parts rate.
+3. **Parts take effect a month early.** The parts duty began May 3, 2025 (CBP CSMS 64913145), but `_apply_auto_initial` applies the whole list, vehicles and parts, from Apr 3, 2025. This affects the five panel dates from Apr 3 to Apr 11, 2025.
 
 ---
+
+## Update notes (2026-10-26)
+
+- **Section 338 Canada amendments modeled.** See the Phase 3 table and the amendments
+  paragraph under it.
+  - Sep 15: Procs 11064/11065 change the alcohol and autos baskets, and both now stack on
+    Section 232.
+  - Sep 29: Procs 11061–11063 impose import bans, kept at the 50% basket rate (no-op).
+  - Oct 30: the Proclamation of Oct 23, 2026 changes the autos basket again (−22, +100).
+- Phase 3 regimes can now end: the registry loop passes `end_date` through, so the
+  alcohol and autos regimes are split into dated versions instead of being edited in place.
+- New lists:
+  - [canada-338-alcohol-2026-09-15.csv](tariff-lists/canada-338-alcohol-2026-09-15.csv) (101 codes)
+  - [canada-338-autos-2026-09-15.csv](tariff-lists/canada-338-autos-2026-09-15.csv) (513)
+  - [canada-338-autos-2026-10-30.csv](tariff-lists/canada-338-autos-2026-10-30.csv) (591)
+
+  They are built by the new `AMENDMENTS` table in `extract-338-annex.py`, and
+  `validate-338.py` gained a section that checks them.
+- Added 2026-09-15 and 2026-10-30 to `date_strings` and re-ran the main notebook.
+  - `country-by-time.csv` is unchanged for every earlier date and gains rows for the two
+    new dates.
+  - `daily-tariff-latest-data.csv` is unchanged through Sep 14 and now runs to Dec 25, 2026.
+  - Canada 7.66% → 7.94% → 7.97%; national 11.46% → 11.49% → 11.50%.
+  - Oct 30 falls after this run, so it appears in the series as a scheduled step.
+- Corrected Canada's Aug 22 level from 7.67% to 7.66% (it is 7.6647; earlier notes rounded
+  it up). The +1.85 pp step is unchanged.
+- Corrected the auto-parts modeling limitation. It called `_mask_auto` a coarse HS6
+  approximation; it is not. Checked against the Proclamation 10908 annex and HTSUS
+  note 33(g), `auto-tariffs.csv` lists codes at the same granularity as the law (8537.10
+  is listed there at six digits). The Section 338 switchgear effect, 0.19 pp, comes
+  from applying the list's passenger-vehicle end-use condition flat by HS code — the
+  same convention as the aircraft and pharma exemptions. No rates changed by this
+  correction.
+- The same check found three Proclamation 10908 problems that are logged under
+  [Needs attention](#needs-attention) and not yet corrected.
 
 ## Update notes (2026-10-23)
 
