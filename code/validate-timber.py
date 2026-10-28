@@ -6,14 +6,15 @@ Unlike the engine, this recomputes everything from the committed list and the
 Census import parquet, so a silent edit to timber-232.csv that would move the
 published numbers fails loudly here. Does NOT import the tariff engine.
 
-Usage: python validate-timber.py   (exits non-zero on failure)
+Usage: python code/validate-timber.py   (exits non-zero on failure)
 """
 import sys
 from pathlib import Path
 import pandas as pd
 
-TL = Path("tariff-lists")
-DATA = Path("data")
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+TL = ROOT / "tariff-lists"
+DATA = ROOT / "data"
 CANADA = "1220"
 
 # The 22 codes exactly as enumerated in Proclamation 10976, U.S. note 37.

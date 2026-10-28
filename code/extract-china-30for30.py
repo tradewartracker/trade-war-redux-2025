@@ -21,18 +21,19 @@ Outputs
       "enabled with radio frequency, Wi-Fi, Ethernet, or Bluetooth" — is kept
       flat at HS8 and flagged resolution='flat'.
 
-Usage: python extract-china-30for30.py
+Usage: python code/extract-china-30for30.py
 """
 import sys
 from pathlib import Path
 import pandas as pd
 import pdfplumber
 
-TL = Path("tariff-lists")
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+TL = ROOT / "tariff-lists"
 PDF = TL / "sources" / "china-USimports-Public-List.pdf"
 RAW_OUT = TL / "china-30for30-us-import-list.csv"
 MODEL_OUT = TL / "china-30for30-model-list.csv"
-PARQUET = Path("data") / "2024-hs10-imports5700.parquet"   # for HS10 descriptions
+PARQUET = ROOT / "data" / "2024-hs10-imports5700.parquet"   # for HS10 descriptions
 
 # HS10 resolution of the juvenile-furniture ex-outs, read literally from each
 # row's product description in the PDF. Only the products NAMED in the text are
@@ -100,8 +101,8 @@ def main():
     model.to_csv(MODEL_OUT, index=False, encoding="utf-8")
     n8 = (model.HTSUS.str.len() == 8).sum()
     n10 = (model.HTSUS.str.len() == 10).sum()
-    print(f"{RAW_OUT}: {len(raw)} rows ({(raw.ex_out == 'X').sum()} ex-outs)")
-    print(f"{MODEL_OUT}: {len(model)} rows ({n8} HS8 + {n10} HS10)")
+    print(f"{RAW_OUT.relative_to(ROOT)}: {len(raw)} rows ({(raw.ex_out == 'X').sum()} ex-outs)")
+    print(f"{MODEL_OUT.relative_to(ROOT)}: {len(model)} rows ({n8} HS8 + {n10} HS10)")
     return 0
 
 

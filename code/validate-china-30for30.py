@@ -9,15 +9,16 @@ modeled Section 232 list or an active labor Annex II Part A exemption, which is
 why reversing the 12.5% labor duty nets the list to exactly zero added tariff;
 and (2) the size of that reversal on China's rate.
 
-Usage: python validate-china-30for30.py   (exits non-zero on failure)
+Usage: python code/validate-china-30for30.py   (exits non-zero on failure)
 """
 import re
 import sys
 from pathlib import Path
 import pandas as pd
 
-TL = Path("tariff-lists")
-DATA = Path("data")
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+TL = ROOT / "tariff-lists"
+DATA = ROOT / "data"
 CHINA = "5700"
 
 EXPECT_N_RAW = 77

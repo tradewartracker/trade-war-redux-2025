@@ -9,7 +9,7 @@ a real action issues. This script guards that provisional baseline.
 
 Two modes:
 
-  python validate-301-labor.py
+  python code/validate-301-labor.py
       Baseline checks: the economy->tier table and the Annex A exemption list
       are internally consistent and match the magnitudes quoted downstream, and
       -- the load-bearing check -- Annex A is still bit-for-bit identical to the
@@ -17,7 +17,7 @@ Two modes:
       source. A silent divergence here means the notebook must stop reusing the
       Section 122 files for the labor regime.
 
-  python validate-301-labor.py --diff-economies NEW_ECON.csv \
+  python code/validate-301-labor.py --diff-economies NEW_ECON.csv \
                                --diff-exemptions NEW_EXEMPT.csv
       Diff mode, to run when the Notice of Action lands. Re-extract the action's
       economy list and Annex A from the final notice into two CSVs of the same
@@ -37,8 +37,9 @@ from pathlib import Path
 
 import pandas as pd
 
-TL = Path("tariff-lists")
-DATA = Path("data")
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+TL = ROOT / "tariff-lists"
+DATA = ROOT / "data"
 
 ECON = TL / "301-labor-economies.csv"
 EXEMPT = TL / "301-labor-exemptions.csv"

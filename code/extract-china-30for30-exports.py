@@ -27,14 +27,15 @@ Output: tariff-lists/china-30for30-china-import-list.csv
   no, tariff_line (8-digit China 2026 schedule), hs6, match, description_zh,
   source_page.
 
-Usage: python extract-china-30for30-exports.py
+Usage: python code/extract-china-30for30-exports.py
 """
 import sys
 from pathlib import Path
 import pandas as pd
 import pdfplumber
 
-TL = Path("tariff-lists")
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+TL = ROOT / "tariff-lists"
 PDF = TL / "sources" / "Usexports-China-Import-List.pdf"
 OUT = TL / "china-30for30-china-import-list.csv"
 
@@ -86,7 +87,7 @@ def main():
     raw = raw[["no", "tariff_line", "hs6", "match", "description_zh", "source_page"]]
     raw.to_csv(OUT, index=False, encoding="utf-8")
     by6 = raw.drop_duplicates("hs6")["match"].value_counts()
-    print(f"{OUT}: {len(raw)} tariff lines, {raw.hs6.nunique()} HS6, "
+    print(f"{OUT.relative_to(ROOT)}: {len(raw)} tariff lines, {raw.hs6.nunique()} HS6, "
           f"{raw.tariff_line.str[:2].nunique()} chapters")
     print("  HS6 match: " + ", ".join(f"{k} {v}" for k, v in by6.items()))
     return 0

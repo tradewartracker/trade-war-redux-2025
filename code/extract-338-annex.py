@@ -23,7 +23,7 @@ Later proclamations amend a basket rather than restate it. Each amendment is
 applied to the basket in force the day before and written as a dated version
 (see AMENDMENTS), so the engine can switch baskets on the effective date.
 
-Usage: python extract-338-annex.py [--srcdir tariff-lists/sources] [--outdir tariff-lists]
+Usage: python code/extract-338-annex.py [--srcdir tariff-lists/sources] [--outdir tariff-lists]
 
 The annex PDFs are read from --srcdir; the CSVs are written to --outdir.
 """
@@ -36,6 +36,8 @@ from pathlib import Path
 import pandas as pd
 import pdfplumber
 import pypdf
+
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
 
 # ── Configuration ────────────────────────────────────────────────────────
 # One entry per Section 338 action. `heading` is the chapter 99 heading the
@@ -354,8 +356,8 @@ def apply_amendment(am, outdir, srcdir):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--srcdir", default="tariff-lists/sources")
-    ap.add_argument("--outdir", default="tariff-lists")
+    ap.add_argument("--srcdir", default=ROOT / "tariff-lists" / "sources")
+    ap.add_argument("--outdir", default=ROOT / "tariff-lists")
     args = ap.parse_args()
     srcdir = Path(args.srcdir)
     outdir = Path(args.outdir)

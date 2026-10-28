@@ -11,7 +11,7 @@ Run it after extract-338-annex.py whenever a new Section 338 action is added.
 The action config is imported from the extractor rather than duplicated, so the
 two cannot disagree about which PDF is which.
 
-Usage: python validate-338.py
+Usage: python code/validate-338.py
 Exits non-zero if any check fails.
 """
 
@@ -24,9 +24,10 @@ from pathlib import Path
 import pandas as pd
 import pypdf
 
-TL = Path("tariff-lists")
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+TL = ROOT / "tariff-lists"
 SRC = TL / "sources"          # the proclamation PDFs
-DATA = Path("data")
+DATA = ROOT / "data"
 CANADA = "1220"
 
 # Expected magnitudes, asserted so a silent list change cannot quietly move the

@@ -16,17 +16,20 @@ Extract the IEEPA product-exemption lists read by make-tariff-by-country-by-time
 pypdf scrambles the layout of the Annex II PDF, so both are read with pdfplumber.
 
 Usage:
-    python extract-annex-ii.py
+    python code/extract-annex-ii.py
 """
 import re
+from pathlib import Path
+
 import pandas as pd
 import pdfplumber
 
-ANNEX_II_PDF = "tariff-lists/sources/Annex-II.pdf"
-ANNEX_II_OUT = "tariff-lists/annex-II-exemptions.csv"
-ANNEX_II_LEGACY = "tariff-lists/annex-II-exemptions-legacy.csv"
-BRAZIL_PDF = "tariff-lists/sources/brazil-EO14361-annexes.pdf"
-BRAZIL_OUT = "tariff-lists/brazil-ag-exemptions-nov13.csv"
+ROOT = Path(__file__).resolve().parents[1]   # the repository root
+ANNEX_II_PDF = ROOT / "tariff-lists/sources/Annex-II.pdf"
+ANNEX_II_OUT = ROOT / "tariff-lists/annex-II-exemptions.csv"
+ANNEX_II_LEGACY = ROOT / "tariff-lists/annex-II-exemptions-legacy.csv"
+BRAZIL_PDF = ROOT / "tariff-lists/sources/brazil-EO14361-annexes.pdf"
+BRAZIL_OUT = ROOT / "tariff-lists/brazil-ag-exemptions-nov13.csv"
 
 
 def pdf_text(path):
@@ -51,7 +54,7 @@ def annex_ii():
         raise SystemExit(f"legacy codes not in Annex II: {sorted(missing)}")
 
     pd.DataFrame({"HTSUS": codes}).to_csv(ANNEX_II_OUT, index=False)
-    print(f"{ANNEX_II_OUT}: {len(codes)} HS8 subheadings")
+    print(f"{ANNEX_II_OUT.relative_to(ROOT).as_posix()}: {len(codes)} HS8 subheadings")
 
 
 def brazil_ag():
@@ -72,7 +75,7 @@ def brazil_ag():
         raise SystemExit("duplicate subheadings in the Brazil list")
 
     out.to_csv(BRAZIL_OUT, index=False)
-    print(f"{BRAZIL_OUT}: {len(listed)} listed + {len(described)} described")
+    print(f"{BRAZIL_OUT.relative_to(ROOT).as_posix()}: {len(listed)} listed + {len(described)} described")
 
 
 if __name__ == "__main__":

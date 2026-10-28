@@ -5,7 +5,7 @@ Parses the U.S. note subdivisions in Annex I into a single CSV with a `category`
 column, one file per 301 country regime.
 
 Usage:
-    python extract_301.py <pdf> <out.csv>
+    python code/extract-301-exemptions.py <pdf> <out.csv>
 """
 import re
 import sys
