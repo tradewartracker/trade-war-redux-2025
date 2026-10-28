@@ -49,10 +49,20 @@ that had already been published.
 - **README restructured** for readers outside the project. The methodology moved to
   [METHODOLOGY.md](METHODOLOGY.md), the notebook and script guide to
   [TECHNICAL-README.md](TECHNICAL-README.md), and the dated notes to this file.
-- **README chart replaced.** [tariff-fig.png](tariff-fig.png) is now an annotated chart in
+- **README chart replaced.** [tariff-fig.png](figures/tariff-fig.png) is now an annotated chart in
   the house figure style, drawn by the "README header figure" cell of
   `plot-tariff-by-country-by-time.ipynb` and also saved as `figures/tariff-fig.pdf`. It replaces the headless-browser snapshot of
   the website chart.
+- **Repository reorganized; no data changed.** The layout is described in
+  [TECHNICAL-README.md](TECHNICAL-README.md#repository-layout).
+  - Notebooks and scripts moved to [code](code), with the analysis notebooks in
+    [code/analysis](code/analysis). The legal texts moved to
+    [tariff-lists/sources](tariff-lists/sources) and the README chart to `figures/`.
+  - Code and data no longer in use moved to [archive](archive): `old-code/`, `old-files/`,
+    `old-data/`, `data-hs2/` with `get-country-hs2-tariff.ipynb`, `revenue-analysis.ipynb`
+    and the inputs of the 2025 retaliation pages.
+  - The two data files and the code lists in `tariff-lists/` keep their paths. Re-running
+    the main notebook from its new location reproduces both data files byte for byte.
 
 ## 2026-10-27
 
@@ -62,7 +72,7 @@ that had already been published.
   lines. The list also held only 720 of the annex's 1,039 subheadings; 108 of the missing
   ones are chapter 29 chemicals.
   - [annex-II-exemptions.csv](tariff-lists/annex-II-exemptions.csv) is now the full list,
-    built by the new [extract-annex-ii.py](extract-annex-ii.py) and matched on HS8.
+    built by the new [extract-annex-ii.py](code/extract-annex-ii.py) and matched on HS8.
   - It starts on Apr 5, 2025, when Annex II took effect, instead of Apr 11.
   - The Nov 14 list was already matched on HS8, so the error ran from Apr 11 to Nov 13, 2025.
 - **Annex II removes only the reciprocal duty** (EO 14257 s.3(b)), so other IEEPA duties now
@@ -172,9 +182,9 @@ that had already been published.
   instrument, so nothing enters the published series (`country-by-time.csv` and
   `daily-tariff-latest-data.csv` are unchanged). See the "Announced, not enacted"
   section of [METHODOLOGY.md](METHODOLOGY.md#announced-not-enacted--us-china-30-for-30-list-staged-off).
-- Added [extract-china-30for30.py](extract-china-30for30.py), which writes two CSVs to
+- Added [extract-china-30for30.py](code/extract-china-30for30.py), which writes two CSVs to
   `tariff-lists/` (the list as printed; the engine form with the seven juvenile-furniture
-  ex-outs resolved to 13 HTS10 lines), and [validate-china-30for30.py](validate-china-30for30.py),
+  ex-outs resolved to 13 HTS10 lines), and [validate-china-30for30.py](code/validate-china-30for30.py),
   which pins the list to the PDF, the $29.6B 2024 coverage, the disjointness from the 232
   and labor Part A lists, and the −0.86pp China step.
 - Main notebook: the list is loaded as `STACKED_INCLUDE_LISTS["China-30for30"]`; a staged
@@ -184,14 +194,14 @@ that had already been published.
   regime models a dated reduction; positive regimes are unaffected. Smoke-tested: flag off
   reproduces the published China figure bit-for-bit; flag on moves only the 124 listed
   HTS10 lines, each from 12.5 to 0.
-- Added [china-30for30-analysis.ipynb](china-30for30-analysis.ipynb): what China's rate does
+- Added [china-30for30-analysis.ipynb](code/analysis/china-30for30-analysis.ipynb): what China's rate does
   if the list is excluded from the labor 301 (−0.86pp China, −0.12pp national), by product
   group, with the legacy-301 residual.
 
 ## 2026-08-24
 
 - **Section 338 Canada actions deferred three days by Proclamation 11056** (Aug 18, 2026;
-  FR Doc 2026‑17294, [338-pause-2026-17294.pdf](tariff-lists/338-pause-2026-17294.pdf)).
+  FR Doc 2026‑17294, [338-pause-2026-17294.pdf](tariff-lists/sources/338-pause-2026-17294.pdf)).
   The proclamation suspended the alcohol, dairy and motor-vehicle duties for 3 days pending
   negotiations and amended the effective date in each Annex II chapeau from Aug 19 to
   **Aug 22, 2026**. Negotiations failed at the last minute, so the duties are in force from
@@ -255,7 +265,7 @@ that had already been published.
   (9403.60.8093), now correctly carved out (50% → 25%). Canada's Section 338 step
   is essentially unchanged (~1.85pp). The correction is reflected in the README
   modeling notes, `canada-338-analysis.ipynb`, and `validate-338.py`.
-- Added [validate-timber.py](validate-timber.py); `validate-338.py` still passes
+- Added [validate-timber.py](code/validate-timber.py); `validate-338.py` still passes
   (its magnitudes are raw-basket computations, independent of the engine).
 
 ## 2026-07-22
@@ -273,7 +283,7 @@ that had already been published.
 - Extended `_make_stacked_apply` with two country-conditional carve-outs (`usmca_exempt`
   for CA/MX, `cafta_textile_exempt` for the six CAFTA-DR economies), both no-ops for the
   existing Brazil/Canada regimes.
-- Added [validate-301-labor.py](validate-301-labor.py) — baseline guardrail plus a diff
+- Added [validate-301-labor.py](code/validate-301-labor.py) — baseline guardrail plus a diff
   mode for reconciling against the Notice of Action when it issues.
 
 ## 2026-07-21
@@ -295,7 +305,7 @@ that had already been published.
   - [canada-338-autos.csv](tariff-lists/canada-338-autos.csv) — 439 codes
   - [canada-338-aircraft-exempt.csv](tariff-lists/canada-338-aircraft-exempt.csv) — 554
     codes, shared carve-out
-- Added [extract-338-annex.py](extract-338-annex.py) and [validate-338.py](validate-338.py).
+- Added [extract-338-annex.py](code/extract-338-annex.py) and [validate-338.py](code/validate-338.py).
 - **Fixed the Section 122 end-date off-by-one.** Annex I terminates the surcharge *at*
   12:01 a.m. Jul 24, 2026, so the last covered day is Jul 23; the registry previously
   carried `end_date: 2026-07-24` and the engine tests `date <= end_date`, applying the
@@ -314,7 +324,7 @@ that had already been published.
   only a list file and a config entry.
 - Added [brazil-301-exemptions.csv](tariff-lists/brazil-301-exemptions.csv) — 2,126 HS
   codes across four exemption categories (`flat`, `named`, `aircraft`, `pharma`),
-  extracted from the notice with [extract-301-exemptions.py](extract-301-exemptions.py).
+  extracted from the notice with [extract-301-exemptions.py](code/extract-301-exemptions.py).
 - Gave the Section 122 surcharge an `end_date` of 2026-07-24. It previously had none,
   so the 10% surcharge ran indefinitely past the end of its 150-day authority.
 - Factored the Section 232 union into a single `_mask_all_232` helper, replacing the
@@ -325,8 +335,8 @@ that had already been published.
 
 ## 2026-04-03 (cleanup)
 
-- Extracted revenue analysis (2025 tariff revenue estimate) from the main notebook into [revenue-analysis.ipynb](revenue-analysis.ipynb).
-- Extracted Section 122 exemption and SCOTUS analysis from the main notebook into [section-122-analysis.ipynb](section-122-analysis.ipynb).
+- Extracted revenue analysis (2025 tariff revenue estimate) from the main notebook into [revenue-analysis.ipynb](archive/revenue-analysis.ipynb).
+- Extracted Section 122 exemption and SCOTUS analysis from the main notebook into [section-122-analysis.ipynb](code/analysis/section-122-analysis.ipynb).
 - Added April 6, 2026 Section 232 metals tiered restructuring (Proclamation of Apr 2, 2026) to the tariff engine.
 - Added four new tariff list files for the metals restructuring:
   - [metals-annex-IA.csv](tariff-lists/metals-annex-IA.csv) — 50% tier (279 HS codes)
@@ -336,10 +346,10 @@ that had already been published.
 
 ## 2026-02-24 (cleanup)
 
-- Moved historical snapshots to [old-data](old-data):
-  - [tariff-summary-05-22-2025.csv](old-data/tariff-summary-05-22-2025.csv)
-  - [tariff-summary-06-03-2025.csv](old-data/tariff-summary-06-03-2025.csv)
-- Moved legacy notebooks to [old-code](old-code):
-  - [clean-aug7-list.ipynb](old-code/clean-aug7-list.ipynb)
-  - [make-tariff-by-country-by-time-new.ipynb](old-code/make-tariff-by-country-by-time-new.ipynb)
-  - [tariff-summary.ipynb](old-code/tariff-summary.ipynb)
+- Moved historical snapshots to [old-data](archive/data):
+  - [tariff-summary-05-22-2025.csv](archive/data/tariff-summary-05-22-2025.csv)
+  - [tariff-summary-06-03-2025.csv](archive/data/tariff-summary-06-03-2025.csv)
+- Moved legacy notebooks to [old-code](archive):
+  - [clean-aug7-list.ipynb](archive/clean-aug7-list.ipynb)
+  - [make-tariff-by-country-by-time-new.ipynb](archive/make-tariff-by-country-by-time-new.ipynb)
+  - [tariff-summary.ipynb](archive/tariff-summary.ipynb)

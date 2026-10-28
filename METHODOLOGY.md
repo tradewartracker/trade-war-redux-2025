@@ -147,7 +147,7 @@ Modeled as Phase-3 stacked Section 301 regimes generated from [301-labor-economi
 
 - **10%** on 18 tracked economies (imposed a prohibition or made ART/commitments): Argentina, Bangladesh, Cambodia, Canada, Ecuador, El Salvador, EU, Guatemala, Honduras, India, Indonesia, Malaysia, Mexico, Pakistan, Sri Lanka, Taiwan, Trinidad & Tobago, United Kingdom.
 - **12.5%** on the remaining 32 tracked economies.
-- **Net-of-MFN cap.** For the EU and Taiwan (10% cap) and Japan, Korea and Switzerland (12.5% cap), the notice sets the 301 rate *net of a product's column-1 MFN* — "the sum of the MFN tariff and the section 301 tariff" equals the cap, and the 301 is zero where MFN ≥ the cap. The model implements this as `301 = max(0, cap − MFN)` per HS10, using the statutory column-1 rate in [mfn-per-code.csv](tariff-lists/mfn-per-code.csv) (HTS statutory where the rate is a clean ad valorem, pooled 2024 customs AVE as a fallback for specific/compound duties; built in [mfn-per-code-comparison.ipynb](mfn-per-code-comparison.ipynb)). Applied to the four **non-FTA** economies (EU, Taiwan, Japan, Switzerland). **Korea is deliberately left on the flat cap:** the HTS headings set both the general and special column-1 rate to the flat cap (9903.05.71 = "12.5% / 12.5%"), so a KORUS claim is overridden to the flat rate, and against Korea's ~0 FTA-preferenced 2024 baseline the full cap *is* the added tariff — netting would understate it. A small residual **upward** bias remains only on codes absent from the MFN table (treated as MFN = 0 = full cap).
+- **Net-of-MFN cap.** For the EU and Taiwan (10% cap) and Japan, Korea and Switzerland (12.5% cap), the notice sets the 301 rate *net of a product's column-1 MFN* — "the sum of the MFN tariff and the section 301 tariff" equals the cap, and the 301 is zero where MFN ≥ the cap. The model implements this as `301 = max(0, cap − MFN)` per HS10, using the statutory column-1 rate in [mfn-per-code.csv](tariff-lists/mfn-per-code.csv) (HTS statutory where the rate is a clean ad valorem, pooled 2024 customs AVE as a fallback for specific/compound duties; built in [mfn-per-code-comparison.ipynb](code/mfn-per-code-comparison.ipynb)). Applied to the four **non-FTA** economies (EU, Taiwan, Japan, Switzerland). **Korea is deliberately left on the flat cap:** the HTS headings set both the general and special column-1 rate to the flat cap (9903.05.71 = "12.5% / 12.5%"), so a KORUS claim is overridden to the flat rate, and against Korea's ~0 FTA-preferenced 2024 baseline the full cap *is* the added tariff — netting would understate it. A small residual **upward** bias remains only on codes absent from the MFN table (treated as MFN = 0 = full cap).
 
 **Exemptions.** Come from **Annex II Part A** ("Goods of Any Investigated Economy"), the base list applying to every economy, extracted to [301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv) (2,113 codes) directly from the notice's machine-readable tables. Scope flags: `''` unconditional (856), `pharma` (700), `aircraft` (541), `ex` (16).
 
@@ -163,12 +163,12 @@ The provisional Jun 5, 2026 files — [301-labor-economies.csv](tariff-lists/301
 
 On Sep 27, 2026 the White House released the working procedures of a U.S.-China **Board of
 Trade** and the terms of reference of its **"30-for-30" framework**
-([US-China-Board-of-Trade-Working-Procedures.pdf](tariff-lists/US-China-Board-of-Trade-Working-Procedures.pdf),
-[Terms-of-Reference-for-30-for-30-Framework.pdf](tariff-lists/Terms-of-Reference-for-30-for-30-Framework.pdf)):
+([US-China-Board-of-Trade-Working-Procedures.pdf](tariff-lists/sources/US-China-Board-of-Trade-Working-Procedures.pdf),
+[Terms-of-Reference-for-30-for-30-Framework.pdf](tariff-lists/sources/Terms-of-Reference-for-30-for-30-Framework.pdf)):
 the two sides approved comparably valued lists of goods, roughly $30B each at calendar-2024
 trade values, "with a view toward providing reduced tariff treatment to those goods in a
 reciprocal manner." The U.S. import list
-([china-USimports-Public-List.pdf](tariff-lists/china-USimports-Public-List.pdf)) names
+([china-USimports-Public-List.pdf](tariff-lists/sources/china-USimports-Public-List.pdf)) names
 **77 HTS8 codes** of Chinese consumer goods — toys ($13.5B alone), plastic tableware, small
 kitchen appliances, home textiles, juvenile furniture and car seats, sporting goods,
 Christmas articles, fishing tackle, vacuum flasks (chapters 36, 39, 63, 66, 67, 84, 85, 94,
@@ -209,9 +209,9 @@ False`, placeholder date) so going live is a flag flip when the implementing not
 - **Size if enacted as a full exclusion** (2024 weights): China **11.94% → 11.07% (−0.86pp)**,
   national **−0.12pp**. A partial reduction scales linearly; a companion cut to the legacy
   301 lists would add only −0.04pp to China. Detail in
-  [china-30for30-analysis.ipynb](china-30for30-analysis.ipynb).
+  [china-30for30-analysis.ipynb](code/analysis/china-30for30-analysis.ipynb).
 - **China's list of U.S. goods** (the other half of the framework) is not modeled, since it
-  is a Chinese tariff; [extract-china-30for30-exports.py](extract-china-30for30-exports.py)
+  is a Chinese tariff; [extract-china-30for30-exports.py](code/extract-china-30for30-exports.py)
   extracts it. On U.S. export statistics it covers **$25.0B** of 2024 exports to China
   (17.5%), against the stated ~$30B. The gap is CIF/origin-based Chinese import statistics
   vs FAS U.S. export statistics, not the HS6 match, which can only overstate. Notably

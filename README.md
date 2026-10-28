@@ -12,7 +12,7 @@ code is in [TECHNICAL-README.md](TECHNICAL-README.md). Every change to the data 
 >
 > Waugh, Michael E. "Tracking U.S. Tariffs, 2025–2026." https://github.com/tradewartracker/trade-war-redux-2025
 
-![U.S. average tariff rate, 2025–2026](tariff-fig.png)
+![U.S. average tariff rate, 2025–2026](figures/tariff-fig.png)
 
 **Updated Oct 28, 2026.** The average U.S. tariff rate is **11.5%**, up from 2.3% before
 2025. It peaked at 28.3% on Apr 9, 2025.
@@ -154,20 +154,23 @@ The full list of choices and limitations, with size estimates, is in
   one on the latest earlier date.
 - The daily file runs 60 days past the latest update. Days after the update assume no
   further change.
-- The tariff codes covered by every action, and the legal texts they come from, are in
-  [tariff-lists](tariff-lists).
+- The tariff codes covered by every action are in [tariff-lists](tariff-lists), and the
+  legal texts they come from are in [tariff-lists/sources](tariff-lists/sources).
 
 ## 5. What's in the repository
 
-- [make-tariff-by-country-by-time.ipynb](make-tariff-by-country-by-time.ipynb) codes every
-  tariff action and builds the two data files.
-- [plot-tariff-by-country-by-time.ipynb](plot-tariff-by-country-by-time.ipynb) draws the
-  tracker's charts and the chart above.
-- Analysis notebooks examine individual actions: the Brazil and forced-labor Section 301
-  actions, the Section 338 actions against Canada, the U.S.-China list and the Section 122
-  surcharge.
-- [tariff-lists](tariff-lists) holds the product lists extracted from each legal text, with
-  scripts that extract and validate them.
+- [code/make-tariff-by-country-by-time.ipynb](code/make-tariff-by-country-by-time.ipynb)
+  codes every tariff action and builds the two data files.
+- [code/plot-tariff-by-country-by-time.ipynb](code/plot-tariff-by-country-by-time.ipynb)
+  draws the tracker's charts and the chart above.
+- [code/analysis](code/analysis) holds notebooks that examine individual actions: the
+  Brazil and forced-labor Section 301 actions, the Section 338 actions against Canada, the
+  U.S.-China list and the Section 122 surcharge.
+- [tariff-lists](tariff-lists) holds the product lists extracted from each legal text.
+  The texts themselves are in [tariff-lists/sources](tariff-lists/sources), and the
+  scripts that extract and validate the lists are in [code](code).
+- [data](data) holds the Census import data by partner and product; the 2024 files supply
+  the weights.
 
 [TECHNICAL-README.md](TECHNICAL-README.md) describes each notebook and script and how to run
 them.
