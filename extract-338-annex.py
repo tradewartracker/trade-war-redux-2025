@@ -23,7 +23,9 @@ Later proclamations amend a basket rather than restate it. Each amendment is
 applied to the basket in force the day before and written as a dated version
 (see AMENDMENTS), so the engine can switch baskets on the effective date.
 
-Usage: python extract-338-annex.py [--outdir tariff-lists]
+Usage: python extract-338-annex.py [--srcdir tariff-lists/sources] [--outdir tariff-lists]
+
+The annex PDFs are read from --srcdir; the CSVs are written to --outdir.
 """
 
 import argparse
@@ -299,14 +301,14 @@ def reconcile(deleted, inserted, added_i, removed_i):
     return problems
 
 
-def apply_amendment(am, outdir):
+def apply_amendment(am, outdir, srcdir):
     """Build one dated basket version. Returns (DataFrame, failures)."""
     tag = f"{am['name']} {am['effective']}"
     failures = []
 
     deleted, inserted = parse_annex_ii_edits(
-        read_pdf_layout(outdir / am["annex_ii"]), am["subdivision"])
-    parts = parse_annex_i_parts(read_pdf_layout(outdir / am["annex_i"]))
+        read_pdf_layout(srcdir / am["annex_ii"]), am["subdivision"])
+    parts = parse_annex_i_parts(read_pdf_layout(srcdir / am["annex_i"]))
     added_i = dict(parts["added"])
     removed_i = [c for c, _ in parts["removed"]]
 
@@ -352,15 +354,17 @@ def apply_amendment(am, outdir):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--srcdir", default="tariff-lists/sources")
     ap.add_argument("--outdir", default="tariff-lists")
     args = ap.parse_args()
+    srcdir = Path(args.srcdir)
     outdir = Path(args.outdir)
 
     failures = []
 
     for act in ACTIONS:
-        ti = read_pdf(outdir / act["annex_i"])
-        tii = read_pdf(outdir / act["annex_ii"])
+        ti = read_pdf(srcdir / act["annex_i"])
+        tii = read_pdf(srcdir / act["annex_ii"])
 
         rows = parse_annex_i(ti)
         basket_ii = parse_annex_ii_basket(tii, act["heading"])
@@ -405,7 +409,7 @@ def main():
                   f"-> {CARVEOUT_OUT}  (shared by all three actions)")
 
     for am in AMENDMENTS:
-        out, fails = apply_amendment(am, outdir)
+        out, fails = apply_amendment(am, outdir, srcdir)
         failures += fails
         out.to_csv(outdir / am["out"], index=False)
         print(f"{am['name']:8s} {am['effective']}  -{am['n_deleted']:<3d} "

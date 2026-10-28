@@ -22,10 +22,10 @@ import re
 import pandas as pd
 import pdfplumber
 
-ANNEX_II_PDF = "data/Annex-II.pdf"
+ANNEX_II_PDF = "tariff-lists/sources/Annex-II.pdf"
 ANNEX_II_OUT = "tariff-lists/annex-II-exemptions.csv"
 ANNEX_II_LEGACY = "tariff-lists/annex-II-exemptions-legacy.csv"
-BRAZIL_PDF = "tariff-lists/brazil-EO14361-annexes.pdf"
+BRAZIL_PDF = "tariff-lists/sources/brazil-EO14361-annexes.pdf"
 BRAZIL_OUT = "tariff-lists/brazil-ag-exemptions-nov13.csv"
 
 

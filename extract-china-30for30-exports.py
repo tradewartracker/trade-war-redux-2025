@@ -4,7 +4,7 @@ framework (White House release, Sep 27, 2026) — the U.S. EXPORT side — into 
 CSV in tariff-lists/. Companion to extract-china-30for30.py (the U.S. import
 list).
 
-Source: tariff-lists/Usexports-China-Import-List.pdf ("中国进口产品清单", 38 pages)
+Source: tariff-lists/sources/Usexports-China-Import-List.pdf ("中国进口产品清单", 38 pages)
 — 1,619 tariff lines of China's 2026 Import and Export Tariff (中华人民共和国
 进出口税则 2026), 8 digits, with China's simplified commodity names (Chinese
 only). The footnote says the names are for reference and the scope of each line
@@ -35,7 +35,7 @@ import pandas as pd
 import pdfplumber
 
 TL = Path("tariff-lists")
-PDF = TL / "Usexports-China-Import-List.pdf"
+PDF = TL / "sources" / "Usexports-China-Import-List.pdf"
 OUT = TL / "china-30for30-china-import-list.csv"
 
 EXPECT_N = 1619

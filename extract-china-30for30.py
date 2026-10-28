@@ -2,7 +2,7 @@
 """Extract the U.S. import list of the U.S.-China Board of Trade "30-for-30"
 framework (White House release, Sep 27, 2026) into two CSVs in tariff-lists/.
 
-Source: tariff-lists/china-USimports-Public-List.pdf — 77 HTSUS 8-digit codes of
+Source: tariff-lists/sources/china-USimports-Public-List.pdf — 77 HTSUS 8-digit codes of
 Chinese goods approved "with a view toward providing reduced tariff treatment",
 valued at roughly $30B of calendar-2024 bilateral trade (Terms of Reference).
 This is an ANNOUNCED list, not an enacted tariff action: no rate, effective
@@ -29,7 +29,7 @@ import pandas as pd
 import pdfplumber
 
 TL = Path("tariff-lists")
-PDF = TL / "china-USimports-Public-List.pdf"
+PDF = TL / "sources" / "china-USimports-Public-List.pdf"
 RAW_OUT = TL / "china-30for30-us-import-list.csv"
 MODEL_OUT = TL / "china-30for30-model-list.csv"
 PARQUET = Path("data") / "2024-hs10-imports5700.parquet"   # for HS10 descriptions

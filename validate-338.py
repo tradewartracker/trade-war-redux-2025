@@ -25,6 +25,7 @@ import pandas as pd
 import pypdf
 
 TL = Path("tariff-lists")
+SRC = TL / "sources"          # the proclamation PDFs
 DATA = Path("data")
 CANADA = "1220"
 
@@ -72,7 +73,7 @@ def check(label, cond, detail=""):
 
 
 def read_pdf(name):
-    return "\n".join(p.extract_text() for p in pypdf.PdfReader(str(TL / name)).pages)
+    return "\n".join(p.extract_text() for p in pypdf.PdfReader(str(SRC / name)).pages)
 
 
 def main():
@@ -255,7 +256,7 @@ def main():
         # A narrowing keeps some HS10 lines of a deleted HS8 line and Annex I
         # names the rest as leaving. Together they must be every HS10 line under
         # that HS8 in the HTS, or goods would silently fall out of scope.
-        parts = ex.parse_annex_i_parts(ex.read_pdf_layout(TL / am["annex_i"]))
+        parts = ex.parse_annex_i_parts(ex.read_pdf_layout(SRC / am["annex_i"]))
         leaving = {c for c, _ in parts["removed"] if len(c) == 10}
         kept = {c for c in got["HTSUS"] if len(c) == 10} - base
         for parent in sorted({c[:8] for c in kept | leaving}):
@@ -268,9 +269,9 @@ def main():
     # Note 51(c) carries the Section 232 exemption. The Sep 8 annexes repoint it
     # to dairy alone (exempt_232=False for alcohol and autos from Sep 15); the
     # Oct 23 annex must leave it alone.
-    t_alc = " ".join(ex.read_pdf_layout(TL / "338-alcohol-scope-annex-II.pdf").split())
-    t_aut = " ".join(ex.read_pdf_layout(TL / "338-autos-scope-annex-II.pdf").split())
-    t_oct = ex.read_pdf_layout(TL / ex.AMENDMENTS[-1]["annex_ii"])
+    t_alc = " ".join(ex.read_pdf_layout(SRC / "338-alcohol-scope-annex-II.pdf").split())
+    t_aut = " ".join(ex.read_pdf_layout(SRC / "338-autos-scope-annex-II.pdf").split())
+    t_oct = ex.read_pdf_layout(SRC / ex.AMENDMENTS[-1]["annex_ii"])
     check("Sep 15: alcohol annex drops 9903.03.12 from note 51(c)",
           "Subdivision (c) of U.S. note 51 is modified by deleting “9903.03.12” "
           "and inserting “9903.03.13”" in t_alc)
