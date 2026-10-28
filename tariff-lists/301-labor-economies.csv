@@ -1,0 +1,61 @@
+economy,cty_code,proposed_rate_pct,basis,tracked
+Algeria,7210,12.5,impose+enforce,True
+Angola,7620,12.5,impose+enforce,True
+Argentina,3570,10.0,impose+enforce; commitments/in-process,True
+Australia,6021,12.5,impose+enforce,True
+Bangladesh,5380,10.0,impose+enforce; commitments/in-process,True
+Brazil,3510,12.5,impose+enforce,True
+Cambodia,5550,10.0,impose+enforce; commitments/in-process,True
+Canada,1220,12.5,enforce-only,True
+Chile,3370,12.5,impose+enforce,True
+China,5700,12.5,impose+enforce,True
+Colombia,3010,12.5,impose+enforce,True
+Costa Rica,2230,12.5,impose+enforce,True
+Dominican Republic,2470,12.5,impose+enforce,True
+Ecuador,3310,10.0,enforce-only; commitments/in-process,True
+Egypt,7290,12.5,impose+enforce,True
+El Salvador,2110,10.0,impose+enforce; commitments/in-process,True
+European Union,0003,12.5,enforce-only,True
+Guatemala,2050,10.0,impose+enforce; commitments/in-process,True
+Honduras,2150,12.5,impose+enforce,True
+Hong Kong,5820,12.5,impose+enforce,True
+India,5330,12.5,impose+enforce,True
+Indonesia,5600,10.0,enforce-only; commitments/in-process,True
+Iraq,5050,12.5,impose+enforce,True
+Israel,5081,12.5,impose+enforce,True
+Japan,5880,12.5,impose+enforce,True
+Kuwait,5130,12.5,impose+enforce,True
+Malaysia,5570,10.0,impose+enforce; commitments/in-process,True
+Mexico,2010,12.5,enforce-only,True
+New Zealand,6141,12.5,impose+enforce,True
+Nicaragua,2190,12.5,impose+enforce,True
+Nigeria,7530,12.5,impose+enforce,True
+Norway,4039,12.5,impose+enforce,True
+Pakistan,5350,12.5,enforce-only,True
+Peru,3330,12.5,impose+enforce,True
+Philippines,5650,12.5,impose+enforce,True
+Russia,4621,12.5,impose+enforce,True
+Saudi Arabia,5170,12.5,impose+enforce,True
+Singapore,5590,12.5,impose+enforce,True
+South Africa,7910,12.5,impose+enforce,True
+South Korea,5800,12.5,impose+enforce,True
+Sri Lanka,5420,12.5,impose+enforce,True
+Switzerland,4419,12.5,impose+enforce,True
+Taiwan,5830,10.0,impose+enforce; commitments/in-process,True
+Thailand,5490,12.5,impose+enforce,True
+Trinidad and Tobago,2740,12.5,impose+enforce,True
+Turkiye,4890,12.5,impose+enforce,True
+United Arab Emirates,5200,12.5,impose+enforce,True
+United Kingdom,4120,10.0,impose+enforce; partial-regime,True
+Venezuela,3070,12.5,impose+enforce,True
+Vietnam,5520,12.5,impose+enforce,True
+Bahrain,,12.5,impose+enforce,False
+Guyana,,12.5,impose+enforce,False
+Jordan,,12.5,impose+enforce,False
+Kazakhstan,,12.5,impose+enforce,False
+Libya,,12.5,impose+enforce,False
+Morocco,,12.5,impose+enforce,False
+Oman,,12.5,impose+enforce,False
+Qatar,,12.5,impose+enforce,False
+The Bahamas,,12.5,impose+enforce,False
+Uruguay,,12.5,impose+enforce,False

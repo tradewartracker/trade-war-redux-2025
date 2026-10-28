@@ -1,0 +1,1656 @@
+htsus,digits,hts_digits,scope_limitation,valid_hts,description,source_page,ocr_conf
+0201.10.05,02011005,8,,True,Described in general note 15 of the tariff schedule and entered pursuant to its provisions,097,0.85
+0201.10.10,02011010,8,,True,Described in additional U.S. note 3 to this chapter and entered pursuant to its provisions,097,0.87
+0201.10.50,02011050,8,,True,Other,097,0.89
+0201.20.02,02012002,8,,True,High-quality beef cuts,097,0.84
+0201.20.04,02012004,8,,True,Other,097,0.84
+0201.20.06,02012006,8,,True,Other,097,0.74
+0201.20.10,02012010,8,,True,High-quality beef cuts,097,0.84
+0201.20.30,02012030,8,,True,Other,097,0.84
+0201.20.50,02012050,8,,True,Other,097,0.9
+0201.20.80,02012080,8,,True,Other,097,0.83
+0201.30.02,02013002,8,,True,High-quality beef cuts,097,0.9
+0201.30.04,02013004,8,,True,Other,097,0.82
+0201.30.06,02013006,8,,True,Other,097,0.82
+0201.30.10,02013010,8,,True,High-quality beef cuts,097,0.85
+0201.30.30,02013030,8,,True,Other,097,0.84
+0201.30.50,02013050,8,,True,Other,097,0.84
+0201.30.80,02013080,8,,True,Other,097,0.8
+0202.10.05,02021005,8,,True,Described in general note 15 of the tariff schedule and entered pursuant to its provisions,097,0.83
+0202.10.10,02021010,8,,True,Described in additional U.S. note 3 to this chapter and entered pursuant to its provisions,098,0.81
+0202.10.50,02021050,8,,True,Other,098,0.87
+0202.20.02,02022002,8,,True,High-quality beef cuts,098,0.84
+0202.20.04,02022004,8,,True,Other,098,0.78
+0202.20.06,02022006,8,,True,Other,098,0.82
+0202.20.10,02022010,8,,True,High-quality beef cuts,098,0.81
+0202.20.30,02022030,8,,True,Other,098,0.77
+0202.20.50,02022050,8,,True,Other,098,0.84
+0202.20.80,02022080,8,,True,Other,098,0.82
+0202.30.02,02023002,8,,True,High-quality beef cuts,098,0.8
+0202.30.04,02023004,8,,True,Other,098,0.81
+0202.30.06,02023006,8,,True,Other,098,0.82
+0202.30.10,02023010,8,,True,High-quality beef cuts,098,0.85
+0202.30.30,02023030,8,,True,Other,098,0.77
+0202.30.50,02023050,8,,True,Other,098,0.76
+0202.30.80,02023080,8,,True,Other,098,0.81
+0206.10.00,02061000,8,,True,"Of bovine animals, fresh or chilled",098,0.82
+0206.21.00,02062100,8,,True,Tongues,098,0.82
+0206.22.00,02062200,8,,True,Livers,098,0.78
+0206.29.00,02062900,8,,True,Other,098,0.79
+0210.20.00,02102000,8,,True,Meat of bovine animals,098,0.85
+0508.00.00,05080000,8,,True,"Coral and similar materials, unworked or simply prepared but not otherwise worked; shells of molluscs, crustaceans or echinoderms and cuttlebone, unworked or simply prepared but not cut to shape, powder and waste thereof",099,0.76
+0702.00.20,07020020,8,,True,"If entered during the period from March 1 to July 14, inclusive, or the period from September 1 to November 14, inclusive, in any year",099,0.82
+0702.00.40,07020040,8,,True,"If entered during the period from July 15 to August 31, inclusive, in any year",099,0.85
+0702.00.60,07020060,8,,True,"If entered during the period from November 15, in any year, to the last day of the following February, inclusive",099,0.75
+0709.99.05,07099905,8,,True,"Jicamas, and breadfruit",099,0.77
+0709.99.10,07099910,8,,True,Chayote (Sechium edule),099,0.77
+0710.80.15,07108015,8,,True,"Bamboo shoots and water chestnuts, other than Chinese water chestnuts",099,0.85
+0711.90.30,07119030,8,,True,Capers,099,0.89
+0712.32.00,07123200,8,,True,Wood ears (Auricularia spp.),099,0.9
+0712.34.10,07123410,8,,True,Air dried or sun dried,099,0.75
+0712.34.20,07123420,8,,True,Other,099,0.85
+0713.34.20,07133420,8,,True,"If entered for consumption during the period from May 1 to August 31, Inclusive, in any year",099,0.87
+0713.34.40,07133440,8,,True,"If entered for consumption outside the above stated period, or if withdrawn for consumption at any time",099,0.82
+0714.10.10,07141010,8,,True,Frozen,099,0.88
+0714.10.20,07141020,8,,True,Other,099,0.85
+0714.40.10,07144010,8,,True,Taro (Colocasia spp.):,099,0.88
+0714.40.20,07144020,8,,True,Frozen,099,0.77
+0714.40.50,07144050,8,,True,In the form of pellets,099,0.75
+0714.40.60,07144060,8,,True,Other,099,0.89
+0714.50.10,07145010,8,,True,Fresh or chilled,099,0.88
+0714.50.20,07145020,8,,True,Frozen,099,0.73
+0714.50.60,07145060,8,,True,Other,099,0.88
+0714.90.42,07149042,8,,True,Other mixtures of Chinese water chestnuts,099,0.77
+0714.90.44,07149044,8,,True,"Chinese water chestnuts, not mixed",099,0.78
+0714.90.46,07149046,8,,True,Other,099,0.88
+0714.90.48,07149048,8,,True,Chinese water chestnuts,099,0.85
+0714.90.61,07149061,8,,True,Other,100,0.78
+0801.11.00,08011100,8,,True,Desiccated,100,0.78
+0801.12.00,08011200,8,,True,In the inner shell (endocarp),100,0.86
+0801.19.01,08011901,8,,True,Other,100,0.76
+0801.21.00,08012100,8,,True,In shell,100,0.84
+0801.22.00,08012200,8,,True,Shelled,100,0.78
+0801.31.00,08013100,8,,True,In shell,100,0.9
+0801.32.00,08013200,8,,True,Shelled,100,0.89
+0802.41.00,08024100,8,,True,In shell,100,0.83
+0802.42.00,08024200,8,,True,Shelled,100,0.87
+0802.61.00,08026100,8,,True,In shell,100,0.84
+0802.62.00,08026200,8,,True,Shelled,100,0.86
+0802.70.10,08027010,8,,True,In shell,100,0.85
+0802.70.20,08027020,8,,True,Shelled,100,0.8
+0802.80.10,08028010,8,,True,In shell,100,0.9
+0802.80.20,08028020,8,,True,Shelled,100,0.88
+0802.91.10,08029110,8,,True,Pignolia,100,0.85
+0802.91.90,08029190,8,,True,Other,100,0.85
+0802.92.10,08029210,8,,True,Pignolia,100,0.9
+0802.92.90,08029290,8,,True,Other,100,0.82
+0803.10.10,08031010,8,,True,Fresh,100,0.85
+0803.10.20,08031020,8,,True,Dried,100,0.87
+0803.90.00,08039000,8,,True,Other,100,0.89
+0804.30.20,08043020,8,,True,In bulk,100,0.78
+0804.30.40,08043040,8,,True,In crates or other packages,100,0.85
+0804.30.60,08043060,8,,True,Reduced in size,100,0.81
+0804.40.00,08044000,8,,True,Avocados,100,0.84
+0804.50.40,08045040,8,,True,"If entered during the period from September 1, in any year, to the following May 31, inclusive",100,0.85
+0804.50.60,08045060,8,,True,If entered at any other time,100,0.82
+0804.50.80,08045080,8,,True,Dried,100,0.84
+0805.10.00,08051000,8,,True,Oranges,100,0.9
+0805.50.30,08055030,8,,True,"Tahitian limes, Persian limes and other limes of the Citrus latifolia variety",100,0.81
+0805.50.40,08055040,8,,True,Other,100,0.88
+0805.90.01,08059001,8,ex,True,"Other, including kumquats, citrons and bergamots",100,0.85
+0807.20.00,08072000,8,,True,Papayas (papaws),100,0.89
+0808.40.20,08084020,8,,True,"If entered during the period from April 1 to June 30, inclusive, in any year",100,0.76
+0808.40.40,08084040,8,,True,If entered at any other time,101,0.78
+0810.50.00,08105000,8,,True,Kiwifruit,101,0.76
+0810.60.00,08106000,8,,True,Durians,101,0.76
+0810.90.27,08109027,8,,True,Other berries; tamarinds,101,0.86
+0810.90.46,08109046,8,,True,Other,101,0.79
+0811.90.10,08119010,8,,True,Bananas and plantains,101,0.84
+0811.90.25,08119025,8,,True,"Cashew apples, mameyes colorados, sapodillas, soursops and sweetsops",101,0.87
+0811.90.30,08119030,8,,True,Coconut meat,101,0.8
+0811.90.40,08119040,8,,True,Papayas,101,0.78
+0811.90.50,08119050,8,,True,Pineapples,101,0.85
+0811.90.52,08119052,8,,True,Mangoes,101,0.74
+0811.90.80,08119080,8,ex,True,Other,101,0.88
+0812.90.40,08129040,8,,True,Pineapples,101,0.88
+0901.11.00,09011100,8,,True,Not decaffeinated,101,0.73
+0901.12.00,09011200,8,,True,Decaffeinated,101,0.81
+0901.21.00,09012100,8,,True,Not decaffeinated,101,0.76
+0901.22.00,09012200,8,,True,Decaffeinated,101,0.81
+0901.90.10,09019010,8,,True,Coffee husks and skins,101,0.84
+0901.90.20,09019020,8,,True,Coffee substitutes containing coffee,101,0.81
+0902.10.10,09021010,8,,True,Flavored,101,0.87
+0902.10.90,09021090,8,,True,Other,101,0.85
+0902.20.10,09022010,8,,True,Flavored,101,0.89
+0902.20.90,09022090,8,,True,Other,101,0.9
+0902.30.00,09023000,8,,True,"Black tea (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3 kg",101,0.85
+0902.40.00,09024000,8,,True,Other black tea (fermented) and other partly fermented tea,101,0.86
+0903.00.00,09030000,8,,True,Maté,101,0.73
+0904.11.00,09041100,8,,True,Neither crushed nor ground,101,0.83
+0904.12.00,09041200,8,,True,Crushed or ground,101,0.78
+0904.21.20,09042120,8,,True,Paprika,101,0.81
+0904.21.40,09042140,8,,True,Anaheim and ancho pepper,101,0.83
+0904.21.60,09042160,8,,True,Other,101,0.79
+0904.21.80,09042180,8,,True,Of the genus Pimenta (including allspice),102,0.82
+0904.22.20,09042220,8,,True,Paprika,102,0.88
+0904.22.40,09042240,8,,True,Anaheim and ancho pepper,102,0.76
+0904.22.73,09042273,8,,True,Mixtures of mashed or macerated hot red peppers and salt,102,0.82
+0904.22.76,09042276,8,,True,Other,102,0.79
+0904.22.80,09042280,8,,True,Of the genus Pimenta (including allspice),102,0.83
+0905.10.00,09051000,8,,True,Neither crushed nor ground,102,0.87
+0905.20.00,09052000,8,,True,Crushed or ground,102,0.88
+0906.11.00,09061100,8,,True,Cinnamon (Cinnamomum zeylanicum Blume),102,0.82
+0906.19.00,09061900,8,,True,Other,102,0.88
+0906.20.00,09062000,8,,True,Crushed or ground,102,0.83
+0907.10.00,09071000,8,,True,Neither crushed nor ground,102,0.82
+0907.20.00,09072000,8,,True,Crushed or ground,102,0.87
+0908.11.00,09081100,8,,True,Neither crushed nor ground,102,0.81
+0908.12.00,09081200,8,,True,Crushed or ground,102,0.76
+0908.21.00,09082100,8,,True,Neither crushed nor ground,102,0.83
+0908.22.20,09082220,8,,True,"Bombay or wild mace, ground",102,0.81
+0908.22.40,09082240,8,,True,Other,102,0.9
+0908.31.00,09083100,8,,True,Neither crushed nor ground,102,0.86
+0908.32.00,09083200,8,,True,Crushed or ground,102,0.87
+0909.21.00,09092100,8,,True,Neither crushed nor ground,102,0.74
+0909.22.00,09092200,8,,True,Crushed or ground,102,0.77
+0909.31.00,09093100,8,,True,Neither crushed nor ground,102,0.87
+0909.32.00,09093200,8,,True,Crushed or ground,102,0.79
+0909.61.00,09096100,8,,True,Neither crushed nor ground,102,0.82
+0909.62.00,09096200,8,,True,Crushed or ground,102,0.88
+0910.11.00,09101100,8,,True,Neither crushed nor ground,102,0.87
+0910.12.00,09101200,8,,True,Crushed or ground,102,0.79
+0910.20.00,09102000,8,,True,Saffron,102,0.71
+0910.30.00,09103000,8,,True,Turmeric (curcuma),102,0.81
+0910.91.00,09109100,8,,True,Mixtures referred to in note 1(b) to this chapter,102,0.85
+0910.99.07,09109907,8,,True,Bay leaves,102,0.78
+0910.99.10,09109910,8,,True,Curry,102,0.77
+0910.99.20,09109920,8,,True,Crude or not manufactured,102,0.84
+0910.99.40,09109940,8,,True,Other,102,0.89
+0910.99.50,09109950,8,,True,Dill,102,0.84
+0910.99.60,09109960,8,,True,Other,103,0.77
+1003.90.40,10039040,8,,True,Other,103,0.78
+1008.30.00,10083000,8,,True,Canary seeds,103,0.88
+1008.40.00,10084000,8,,True,Fonio (Digitaria spp.),103,0.85
+1008.60.00,10086000,8,,True,Triticale,103,0.87
+1106.20.90,11062090,8,,True,Other,103,0.85
+1106.30.20,11063020,8,,True,Banana and plantain,103,0.87
+1108.14.00,11081400,8,,True,Cassava (manioc) starch,103,0.87
+1108.19.00,11081900,8,,True,Other starches,103,0.87
+1203.00.00,12030000,8,,True,Copra,103,0.81
+1207.91.00,12079100,8,,True,Poppy seeds,103,0.87
+1404.90.90,14049090,8,ex,True,Other,103,0.87
+1513.11.00,15131100,8,,True,Crude oil,103,0.87
+1513.19.00,15131900,8,,True,Other,103,0.82
+1521.10.00,15211000,8,,True,Vegetable waxes,103,0.89
+1521.90.20,15219020,8,,True,Bleached beeswax,103,0.85
+1602.50.05,16025005,8,,True,Offal,103,0.84
+1602.50.07,16025007,8,,True,Corned beef in airtight containers,103,0.85
+1602.50.08,16025008,8,,True,Other,103,0.87
+1602.50.21,16025021,8,,True,In airtight containers,103,0.79
+1602.50.60,16025060,8,,True,Other,103,0.85
+1602.50.90,16025090,8,,True,Other,103,0.86
+1801.00.00,18010000,8,,True,"Cocoa beans, whole or broken, raw or roasted",103,0.91
+1802.00.00,18020000,8,,True,"Cocoa shells, husks, skins and other cocoa waste",103,0.83
+1803.10.00,18031000,8,,True,Not defatted,103,0.81
+1803.20.00,18032000,8,,True,Wholly or partly defatted,103,0.84
+1804.00.00,18040000,8,,True,"Cocoa butter, fat and oil",103,0.86
+1805.00.00,18050000,8,,True,"Cocoa powder, not containing added sugar or other sweetening matter",103,0.87
+1903.00.20,19030020,8,,True,"Of arrowroot, cassava or sago",103,0.86
+1903.00.40,19030040,8,,True,Other,103,0.84
+1905.90.10,19059010,8,ex,True,"Bread, pastry, cakes, biscuits and similar baked products, and puddings, whether or not containing chocolate, fruit, nuts or confectionery",103,0.83
+1905.90.90,19059090,8,ex,True,Other,104,0.89
+2001.90.45,20019045,8,,True,Mangoes,104,0.79
+2005.91.60,20059160,8,,True,In airtight containers,104,0.87
+2006.00.40,20060040,8,,True,Pineapples,104,0.65
+2007.99.40,20079940,8,,True,Pineapple,104,0.82
+2007.99.50,20079950,8,,True,Guava and mango,104,0.85
+2008.19.15,20081915,8,,True,Coconuts,104,0.87
+2008.20.00,20082000,8,,True,Pineapples,104,0.65
+2008.91.00,20089100,8,,True,Palm hearts,104,0.85
+2008.99.13,20089913,8,,True,Pulp,104,0.89
+2008.99.15,20089915,8,,True,Other,104,0.84
+2008.99.21,20089921,8,ex,True,Other,104,0.82
+2008.99.40,20089940,8,,True,Mangoes,104,0.85
+2008.99.45,20089945,8,,True,Pulp,104,0.82
+2008.99.91,20089991,8,,True,Other,104,0.81
+2009.11.00,20091100,8,,True,Frozen,104,0.85
+2009.12.25,20091225,8,,True,Not concentrated and not made from a juice having a degree of concentration of 1.5 or more (as determined before correction to the nearest 0.5 degree),104,0.81
+2009.12.45,20091245,8,,True,Other,104,0.67
+2009.19.00,20091900,8,,True,Other,104,0.76
+2009.31.60,20093160,8,ex,True,Concentrated,104,0.7
+2009.39.20,20093920,8,,True,Other,104,0.78
+2009.49.40,20094940,8,,True,Other,104,0.7
+2009.89.70,20098970,8,ex,True,Other,104,0.87
+2009.90.40,20099040,8,ex,True,Other,104,0.86
+2101.11.29,21011129,8,,True,Other,104,0.89
+2101.12.90,21011290,8,,True,Other,104,0.84
+2101.20.20,21012020,8,,True,"Extracts, essences and concentrates",104,0.84
+2106.90.48,21069048,8,,True,Orange juice,104,0.8
+2106.90.99,21069099,8,ex,True,Other,105,0.84
+2202.99.30,22029930,8,,True,Not made from a juice having a degree of concentration of 1.5 or more (as determined before correction to the nearest 0.5 degree),105,0.82
+2202.99.35,22029935,8,,True,Other,105,0.73
+2504.10.10,25041010,8,,True,Crystalline flake (not including flake dust),105,0.89
+2504.10.50,25041050,8,,True,Other,105,0.87
+2504.90.00,25049000,8,,True,Other,105,0.81
+2510.10.00,25101000,8,,True,Unground,105,0.83
+2510.20.00,25102000,8,,True,Ground,105,0.84
+2511.10.10,25111010,8,,True,Ground,105,0.87
+2511.10.50,25111050,8,,True,Other,105,0.78
+2519.10.00,25191000,8,,True,Natural magnesium carbonate (magnesite),105,0.84
+2519.90.10,25199010,8,,True,Fused magnesia and dead-burned (sintered) magnesia,105,0.89
+2519.90.20,25199020,8,,True,Caustic calcined magnesite,105,0.79
+2524.90.00,25249000,8,,True,Other,105,0.84
+2529.21.00,25292100,8,,True,Containing by weight 97 percent or less of calcium fluoride,105,0.78
+2529.22.00,25292200,8,,True,Containing by weight more than 97 percent of calcium fluoride,105,0.77
+2530.20.10,25302010,8,,True,Kieserite,105,0.77
+2530.20.20,25302020,8,,True,Epsom salts,105,0.81
+2530.90.10,25309010,8,,True,Natural cryolite; natural chiolite,105,0.82
+2530.90.20,25309020,8,,True,Natural micaceous iron oxides,105,0.82
+2530.90.80,25309080,8,,True,Other,105,0.83
+2602.00.00,26020000,8,,True,"Manganese ores and concentrates, including ferruginous manganese ores and concentrates with a manganese content of 20 percent or more, calculated on the dry weight",105,0.8
+2603.00.00,26030000,8,,True,Copper ores and concentrates,105,0.83
+2604.00.00,26040000,8,,True,Nickel ores and concentrates,105,0.79
+2605.00.00,26050000,8,,True,Cobalt ores and concentrates,105,0.83
+2606.00.00,26060000,8,,True,Aluminum ores and concentrates,105,0.87
+2608.00.00,26080000,8,,True,Zinc ores and concentrates,105,0.84
+2609.00.00,26090000,8,,True,Tin ores and concentrates,105,0.84
+2610.00.00,26100000,8,,True,Chromium ores and concentrates,105,0.87
+2611.00.30,26110030,8,,True,Ores,105,0.87
+2611.00.60,26110060,8,,True,Concentrates,105,0.87
+2612.10.00,26121000,8,,True,Uranium ores and concentrates,105,0.8
+2612.20.00,26122000,8,,True,Thorium ores and concentrates,105,0.83
+2613.90.00,26139000,8,,True,Other,105,0.85
+2614.00.30,26140030,8,,True,Synthetic rutile,105,0.76
+2614.00.60,26140060,8,,True,Other,106,0.83
+2615.90.30,26159030,8,,True,Synthetic tantalum-niobium (columbium) concentrates,106,0.79
+2615.90.60,26159060,8,,True,Other,106,0.82
+2616.10.00,26161000,8,,True,Silver ores and concentrates,106,0.91
+2617.10.00,26171000,8,,True,Antimony ores and concentrates,106,0.79
+2620.30.00,26203000,8,,True,Containing mainly copper,106,0.83
+2620.99.50,26209950,8,,True,"Slag containing by weight over 40 percent titanium, and which if containing over 2 percent by weight of copper, lead, or zinc is not to be treated for the recovery thereof",106,0.75
+2701.11.00,27011100,8,,True,Anthracite,106,0.84
+2701.12.00,27011200,8,,True,Bituminous coal,106,0.74
+2701.19.00,27011900,8,,True,Other coal,106,0.86
+2701.20.00,27012000,8,,True,"Briquettes, ovoids and similar solid fuels manufactured from coal",106,0.78
+2702.10.00,27021000,8,,True,"Lignite, whether or not pulverized, but not agglomerated",106,0.87
+2702.20.00,27022000,8,,True,Agglomerated lignite,106,0.78
+2703.00.00,27030000,8,,True,"Peat (including peat litter), whether or not agglomerated",106,0.88
+2704.00.00,27040000,8,,True,"Coke and semicoke of coal, of lignite or of peat, whether or not agglomerated; retort carbon",106,0.87
+2705.00.00,27050000,8,,True,"Coal gas, water gas, producer gas and similar gases, other than petroleum gases and other gaseous hydrocarbons",106,0.9
+2706.00.00,27060000,8,,True,"Tar distilled from coal, from lignite or from peat, and other mineral tars, whether or not dehydrated or partially distilled, including reconstituted tars",106,0.81
+2707.10.00,27071000,8,,True,Benzene,106,0.86
+2707.20.00,27072000,8,,True,Toluene,106,0.75
+2707.30.00,27073000,8,,True,Xylenes,106,0.88
+2707.40.00,27074000,8,,True,Naphthalene,106,0.81
+2707.50.00,27075000,8,,True,Other aromatic hydrocarbon mixtures of which 65 percent or more by volume (including losses) distills at 250˚C by the ISO 3405 method (equivalent to the ASTM D 86 method),106,0.89
+2707.91.00,27079100,8,,True,Creosote oils,107,0.86
+2707.99.10,27079910,8,,True,Light oil,107,0.82
+2707.99.20,27079920,8,,True,Picolines,107,0.88
+2707.99.40,27079940,8,,True,Carbazole having a purity of 65 percent or more by weight,107,0.88
+2707.99.51,27079951,8,,True,Containing more than 50 percent by weight of hydroxybenzene,107,0.82
+2707.99.55,27079955,8,,True,"Metacresol, orthocresol, paracresol and metaparacresol, all the foregoing having a purity of 75 percent or more by weight",107,0.82
+2707.99.59,27079959,8,,True,Other,107,0.85
+2707.99.90,27079990,8,,True,Other,107,0.83
+2708.10.00,27081000,8,,True,Pitch,107,0.85
+2708.20.00,27082000,8,,True,Pitch coke,107,0.88
+2709.00.10,27090010,8,,True,Testing under 25 degrees A.P.I.,107,0.81
+2709.00.20,27090020,8,,True,Testing 25 degrees A.P.I. or more,107,0.82
+2710.12.15,27101215,8,,True,Motor fuel,107,0.82
+2710.12.18,27101218,8,,True,Motor fuel blending stock,107,0.83
+2710.12.25,27101225,8,,True,Naphthas (except motor fuel or motor fuel blending stock),107,0.86
+2710.12.45,27101245,8,,True,"Mixtures of hydrocarbons not elsewhere specified or included, which contain by weight not over 50 percent of any single hydrocarbon compound",107,0.9
+2710.12.90,27101290,8,,True,Other,108,0.76
+2710.19.06,27101906,8,,True,Testing under 25 degrees A.P.I.,108,0.87
+2710.19.11,27101911,8,,True,Testing 25 degrees A.P.I. or more,108,0.89
+2710.19.16,27101916,8,,True,Kerosene-type jet fuel,108,0.69
+2710.19.24,27101924,8,,True,Motor fuel,108,0.86
+2710.19.25,27101925,8,,True,Motor fuel blending stock,108,0.85
+2710.19.26,27101926,8,,True,Kerosene (except kerosene-type jet fuel,108,0.75
+2710.19.30,27101930,8,,True,Oils,108,0.89
+2710.19.35,27101935,8,,True,Containing not over 10 percent by weight of salts of fatty acids of animal (including marine animal) or vegetable origin,108,0.87
+2710.19.40,27101940,8,,True,Other,108,0.91
+2710.19.45,27101945,8,,True,"Mixtures of hydrocarbons not elsewhere specified or included, which contain by weight not over 50 percent of any single hydrocarbon compound",108,0.8
+2710.19.90,27101990,8,,True,Other,109,0.86
+2710.20.05,27102005,8,,True,Testing under 25 degrees A.P.I.,109,0.86
+2710.20.10,27102010,8,,True,Testing 25 degrees A.P.I. or more,109,0.77
+2710.20.15,27102015,8,,True,"Kerosene-type jet fuel, motor fuel or motor fuel blending stock",109,0.86
+2710.20.25,27102025,8,,True,"Kerosene (except kerosene-type jet fuel, motor fuel or motor fuel blending stock)",109,0.86
+2710.91.00,27109100,8,,True,"Containing polychlorinated biphenyls (PCBs), polychlorinated terphenyls (PCTs) or polybrominated biphenyls (PBBs)",109,0.78
+2710.99.05,27109905,8,,True,Testing under 25 degrees A.P.I.,109,0.84
+2710.99.10,27109910,8,,True,Testing 25 degrees A.P.I. or more,109,0.89
+2710.99.16,27109916,8,,True,Wastes of motor fuel or of motor fuel blending stock,109,0.84
+2710.99.21,27109921,8,,True,Wastes of kerosene or naphthas,109,0.87
+2710.99.31,27109931,8,,True,Of oils,109,0.87
+2710.99.32,27109932,8,,True,Containing not over 10 percent by weight of salts of fatty acids of animal (including marine animal) or vegetable origin,109,0.85
+2710.99.39,27109939,8,,True,Other,109,0.82
+2710.99.45,27109945,8,,True,"Mixtures of hydrocarbons not elsewhere specified or included, which contain not over 50 percent of any single hydrocarbon compound",110,0.87
+2710.99.90,27109990,8,,True,Other,110,0.82
+2711.11.00,27111100,8,,True,Natural gas,110,0.87
+2711.12.00,27111200,8,,True,Propane,110,0.78
+2711.13.00,27111300,8,,True,Butanes,110,0.85
+2711.14.00,27111400,8,,True,"Ethylene, propylene, butylene and butadiene",110,0.87
+2711.19.00,27111900,8,,True,Other,110,0.89
+2711.21.00,27112100,8,,True,Natural gas,110,0.85
+2711.29.00,27112900,8,,True,Other,110,0.8
+2712.10.00,27121000,8,,True,Petroleum jelly,110,0.83
+2712.20.00,27122000,8,,True,Paraffin wax containing by weight less than 0.75 percent of oil,110,0.83
+2712.90.10,27129010,8,,True,Montan wax,110,0.78
+2712.90.20,27129020,8,,True,Other,110,0.75
+2713.11.00,27131100,8,,True,Not calcined,110,0.83
+2713.12.00,27131200,8,,True,Calcined,110,0.85
+2713.20.00,27132000,8,,True,Petroleum bitumen,110,0.83
+2713.90.00,27139000,8,,True,Other residues of petroleum oils or of oils obtained from bituminous materials,110,0.78
+2714.10.00,27141000,8,,True,Bituminous or oil shale and tar sands,110,0.78
+2714.90.00,27149000,8,,True,Other,110,0.89
+2715.00.00,27150000,8,,True,"Bituminous mixtures based on natural asphalt, on natural bitumen, on petroleum bitumen, on mineral tar or on mineral tar pitch (for example, bituminous mastics, cut-backs)",110,0.87
+2716.00.00,27160000,8,,True,Electrical energy,110,0.79
+2801.20.00,28012000,8,,True,Iodine,110,0.86
+2804.29.00,28042900,8,,True,Other,110,0.87
+2804.50.00,28045000,8,,True,Boron; tellurium,110,0.88
+2804.61.00,28046100,8,,True,Containing by weight not less than 99.99 percent of silicon,110,0.75
+2804.80.00,28048000,8,,True,Arsenic,110,0.84
+2804.90.00,28049000,8,,True,Selenium,110,0.86
+2805.19.10,28051910,8,,True,Strontium,110,0.86
+2805.19.20,28051920,8,,True,Barium,110,0.74
+2805.19.90,28051990,8,,True,Other,110,0.83
+2805.30.00,28053000,8,,True,"Rare-earth metals, scandium and yttrium, whether or not intermixed or interalloyed",110,0.85
+2811.11.00,28111100,8,,True,Hydrogen fluoride (Hydrofluoric acid),110,0.79
+2811.19.10,28111910,8,,True,Arsenic acid,110,0.87
+2811.29.10,28112910,8,,True,Arsenic trioxide,110,0.87
+2811.29.20,28112920,8,,True,Selenium dioxide,111,0.88
+2812.19.00,28121900,8,,True,Other,111,0.84
+2813.90.10,28139010,8,,True,Of arsenic,111,0.83
+2815.20.00,28152000,8,,True,Potassium hydroxide (Caustic potash),111,0.86
+2816.10.00,28161000,8,,True,Hydroxide and peroxide of magnesium,111,0.91
+2816.40.10,28164010,8,,True,Of strontium,111,0.87
+2816.40.20,28164020,8,,True,Of barium,111,0.87
+2817.00.00,28170000,8,,True,Zinc oxide; zinc peroxide,111,0.85
+2818.10.10,28181010,8,,True,Crude,111,0.85
+2818.10.20,28181020,8,,True,"In grains, or ground, pulverized or refined",111,0.87
+2818.20.00,28182000,8,,True,"Aluminum oxide, other than artificial corundum",111,0.87
+2820.10.00,28201000,8,,True,Manganese dioxide,111,0.82
+2821.10.00,28211000,8,,True,Iron oxides and hydroxides,111,0.82
+2821.20.00,28212000,8,,True,Earth colors,111,0.86
+2822.00.00,28220000,8,,True,Cobalt oxides and hydroxides; commercial cobalt oxides,111,0.79
+2823.00.00,28230000,8,,True,Titanium oxides,111,0.87
+2825.20.00,28252000,8,,True,Lithium oxide and hydroxide,111,0.83
+2825.40.00,28254000,8,,True,Nickel oxides and hydroxides,111,0.82
+2825.50.30,28255030,8,,True,Copper hydroxides,111,0.82
+2825.60.00,28256000,8,,True,Germanium oxides and zirconium dioxide,111,0.84
+2825.80.00,28258000,8,,True,Antimony oxides,111,0.84
+2825.90.15,28259015,8,,True,Niobium oxide,111,0.79
+2825.90.30,28259030,8,,True,Tungsten oxides,111,0.79
+2825.90.90,28259090,8,,True,Other,111,0.81
+2826.12.00,28261200,8,,True,Of aluminum,111,0.83
+2826.30.00,28263000,8,,True,Sodium hexafluoroaluminate (Synthetic cryolite),111,0.83
+2826.90.90,28269090,8,,True,Other,111,0.78
+2827.31.00,28273100,8,,True,Of magnesium,111,0.81
+2827.39.45,28273945,8,,True,Of barium,111,0.84
+2827.39.60,28273960,8,,True,Of cobalt,111,0.81
+2827.39.90,28273990,8,,True,Other,111,0.84
+2827.41.00,28274100,8,,True,Of copper,111,0.83
+2827.49.50,28274950,8,,True,Other,111,0.84
+2827.59.51,28275951,8,,True,Other,111,0.84
+2827.60.10,28276010,8,,True,Of calcium or of copper,111,0.87
+2827.60.51,28276051,8,,True,Other,111,0.83
+2833.21.00,28332100,8,,True,Of magnesium,111,0.77
+2833.24.00,28332400,8,,True,Of nickel,111,0.82
+2833.25.00,28332500,8,,True,Of copper,112,0.82
+2833.27.00,28332700,8,,True,Of barium,112,0.82
+2833.29.10,28332910,8,,True,Of cobalt,112,0.84
+2833.29.45,28332945,8,,True,Of zinc,112,0.76
+2833.29.51,28332951,8,,True,Other,112,0.88
+2834.21.00,28342100,8,,True,Of potassium,112,0.82
+2834.29.20,28342920,8,,True,Of strontium,112,0.89
+2834.29.51,28342951,8,,True,Other,112,0.8
+2836.60.00,28366000,8,,True,Barium carbonate,112,0.82
+2836.91.00,28369100,8,,True,Lithium carbonates,112,0.85
+2836.92.00,28369200,8,,True,Strontium carbonate,112,0.85
+2836.99.10,28369910,8,,True,Cobalt carbonates,112,0.79
+2836.99.50,28369950,8,,True,Other,112,0.78
+2841.80.00,28418000,8,,True,Tungstates (wolframates),112,0.86
+2841.90.20,28419020,8,,True,Ammonium perrhenate,112,0.84
+2841.90.40,28419040,8,,True,Aluminates,112,0.87
+2843.29.01,28432901,8,,True,Other,112,0.86
+2843.30.00,28433000,8,,True,Gold compounds,112,0.82
+2843.90.00,28439000,8,,True,Other compounds; amalgams,112,0.79
+2844.10.10,28441010,8,,True,Uranium metal,112,0.8
+2844.10.20,28441020,8,,True,Uranium compounds,112,0.87
+2844.20.00,28442000,8,,True,"Uranium enriched in U235 and its compounds; plutonium and its compounds; alloys, dispersions (including cermets), ceramic products and mixtures containing uranium enriched in U235, plutonium or compounds of these products",112,0.81
+2844.30.20,28443020,8,,True,Uranium compounds,112,0.78
+2844.30.50,28443050,8,,True,Other,112,0.83
+2844.43.00,28444300,8,,True,"Other radioactive elements and isotopes and compounds; other alloys, dispersions (including cermets), ceramic products and mixtures containing these elements, isotopes or compounds",112,0.81
+2845.90.01,28459001,8,,True,Other,112,0.8
+2846.10.00,28461000,8,,True,Cerium compounds,112,0.8
+2846.90.20,28469020,8,,True,Mixtures of rare-earth oxides or of rare-earth chlorides,112,0.8
+2846.90.40,28469040,8,,True,Yttrium bearing materials and compounds containing by weight more than 19 percent but less than 85 percent yttrium oxide equivalent,112,0.78
+2846.90.80,28469080,8,,True,Other,112,0.82
+2849.20.10,28492010,8,,True,Crude,112,0.8
+2849.20.20,28492020,8,,True,"In grains, or ground, pulverized or refined",112,0.84
+2849.90.30,28499030,8,,True,Of tungsten,112,0.79
+2853.90.10,28539010,8,,True,"Of copper (phosphor copper), containing more than 15 percent by weight of phosphorous",113,0.81
+2853.90.90,28539090,8,,True,Other,113,0.83
+2903.45.10,29034510,8,,True,"1,1,1,2-Tetrafluoroethane (HFC-134a) and 1,1,2,2-tetrafluoroethane (HFC-134)",113,0.81
+2903.51.10,29035110,8,,True,"2,3,3,3-Tetrafluoropropene (HFO-1234yf),1,3,3,3-tetrafluoropropene (HFO-1234ze) and (Z)-1,1,1,4,4,4-hexafluoro-2-butene (HFO-1336mzz)",113,0.84
+2903.59.90,29035990,8,,True,Other,113,0.83
+2903.69.90,29036990,8,,True,Other,113,0.86
+2903.78.00,29037800,8,,True,Other perhalogenated derivatives,113,0.78
+2903.79.90,29037990,8,,True,Other,113,0.77
+2903.89.15,29038915,8,,True,Products described in additional U.S. note 3 to section VI,113,0.85
+2903.89.20,29038920,8,,True,Other,113,0.83
+2903.89.70,29038970,8,,True,Other,113,0.86
+2903.92.00,29039200,8,,True,"Hexachlorobenzene (ISO) and DDT (ISO) (clofenotane (INN)), (1,1,1-trichloro-2,2- bis(p-chlorophenyl)ethane)",113,0.86
+2904.99.40,29049940,8,,True,Products described in additional U.S. note 3 to section VI,113,0.85
+2905.29.90,29052990,8,,True,Other,113,0.83
+2905.39.90,29053990,8,,True,Other,113,0.81
+2905.59.10,29055910,8,,True,Derivatives of monohydric alcohols,113,0.8
+2905.59.90,29055990,8,,True,Other,113,0.78
+2906.19.50,29061950,8,,True,Other,113,0.85
+2906.29.60,29062960,8,,True,Other,113,0.8
+2907.29.90,29072990,8,,True,Other,113,0.87
+2908.19.60,29081960,8,,True,Other,113,0.82
+2909.19.18,29091918,8,,True,Other,113,0.82
+2909.20.00,29092000,8,,True,"Cyclanic, cyclenic or cycloterpenic ethers and their halogenated, sulfonated, nitrated or nitrosated derivatives",113,0.84
+2909.30.60,29093060,8,,True,Other,114,0.84
+2909.49.10,29094910,8,,True,Products described in additional U.S. note 3 to section VI,114,0.83
+2909.49.15,29094915,8,,True,Other,114,0.83
+2909.49.20,29094920,8,,True,Glycerol ethers,114,0.87
+2909.49.60,29094960,8,,True,Other,114,0.8
+2909.50.40,29095040,8,,True,Odoriferous or flavoring compounds,114,0.81
+2909.50.45,29095045,8,,True,Products described in additional U.S. note 3 to section VI,114,0.81
+2909.50.50,29095050,8,,True,Other,114,0.8
+2912.19.50,29121950,8,,True,Other,114,0.83
+2912.49.26,29124926,8,,True,Other,114,0.76
+2914.19.00,29141900,8,,True,Other,114,0.73
+2914.40.90,29144090,8,,True,Other,114,0.87
+2914.50.30,29145030,8,,True,Other,114,0.76
+2914.50.50,29145050,8,,True,Other,114,0.9
+2914.62.00,29146200,8,,True,Coenzyme Q10 (ubidecarenone (INN),114,0.87
+2914.69.21,29146921,8,,True,Drugs,114,0.87
+2914.69.90,29146990,8,,True,Other,114,0.82
+2914.79.40,29147940,8,,True,Other,114,0.84
+2915.29.30,29152930,8,,True,Cobalt acetates,114,0.86
+2915.39.31,29153931,8,,True,Products described in additional U.S. note 3 to section VI,114,0.9
+2915.39.35,29153935,8,,True,Other,114,0.85
+2915.39.47,29153947,8,,True,Acetates of polyhydric alcohols or of polyhydric alcohol ethers,114,0.84
+2915.39.90,29153990,8,,True,Other,114,0.78
+2915.90.10,29159010,8,,True,Fatty acids of animal or vegetable origin,114,0.81
+2915.90.14,29159014,8,,True,Valproic acid,114,0.75
+2915.90.18,29159018,8,,True,Other,114,0.85
+2915.90.20,29159020,8,,True,Aromatic,114,0.85
+2915.90.50,29159050,8,,True,Other,115,0.8
+2916.19.30,29161930,8,,True,Acids,115,0.81
+2916.19.50,29161950,8,,True,Other,115,0.83
+2916.20.50,29162050,8,,True,Other,115,0.85
+2916.31.50,29163150,8,,True,Other,115,0.8
+2916.39.46,29163946,8,,True,Products described in additional U.S. note 3 to section VI,115,0.83
+2916.39.79,29163979,8,,True,Other,115,0.76
+2917.13.00,29171300,8,,True,"Azelaic acid, sebacic acid, their salts and esters",115,0.83
+2917.19.10,29171910,8,,True,Ferrous fumarate,115,0.79
+2917.19.70,29171970,8,,True,Other,115,0.86
+2917.34.01,29173401,8,,True,Other esters of orthophthalic acid,115,0.79
+2917.39.30,29173930,8,,True,Products described in additional U.S. note 3 to section VI,115,0.79
+2918.11.51,29181151,8,,True,Other,115,0.8
+2918.13.50,29181350,8,,True,Other,115,0.8
+2918.16.50,29181650,8,,True,Other,115,0.84
+2918.19.60,29181960,8,,True,Malic acid,115,0.81
+2918.19.90,29181990,8,,True,Other,115,0.81
+2918.22.10,29182210,8,,True,O-Acetylsalicylic acid (Aspirin),115,0.81
+2918.22.50,29182250,8,,True,Salts and esters of O-acetylsalicylic acid,115,0.78
+2918.23.30,29182330,8,,True,Products described in additional U.S. note 3 to section VI,115,0.87
+2918.23.50,29182350,8,,True,Other,115,0.81
+2918.29.20,29182920,8,,True,Gentisic acid; and Hydroxycinnamic acid and its salts,115,0.82
+2918.29.65,29182965,8,,True,Products described in additional U.S. note 3 to section VI,115,0.81
+2918.29.75,29182975,8,,True,Other,115,0.79
+2918.30.25,29183025,8,,True,Products described in additional U.S. note 3 to section VI,115,0.81
+2918.30.30,29183030,8,,True,Other,116,0.84
+2918.30.90,29183090,8,,True,Other,116,0.87
+2918.99.30,29189930,8,,True,Drugs,116,0.79
+2918.99.43,29189943,8,,True,Products described in additional U.S. note 3 to section VI,116,0.8
+2918.99.47,29189947,8,,True,Other,116,0.83
+2918.99.50,29189950,8,,True,Other,116,0.85
+2919.90.30,29199030,8,,True,Other,116,0.87
+2919.90.50,29199050,8,,True,Other,116,0.9
+2920.90.51,29209051,8,,True,Other,116,0.86
+2921.19.11,29211911,8,,True,"Mono-, di- and triethylamines;mono-, di-, and tri-(propyl- and butyl-)monoamines; salts of any of the foregoing",116,0.85
+2921.19.61,29211961,8,,True,Other,116,0.81
+2921.29.00,29212900,8,,True,Other,116,0.82
+2921.30.10,29213010,8,,True,Products described in additional U.S. note 3 to section VI,116,0.82
+2921.30.50,29213050,8,,True,Other,116,0.82
+2921.42.90,29214290,8,,True,Other,116,0.86
+2921.46.00,29214600,8,,True,"Amfetamine (INN), benzfetamine (INN), dexamfetamine (INN), etilamfetamine (INN), fencamfamin (INN), lefetamine (INN), levamfetamine (INN), mefenorex (INN) and phentermine (INN); salts thereof",116,0.85
+2921.49.38,29214938,8,,True,"Antidepressants, tranquilizers and other psychotherapeutic agents",116,0.8
+2921.49.43,29214943,8,,True,Other,116,0.83
+2921.49.45,29214945,8,,True,Products described in additional U.S. note 3 to section VI,117,0.86
+2921.49.50,29214950,8,,True,Other,117,0.86
+2921.59.80,29215980,8,,True,Other,117,0.86
+2922.11.00,29221100,8,,True,Monoethanolamine and its salts,117,0.85
+2922.14.00,29221400,8,,True,Dextropropoxyphene (INN) and its salts,117,0.85
+2922.19.09,29221909,8,,True,Drugs,117,0.84
+2922.19.20,29221920,8,,True,"4,4'-Bis(dimethylamino) benzhydrol (Michler's hydrol); 5'-[3'-(Dimethylamino) propyl]-10',11'- dihydro-5H'-dibenzo [a,b] cyclohept- en-5'-ol (Dibenzcarbinol); and 1-(p-Nitrophenyl)-2-amino-1,3- propanediol",117,0.87
+2922.19.33,29221933,8,,True,"N1-(2-Hydroxyethyl)-2-nitro-1,4- phenylenediamine;N1,N4,N4- Tris(2-hydroxyethyl)-2- nitro-1,4- phenylenediamine;N1,N4-Dimethyl-N1- (2-hydroxyethyl)-3-nitro-1,4- phenylene- diamine;N1,N4-Dimethyl-N1-(2,3-dihydroxy- propyl)-3-nitro-1,4- phenylenediamine; andN1-(2-Hydroxyethyl)-3-nitro-1,4- phenylenediamine",117,0.8
+2922.19.60,29221960,8,,True,Products described in additional U.S. note 3 to section VI,117,0.84
+2922.19.70,29221970,8,,True,Other,117,0.85
+2922.19.90,29221990,8,,True,Salts of triethanolamine,117,0.89
+2922.19.96,29221996,8,,True,Other,117,0.85
+2922.29.27,29222927,8,,True,Drugs,117,0.9
+2922.29.61,29222961,8,,True,Products described in additional U.S. note 3 to section VI,117,0.83
+2922.29.81,29222981,8,,True,Other,117,0.8
+2922.31.00,29223100,8,,True,"Amfepramone (INN), methadone (INN) and normethadone (INN); salts thereof",117,0.84
+2922.39.25,29223925,8,,True,Products described in additional U.S. note 3 to section VI,117,0.83
+2922.39.45,29223945,8,,True,Other,117,0.87
+2922.39.50,29223950,8,,True,Other,118,0.82
+2922.41.00,29224100,8,,True,Lysine and its esters; salts thereof,118,0.88
+2922.42.50,29224250,8,,True,Other,118,0.81
+2922.44.00,29224400,8,,True,Tilidine (INN) and its salts,118,0.84
+2922.49.10,29224910,8,,True,"m-Aminobenzoic acid, technical;p-Aminobenzoic acid; 3,5-Diaminobenzoic acid; 2-Ethylamino-5-sulfobenzoic acid; 3-(N-Ethylanilino)propionic acid, methyl ester;β-(β-Methoxyethoxyethyl)-4-aminobenzoate; Methyl anthranilate; andl-Phenylalanine",118,0.82
+2922.49.26,29224926,8,,True,Drugs,118,0.78
+2922.49.30,29224930,8,,True,Products described in additional U.S. note 3 to section VI,118,0.72
+2922.49.37,29224937,8,,True,Other,118,0.85
+2922.49.49,29224949,8,,True,Other amino acids,118,0.75
+2922.49.80,29224980,8,,True,Other,118,0.79
+2922.50.07,29225007,8,,True,"3,4-Diaminophenetole dihydrogen sulfate; 2-Nitro-5-[(2,3-dihydroxy) propoxy]-N- methyl aniline; 2-Nitro-5-(2-hydroxy ethoxy)-N-methyl aniline; 4-(2-Hydroethoxy)-1,3-phenylene diamine dihydro chloride; 3-Methoxy-4-[(2-hydroxy ethyl) amino] nitro- benzene; 4-[(2-Hydroxy ethyl) amino]-3-nitro phenol; and (R)-α-Amino-4-hydroxy benzene acetic acid (d(-)-p-Hydroxy phenyl glycine)",118,0.81
+2922.50.10,29225010,8,,True,"dl-3-(3,4-Di hydroxy phenyl) alanine;N-Ethyl-N-(2-methoxy carbonyl ethyl) aniline;dl-Phenyl ephrine base; and Carbonic acid, methyl ester, diester with 2,2'-(m-tolyl amino) diethanol (Toluidine carbonate)",118,0.85
+2922.50.11,29225011,8,,True,Salts of d(-)-p-Hydroxyphenylglycine ((R)- α-Amino-4-hydroxybenzeneacetic acid),118,0.79
+2922.50.13,29225013,8,,True,Isoetharine hydrochloride; Isoxsuprine hydrochloride; Nylidrin hydrochloride; Phenylephrine hydrochloride; Salbutamol (Albuterol); and Terbutaline sulfate,118,0.81
+2922.50.14,29225014,8,,True,Cardiovascular drugs,118,0.82
+2922.50.17,29225017,8,,True,Dermatological agents and local anesthetics,118,0.82
+2922.50.25,29225025,8,,True,Other,118,0.78
+2922.50.35,29225035,8,,True,Products described in additional U.S. note 3 to section VI,118,0.76
+2922.50.40,29225040,8,,True,Other,118,0.71
+2922.50.50,29225050,8,,True,Other,118,0.84
+2923.10.00,29231000,8,,True,Choline and its salts,118,0.84
+2923.20.20,29232020,8,,True,Other,118,0.86
+2923.90.01,29239001,8,,True,Other,119,0.76
+2924.11.00,29241100,8,,True,Meprobamate (INN),119,0.85
+2924.19.11,29241911,8,,True,Amides,119,0.86
+2924.19.80,29241980,8,,True,Other,119,0.74
+2924.21.16,29242116,8,,True,Other,119,0.79
+2924.21.50,29242150,8,,True,Other,119,0.83
+2924.29.01,29242901,8,,True,"p-Acetanisidide;p-Acetoacetotoluidide; 4'-Amino-N-methylacetanilide; 2,5-Dimethoxyacetanilide; andN-(7-Hydroxy-1-naphthyl)acetamide",119,0.88
+2924.29.03,29242903,8,,True,"3,5-Dinitro-o-toluamide",119,0.76
+2924.29.10,29242910,8,,True,"Acetanilide;N-Acetylsulfanilyl chloride; Aspartame; and 2-Methoxy-5-acetamino-N,N- bis(2-acetoxyethyl)aniline",119,0.83
+2924.29.23,29242923,8,,True,"4-Amino acetanilide; 2,2'-Oxamido bis [ethyl-3-(3,5-di-tert-butyl- 4-hydroxyphenyl) propionate]; Aceto acetsulfanilic acid, potassium salt; and N-(2,3-Dihydroxy propyl)-5-N-(2,3-dihydroxy- propyl) acetamido-N'-(2-hydroxyethyl)- 2,4,6-triiodoisophthalamide",119,0.81
+2924.29.26,29242926,8,,True,3-Aminomethoxybenzanilide,119,0.84
+2924.29.28,29242928,8,,True,"N-[[(4-Chlorophenyl)amino]carbonyl]-2,6- difluorobenzamide; and 3,5-Dichloro-N-(1,1-dimethyl-2-propynyl)- benzamide (Pronamide)",119,0.81
+2924.29.33,29242933,8,,True,"3-Hydroxy-2-naphthanilide; 3-Hydroxy-2-naphtho-o-toluidide; 3-Hydroxy-2-naphtho-o-anisidine; 3-Hydroxy-2-naphtho-o-phenetidide; 3-Hydroxy-2-naphtho-4-chloro-2,5- dimethoxyanilide; 3-Hydroxy-3'-nitro-2-naphthanilide; andN,N'-Bis(acetoacetyl-o-toluidine)",119,0.85
+2924.29.57,29242957,8,,True,Diethylaminoacetoxylidide (Lidocaine),119,0.83
+2924.29.62,29242962,8,,True,Other,119,0.82
+2924.29.71,29242971,8,,True,Products described in additional U.S. note 3 to section VI,119,0.75
+2924.29.77,29242977,8,,True,Other,119,0.73
+2924.29.80,29242980,8,,True,"2,2-Dimethylcyclopropylcarboxamide",119,0.71
+2924.29.95,29242995,8,,True,Other,119,0.77
+2925.12.00,29251200,8,,True,Glutethimide (INN),119,0.86
+2925.19.42,29251942,8,,True,Other,119,0.87
+2925.19.91,29251991,8,,True,Other,119,0.87
+2925.21.00,29252100,8,,True,Chlordimeform (ISO),119,0.85
+2925.29.20,29252920,8,,True,Drugs,119,0.85
+2925.29.60,29252960,8,,True,Other,119,0.82
+2925.29.90,29252990,8,,True,Other,119,0.8
+2926.30.10,29263010,8,,True,Fenproporex (INN) and its salts,119,0.81
+2926.40.00,29264000,8,,True,alpha-Phenylacetoacetonitrile,119,0.86
+2926.90.14,29269014,8,,True,p-Chlorobenzonitrile; and Verapamil hydrochloride,119,0.82
+2926.90.43,29269043,8,,True,Products described in additional U.S. note 3 to section VI,120,0.84
+2926.90.48,29269048,8,,True,Other:,120,0.78
+2926.90.50,29269050,8,,True,Other,120,0.77
+2927.00.40,29270040,8,,True,Products described in additional U.S. note 3 to section VI,120,0.82
+2927.00.50,29270050,8,,True,Other,120,0.82
+2928.00.25,29280025,8,,True,Aromatic,120,0.82
+2928.00.30,29280030,8,,True,Drugs,120,0.81
+2928.00.50,29280050,8,,True,Other,120,0.85
+2929.90.20,29299020,8,,True,Other,120,0.9
+2929.90.50,29299050,8,,True,Other,120,0.83
+2930.20.20,29302020,8,,True,Other,120,0.8
+2930.20.90,29302090,8,,True,Other,120,0.87
+2930.30.60,29303060,8,,True,Other,120,0.69
+2930.90.29,29309029,8,,True,Other,120,0.87
+2930.90.49,29309049,8,,True,Other,120,0.83
+2930.90.92,29309092,8,,True,Other,120,0.72
+2931.49.00,29314900,8,,True,Other,120,0.85
+2931.53.00,29315300,8,,True,O-(3-chloropropyl) O-[4-nitro-3-(trifluoromethyl)phenyl] methylphosphonothionate,120,0.87
+2931.90.22,29319022,8,,True,Drugs,120,0.78
+2931.90.90,29319090,8,,True,Other,120,0.8
+2932.14.00,29321400,8,,True,Sucralose,120,0.79
+2932.19.51,29321951,8,,True,Other,120,0.87
+2932.20.20,29322020,8,,True,Drugs,120,0.9
+2932.20.30,29322030,8,,True,Products described in additional U.S. note 3 to section VI,120,0.76
+2932.20.50,29322050,8,,True,Other,120,0.83
+2932.99.61,29329961,8,,True,Products described in additional U.S. note 3 to section VI,120,0.84
+2932.99.70,29329970,8,,True,Other,120,0.84
+2932.99.90,29329990,8,,True,Other,120,0.83
+2933.11.00,29331100,8,,True,Phenazone (Antipyrine) and its derivatives,121,0.8
+2933.19.35,29331935,8,,True,Drugs,121,0.88
+2933.19.45,29331945,8,,True,Drugs,121,0.84
+2933.19.90,29331990,8,,True,Other,121,0.84
+2933.21.00,29332100,8,,True,Hydantoin and its derivatives,121,0.86
+2933.29.05,29332905,8,,True,1-[1-((4-Chloro-2-(trifluoromethyl)phenyl)- imino)-2-propoxyethyl]-1H-imidazole (Triflumizole); and Ethylene thiourea,121,0.81
+2933.29.20,29332920,8,,True,Drugs,121,0.8
+2933.29.35,29332935,8,,True,Products described in additional U.S. note 3 to section VI,121,0.84
+2933.29.43,29332943,8,,True,Other,121,0.8
+2933.29.45,29332945,8,,True,Drugs,121,0.86
+2933.29.60,29332960,8,,True,Imidazole,121,0.91
+2933.29.90,29332990,8,,True,Other,121,0.83
+2933.33.01,29333301,8,,True,"Alfentanil (INN), anileridine (INN), bezitramide (INN), bromazepam (INN), carfentanil (INN), difenoxin (INN), diphenoxylate (INN), dipipanone (INN), fentanyl (INN), ketobemidone (INN), methylphenidate (INN), pentazocine (INN), pethidine (INN), pethidine (INN) intermediate A, phencyclidine (INN) (PCP), phenoperidine (INN), pipradrol (INN), piritramide (INN), propiram (INN), remifentanil (INN) and trimeperidine (INN); salts thereof",121,0.81
+2933.34.00,29333400,8,,True,Other fentanyls and their derivatives,121,0.82
+2933.35.00,29333500,8,,True,3-Quinuclidinol,121,0.83
+2933.37.00,29333700,8,,True,N-Phenethyl-4-piperidone (NPP),121,0.85
+2933.39.08,29333908,8,,True,"1-(3-Sulfo propyl) pyridinium hydroxide;N,N'-Bis (2,2,6,6-tetra methyl-4-piperidinyl)-1,6- hexane diamine; 3,5-Dimethyl-2-hydroxy methyl-4-methoxy- pyridine (pyrmethyl alcohol); Dipenta methylene thiuram tetra sulfide; 2H-Indol-2-one,1,3-dihydro-1-phenyl-3-(4- pyridinyl methylene); 4-Picolyl chloride hydro chloride; and Piperidino ethyl chloride hydro chloride",121,0.91
+2933.39.10,29333910,8,,True,"Collidines, lutidines and picolines",121,0.78
+2933.39.20,29333920,8,,True,"p-Chloro-2-benzylpyridine; 4-Chloro-1-methylpiperidine hydrochloride; 1,4-Dimethyl-6-hydroxy-3-cyanopyrid-2-one; Di-(2,2,6,6-tetramethyl-4-hydroxy- piperidine)sebacate; 2-Methyl-5-ethylpyridine; 4-Phenylpropylpyridine; α-Phenylpyridylacetic acid, methyl ester; Picolinic acid; 2-Pyridinecarboxaldehyde; and 2,5-Pyridinedicarboxylic acid",121,0.9
+2933.39.21,29333921,8,,True,Fungicides,121,0.77
+2933.39.23,29333923,8,,True,o-Paraquat dichloride,122,0.76
+2933.39.25,29333925,8,,True,Other,122,0.81
+2933.39.27,29333927,8,,True,Other,122,0.84
+2933.39.31,29333931,8,,True,"Antidepressants, tranquilizers and other psychotherapeutic agents",122,0.77
+2933.39.41,29333941,8,,True,Other,122,0.86
+2933.39.61,29333961,8,,True,Products described in additional U.S. note 3 to section VI,122,0.77
+2933.39.92,29333992,8,,True,Other,122,0.82
+2933.41.00,29334100,8,,True,Levorphanol (INN) and its salts,122,0.75
+2933.49.08,29334908,8,,True,"4,7-Dichloroquinoline",122,0.82
+2933.49.10,29334910,8,,True,"Ethoxyquin (1,2-Dihydro-6-ethoxy-2,2,4- trimethylquinoline)",122,0.83
+2933.49.15,29334915,8,,True,8-Methylquinoline and Isoquinoline,122,0.8
+2933.49.17,29334917,8,,True,"Ethyl ethyl-6,7,8-trifluoro-1,4-dihydro-4-oxo-3- quinolinecarboxylate",122,0.7
+2933.49.20,29334920,8,,True,5-Chloro-7-iodo-8-quinolinol (Iodo chlo rhydroxy quin); Deco quinate; Diiodo hydroxy quin; and Oxy quinoline sulfate,122,0.79
+2933.49.26,29334926,8,,True,Other,122,0.78
+2933.49.30,29334930,8,,True,Pesticides,122,0.76
+2933.49.60,29334960,8,,True,Products described in additional U.S. note 3 to section VI,122,0.85
+2933.49.70,29334970,8,,True,Other,122,0.83
+2933.52.10,29335210,8,,True,Malonylurea (barbituric acid),122,0.74
+2933.52.90,29335290,8,,True,Other,122,0.8
+2933.53.00,29335300,8,,True,"Allobarbital (INN), amobarbital (INN), barbital (INN), butalbital (INN), butobarbital, cyclobarbital (INN), methylphenobarbital (INN), pentobarbital (INN), phenobarbital (INN), secbutabarbital (INN), secobarbital (INN) and vinylbital (INN); salts thereof",122,0.88
+2933.54.00,29335400,8,,True,Other derivatives of malonylurea (barbituric acid); salts thereof,122,0.83
+2933.59.10,29335910,8,,True,Herbicides,122,0.72
+2933.59.15,29335915,8,,True,Other,122,0.82
+2933.59.18,29335918,8,,True,Other,123,0.85
+2933.59.21,29335921,8,,True,"Antihistamines, including those principally used as anti-nauseants",123,0.74
+2933.59.22,29335922,8,,True,Nicarbazin; and Trimethoprim,123,0.89
+2933.59.36,29335936,8,,True,Other,123,0.86
+2933.59.46,29335946,8,,True,"Antidepressants, tranquilizers and other psychotherapeutic agents",123,0.86
+2933.59.53,29335953,8,,True,Other,123,0.83
+2933.59.59,29335959,8,,True,Other,123,0.83
+2933.59.70,29335970,8,,True,Products described in additional U.S. note 3 to section VI,123,0.8
+2933.59.80,29335980,8,,True,Other,123,0.8
+2933.59.85,29335985,8,,True,"2-Amino-4-chloro-6-methoxy pyrimidine; 2-Amino-4,6-di methoxy pyrimidine; and 6-Methyl uracil",123,0.82
+2933.59.95,29335995,8,,True,Other,123,0.79
+2933.69.60,29336960,8,,True,Other,123,0.79
+2933.72.00,29337200,8,,True,Clobazam (INN) and methyprylon (INN),123,0.88
+2933.79.08,29337908,8,,True,Products described in additional U.S. note 3 to section VI,123,0.83
+2933.79.15,29337915,8,,True,Other,123,0.86
+2933.79.85,29337985,8,,True,Other,123,0.78
+2933.91.00,29339100,8,,True,"Alprazolam (INN), camazepam (INN), chlordiazepoxide (INN), clonazepam (INN), clorazepate, delorazepam (INN), diazepam (INN), estazolam (INN), ethyl loflazepate (INN), fludiazepam (INN), flunitrazepam (INN), flurazepam (INN), halazepam (INN), lorazepam (INN), lormetazepam (INN), mazindol (INN), medazepam (INN), midazolam (INN), nimetazepam (INN), nitrazepam (INN), nordazepam (INN), oxazepam (INN), pinazepam (INN), prazepam (INN), pyrovalerone (INN), temazepam (INN), tetrazepam (INN) and triazolam (INN); salts thereof",123,0.86
+2933.99.01,29339901,8,,True,Butyl (R)-2-[4-(5-trifluoromethyl-2- pyridinyloxy)phenoxy]propanoate,123,0.85
+2933.99.02,29339902,8,,True,"2-[4-[(6-Chloro-2-quinoxalinyl)oxy]phenoxy]- propionic acid, ethyl ester",123,0.86
+2933.99.05,29339905,8,,True,Acridine and indole,123,0.82
+2933.99.06,29339906,8,,True,"α-Butyl-α-(4-chlorophenyl)-1H-1,2,4- triazole-1- propanenitrile (Myclobutanil); andα-[2-(4-Chlorophenyl)ethyl]-α-phenyl-1H- 1,2,4-triazole-1-propanenitrile (Fenbuconazole)",124,0.81
+2933.99.08,29339908,8,,True,"Aceto acetyl-5-amino benz imidazolone; 3-(2H-Benzo triazol-2-yl)-5-(tert-butyl)-4- hydroxy benzene propanoic acid, C7-C9 branched or linear alkyl esters; 2-(2H-Benzotriazol-2-yl)-6-dodecyl-4- methyl phenol, in liquid form, branched and linear; and 1,3,3-Trimethyl-2-methyleneindoline",124,0.86
+2933.99.11,29339911,8,,True,Carbazole,124,0.77
+2933.99.12,29339912,8,,True,"6-Bromo-5-methyl-1H-imidazo[4,5-b]- pyridine; 2-sec-Butyl-4-tert-butyl-6-(benzotriazol-2- yl)phenol; 2-tert-Butyl-4-methyl-6-(5-chlorobenzotri- azol-2-yl)phenol; 2,4-Di-tert-butyl-6-(benzotriazol-2-yl)phenol; 2,4-Di-tert-butyl-6-(5-chlorobenzotriazol-2- yl)phenol; 2,3-Dichloro-6-quinoxalinecarbonyl chloride; 1-Hydroxy-2-carbazolecarboxylic acid; 2-Hydroxy-3-carbazolecarboxylic acid; 2-Hydroxy-3-carbazolecarboxylic acid, sodium salt; Iminodibenzyl(10,11-dihydro-5H-dibenz- [b,f]azepine); Indoline; 3-Methylbenzo[f]quinoline; 2-Methylindoline; 2-Methylmercaptobenzimidazole; 1-Methyl-2-phenylindole; 1-Methylpyrazine; 2,4-Methylpyrazolic acid; 2-Phenylbenzimidazole; 2-Phenylindole; Tetramethylpyrazine; 2,3,5-Triphenyltetrazolium chloride;dl-Tryptophan; and Vinylcarbazole, monomer",124,0.84
+2933.99.16,29339916,8,,True,"o-Diquat dibromide (1,1'-Ethylene- 2,2'-dipyridylium dibromide)",124,0.83
+2933.99.17,29339917,8,,True,Other:,124,0.8
+2933.99.22,29339922,8,,True,Other,124,0.79
+2933.99.24,29339924,8,,True,Photographic chemicals,124,0.84
+2933.99.26,29339926,8,,True,Antihistamines,124,0.86
+2933.99.42,29339942,8,,True,Acriflavine; Acriflavine hydrochloride; Carbadox; and Pyrazinamide,124,0.87
+2933.99.46,29339946,8,,True,Other,124,0.86
+2933.99.51,29339951,8,,True,Hydralazine hydrochloride,124,0.87
+2933.99.53,29339953,8,,True,Other,124,0.86
+2933.99.55,29339955,8,,True,"Analgesics, antipyretics and nonhormonal anti-inflammatory agents",124,0.83
+2933.99.58,29339958,8,,True,Droperidol; and Imipramine hydrochloride,124,0.86
+2933.99.61,29339961,8,,True,Other,124,0.76
+2933.99.65,29339965,8,,True,"Anticonvulsants, hypnotics and sedatives",124,0.86
+2933.99.70,29339970,8,,True,Other,124,0.8
+2933.99.75,29339975,8,,True,Other,124,0.87
+2933.99.79,29339979,8,,True,Products described in additional U.S. note 3 to section VI,124,0.87
+2933.99.82,29339982,8,,True,Other,125,0.81
+2933.99.85,29339985,8,,True,"3-Amino-1,2,4-triazole",125,0.83
+2933.99.89,29339989,8,,True,Hexamethyleneimine,125,0.8
+2933.99.90,29339990,8,,True,Drugs,125,0.79
+2933.99.97,29339997,8,,True,Other:,125,0.83
+2934.10.10,29341010,8,,True,Products described in additional U.S. note 3 to section VI,125,0.85
+2934.10.20,29341020,8,,True,Other,125,0.9
+2934.10.90,29341090,8,,True,Other,125,0.87
+2934.20.40,29342040,8,,True,Products described in additional U.S. note 3 to section VI,125,0.87
+2934.20.80,29342080,8,,True,Other,125,0.84
+2934.30.23,29343023,8,,True,"Antidepressants, tranquilizers and other psychotherapeutic agents",125,0.83
+2934.30.27,29343027,8,,True,Other,125,0.81
+2934.30.43,29343043,8,,True,Products described in additional U.S. note 3 to section VI,125,0.83
+2934.30.50,29343050,8,,True,Other,125,0.84
+2934.91.00,29349100,8,,True,"Aminorex (INN), brotizolam (INN), clotiazepam (INN), cloxazolam (INN), dextromoramide (INN), haloxazolam (INN), ketazolam (INN), mesocarb (INN), oxazolam (INN), pemoline (INN), phendimetrazine (INN), phenmetrazine (INN) and sufentanil (INN); salts thereof",125,0.85
+2934.92.00,29349200,8,,True,Other fentanyls and their derivatives,125,0.76
+2934.99.01,29349901,8,,True,Mycophenolate mofetil,125,0.83
+2934.99.03,29349903,8,,True,"2-Acetylbenzo(b)thiophene; 3-Methylene-7-(2-phenoxyacetamido)- cephan-4-carboxylic acid, p-nitrobenzyl ester, 1-oxide; and Naphth[1,2-d]-[1,2,3]-oxadiazole-5-sulfonic acid and its sodium salt",125,0.9
+2934.99.05,29349905,8,,True,"5-Amino-3-phenyl-1,2,4-thiadiazole (3-Phenyl-5-amino-1,2,4-thiadiazole); 2-Hydroxybenzoxazole (Benzoxazolone); 4-Phenylmorpholine; 1,9-Thianthrenedicarboxylic acid; and Thioxanthene-9-one (Thioxanthone)",125,0.82
+2934.99.06,29349906,8,,True,"7-Nitronaphth[1,2]oxadiazole-5-sulfonic acid and its salts",125,0.84
+2934.99.07,29349907,8,,True,Ethyl 2-[4-[(6-chloro-2-benzoxazolyl)oxy]- phenoxy]propanoate (Fenoxaprop-ethyl),125,0.84
+2934.99.08,29349908,8,,True,"2,5-Diphenyloxazole",126,0.8
+2934.99.09,29349909,8,,True,"1,2-Benzisothiazolin-3-one",126,0.81
+2934.99.11,29349911,8,,True,"2-tert-Butyl-4-(2,4-dichloro-5- isopropoxyphenyl)-Δ²-1,3,4- oxadiazolin-5-one; 3-Isopropyl-1H-2,1,3- benzothiadiazin-4-(3H)-one-2,2- dioxide (Bentazon); andO,O-Diethyl-S-[(6-chloro-2- oxobenzoxazolin-3-yl)methyl]- phosphorodithioate (Phosalone)",126,0.88
+2934.99.12,29349912,8,,True,Fungicides,126,0.83
+2934.99.15,29349915,8,,True,Herbicides,126,0.84
+2934.99.16,29349916,8,,True,Insecticides,126,0.87
+2934.99.18,29349918,8,,True,Other,126,0.88
+2934.99.20,29349920,8,,True,Photographic chemicals,126,0.83
+2934.99.30,29349930,8,,True,Drugs,126,0.87
+2934.99.39,29349939,8,,True,Products described in additional U.S. note 3 to section VI,126,0.86
+2934.99.44,29349944,8,,True,Other,126,0.84
+2934.99.47,29349947,8,,True,Drugs,126,0.8
+2934.99.70,29349970,8,,True,"Morpholinoethyl chloride hydrochloride; 2-Methyl-2,5-dioxo-1-oxa-2-phospholan; and (6R-trans)-7-Amino-3-methyl-8-oxo-5- thia-1-azabicyclo[4.2.0]-oct-2-ene-2- carboxylic acid",126,0.85
+2934.99.90,29349990,8,,True,Other:,126,0.79
+2935.50.00,29355000,8,,True,Other perfluorooctane sulfonamides,126,0.86
+2935.90.06,29359006,8,,True,4-Amino-6-chloro-m-benzenedisulfonamide and Methyl-4-aminobenzenesulfonylcarbamate (Asulam),126,0.83
+2935.90.10,29359010,8,,True,"2-Amino-N-ethylbenzenesulfonanilide; 5-Amino-α,α,α-trifluorotoluene-2,4-disulfonamide; Benzenesulfonamide; Benzenesulfonyl hydrazide; 2-Chloro-4-amino-5-hydroxybenzenesulfonamide; 2,5-Dimethoxysulfanilanilide; and Metanilamide",126,0.82
+2935.90.13,29359013,8,,True,"(5‐[2‐Chloro‐4‐ (trifluoromethyl)phenoxy]‐N‐ (methylsulfonyl)‐2‐nitrobenzamide) (Fomesafen); N‐(2,6‐Dichloro‐3‐ methylphenyl)‐5‐ amino‐1,3,4‐triazole‐2‐sulfonamide; 2,4‐Dichloro‐5‐ sulfamoylbenzoic acid; N‐Ethyl‐o‐ toluenesulfonamide; N‐Ethyl‐p‐toluenesulfonamide; 7-(Hexadecylsulfonylamino) ‐1H‐indole; Methyl 5‐{[(4,6‐dimethoxy‐2‐pyrimidinyl)amino]‐ carbonylaminosulfonyl} ‐3‐chloro‐1‐methyl‐1H‐pyrazole‐4‐carboxylate (Halosulfuron methyl); and Mixtures of ortho‐ and para-toluenesulfonamides",126,0.83
+2935.90.15,29359015,8,,True,o-Toluenesulfonamide,126,0.81
+2935.90.20,29359020,8,,True,Fast color bases and fast color salts,126,0.86
+2935.90.30,29359030,8,,True,Sulfamethazine,126,0.8
+2935.90.32,29359032,8,,True,"Acetylsulfisoxazole; Sulfacetamide, sodium; and Sulfamethazine, sodium",126,0.79
+2935.90.33,29359033,8,,True,"Sulfathiazole and Sulfathiazole, sodium",126,0.8
+2935.90.42,29359042,8,,True,Salicylazosulfapyridine (Sulfasalazine); Sulfadiazine; Sulfaguanidine; Sulfamerizine; and Sulfapyridine,126,0.82
+2935.90.48,29359048,8,,True,Other,126,0.87
+2935.90.60,29359060,8,,True,Other,126,0.82
+2935.90.75,29359075,8,,True,Products described in additional U.S. note 3 to section VI,126,0.82
+2935.90.95,29359095,8,,True,Other,127,0.74
+2936.21.00,29362100,8,,True,Vitamins A and their derivatives,127,0.91
+2936.22.00,29362200,8,,True,Vitamin B1 (Thiamine) and its derivatives,127,0.75
+2936.23.00,29362300,8,,True,Vitamin B2 (Riboflavin) and its derivatives,127,0.84
+2936.24.01,29362401,8,,True,D- or DL-Pantothenic acid (Vitamin B5) and its derivatives,127,0.84
+2936.25.00,29362500,8,,True,Vitamin B6 (Pyridoxine and related compounds with Vitamin B6 activity) and its derivatives,127,0.83
+2936.26.00,29362600,8,,True,Vitamin B12 (Cyanocobalamin and related compounds with Vitamin B12 activity) and its derivatives,127,0.79
+2936.27.00,29362700,8,,True,Vitamin C (Ascorbic acid) and its derivatives,127,0.91
+2936.28.00,29362800,8,,True,Vitamin E (Tocopherols and related compounds with Vitamin E activity) and its derivatives,127,0.76
+2936.29.10,29362910,8,,True,Folic acid,127,0.8
+2936.29.16,29362916,8,,True,Niacin and niacinamide,127,0.87
+2936.29.20,29362920,8,,True,Aromatic or modified aromatic,127,0.79
+2936.29.50,29362950,8,,True,Other,127,0.76
+2936.90.01,29369001,8,,True,"Other, including provitamins and natural concentrates",127,0.74
+2937.11.00,29371100,8,,True,"Somatotropin, its derivatives and structural analogues",127,0.8
+2937.12.00,29371200,8,,True,Insulin and its salts,127,0.81
+2937.19.00,29371900,8,,True,Other,127,0.79
+2937.21.00,29372100,8,,True,"Cortisone, hydrocortisone, prednisone (dehydrocortisone), and prednisolone (dehydrohydrocortisone)",127,0.75
+2937.22.00,29372200,8,,True,Halogenated derivatives of adrenal cortical hormones,127,0.84
+2937.23.10,29372310,8,,True,Obtained directly or indirectly from animal or vegetable materials,127,0.81
+2937.23.25,29372325,8,,True,Estradiol benzoate; and Estradiol cyclopentylpropionate (Estradiol cypionate),127,0.8
+2937.23.50,29372350,8,,True,Other,127,0.78
+2937.29.10,29372910,8,,True,Desonide; andNandrolone phenproprionate,127,0.81
+2937.29.90,29372990,8,,True,Other,127,0.87
+2937.50.00,29375000,8,,True,"Prostaglandins, thromboxanes and leukotrienes, their derivatives and structural analogues",127,0.86
+2937.90.05,29379005,8,,True,Epinephrine,128,0.78
+2937.90.10,29379010,8,,True,Epinephrine hydrochloride,128,0.8
+2937.90.20,29379020,8,,True,Other,128,0.82
+2937.90.40,29379040,8,,True,"l-Thyroxine (Levothyroxine), sodium",128,0.86
+2937.90.45,29379045,8,,True,Other,128,0.88
+2937.90.90,29379090,8,,True,Other,128,0.82
+2938.10.00,29381000,8,,True,Rutoside (Rutin) and its derivatives,128,0.8
+2938.90.00,29389000,8,,True,Other,128,0.9
+2939.11.00,29391100,8,,True,"Concentrates of poppy straw; buprenorphine (INN); codeine, dihydrocodeine (INN), ethylmorphine, etorphine (INN), heroin, hydrocodone (INN), hydromorphone (INN), morphine, nicomorphine (INN), oxycodone (INN), oxymorphone (INN), pholcodine (INN), thebacon (INN) and thebaine; salts thereof",128,0.84
+2939.19.10,29391910,8,,True,Papaverine and its salts,128,0.81
+2939.19.20,29391920,8,,True,Synthetic,128,0.8
+2939.19.50,29391950,8,,True,Other,128,0.85
+2939.20.00,29392000,8,,True,Alkaloids of cinchona and their derivatives; salts thereof,128,0.83
+2939.30.00,29393000,8,,True,Caffeine and its salts,128,0.87
+2939.41.00,29394100,8,,True,Ephedrine and its salts,128,0.79
+2939.42.00,29394200,8,,True,Pseudoephedrine (INN) and its salts,128,0.83
+2939.44.00,29394400,8,,True,Norephedrine and its salts,128,0.87
+2939.45.00,29394500,8,,True,"Levometamfetamine, metamfetamine (INN), metamfetamine racemate and their salts",128,0.81
+2939.49.03,29394903,8,,True,Other,128,0.84
+2939.59.00,29395900,8,,True,Other,128,0.83
+2939.62.00,29396200,8,,True,Ergotamine and its salts,128,0.74
+2939.63.00,29396300,8,,True,Lysergic acid and its salts,128,0.78
+2939.69.00,29396900,8,,True,Other,128,0.88
+2939.72.00,29397200,8,,True,"Cocaine, ecgonine; salts, esters and other derivatives thereof",128,0.74
+2939.79.00,29397900,8,,True,Other,128,0.81
+2939.80.00,29398000,8,,True,Other,128,0.83
+2940.00.60,29400060,8,,True,Other,128,0.83
+2941.10.10,29411010,8,,True,Ampicillin and its salts,128,0.79
+2941.10.20,29411020,8,,True,Penicillin G salts,129,0.77
+2941.10.30,29411030,8,,True,"Carfecillin, sodium; Cloxacillin, sodium; Dicloxacillin, sodium; Flucloxacillin (Floxacillin); and Oxacillin, sodium",129,0.87
+2941.10.50,29411050,8,,True,Other,129,0.87
+2941.20.10,29412010,8,,True,Dihydrostreptomycin and its derivatives; salts thereof,129,0.79
+2941.20.50,29412050,8,,True,Other,129,0.83
+2941.30.00,29413000,8,,True,Tetracyclines and their derivatives; salts thereof,129,0.87
+2941.40.00,29414000,8,,True,Chloramphenicol and its derivatives; salts thereof,129,0.73
+2941.50.00,29415000,8,,True,Erythromycin and its derivatives; salts thereof,129,0.82
+2941.90.10,29419010,8,,True,Natural,129,0.9
+2941.90.30,29419030,8,,True,Aromatic or modified aromatic,129,0.81
+2941.90.50,29419050,8,,True,Other,129,0.81
+2942.00.05,29420005,8,,True,Drugs,129,0.82
+2942.00.35,29420035,8,,True,Other,129,0.84
+2942.00.50,29420050,8,,True,Other,129,0.8
+3001.20.00,30012000,8,,True,Extracts of glands or other organs or of their secretions,129,0.81
+3001.90.01,30019001,8,,True,Other,129,0.87
+3002.12.00,30021200,8,,True,Antisera and other blood fractions,129,0.86
+3002.13.00,30021300,8,,True,"Immunological products, unmixed, not put up in measured doses or in forms or packings for retail sale",129,0.8
+3002.14.00,30021400,8,,True,"Immunological products, mixed, not put up in measured doses or in forms or packings for retail sale",129,0.8
+3002.15.00,30021500,8,,True,"Immunological products, put up in measured doses or in forms or packings for retail sale",129,0.87
+3002.41.00,30024100,8,,True,Vaccines for human medicine,129,0.81
+3002.42.00,30024200,8,,True,Vaccines for veterinary medicine,129,0.82
+3002.49.00,30024900,8,,True,Other,129,0.83
+3002.51.00,30025100,8,,True,Cell therapy products,129,0.91
+3002.59.00,30025900,8,,True,Other,129,0.86
+3002.90.10,30029010,8,,True,Ferments,129,0.86
+3002.90.52,30029052,8,,True,Other,129,0.83
+3003.10.00,30031000,8,,True,"Containing penicillins or derivatives thereof, with a penicillanic acid structure, or streptomycins or their derivatives",129,0.86
+3003.20.00,30032000,8,,True,"Other, containing antibiotics",129,0.87
+3003.39.10,30033910,8,,True,Artificial mixtures of natural hormones,130,0.82
+3003.39.50,30033950,8,,True,Other,130,0.82
+3003.41.00,30034100,8,,True,Containing ephedrine or its salts,130,0.83
+3003.42.00,30034200,8,,True,Containing pseudoephedrine (INN) or its salts,130,0.85
+3003.49.00,30034900,8,,True,Other,130,0.85
+3003.90.01,30039001,8,,True,Other,130,0.8
+3004.10.10,30041010,8,,True,Containing penicillin G salts,130,0.82
+3004.10.50,30041050,8,,True,Other,130,0.83
+3004.20.00,30042000,8,,True,"Other, containing antibiotics",130,0.7
+3004.31.00,30043100,8,,True,Containing insulin,130,0.84
+3004.32.00,30043200,8,,True,Containing corticosteroid hormones their derivatives or structural analogues,130,0.86
+3004.39.00,30043900,8,,True,Other,130,0.86
+3004.41.00,30044100,8,,True,Containing ephedrine or its salts,130,0.83
+3004.42.00,30044200,8,,True,Containing pseudoephedrine (INN) or its salts,130,0.9
+3004.49.00,30044900,8,,True,Other,130,0.83
+3004.50.10,30045010,8,,True,Vitamin B2,130,0.84
+3004.50.20,30045020,8,,True,Vitamin B12,130,0.83
+3004.50.30,30045030,8,,True,Vitamin E,130,0.82
+3004.50.40,30045040,8,,True,Other,130,0.89
+3004.50.50,30045050,8,,True,Other,131,0.81
+3004.60.00,30046000,8,,True,"Other, containing antimalarial active principles described in subheading note 2 to this chapter",131,0.87
+3004.90.10,30049010,8,,True,Containing antigens or hyaluronic acid or its sodium salt,131,0.77
+3004.90.92,30049092,8,,True,Other,131,0.86
+3006.30.10,30063010,8,,True,Containing antigens or antisera,131,0.83
+3006.30.50,30063050,8,,True,Other,131,0.86
+3006.60.00,30066000,8,,True,"Chemical contraceptive preparations based on hormones, on other products of heading 2937 or on spermicides",131,0.83
+3006.70.00,30067000,8,,True,Gel preparations designed to be used in human or veterinary medicine as a lubricant for parts of the body for surgical operations or physical examinations or as a coupling agent between the body and medical instruments,131,0.86
+3006.93.10,30069310,8,,True,Packaged with medicinal preparations,131,0.84
+3006.93.20,30069320,8,,True,Containing over 10 percent by dry weight of sugar,131,0.82
+3006.93.50,30069350,8,,True,"Containing ingredients having nutritional value, in which starch or other foodstuff predominates by weight",131,0.8
+3006.93.60,30069360,8,,True,In liquid form for oral intake,131,0.79
+3006.93.80,30069380,8,,True,Placebos and clinical trial kits containing other chemicals other than medicaments,131,0.84
+3101.00.00,31010000,8,,True,"Animal or vegetable fertilizers, whether or not mixed together or chemically treated; fertilizers produced by the mixing or chemical treatment of animal or vegetable products",131,0.87
+3102.10.00,31021000,8,,True,"Urea, whether or not in aqueous solution",131,0.88
+3102.21.00,31022100,8,,True,Ammonium sulfate,131,0.86
+3102.29.00,31022900,8,,True,Other,131,0.91
+3102.30.00,31023000,8,,True,"Ammonium nitrate, whether or not in aqueous solution",131,0.89
+3102.40.00,31024000,8,,True,Mixtures of ammonium nitrate with calcium carbonate or other inorganic nonfertilizing substances,131,0.86
+3102.50.00,31025000,8,,True,Sodium nitrate,131,0.91
+3102.60.00,31026000,8,,True,Double salts and mixtures of calcium nitrate and ammonium nitrate,131,0.86
+3102.80.00,31028000,8,,True,Mixtures of urea and ammonium nitrate in aqueous or ammoniacal solution,131,0.85
+3102.90.01,31029001,8,,True,"Other, including mixtures not specified in the foregoing subheadings",131,0.86
+3103.11.00,31031100,8,,True,Containing by weight 35 percent or more of diphosphorous pentaoxide (P2O5),132,0.86
+3103.19.00,31031900,8,,True,Other,132,0.76
+3103.90.01,31039001,8,,True,Other,132,0.83
+3104.20.00,31042000,8,,True,Potassium chloride,132,0.81
+3104.30.00,31043000,8,,True,Potassium sulfate,132,0.81
+3104.90.01,31049001,8,,True,Other,132,0.91
+3105.10.00,31051000,8,,True,Products of this chapter in tablets or similar forms or in packages of a gross weight not exceeding 10 kg,132,0.91
+3105.20.00,31052000,8,,True,"Mineral or chemical fertilizers containing the three fertilizing elements nitrogen, phosphorus and potassium",132,0.86
+3105.30.00,31053000,8,,True,Diammonium hydrogenorthophosphate (Diammonium phosphate),132,0.82
+3105.40.00,31054000,8,,True,Ammonium dihydrogenorthophosphate (Monoammonium phosphate) and mixtures thereof with diammonium hydrogenorthophosphate (Diammonium phosphate),132,0.83
+3105.51.00,31055100,8,,True,Containing nitrates and phosphates,132,0.86
+3105.59.00,31055900,8,,True,Other,132,0.87
+3105.60.00,31056000,8,,True,Mineral or chemical fertilizers containing the two fertilizing elements phosphorus and potassium,132,0.91
+3105.90.00,31059000,8,,True,Other,132,0.86
+3203.00.80,32030080,8,,True,Other,132,0.81
+3204.13.80,32041380,8,,True,Other,132,0.84
+3204.17.20,32041720,8,,True,"Copper phthalocyanine ([Phthalocyanato(2-)]- copper), not ready for use as a pigment",132,0.85
+3204.18.00,32041800,8,,True,Carotenoid coloring matters and preparations based thereon,132,0.83
+3206.11.00,32061100,8,,True,Containing 80 percent or more by weight of titanium dioxide calculated on the dry matter,132,0.85
+3206.19.00,32061900,8,,True,Other,132,0.74
+3301.29.51,33012951,8,ex,True,Other,132,0.87
+3402.42.10,34024210,8,,True,Aromatic or modified aromatic,132,0.9
+3402.42.20,34024220,8,,True,"Fatty substances of animal, vegetable or microbial origin",132,0.87
+3402.42.90,34024290,8,,True,Other,132,0.71
+3606.90.30,36069030,8,,True,Ferrocerium and other pyrophoric alloys,132,0.88
+3808.94.10,38089410,8,,True,Containing any aromatic or modified aromatic disinfectant,132,0.73
+3808.94.50,38089450,8,,True,Other,133,0.74
+3818.00.00,38180000,8,,True,"Chemical elements doped for use in electronics, in the form of discs, wafers or similar forms; chemical compounds doped for use in electronics",133,0.83
+3824.91.00,38249100,8,,True,"Mixtures and preparations consisting mainly of (5-ethyl-2-methyl-2-oxido3,2-dioxaphosphinan-5-yl)methyl methylphosphonate and bis(5-ethyl-2-methyl-2-oxido-1,3,2-dioxaphosphinan-5-yl)methyl methylphosphonate",133,0.75
+3824.99.29,38249929,8,,True,Other,133,0.85
+3824.99.49,38249949,8,,True,"Mixtures that are in whole or in part of hydrocarbons derived in whole or in part from petroleum, shale oil or natural gas",133,0.88
+3824.99.55,38249955,8,,True,Other,133,0.73
+3901.90.90,39019090,8,,True,Other,133,0.83
+3902.90.00,39029000,8,,True,Other,133,0.89
+3904.61.00,39046100,8,,True,Polytetrafluoroethylene (PTFE),133,0.82
+3905.91.10,39059110,8,,True,Containing by weight 50 percent or more of derivatives of vinyl acetate,133,0.86
+3905.99.80,39059980,8,,True,Other,133,0.82
+3906.90.50,39069050,8,,True,Other,133,0.88
+3907.10.00,39071000,8,,True,Polyacetals,133,0.91
+3907.21.00,39072100,8,,True,Bis(polyoxyethylene) methylphosphonate,133,0.81
+3907.70.00,39077000,8,,True,Poly(lactic acid),133,0.83
+3908.10.00,39081000,8,,True,"Polyamide-6, -11, -12, -6,6, -6,9, -6,10 or -6,12",133,0.78
+3911.90.25,39119025,8,,True,Other,133,0.87
+3911.90.91,39119091,8,,True,Other,133,0.73
+3912.31.00,39123100,8,,True,Carboxymethylcellulose and its salts,133,0.78
+3912.39.00,39123900,8,,True,Other,133,0.85
+3912.90.00,39129000,8,,True,Other,133,0.9
+3913.90.20,39139020,8,,True,Polysaccharides and their derivatives,133,0.76
+3913.90.50,39139050,8,,True,Other,133,0.87
+3914.00.60,39140060,8,,True,Other,133,0.86
+3917.21.00,39172100,8,aircraft,True,Of polymers of ethylene,133,0.79
+3917.22.00,39172200,8,aircraft,True,Of polymers of propylene,133,0.83
+3917.23.00,39172300,8,aircraft,True,Of polymers of vinyl chloride,133,0.83
+3917.29.00,39172900,8,aircraft,True,Of other plastics,134,0.84
+3917.31.00,39173100,8,aircraft,True,"Flexible tubes, pipes and hoses, having a minimum burst pressure of 27.6 MPa",134,0.83
+3917.33.00,39173300,8,aircraft,True,"Other, not reinforced or otherwise combined with other materials, with fittings",134,0.82
+3917.39.00,39173900,8,aircraft,True,Other,134,0.85
+3917.40.00,39174000,8,aircraft,True,Fittings,134,0.85
+3926.90.45,39269045,8,aircraft,True,"Gaskets, washers and other seals",134,0.84
+3926.90.94,39269094,8,aircraft,True,"Cards, not punched, suitable for use as, or in making, jacquard cards; Jacquard cards and jacquard heads for power-driven weaving machines, and parts thereof; and Transparent sheeting of plastics containing 30 percent or more by weight of lead",134,0.87
+3926.90.96,39269096,8,aircraft,True,"Casing for bicycle derailleur cables; and casing for cable or inner wire for caliper and cantilever brakes, whether or not cut to length",134,0.83
+3926.90.99,39269099,8,aircraft,True,Other,134,0.87
+4001.10.00,40011000,8,,True,"Natural rubber latex, whether or not pre-vulcanized",134,0.85
+4001.21.00,40012100,8,,True,Smoked sheets,134,0.83
+4001.22.00,40012200,8,,True,Technically specified natural rubber (TSNR),134,0.82
+4001.29.00,40012900,8,,True,Other,134,0.86
+4001.30.00,40013000,8,,True,"Balata, gutta-percha, guayule, chicle and similar natural gums",134,0.86
+4008.29.20,40082920,8,aircraft,True,Profile shapes,134,0.9
+4009.12.00,40091200,8,aircraft,True,With fittings,134,0.84
+4009.22.00,40092200,8,aircraft,True,With fittings,134,0.78
+4009.32.00,40093200,8,aircraft,True,With fittings,134,0.79
+4009.42.00,40094200,8,aircraft,True,With fittings,134,0.83
+4011.30.00,40113000,8,aircraft,True,Of a kind used on aircraft,134,0.85
+4012.13.00,40121300,8,aircraft,True,Of a kind used on aircraft,134,0.83
+4012.20.10,40122010,8,aircraft,True,Aircraft,134,0.84
+4016.10.00,40161000,8,aircraft,True,Of cellular rubber,134,0.84
+4016.93.50,40169350,8,aircraft,True,Other,134,0.84
+4016.99.35,40169935,8,aircraft,True,Other,135,0.9
+4016.99.60,40169960,8,aircraft,True,Other,135,0.83
+4017.00.00,40170000,8,aircraft,True,"Hard rubber (for example, ebonite) in all forms, including waste and scrap; articles of hard rubber",135,0.78
+4403.42.00,44034200,8,,True,Teak,135,0.85
+4403.49.02,44034902,8,,True,Other,135,0.85
+4407.21.00,44072100,8,,True,Mahogany (Swietenia spp.),135,0.8
+4407.22.00,44072200,8,,True,"Virola, Imbuia and Balsa",135,0.74
+4407.23.01,44072301,8,,True,Teak,135,0.81
+4407.25.00,44072500,8,,True,"Dark Red Meranti, Light Red Meranti and Meranti Bakau",135,0.72
+4407.26.00,44072600,8,,True,"White Lauan, White Meranti, White Seraya, Yellow Meranti and Alan",135,0.68
+4407.27.00,44072700,8,,True,Sapelli,135,0.76
+4407.28.00,44072800,8,,True,Iroko,135,0.83
+4407.29.02,44072902,8,,True,Other,135,0.73
+4408.31.01,44083101,8,,True,"Dark Red Meranti, Light Red Meranti and Meranti Bakau",135,0.87
+4408.39.02,44083902,8,,True,Other,135,0.76
+4504.90.00,45049000,8,aircraft,True,Other,135,0.83
+4703.11.00,47031100,8,,True,Coniferous,135,0.72
+4703.21.00,47032100,8,,True,Coniferous,135,0.71
+4703.29.00,47032900,8,,True,Nonconiferous,135,0.8
+4823.90.10,48239010,8,aircraft,True,Of paper pulp,135,0.9
+4823.90.20,48239020,8,aircraft,True,Of papier-mâché,135,0.8
+4823.90.31,48239031,8,aircraft,True,"Cards, not punched, for punchcard machines, whether or not in strips",135,0.77
+4823.90.40,48239040,8,aircraft,True,Frames or mounts for photographic slides,135,0.82
+4823.90.50,48239050,8,aircraft,True,Hand fans,135,0.84
+4823.90.60,48239060,8,aircraft,True,"Gaskets, washers and other seals",136,0.79
+4823.90.67,48239067,8,aircraft,True,Other,136,0.81
+4823.90.70,48239070,8,aircraft,True,Of cellulose wadding,136,0.83
+4823.90.80,48239080,8,aircraft,True,"Gaskets, washers and other seals",136,0.8
+4823.90.86,48239086,8,aircraft,True,Other,136,0.81
+6812.80.90,68128090,8,aircraft,True,Other,136,0.87
+6812.99.10,68129910,8,aircraft,True,"Paper, millboard and felt",136,0.82
+6812.99.20,68129920,8,aircraft,True,"Compressed asbestos fiber jointing, in sheets or rolls",136,0.88
+6812.99.90,68129990,8,aircraft,True,Other,136,0.85
+6813.20.00,68132000,8,aircraft,True,Containing asbestos,136,0.82
+6813.81.00,68138100,8,aircraft,True,Brake linings and pads,136,0.86
+6813.89.00,68138900,8,aircraft,True,Other,136,0.89
+7007.21.11,70072111,8,aircraft,True,Windshields,136,0.83
+7106.91.10,71069110,8,,True,Bullion and dore,136,0.86
+7108.11.00,71081100,8,,True,Powder,136,0.85
+7108.12.10,71081210,8,,True,Bullion and dore,136,0.75
+7108.12.50,71081250,8,,True,Other,136,0.8
+7108.13.10,71081310,8,,True,Gold leaf,136,0.87
+7108.13.55,71081355,8,,True,"Rectangular or near rectangular shapes, containing 99.5 percent or more by weight of gold and not otherwise marked or decorated than with weight, purity, or other identifying information",136,0.87
+7108.13.70,71081370,8,,True,Other,136,0.82
+7108.20.00,71082000,8,,True,Monetary,136,0.83
+7110.11.00,71101100,8,,True,Unwrought or in powder form,136,0.83
+7110.19.00,71101900,8,,True,Other,136,0.89
+7110.21.00,71102100,8,,True,Unwrought or in powder,136,0.8
+7110.29.00,71102900,8,,True,Other,136,0.87
+7110.31.00,71103100,8,,True,Unwrought or in powder form,136,0.79
+7110.39.00,71103900,8,,True,Other,136,0.84
+7110.41.00,71104100,8,,True,Unwrought or in powder form,136,0.82
+7110.49.00,71104900,8,,True,Other,136,0.76
+7112.92.01,71129201,8,,True,"Of platinum, including metal clad with platinum but excluding sweepings containing other precious metals",136,0.81
+7115.90.05,71159005,8,,True,"Articles of precious metal, in rectangular or near rectangular shapes, containing 99.5 percent or more by weight of a precious metal and not otherwise marked or decorated than with weight, purity, or other identifying information",137,0.82
+7115.90.30,71159030,8,,True,"Of gold, including metal clad with gold",137,0.81
+7118.90.00,71189000,8,,True,Other,137,0.76
+7202.11.10,72021110,8,,True,Containing by weight more than 2 percent but not more than 4 percent of carbon,137,0.74
+7202.11.50,72021150,8,,True,Containing by weight more than 4 percent of carbon,137,0.88
+7202.19.10,72021910,8,,True,Containing by weight not more than 1 percent of carbon,137,0.85
+7202.19.50,72021950,8,,True,Containing by weight more than 1 percent but not more than 2 percent of carbon,137,0.84
+7202.30.00,72023000,8,,True,Ferrosilicon manganese,137,0.82
+7202.41.00,72024100,8,,True,Containing by weight more than 4 percent of carbon,137,0.86
+7202.49.10,72024910,8,,True,Containing by weight more than 3 percent of carbon,137,0.79
+7202.49.50,72024950,8,,True,Other,137,0.85
+7202.50.00,72025000,8,,True,Ferrosilicon chromium,137,0.81
+7202.60.00,72026000,8,,True,Ferronickel,137,0.84
+7202.80.00,72028000,8,,True,Ferrotungsten and ferrosilicon tungsten,137,0.8
+7202.91.00,72029100,8,,True,Ferrotitanium and ferrosilicon titanium,137,0.81
+7202.93.40,72029340,8,,True,Containing by weight less than 0.02 percent of phosphorus or sulfur or less than 0.4 percent of silicon,137,0.86
+7202.93.80,72029380,8,,True,Other,137,0.81
+7204.21.00,72042100,8,,True,Of stainless steel,137,0.82
+7304.31.30,73043130,8,aircraft,True,Hollow bars,137,0.82
+7304.31.60,73043160,8,aircraft,True,Other,137,0.85
+7304.39.00,73043900,8,aircraft,True,Other,137,0.82
+7304.41.30,73044130,8,aircraft,True,Of an external diameter of less than 19 mm,137,0.8
+7304.41.60,73044160,8,aircraft,True,Other,137,0.89
+7304.49.00,73044900,8,aircraft,True,Other,137,0.8
+7304.51.10,73045110,8,aircraft,True,Suitable for use in the manufacture of ball or roller bearings,138,0.82
+7304.51.50,73045150,8,aircraft,True,Other,138,0.84
+7304.59.10,73045910,8,aircraft,True,Suitable for use in the manufacture of ball or roller bearings,138,0.79
+7304.59.20,73045920,8,aircraft,True,"Suitable for use in boilers, superheaters, heat exchangers, condensers, refining furnaces and feedwater heaters",138,0.82
+7304.59.60,73045960,8,aircraft,True,Of heat-resisting steel,138,0.8
+7304.59.80,73045980,8,aircraft,True,Other,138,0.9
+7304.90.10,73049010,8,aircraft,True,Of iron or nonalloy steel,138,0.83
+7304.90.30,73049030,8,aircraft,True,Of alloy steel,138,0.89
+7304.90.50,73049050,8,aircraft,True,Of iron or nonalloy steel,138,0.82
+7304.90.70,73049070,8,aircraft,True,Of alloy steel,138,0.81
+7306.30.10,73063010,8,aircraft,True,Having a wall thickness of less than 1.65 mm,138,0.8
+7306.30.30,73063030,8,aircraft,True,Tapered steel pipes and tubes principally used as parts of illuminating articles,138,0.84
+7306.30.50,73063050,8,aircraft,True,Other,138,0.85
+7306.40.10,73064010,8,aircraft,True,Having a wall thickness of less than 1.65 mm,138,0.82
+7306.40.50,73064050,8,aircraft,True,Having a wall thickness of 1.65 mm or more,138,0.84
+7306.50.10,73065010,8,aircraft,True,Having a wall thickness of less than 1.65 mm,138,0.83
+7306.50.30,73065030,8,aircraft,True,Tapered pipes and tubes of steel principally used as parts of illuminating articles,139,0.85
+7306.50.50,73065050,8,aircraft,True,Other,139,0.82
+7306.61.10,73066110,8,aircraft,True,Of iron or nonalloy steel,139,0.84
+7306.61.30,73066130,8,aircraft,True,Of alloy steel,139,0.85
+7306.61.50,73066150,8,aircraft,True,Of iron or nonalloy steel,139,0.84
+7306.61.70,73066170,8,aircraft,True,Of alloy steel,139,0.8
+7306.69.10,73066910,8,aircraft,True,Of iron or nonalloy steel,139,0.84
+7306.69.30,73066930,8,aircraft,True,Of alloy steel,139,0.88
+7306.69.50,73066950,8,aircraft,True,Of iron or nonalloy steel,139,0.83
+7306.69.70,73066970,8,aircraft,True,Of alloy steel,139,0.8
+7312.10.05,73121005,8,aircraft,True,Fitted with fittings or made up into articles,139,0.86
+7312.10.10,73121010,8,aircraft,True,Other,139,0.84
+7312.10.20,73121020,8,aircraft,True,Fitted with fittings or made up into articles,139,0.83
+7312.10.30,73121030,8,aircraft,True,Other,139,0.85
+7312.10.50,73121050,8,aircraft,True,Fitted with fittings or made up into articles,139,0.83
+7312.10.60,73121060,8,aircraft,True,Other,140,0.82
+7312.10.70,73121070,8,aircraft,True,Fitted with fittings or made up into articles,140,0.84
+7312.10.80,73121080,8,aircraft,True,Of brass plated wire,140,0.75
+7312.10.90,73121090,8,aircraft,True,Other,140,0.84
+7312.90.00,73129000,8,aircraft,True,Other,140,0.85
+7322.90.00,73229000,8,aircraft,True,"Other, including parts",140,0.86
+7324.10.00,73241000,8,aircraft,True,"Sinks and wash basins, of stainless steel",140,0.86
+7324.90.00,73249000,8,aircraft,True,"Other, including parts",140,0.84
+7326.20.00,73262000,8,aircraft,True,Articles of iron or steel wire,140,0.84
+7401.00.00,74010000,8,,True,Copper mattes; cement copper (precipitated copper),140,0.83
+7402.00.00,74020000,8,,True,Unrefined copper; copper anodes for electrolytic refining,140,0.86
+7403.11.00,74031100,8,,True,Cathodes and sections of cathodes,140,0.81
+7403.12.00,74031200,8,,True,Wire bars,140,0.81
+7403.13.00,74031300,8,,True,Billets,140,0.77
+7403.19.00,74031900,8,,True,Other,140,0.86
+7403.21.00,74032100,8,,True,Copper-zinc base alloys (brass),140,0.86
+7403.22.00,74032200,8,,True,Copper-tin base alloys (bronze),140,0.8
+7403.29.01,74032901,8,,True,Other copper alloys,140,0.76
+7404.00.30,74040030,8,,True,Spent anodes; waste and scrap with a copper content of less than 94 percent by weight,140,0.77
+7404.00.60,74040060,8,,True,Other,140,0.78
+7405.00.10,74050010,8,,True,Containing by weight 5 percent or more but not more than 15 percent of phosphorus,140,0.76
+7405.00.60,74050060,8,,True,Other,140,0.76
+7413.00.90,74130090,8,aircraft,True,Fitted with fittings or made up into articles,140,0.78
+7501.10.00,75011000,8,,True,Nickel mattes,140,0.86
+7502.10.00,75021000,8,,True,"Nickel, not alloyed",140,0.72
+7502.20.00,75022000,8,,True,Nickel alloys,140,0.87
+7503.00.00,75030000,8,,True,Nickel waste and scrap,140,0.75
+7504.00.00,75040000,8,,True,Nickel powders and flakes,141,0.87
+7508.90.50,75089050,8,,True,Other,141,0.78
+7608.10.00,76081000,8,aircraft,True,"Of aluminum, not alloyed",141,0.88
+7608.20.00,76082000,8,aircraft,True,Of aluminum alloys,141,0.82
+7901.11.00,79011100,8,,True,Containing by weight 99.99 percent or more of zinc,141,0.83
+7901.12.10,79011210,8,,True,Casting-grade zinc,141,0.84
+7901.12.50,79011250,8,,True,Other,141,0.79
+7901.20.00,79012000,8,,True,Zinc alloys,141,0.82
+7902.00.00,79020000,8,,True,Zinc waste and scrap,141,0.76
+7903.90.30,79039030,8,,True,Powders,141,0.84
+7907.00.60,79070060,8,,True,Other,141,0.75
+8001.10.00,80011000,8,,True,"Tin, not alloyed",141,0.91
+8001.20.00,80012000,8,,True,Tin alloys,141,0.75
+8002.00.00,80020000,8,,True,Tin waste and scrap,141,0.81
+8007.00.50,80070050,8,,True,Other,141,0.73
+8101.10.00,81011000,8,,True,Powders,141,0.87
+8101.97.00,81019700,8,,True,Waste and scrap,141,0.8
+8103.20.00,81032000,8,,True,"Unwrought tantalum, including bars and rods obtained simply by sintering; powders",141,0.8
+8103.30.00,81033000,8,,True,Waste and scrap,141,0.91
+8103.91.00,81039100,8,,True,Crucibles,141,0.8
+8103.99.00,81039900,8,,True,Other,141,0.78
+8104.11.00,81041100,8,,True,Containing at least 99.8 percent by weight of magnesium,141,0.85
+8104.19.00,81041900,8,,True,Other,141,0.83
+8104.20.00,81042000,8,,True,Waste and scrap,141,0.79
+8104.30.00,81043000,8,,True,"Raspings, turnings and granules, graded according to size; powders",141,0.88
+8104.90.00,81049000,8,,True,Other,141,0.89
+8105.20.30,81052030,8,,True,Alloys,141,0.91
+8105.20.60,81052060,8,,True,Other,141,0.78
+8105.20.90,81052090,8,,True,Other,141,0.91
+8105.30.00,81053000,8,,True,Waste and scrap,141,0.83
+8105.90.00,81059000,8,,True,Other,141,0.79
+8106.10.00,81061000,8,,True,"Containing more than 99.99 percent of bismuth, by weight",141,0.89
+8106.90.00,81069000,8,,True,Other,141,0.8
+8108.20.00,81082000,8,,True,Unwrought titanium; powders,142,0.8
+8108.30.00,81083000,8,,True,Waste and scrap,142,0.9
+8108.90.30,81089030,8,,True,Articles of titanium,142,0.81
+8108.90.60,81089060,8,,True,Other,142,0.8
+8110.10.00,81101000,8,,True,Unwrought antimony; powders,142,0.89
+8110.20.00,81102000,8,,True,Waste and scrap,142,0.75
+8110.90.00,81109000,8,,True,Other,142,0.72
+8111.00.47,81110047,8,,True,Flake containing at least 99.5 percent by weight manganese,142,0.81
+8111.00.49,81110049,8,,True,Other,142,0.73
+8112.21.00,81122100,8,,True,Unwrought; powders,142,0.82
+8112.22.00,81122200,8,,True,Waste and scrap,142,0.77
+8112.29.00,81122900,8,,True,Other,142,0.88
+8112.41.10,81124110,8,,True,Waste and scrap,142,0.85
+8112.41.50,81124150,8,,True,Unwrought; powders,142,0.86
+8112.49.00,81124900,8,,True,Other,142,0.69
+8112.59.00,81125900,8,,True,Other,142,0.87
+8112.92.10,81129210,8,,True,Gallium,142,0.73
+8112.92.30,81129230,8,,True,Indium,142,0.74
+8112.92.40,81129240,8,,True,Niobium (columbium),142,0.8
+8112.92.60,81129260,8,,True,Unwrought,142,0.8
+8112.92.65,81129265,8,,True,Other,142,0.68
+8112.99.10,81129910,8,,True,Germanium,142,0.79
+8112.99.91,81129991,8,,True,Other,142,0.75
+8302.10.60,83021060,8,aircraft,True,Other,142,0.86
+8302.10.90,83021090,8,aircraft,True,Other,142,0.82
+8302.20.00,83022000,8,aircraft,True,"Castors, and parts thereof",142,0.81
+8302.42.30,83024230,8,aircraft,True,"Of iron or steel, of aluminum or of zinc",142,0.75
+8302.42.60,83024260,8,aircraft,True,Other,142,0.81
+8302.49.40,83024940,8,aircraft,True,Other,142,0.9
+8302.49.60,83024960,8,aircraft,True,"Of iron or steel, of aluminum or of zinc",142,0.83
+8302.49.80,83024980,8,aircraft,True,Other,142,0.83
+8302.60.30,83026030,8,aircraft,True,Automatic door closers,142,0.9
+8307.10.30,83071030,8,aircraft,True,With fittings,142,0.75
+8307.90.30,83079030,8,aircraft,True,With fittings,143,0.85
+8407.10.00,84071000,8,aircraft,True,Aircraft engines,143,0.77
+8408.90.90,84089090,8,aircraft,True,Other,143,0.82
+8409.10.00,84091000,8,aircraft,True,For aircraft engines,143,0.76
+8411.11.40,84111140,8,aircraft,True,Aircraft turbines,143,0.86
+8411.11.80,84111180,8,aircraft,True,Other,143,0.86
+8411.12.40,84111240,8,aircraft,True,Aircraft turbines,143,0.84
+8411.12.80,84111280,8,aircraft,True,Other,143,0.83
+8411.21.40,84112140,8,aircraft,True,Aircraft turbines,143,0.86
+8411.21.80,84112180,8,aircraft,True,Other,143,0.86
+8411.22.40,84112240,8,aircraft,True,Aircraft turbines,143,0.71
+8411.22.80,84112280,8,aircraft,True,Other,143,0.87
+8411.81.40,84118140,8,aircraft,True,Aircraft turbines,143,0.79
+8411.82.40,84118240,8,aircraft,True,Aircraft turbines,143,0.84
+8411.91.10,84119110,8,aircraft,True,"Cast-iron parts, not advanced beyond cleaning, and machined only for the removal of fins, gates, sprues and risers or to permit location in finishing machinery",143,0.66
+8411.91.90,84119190,8,aircraft,True,Other,143,0.87
+8411.99.10,84119910,8,aircraft,True,"Cast-iron parts, not advanced beyond cleaning, and machined only for the removal of fins, gates, sprues and risers or to permit location in finishing machinery",143,0.61
+8411.99.90,84119990,8,aircraft,True,Other,143,0.85
+8412.10.00,84121000,8,aircraft,True,Reaction engines other than turbojets,143,0.91
+8412.21.00,84122100,8,aircraft,True,Linear acting (cylinders),143,0.89
+8412.29.40,84122940,8,aircraft,True,Hydrojet engines for marine propulsion,143,0.84
+8412.29.80,84122980,8,aircraft,True,Other,143,0.85
+8412.31.00,84123100,8,aircraft,True,Linear acting (cylinders),143,0.85
+8412.39.00,84123900,8,aircraft,True,Other,143,0.81
+8412.80.10,84128010,8,aircraft,True,Spring-operated and weight-operated motors,143,0.79
+8412.80.90,84128090,8,aircraft,True,Other,143,0.74
+8412.90.90,84129090,8,aircraft,True,Other,143,0.86
+8413.19.00,84131900,8,aircraft,True,Other,143,0.86
+8413.20.00,84132000,8,aircraft,True,"Hand pumps, other than those of subheading 8413.11 or 8413.19",144,0.83
+8413.30.10,84133010,8,aircraft,True,Fuel-injection pumps for compression-ignition engines,144,0.75
+8413.30.90,84133090,8,aircraft,True,Other,144,0.7
+8413.50.00,84135000,8,aircraft,True,Other reciprocating positive displacement pumps,144,0.84
+8413.60.00,84136000,8,aircraft,True,Other rotary positive displacement pumps,144,0.68
+8413.70.10,84137010,8,aircraft,True,"Stock pumps imported for use with machines for making cellulosic pulp, paper or paperboard",144,0.8
+8413.70.20,84137020,8,aircraft,True,Other,144,0.71
+8413.81.00,84138100,8,aircraft,True,Pumps,144,0.82
+8413.91.10,84139110,8,aircraft,True,Of fuel-injection pumps for compression-ignition engines,144,0.88
+8413.91.20,84139120,8,aircraft,True,"Of stock pumps imported for use with machines for making cellulosic pulp, paper or paperboard",144,0.86
+8413.91.90,84139190,8,aircraft,True,Other,144,0.74
+8414.10.00,84141000,8,aircraft,True,Vacuum pumps,144,0.85
+8414.20.00,84142000,8,aircraft,True,Hand- or foot-operated air pumps,144,0.76
+8414.30.40,84143040,8,aircraft,True,Not exceeding 1/4 horsepower,144,0.82
+8414.30.80,84143080,8,aircraft,True,Other,144,0.84
+8414.51.30,84145130,8,aircraft,True,Ceiling fans for permanent installation,144,0.87
+8414.51.90,84145190,8,aircraft,True,Other,144,0.79
+8414.59.30,84145930,8,aircraft,True,Turbochargers and superchargers,144,0.79
+8414.59.65,84145965,8,aircraft,True,Other,144,0.82
+8414.80.05,84148005,8,aircraft,True,Turbochargers and superchargers,144,0.82
+8414.80.16,84148016,8,aircraft,True,Other,144,0.79
+8414.80.20,84148020,8,aircraft,True,Other compressors,144,0.78
+8414.80.90,84148090,8,aircraft,True,Other,144,0.82
+8414.90.10,84149010,8,aircraft,True,Of fans (including blowers) and ventilating or recycling hoods,144,0.75
+8414.90.30,84149030,8,aircraft,True,Stators and rotors of goods of subheading 8414.30,144,0.79
+8414.90.41,84149041,8,aircraft,True,Other,144,0.7
+8414.90.91,84149091,8,aircraft,True,Other,144,0.69
+8415.10.60,84151060,8,aircraft,True,Incorporating a refrigerating unit and a valve for reversal of the cooling/heat cycle (reversible heat pumps),144,0.84
+8415.10.90,84151090,8,aircraft,True,Other,145,0.8
+8415.81.01,84158101,8,aircraft,True,Incorporating a refrigerating unit and a valve for reversal of the cooling/heat cycle (reversible heat pumps),145,0.78
+8415.82.01,84158201,8,aircraft,True,"Other, incorporating a refrigerating unit",145,0.77
+8415.83.00,84158300,8,aircraft,True,Not incorporating a refrigerating unit,145,0.81
+8415.90.40,84159040,8,aircraft,True,"Chassis, chassis bases and outer cabinets",145,0.89
+8415.90.80,84159080,8,aircraft,True,Other,145,0.84
+8418.10.00,84181000,8,aircraft,True,"Combined refrigerator-freezers, fitted with separate external doors or drawers, or combinations thereof",145,0.76
+8418.30.00,84183000,8,aircraft,True,"Freezers of the chest type, not exceeding 800 liters capacity",145,0.78
+8418.40.00,84184000,8,aircraft,True,"Freezers of the upright type, not exceeding 900 liters capacity",145,0.82
+8418.61.01,84186101,8,aircraft,True,Heat pumps other than air conditioning machines of heading 8415,145,0.83
+8418.69.01,84186901,8,aircraft,True,Other,145,0.88
+8419.50.10,84195010,8,aircraft,True,Brazed aluminum plate-fin heat exchangers,145,0.78
+8419.50.50,84195050,8,aircraft,True,Other,145,0.87
+8419.81.50,84198150,8,aircraft,True,"Cooking stoves, ranges and ovens",145,0.69
+8419.81.90,84198190,8,aircraft,True,Other,145,0.83
+8419.90.10,84199010,8,aircraft,True,Of instantaneous or storage water heaters,145,0.87
+8419.90.20,84199020,8,aircraft,True,"Of machinery and plant for making paper pulp, paper or paperboard",145,0.88
+8419.90.30,84199030,8,aircraft,True,Of heat exchange units,145,0.79
+8419.90.50,84199050,8,aircraft,True,"Of molten-salt-cooled acrylic acid reactors; of medical, surgical or laboratory sterilizers",145,0.88
+8419.90.85,84199085,8,aircraft,True,Of electromechanical tools for working in the hand with self-contained electric motor,145,0.79
+8421.19.00,84211900,8,aircraft,True,Other,145,0.86
+8421.21.00,84212100,8,aircraft,True,For filtering or purifying water,145,0.78
+8421.23.00,84212300,8,aircraft,True,Oil or fuel filters for internal combustion engines,145,0.82
+8421.29.00,84212900,8,aircraft,True,Other,145,0.79
+8421.31.00,84213100,8,aircraft,True,Intake air filters for internal combustion engines,145,0.73
+8421.32.00,84213200,8,aircraft,True,"Catalytic converters or particulate filters, whether or not combined, for purifying or filtering exhaust gases from internal combustion engines",145,0.84
+8421.39.01,84213901,8,aircraft,True,Other,145,0.77
+8424.10.00,84241000,8,aircraft,True,"Fire extinguishers, whether or not charged",146,0.8
+8425.11.00,84251100,8,aircraft,True,Powered by electric motor,146,0.8
+8425.19.00,84251900,8,aircraft,True,Other,146,0.87
+8425.31.01,84253101,8,aircraft,True,Powered by electric motor,146,0.75
+8425.39.01,84253901,8,aircraft,True,Other,146,0.85
+8425.42.00,84254200,8,aircraft,True,"Other jacks and hoists, hydraulic",146,0.81
+8425.49.00,84254900,8,aircraft,True,Other,146,0.82
+8426.99.00,84269900,8,aircraft,True,Other,146,0.83
+8428.10.00,84281000,8,aircraft,True,Passenger or freight elevators other than continuous action; skip hoists,146,0.78
+8428.20.00,84282000,8,aircraft,True,Pneumatic elevators and conveyors,146,0.86
+8428.33.00,84283300,8,aircraft,True,"Other, belt type",146,0.82
+8428.39.00,84283900,8,aircraft,True,Other,146,0.9
+8428.90.03,84289003,8,aircraft,True,Other machinery,146,0.82
+8443.31.00,84433100,8,aircraft,True,"Machines which perform two or more of the functions of printing, copying or facsimile transmission, capable of connecting to an automatic data processing machine or to a network",146,0.85
+8443.32.10,84433210,8,aircraft,True,Printer units,146,0.84
+8443.32.50,84433250,8,aircraft,True,Other,146,0.78
+8471.30.01,84713001,8,,True,"Portable automatic data processing machines, weighing not more than 10 kg, consisting of at least a central processing unit, a keyboard and a display",146,0.8
+8471.41.01,84714101,8,,True,"Comprising in the same housing at least a central processing unit and an input and output unit, whether or not combined",146,0.75
+8471.49.00,84714900,8,,True,"Other, entered in the form of systems",146,0.8
+8471.50.01,84715001,8,,True,"Processing units other than those of subheading 8471.41 or 8471.49, whether or not containing in the same housing one or two of the following types of unit: storage units, input units, output units",146,0.79
+8471.60.10,84716010,8,,True,Combined input/output units,146,0.73
+8471.60.20,84716020,8,,True,Keyboards,146,0.8
+8471.60.70,84716070,8,,True,Units suitable for physical incorporation into automatic data processing machines or units thereof,146,0.85
+8471.60.80,84716080,8,,True,Optical scanners and magnetic ink recognition devices,147,0.85
+8471.60.90,84716090,8,,True,Other,147,0.88
+8471.70.10,84717010,8,,True,Without read-write unit assembled therein; read-write units entered separately,147,0.82
+8471.70.20,84717020,8,,True,Units for physical incorporation into automatic data processing machines or units thereof,147,0.87
+8471.70.30,84717030,8,,True,Other,147,0.79
+8471.70.40,84717040,8,,True,"Not assembled in cabinets, and without attached external power supply",147,0.86
+8471.70.50,84717050,8,,True,Other,147,0.75
+8471.70.60,84717060,8,,True,"Not assembled in cabinets for placing on a table, desk, wall, floor or similar place",147,0.81
+8471.70.90,84717090,8,,True,Other,147,0.81
+8471.80.10,84718010,8,,True,Control or adapter units,147,0.86
+8471.80.40,84718040,8,,True,Units suitable for physical incorporation into automatic data processing machines,147,0.86
+8471.80.90,84718090,8,,True,Other,147,0.86
+8471.90.00,84719000,8,,True,Other,147,0.86
+8473.30.11,84733011,8,,True,Printed circuit assemblies,147,0.82
+8473.30.20,84733020,8,,True,"Parts and accessories, including face plates and lock latches, of printed circuit assemblies",147,0.81
+8473.30.51,84733051,8,,True,Other,147,0.84
+8473.30.91,84733091,8,,True,Other,147,0.84
+8479.89.10,84798910,8,aircraft,True,Air humidifiers or dehumidifiers,148,0.84
+8479.89.20,84798920,8,aircraft,True,Floor polishers,148,0.75
+8479.89.65,84798965,8,aircraft,True,Other,148,0.79
+8479.89.70,84798970,8,aircraft,True,Carpet sweepers,148,0.83
+8479.89.95,84798995,8,aircraft,True,Other,148,0.84
+8479.90.41,84799041,8,aircraft,True,Of articles of subheading 8479.89.10 or 8479.89.70,148,0.8
+8479.90.45,84799045,8,aircraft,True,Frame assemblies incorporating more than one of the following: baseplate; side frames; power screws; front plates,148,0.83
+8479.90.55,84799055,8,aircraft,True,Ram assemblies incorporating a ram wrapper and/or ram cover,148,0.8
+8479.90.65,84799065,8,aircraft,True,Container assemblies incorporating more than one of the following: container bottom; container wrapper; slide track; container front,148,0.88
+8479.90.75,84799075,8,aircraft,True,Cabinets or cases,148,0.85
+8479.90.85,84799085,8,aircraft,True,Other,148,0.85
+8479.90.95,84799095,8,aircraft,True,Other,148,0.84
+8483.10.10,84831010,8,aircraft,True,Designed for use solely or principally with spark-ignition internal combustion piston engines or rotary engines,148,0.79
+8483.10.30,84831030,8,aircraft,True,Other,148,0.83
+8483.10.50,84831050,8,aircraft,True,Other transmission shafts and cranks,148,0.85
+8483.30.40,84833040,8,aircraft,True,"Flange, take-up, cartridge and hanger units",148,0.75
+8483.30.80,84833080,8,aircraft,True,Other,148,0.8
+8483.40.10,84834010,8,aircraft,True,Torque converters,148,0.84
+8483.40.30,84834030,8,aircraft,True,"Imported for use with machines for making cellulosic pulp, paper or paperboard",148,0.83
+8483.40.50,84834050,8,aircraft,True,Other,148,0.89
+8483.40.70,84834070,8,aircraft,True,Other speed changers,148,0.82
+8483.40.80,84834080,8,aircraft,True,Ball or roller screws,148,0.84
+8483.40.90,84834090,8,aircraft,True,"Gears and gearing, other than toothed wheels, chain sprockets and other transmission elements entered separately",148,0.84
+8483.50.40,84835040,8,aircraft,True,"Gray-iron awning or tackle pulleys, not over 6.4 cm in wheel diameter",148,0.82
+8483.50.60,84835060,8,aircraft,True,Flywheels,148,0.81
+8483.50.90,84835090,8,aircraft,True,Other,148,0.82
+8483.60.40,84836040,8,aircraft,True,Clutches and universal joints,148,0.84
+8483.60.80,84836080,8,aircraft,True,Other,149,0.88
+8483.90.10,84839010,8,aircraft,True,Chain sprockets and parts thereof,149,0.76
+8483.90.20,84839020,8,aircraft,True,"Parts of flange, take-up, cartridge and hanger units",149,0.79
+8483.90.30,84839030,8,aircraft,True,Other,149,0.75
+8483.90.50,84839050,8,aircraft,True,"Parts of gearing, gear boxes and other speed changers",149,0.88
+8483.90.80,84839080,8,aircraft,True,Other,149,0.79
+8484.10.00,84841000,8,aircraft,True,Gaskets and similar joints of metal sheeting combined with other material or of two or more layers of metal,149,0.79
+8484.90.00,84849000,8,aircraft,True,Other,149,0.81
+8486.10.00,84861000,8,,True,Machines and apparatus for the manufacture of boules or wafers,149,0.86
+8486.20.00,84862000,8,,True,Machines and apparatus for the manufacture of semiconductor devices or of electronic integrated circuits,149,0.77
+8486.30.00,84863000,8,,True,Machines and apparatus for the manufacture of flat panel displays,149,0.82
+8486.40.00,84864000,8,,True,Machines and apparatus specified in note 11(C) to this chapter,149,0.82
+8486.90.00,84869000,8,,True,Parts and accessories,149,0.75
+8501.20.50,85012050,8,aircraft,True,Exceeding 735 W but under 746 W,149,0.74
+8501.20.60,85012060,8,aircraft,True,Other,149,0.75
+8501.31.50,85013150,8,aircraft,True,Exceeding 735 W but under 746 W,149,0.81
+8501.31.60,85013160,8,aircraft,True,Other,149,0.77
+8501.31.81,85013181,8,aircraft,True,Generators,149,0.79
+8501.32.20,85013220,8,aircraft,True,Exceeding 750 W but not exceeding 14.92 kW,149,0.77
+8501.32.55,85013255,8,aircraft,True,Other,149,0.79
+8501.32.61,85013261,8,aircraft,True,Generators,149,0.75
+8501.33.20,85013320,8,aircraft,True,Exceeding 75 kW but under 149.2 kW,149,0.87
+8501.33.30,85013330,8,aircraft,True,149.2 kW or more but not exceeding 150 kW,149,0.82
+8501.33.61,85013361,8,aircraft,True,Generators,149,0.81
+8501.34.61,85013461,8,aircraft,True,Generators,149,0.9
+8501.40.50,85014050,8,aircraft,True,Of an output exceeding 735 W but under 746 W,149,0.84
+8501.40.60,85014060,8,aircraft,True,Other,150,0.85
+8501.51.50,85015150,8,aircraft,True,Exceeding 735 W but under 746 W,150,0.84
+8501.51.60,85015160,8,aircraft,True,Other,150,0.91
+8501.52.40,85015240,8,aircraft,True,Exceeding 750 W but not exceeding 14.92 kW,150,0.79
+8501.52.80,85015280,8,aircraft,True,Other,150,0.83
+8501.53.40,85015340,8,aircraft,True,Exceeding 75 kW but under 149.2 kW,150,0.76
+8501.53.60,85015360,8,aircraft,True,149.2 kW or more but not exceeding 150 kW,150,0.77
+8501.61.01,85016101,8,aircraft,True,Of an output not exceeding 75 kVA,150,0.84
+8501.62.01,85016201,8,aircraft,True,Of an output exceeding 75 kVA but not exceeding 375 kVA,150,0.79
+8501.63.01,85016301,8,aircraft,True,Of an output exceeding 375 kVA but not exceeding 750 kVA,150,0.8
+8501.71.00,85017100,8,aircraft,True,Of an output not exceeding 50 W,150,0.8
+8501.72.10,85017210,8,aircraft,True,Of an output not exceeding 750 W,150,0.81
+8501.72.20,85017220,8,aircraft,True,Of an output exceeding 750 W but not exceeding 75 kW,150,0.79
+8501.72.30,85017230,8,aircraft,True,Of an output exceeding 75 kW but not exceeding 375 kW,150,0.84
+8501.72.90,85017290,8,aircraft,True,Other,150,0.84
+8501.80.10,85018010,8,aircraft,True,Of an output not exceeding 75 kVA,150,0.91
+8501.80.20,85018020,8,aircraft,True,Of an output exceeding 75 kVA but not exceeding 375 kVA,150,0.74
+8501.80.30,85018030,8,aircraft,True,Of an output exceeding 375 kVA but not exceeding 750 kVA,150,0.83
+8502.11.00,85021100,8,aircraft,True,Of an output not exceeding 75 kVA,150,0.84
+8502.12.00,85021200,8,aircraft,True,Of an output exceeding 75 kVA but not exceeding 375 kVA,150,0.82
+8502.13.00,85021300,8,aircraft,True,Of an output exceeding 375 kVA,150,0.83
+8502.20.00,85022000,8,aircraft,True,Generating sets with spark-ignition internal combustion piston engines,150,0.86
+8502.31.00,85023100,8,aircraft,True,Wind-powered,150,0.84
+8502.39.00,85023900,8,aircraft,True,Other,151,0.86
+8502.40.00,85024000,8,aircraft,True,Electric rotary converters,151,0.88
+8504.10.00,85041000,8,aircraft,True,Ballasts for discharge lamps or tubes,151,0.79
+8504.31.20,85043120,8,aircraft,True,Unrated,151,0.82
+8504.31.40,85043140,8,aircraft,True,Having a power handling capacity less than 1 kVA,151,0.84
+8504.31.60,85043160,8,aircraft,True,Having a power handling capacity of 1 kVA,151,0.81
+8504.32.00,85043200,8,aircraft,True,Having a power handling capacity exceeding 1 kVA but not exceeding 16 kVA,151,0.8
+8504.33.00,85043300,8,aircraft,True,Having a power handling capacity exceeding 16 kVA but not exceeding 500 kVA,151,0.86
+8504.40.40,85044040,8,aircraft,True,Speed drive controllers for electric motors,151,0.87
+8504.40.60,85044060,8,aircraft,True,Suitable for physical incorporation into automatic data processing machines or units thereof of heading 8471,151,0.84
+8504.40.70,85044070,8,aircraft,True,Other,151,0.74
+8504.40.85,85044085,8,aircraft,True,For telecommunication apparatus,151,0.87
+8504.40.95,85044095,8,aircraft,True,Other,151,0.77
+8504.50.40,85045040,8,aircraft,True,For power supplies for automatic data processing machines or units thereof of heading 8471; power supplies for goods of subheading 8443.31 or 8443.32; power supplies for monitors of subheading 8528.42 or 8528.52 or projectors of subheading 8528.62; for telecommunication apparatus,151,0.83
+8504.50.80,85045080,8,aircraft,True,Other,151,0.89
+8505.11.00.70,8505110070,10,,True,Sintered neodymium-iron-boron,151,0.86
+8507.10.00,85071000,8,aircraft,True,"Lead-acid storage batteries, of a kind used for starting piston engines",151,0.89
+8507.20.80,85072080,8,aircraft,True,Other,151,0.78
+8507.30.80,85073080,8,aircraft,True,Other,151,0.83
+8507.50.00,85075000,8,aircraft,True,Nickel-metal hydride batteries,151,0.87
+8507.60.00,85076000,8,aircraft,True,Lithium-ion batteries,151,0.72
+8507.80.82,85078082,8,aircraft,True,Other,151,0.88
+8507.90.40,85079040,8,aircraft,True,Of lead-acid storage batteries,151,0.83
+8507.90.80,85079080,8,aircraft,True,Other,151,0.78
+8511.10.00,85111000,8,aircraft,True,Spark plugs,151,0.88
+8511.20.00,85112000,8,aircraft,True,Ignition magnetos; magneto-dynamos; magnetic flywheels,151,0.74
+8511.30.00,85113000,8,aircraft,True,Distributors; ignition coils,152,0.68
+8511.40.00,85114000,8,aircraft,True,Starter motors and dual purpose starter-generators,152,0.88
+8511.50.00,85115000,8,aircraft,True,Other generators,152,0.83
+8511.80.20,85118020,8,aircraft,True,"Designed for use on 6, 12 or 24 V systems",152,0.72
+8511.80.40,85118040,8,aircraft,True,Other,152,0.73
+8511.80.60,85118060,8,aircraft,True,Other,152,0.8
+8514.20.40,85142040,8,aircraft,True,"For making hot drinks, or for cooking or heating food",152,0.84
+8516.80.40,85168040,8,aircraft,True,"Assembled only with simple insulated former and electrical connections, used for anti-icing or deicing",152,0.81
+8516.80.80,85168080,8,aircraft,True,Other,152,0.87
+8517.13.00,85171300,8,,True,Smartphones,152,0.78
+8517.14.00,85171400,8,aircraft,True,Other telephones for cellular networks or for other wireless networks,152,0.78
+8517.61.00,85176100,8,aircraft,True,Base stations,152,0.86
+8517.62.00,85176200,8,,True,"Machines for the reception, conversion and transmission or regeneration of voice, images or other data, including switching and routing apparatus",152,0.89
+8517.69.00,85176900,8,aircraft,True,Other,152,0.83
+8517.71.00,85177100,8,aircraft,True,Aerials and aerial reflectors of all kinds; parts suitable for use therewith,152,0.75
+8518.10.40,85181040,8,aircraft,True,"Microphones having a frequency range of 300 Hz to 3.4 kHz with a diameter of not exceeding 10 mm and a height not exceeding 3 mm, for telecommunication use",152,0.81
+8518.10.80,85181080,8,aircraft,True,Other,152,0.87
+8518.21.00,85182100,8,aircraft,True,"Single loudspeakers, mounted in their enclosures",152,0.67
+8518.22.00,85182200,8,aircraft,True,"Multiple loudspeakers, mounted in the same enclosure",152,0.82
+8518.29.40,85182940,8,aircraft,True,"Without housing, having a frequency range of 300 Hz to 3.4 kHz with a diameter of not exceeding 50 mm, for telecommunication use",152,0.75
+8518.29.80,85182980,8,aircraft,True,Other,152,0.85
+8518.30.10,85183010,8,aircraft,True,Line telephone handsets,152,0.86
+8518.30.20,85183020,8,aircraft,True,Other,152,0.73
+8518.40.10,85184010,8,aircraft,True,For use as repeaters in line telephony,152,0.86
+8518.40.20,85184020,8,aircraft,True,Other,152,0.84
+8518.50.00,85185000,8,aircraft,True,Electric sound amplifier sets,153,0.77
+8519.81.10,85198110,8,aircraft,True,Transcribing machines,153,0.83
+8519.81.20,85198120,8,aircraft,True,Designed exclusively for motor- vehicle installation,153,0.8
+8519.81.25,85198125,8,aircraft,True,Other,153,0.77
+8519.81.30,85198130,8,aircraft,True,Other,153,0.83
+8519.81.41,85198141,8,aircraft,True,Other,153,0.75
+8519.89.10,85198910,8,aircraft,True,Without loudspeaker,153,0.82
+8519.89.20,85198920,8,aircraft,True,Other,153,0.82
+8519.89.30,85198930,8,aircraft,True,Other,153,0.85
+8521.10.30,85211030,8,aircraft,True,Not capable of recording,153,0.84
+8521.10.60,85211060,8,aircraft,True,Other,153,0.81
+8521.10.90,85211090,8,aircraft,True,Other,153,0.87
+8522.90.25,85229025,8,aircraft,True,Printed circuit assemblies,153,0.82
+8522.90.36,85229036,8,aircraft,True,Other,153,0.85
+8522.90.45,85229045,8,aircraft,True,Printed circuit assemblies,153,0.81
+8522.90.58,85229058,8,aircraft,True,Other,153,0.8
+8522.90.65,85229065,8,aircraft,True,Printed circuit assemblies,153,0.77
+8522.90.80,85229080,8,aircraft,True,Other,153,0.84
+8523.51.00,85235100,8,,True,Solid-state non-volatile storage devices,153,0.8
+8524.11.10,85241110,8,,True,"Flat panel display modules, other than flat panel display modules for articles of subheadings 8528.59, 8528.69, 8528.72 and 8528.73",153,0.72
+8524.11.90,85241190,8,,True,Other,153,0.83
+8524.12.00,85241200,8,,True,Of organic light-emitting diodes (OLED),153,0.73
+8524.19.00,85241900,8,,True,Other,153,0.8
+8524.91.10,85249110,8,,True,"Flat panel display modules, other than flat panel display modules for articles of subheadings 8528.59, 8528.69, 8528.72 and 8528.73",154,0.81
+8524.91.90,85249190,8,,True,Other,154,0.85
+8524.92.00,85249200,8,,True,Of organic light-emitting diodes (OLED),154,0.83
+8524.99.00,85249900,8,,True,Other,154,0.76
+8526.10.00,85261000,8,aircraft,True,Radar apparatus,154,0.75
+8526.91.00,85269100,8,aircraft,True,Radio navigational aid apparatus,154,0.82
+8526.92.10,85269210,8,aircraft,True,Radio remote control apparatus for video game consoles,154,0.87
+8526.92.50,85269250,8,aircraft,True,Other,154,0.75
+8528.42.00,85284200,8,aircraft,True,Capable of directly connecting to and designed for use with an automatic data processing machine of heading 8471,154,0.86
+8528.52.00,85285200,8,,True,Capable of directly connecting to and designed for use with an automatic data processing machine of heading 8471,154,0.8
+8528.62.00,85286200,8,aircraft,True,Capable of directly connecting to and designed for use with an automatic data processing machine of heading 8471,154,0.89
+8529.10.21,85291021,8,aircraft,True,Television,154,0.76
+8529.10.40,85291040,8,aircraft,True,"Radar, radio navigational aid and radio remote control",154,0.81
+8529.10.91,85291091,8,aircraft,True,Other,154,0.85
+8529.90.04,85299004,8,aircraft,True,Tuners,154,0.85
+8529.90.05,85299005,8,aircraft,True,Entered with components enumerated in additional U.S. note 4 to this chapter,154,0.79
+8529.90.06,85299006,8,aircraft,True,Other,154,0.83
+8529.90.09,85299009,8,aircraft,True,For television cameras,154,0.85
+8529.90.13,85299013,8,aircraft,True,Other,154,0.75
+8529.90.16,85299016,8,aircraft,True,"Assemblies and subassemblies, consisting of 2 or more parts or pieces fastened or joined together",154,0.83
+8529.90.19,85299019,8,aircraft,True,Other,154,0.84
+8529.90.21,85299021,8,aircraft,True,Other,155,0.87
+8529.90.24,85299024,8,aircraft,True,Other:,155,0.9
+8529.90.29,85299029,8,aircraft,True,Tuners,155,0.84
+8529.90.33,85299033,8,aircraft,True,Entered with components enumerated in additional U.S. note 4 to this chapter,155,0.84
+8529.90.36,85299036,8,aircraft,True,Other,155,0.87
+8529.90.39,85299039,8,aircraft,True,Other,155,0.87
+8529.90.43,85299043,8,aircraft,True,Entered with components enumerated in additional U.S. note 4 to this chapter,155,0.82
+8529.90.46,85299046,8,aircraft,True,Other,155,0.88
+8529.90.49,85299049,8,aircraft,True,Other,155,0.87
+8529.90.55,85299055,8,aircraft,True,"Flat panel screen assemblies for the apparatus of subheadings 8528.59.15, 8528.59.23, 8528.59.25, 8528.59.33, 8528.69.35, 8525.69.40, 8528.69.45, 8528.69.50, 8528.72.62, 8528.72.64, 8528.72.68 and 8528.72.72",155,0.87
+8529.90.63,85299063,8,aircraft,True,For television cameras,155,0.8
+8529.90.68,85299068,8,aircraft,True,Other,155,0.9
+8529.90.73,85299073,8,aircraft,True,"Of radar, radio navigational aid or radio remote control apparatus",155,0.87
+8529.90.77,85299077,8,aircraft,True,Other,155,0.83
+8529.90.78,85299078,8,aircraft,True,"Mounted lenses suitable for use in, and entered separately from, closed-circuit television cameras, with or without attached electrical or non-electrical closed-circuit television camera connectors, and with or without attached motors",155,0.84
+8529.90.81,85299081,8,aircraft,True,Other,155,0.87
+8529.90.83,85299083,8,aircraft,True,Other,155,0.82
+8529.90.87,85299087,8,aircraft,True,Other,155,0.74
+8529.90.88,85299088,8,aircraft,True,Entered with components enumerated in additional U.S. note 4 to this chapter,156,0.82
+8529.90.89,85299089,8,aircraft,True,Other,156,0.82
+8529.90.93,85299093,8,aircraft,True,Other,156,0.82
+8529.90.95,85299095,8,aircraft,True,"Assemblies and subassemblies, consisting of 2 or more parts or pieces fastened or joined together",156,0.82
+8529.90.97,85299097,8,aircraft,True,Other,156,0.78
+8529.90.98,85299098,8,aircraft,True,Other,156,0.83
+8531.10.00,85311000,8,aircraft,True,Burglar or fire alarms and similar apparatus,156,0.89
+8531.20.00,85312000,8,aircraft,True,Indicator panels incorporating liquid crystal devices (LCD's) or light emitting diodes (LED),156,0.72
+8531.80.15,85318015,8,aircraft,True,"Doorbells, chimes, buzzers and similar apparatus",156,0.83
+8531.80.90,85318090,8,aircraft,True,Other,156,0.85
+8536.70.00,85367000,8,aircraft,True,"Connectors for optical fibers, optical fiber bundles or cables",156,0.8
+8539.10.00,85391000,8,aircraft,True,Sealed beam lamp units,156,0.77
+8539.51.00,85395100,8,aircraft,True,Light-emitting diode (LED) modules,156,0.78
+8541.10.00,85411000,8,,True,"Diodes, other than photosensitive or light-emitting diodes (LED)",156,0.88
+8541.21.00,85412100,8,,True,With a dissipation rate of less than 1 W,156,0.85
+8541.29.00,85412900,8,,True,Other,156,0.8
+8541.30.00,85413000,8,,True,"Thyristors, diacs and triacs, other than photosensitive devices",156,0.84
+8541.41.00,85414100,8,,True,Light-emitting diodes (LED),156,0.83
+8541.49.10,85414910,8,,True,Other diodes,156,0.8
+8541.49.70,85414970,8,,True,Transistors,156,0.9
+8541.49.80,85414980,8,,True,Optical coupled isolators,156,0.8
+8541.49.95,85414995,8,,True,Other,156,0.85
+8541.51.00,85415100,8,,True,Semiconductor-based transducers,156,0.86
+8541.59.00,85415900,8,,True,Other,156,0.83
+8541.90.00,85419000,8,,True,Parts,156,0.83
+8542.31.00,85423100,8,,True,"Processors and controllers, whether or not combined with memories, converters, logic circuits, amplifiers, clock and timing circuits, or other circuits",156,0.84
+8542.32.00,85423200,8,,True,Memories,156,0.83
+8542.33.00,85423300,8,,True,Electronic integrated circuits; parts thereof:,156,0.84
+8542.39.00,85423900,8,,True,Other,157,0.89
+8542.90.00,85429000,8,,True,Parts,157,0.87
+8543.70.42,85437042,8,aircraft,True,Flight data recorders,157,0.84
+8543.70.45,85437045,8,aircraft,True,Other,157,0.79
+8543.70.60,85437060,8,aircraft,True,Articles designed for connection to telegraphic or telephonic apparatus or instruments or to telegraphic or telephonic networks,157,0.87
+8543.70.80,85437080,8,aircraft,True,Microwave amplifiers,157,0.85
+8543.70.91,85437091,8,aircraft,True,Digital signal processing apparatus capable of connecting to a wired or wireless network for the mixing of sound,157,0.86
+8543.70.95,85437095,8,aircraft,True,"Touch-sensitive data input devices (so-called ""touch screens"") without display capabilities, for incorporation into apparatus having a display, which function by detecting the presence and location of a touch within the display area (such sensing may be obtained by means of resistance, electrostatic capacity, acoustic pulse recognition, infra-red lights or other touch-sensitive technology)",157,0.86
+8543.90.12,85439012,8,aircraft,True,Of physical vapor deposition apparatus of subheading 8543.70,157,0.82
+8543.90.15,85439015,8,aircraft,True,Printed circuit assemblies,157,0.81
+8543.90.35,85439035,8,aircraft,True,Other,157,0.81
+8543.90.65,85439065,8,aircraft,True,"Of flat panel displays other than for articles of heading 8528, except for subheadings 8528.52 or 8528.62",157,0.88
+8543.90.68,85439068,8,aircraft,True,Other,157,0.79
+8543.90.85,85439085,8,aircraft,True,"Of flat panel displays other than for articles of heading 8528, except for subheadings 8528.52 or 8528.62",157,0.86
+8543.90.88,85439088,8,aircraft,True,Other,157,0.88
+8544.30.00,85443000,8,aircraft,True,"Ignition wiring sets and other wiring sets of a kind used in vehicles, aircraft or ships",157,0.87
+8801.00.00,88010000,8,aircraft,True,"Balloons and dirigibles; gliders, hang gliders and other non-powered aircraft",157,0.88
+8802.11.01,88021101,8,aircraft,True,"Of an unladen weight not exceeding 2,000 kg",157,0.86
+8802.12.01,88021201,8,aircraft,True,"Of an unladen weight exceeding 2,000 kg",157,0.85
+8802.20.01,88022001,8,aircraft,True,"Airplanes and other aircraft, of an unladen weight not exceeding 2,000 kg",157,0.86
+8802.30.01,88023001,8,aircraft,True,"Airplanes and other aircraft, of an unladen weight exceeding 2,000 kg but not exceeding 15,000 kg",157,0.88
+8802.40.01,88024001,8,aircraft,True,"Airplanes and other aircraft, of an unladen weight exceeding 15,000 kg",158,0.79
+8805.29.00,88052900,8,aircraft,True,Other,158,0.85
+8806.10.00,88061000,8,aircraft,True,Designed for the carriage of passengers,158,0.82
+8806.21.00,88062100,8,aircraft,True,With maximum take-off weight not more than 250 g,158,0.72
+8806.22.00,88062200,8,aircraft,True,With maximum take-off weight more than 250 g but not more than 7 kg,158,0.75
+8806.23.00,88062300,8,aircraft,True,With maximum take-off weight more than 7 kg but not more than 25 kg,158,0.87
+8806.24.00,88062400,8,aircraft,True,With maximum take-off weight more than 25 kg but not more than 150 kg,158,0.85
+8806.29.00,88062900,8,aircraft,True,Other,158,0.78
+8806.91.00,88069100,8,aircraft,True,With maximum take-off weight not more than 250 g,158,0.86
+8806.92.00,88069200,8,aircraft,True,With maximum take-off weight more than 250 g but not more than 7 kg,158,0.74
+8806.93.00,88069300,8,aircraft,True,With maximum take-off weight more than 7 kg but not more than 25 kg,158,0.85
+8806.94.00,88069400,8,aircraft,True,With maximum take-off weight more than 25 kg but not more than 150 kg,158,0.85
+8806.99.00,88069900,8,aircraft,True,Other,158,0.87
+8807.10.00,88071000,8,aircraft,True,Propellers and rotors and parts thereof,158,0.81
+8807.20.00,88072000,8,aircraft,True,Undercarriages and parts thereof,158,0.86
+8807.30.00,88073000,8,aircraft,True,"Other parts of airplanes, helicopters or unmanned aircraft",158,0.87
+8807.90.90,88079090,8,aircraft,True,Other,158,0.74
+9001.90.40,90019040,8,aircraft,True,Lenses,158,0.81
+9001.90.50,90019050,8,aircraft,True,Prisms,158,0.74
+9001.90.60,90019060,8,aircraft,True,Mirrors,158,0.72
+9001.90.80,90019080,8,aircraft,True,Halftone screens designed for use in engraving or photographic processes,159,0.82
+9001.90.90,90019090,8,aircraft,True,Other,159,0.85
+9002.90.20,90029020,8,aircraft,True,Prisms,159,0.81
+9002.90.40,90029040,8,aircraft,True,Mirrors,159,0.85
+9002.90.70,90029070,8,aircraft,True,Halftone screens designed for use in engraving or photographic processes,159,0.85
+9002.90.85,90029085,8,aircraft,True,"Mounted lenses suitable for use in, and entered separately from, closed-circuit television cameras, with or without attached electrical or non-electrical closed-circuit television camera connectors, and with or without attached motors",159,0.79
+9002.90.95,90029095,8,aircraft,True,Other,159,0.83
+9014.10.10,90141010,8,aircraft,True,Optical instruments,159,0.77
+9014.10.60,90141060,8,aircraft,True,"Gyroscopic compasses, other than electrical",159,0.81
+9014.10.70,90141070,8,aircraft,True,Electrical,159,0.81
+9014.10.90,90141090,8,aircraft,True,Other,159,0.84
+9014.20.20,90142020,8,aircraft,True,Optical instruments and appliances,159,0.76
+9014.20.40,90142040,8,aircraft,True,Automatic pilots,159,0.84
+9014.20.60,90142060,8,aircraft,True,Electrical,159,0.89
+9014.20.80,90142080,8,aircraft,True,Other,159,0.81
+9014.90.10,90149010,8,aircraft,True,Of articles covered by subheading 9014.20.40,159,0.77
+9014.90.20,90149020,8,aircraft,True,Of articles covered by subheading 9014.20.80,159,0.82
+9014.90.40,90149040,8,aircraft,True,Of articles covered by subheading 9014.80.50,159,0.84
+9014.90.60,90149060,8,aircraft,True,Other,159,0.84
+9020.00.40,90200040,8,aircraft,True,Underwater breathing devices designed as a complete unit to be carried on the person and not requiring attendants,159,0.87
+9020.00.60,90200060,8,aircraft,True,Other breathing appliances and gas masks,159,0.82
+9025.11.20,90251120,8,aircraft,True,Clinical,159,0.85
+9025.11.40,90251140,8,aircraft,True,Other,159,0.85
+9025.19.40,90251940,8,aircraft,True,Pyrometers,159,0.85
+9025.19.80,90251980,8,aircraft,True,Other,159,0.83
+9025.80.10,90258010,8,aircraft,True,Electrical,160,0.75
+9025.80.15,90258015,8,aircraft,True,"Barometers, not combined with other instruments",160,0.81
+9025.80.20,90258020,8,aircraft,True,"Hydrometers and similar floating instruments, whether or not incorporating a thermometer, non-recording",160,0.8
+9025.80.35,90258035,8,aircraft,True,"Hygrometers and psychrometers, non-recording",160,0.9
+9025.80.40,90258040,8,aircraft,True,"Thermographs, barographs, hygrographs and other recording instruments",160,0.88
+9025.80.50,90258050,8,aircraft,True,Other,160,0.87
+9025.90.06,90259006,8,aircraft,True,Parts and accessories,160,0.88
+9026.10.20,90261020,8,aircraft,True,Electrical,160,0.83
+9026.10.40,90261040,8,aircraft,True,Flow meters,160,0.85
+9026.10.60,90261060,8,aircraft,True,Other,160,0.89
+9026.20.40,90262040,8,aircraft,True,Electrical,160,0.83
+9026.20.80,90262080,8,aircraft,True,Other,160,0.89
+9026.80.20,90268020,8,aircraft,True,Electrical,160,0.86
+9026.80.40,90268040,8,aircraft,True,"Heat meters incorporating liquid supply meters, and anemometers",160,0.87
+9026.80.60,90268060,8,aircraft,True,Other,160,0.86
+9026.90.20,90269020,8,aircraft,True,Of electrical instruments and apparatus,160,0.87
+9026.90.40,90269040,8,aircraft,True,"Of flow meters, heat meters incorporating liquid supply meters and anemometers",160,0.89
+9026.90.60,90269060,8,aircraft,True,Other,160,0.9
+9029.10.80,90291080,8,aircraft,True,Other,160,0.78
+9029.20.40,90292040,8,aircraft,True,Other speedometers and tachometers,160,0.87
+9029.90.80,90299080,8,aircraft,True,Other,160,0.84
+9030.10.00,90301000,8,aircraft,True,Instruments and apparatus for measuring or detecting ionizing radiations,161,0.79
+9030.20.05,90302005,8,aircraft,True,Specially designed for telecommunications,161,0.84
+9030.20.10,90302010,8,aircraft,True,Other oscilloscopes and oscillographs,161,0.8
+9030.31.00,90303100,8,aircraft,True,"Multimeters, without a recording device",161,0.89
+9030.32.00,90303200,8,aircraft,True,"Multimeters, with a recording device",161,0.81
+9030.33.34,90303334,8,aircraft,True,Resistance measuring instruments,161,0.83
+9030.33.38,90303338,8,aircraft,True,Other,161,0.86
+9030.39.01,90303901,8,aircraft,True,"Other, with a recording device",161,0.79
+9030.40.00,90304000,8,aircraft,True,"Other instruments and apparatus, specially designed for telecommunications (for example, cross-talk meters, gain measuring instruments, distortion factor meters, psophometers)",161,0.86
+9030.84.00,90308400,8,aircraft,True,"Other, with a recording device",161,0.83
+9030.89.01,90308901,8,aircraft,True,Other,161,0.87
+9030.90.25,90309025,8,aircraft,True,Printed circuit assemblies,161,0.86
+9030.90.46,90309046,8,aircraft,True,Other,161,0.84
+9030.90.66,90309066,8,aircraft,True,Of instruments and apparatus of subheading 9030.40 or 9030.82,161,0.87
+9030.90.68,90309068,8,aircraft,True,Other,161,0.86
+9030.90.84,90309084,8,aircraft,True,Of instruments and apparatus of subheading 9030.82,161,0.84
+9030.90.89,90309089,8,aircraft,True,Other,161,0.87
+9031.80.40,90318040,8,aircraft,True,Electron beam microscopes fitted with equipment specifically designed for the handling and transport of semiconductor wafers or reticles,161,0.82
+9031.80.80,90318080,8,aircraft,True,Other,161,0.83
+9031.90.21,90319021,8,aircraft,True,Of profile projectors,161,0.81
+9031.90.45,90319045,8,aircraft,True,Bases and frames for the coordinate-measuring machines of subheading 9031.49.40,161,0.75
+9031.90.54,90319054,8,aircraft,True,Of optical instruments and appliances of subheading 9031.41 or 9031.49.70,161,0.84
+9031.90.59,90319059,8,aircraft,True,Other,162,0.84
+9031.90.70,90319070,8,aircraft,True,Of articles of subheading 9031.80.40,162,0.84
+9031.90.91,90319091,8,aircraft,True,Other,162,0.82
+9032.10.00,90321000,8,aircraft,True,Thermostats,162,0.83
+9032.20.00,90322000,8,aircraft,True,Manostats,162,0.79
+9032.81.00,90328100,8,aircraft,True,Hydraulic and pneumatic,162,0.79
+9032.89.20,90328920,8,aircraft,True,"Designed for use in a 6, 12 or 24 V system",162,0.71
+9032.89.40,90328940,8,aircraft,True,Other,162,0.89
+9032.89.60,90328960,8,aircraft,True,Other,162,0.85
+9032.90.21,90329021,8,aircraft,True,"Designed for use in a 6, 12 or 24 V system",162,0.82
+9032.90.41,90329041,8,aircraft,True,Other,162,0.82
+9032.90.61,90329061,8,aircraft,True,Other,162,0.77
+9033.00.90,90330090,8,aircraft,True,Other,162,0.89
+9104.00.05,91040005,8,aircraft,True,With opto-electronic display only,162,0.87
+9104.00.10,91040010,8,aircraft,True,Electric (including battery operated),162,0.75
+9104.00.20,91040020,8,aircraft,True,Other,162,0.82
+9104.00.25,91040025,8,aircraft,True,With opto-electronic display only,162,0.8
+9104.00.30,91040030,8,aircraft,True,Electric (including battery operated),162,0.89
+9104.00.40,91040040,8,aircraft,True,Other,162,0.76
+9104.00.45,91040045,8,aircraft,True,With opto-electronic display only,162,0.86
+9104.00.50,91040050,8,aircraft,True,Electric (including battery operated),163,0.76
+9104.00.60,91040060,8,aircraft,True,Other,163,0.82
+9109.10.50,91091050,8,aircraft,True,With opto-electronic display only,163,0.8
+9109.10.60,91091060,8,aircraft,True,Measuring not over 50 mm in width or diameter,163,0.77
+9109.90.20,91099020,8,aircraft,True,Measuring not over 50 mm in width or diameter,163,0.8
+9401.10.40,94011040,8,aircraft,True,Leather upholstered,163,0.75
+9401.10.80,94011080,8,aircraft,True,Other,163,0.78
+9403.20.00,94032000,8,aircraft,True,Other metal furniture,163,0.83
+9403.70.40,94037040,8,aircraft,True,Of reinforced or laminated plastics,163,0.75
+9403.70.80,94037080,8,aircraft,True,Other,163,0.85
+9405.11.40,94051140,8,aircraft,True,Of brass,163,0.86
+9405.11.60,94051160,8,aircraft,True,Other,163,0.84
+9405.11.80,94051180,8,aircraft,True,Other,163,0.83
+9405.19.40,94051940,8,aircraft,True,Of brass,163,0.88
+9405.19.60,94051960,8,aircraft,True,Other,163,0.87
+9405.19.80,94051980,8,aircraft,True,Other,163,0.83
+9405.61.20,94056120,8,aircraft,True,Of brass,163,0.87
+9405.61.40,94056140,8,aircraft,True,Other,163,0.81
+9405.61.60,94056160,8,aircraft,True,Other,163,0.87
+9405.69.20,94056920,8,aircraft,True,Of brass,163,0.82
+9405.69.40,94056940,8,aircraft,True,Other,164,0.85
+9405.69.60,94056960,8,aircraft,True,Other,164,0.77
+9405.92.00,94059200,8,aircraft,True,Of plastics,164,0.84
+9405.99.20,94059920,8,aircraft,True,Of brass,164,0.84
+9405.99.40,94059940,8,aircraft,True,Other,164,0.83
+9620.00.50,96200050,8,aircraft,True,Of plastics,164,0.86
+9620.00.60,96200060,8,aircraft,True,Of graphite or other carbon,164,0.87
+9802.00.40,98020040,8,aircraft,True,Repairs or alterations made pursuant to a warranty,164,0.82
+9802.00.50,98020050,8,aircraft,True,Other,164,0.81
+9802.00.60,98020060,8,aircraft,True,"Any article of metal (as defined in U.S. note 3(e) of this subchapter) manufactured in the United States or subjected to a process of manufacture in the United States, if exported for further processing, and if the exported article as processed outside the United States, or the article which results from the processing outside the United States, is returned to the United States for further processing",164,0.82
+9802.00.80,98020080,8,aircraft,True,"Articles, except goods of heading 9802.00.91 and goods imported under provisions of subchapter XIX of this chapter and goods imported under provisions of subchapter XX, assembled abroad in whole or in part of fabricated components, the product of the United States, which (a) were exported in condition ready for assembly without further fabrication, (b) have not lost their physical identity in such articles by change in form, shape or otherwise, and (c) have not been advanced in value or improved in condition abroad except by being assembled and except by operations incidental to the assembly process such as cleaning, lubricating and painting",164,0.83
+9818.00.05,98180005,8,aircraft,True,"Spare parts necessarily installed before first entry into the United States, upon first entry into the United States of each such spare part purchased in, or imported from, a foreign country",164,0.79
+9818.00.07,98180007,8,aircraft,True,"Other, upon first arrival in any port of the United States of any vessel described in U.S. note 1 to this subchapter",164,0.8
