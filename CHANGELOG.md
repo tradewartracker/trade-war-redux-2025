@@ -17,14 +17,43 @@ that had already been published.
 
 ## 2026-11-25
 
-- **Proposed Section 301 excess-capacity tariffs reviewed and staged off.** On Nov 25, 2026
+- **The proposed Section 301 excess-capacity tariffs now enter the series from an assumed
+  date, Feb 1, 2027.** They are not in force: every rate is a ceiling and no notice
+  proposes a date. They are included, at the rates as written, so that the series shows
+  where rates are headed. Until today, announced and proposed actions stayed out of the
+  series until an implementing notice was published. See
+  [METHODOLOGY.md](METHODOLOGY.md#proposed--section-301-structural-excess-capacity-in-the-series-from-an-assumed-date).
+  - **No past value changes.** `country-by-time.csv` gains two policy dates (100 rows) and
+    `daily-tariff-latest-data.csv` now runs to Mar 3, 2027. Every existing row in both
+    files is identical.
+  - **Jan 1, 2027, scheduled.** The Section 232 step-up on furniture (30%) and cabinets
+    (50%) under Proclamation 10976 was already registered in the engine and is now a panel
+    date.
+    National average 11.46% → 11.50% (+0.035); Vietnam +0.36, Cambodia +0.27.
+  - **Feb 1, 2027, assumed.** The proposals as written: 11.50% → 14.39% (+2.89). Fourteen
+    of the 50 partners move: Vietnam +12.5, China +10.0, India +8.1, Bangladesh +8.0,
+    Cambodia +7.1, Indonesia +5.6, Malaysia +3.7, Singapore +2.9, Thailand +2.6, the EU
+    +2.2, Taiwan +1.2, Switzerland +0.9, Japan +0.9, Korea +0.6.
+  - Main notebook: `SECP_301_LIVE = True`. `SECP_301_EFFECTIVE_DATE` (`"2027-02-01"`) is
+    the one setting for the assumed date, and `date_strings` takes its panel date from it.
+    The daily series now runs `TAIL_DAYS` (30) past the last policy date when that is
+    later than 60 days past the run date, so the new level shows as more than one point.
+  - Chart notebook: the README chart stops its solid line at the run date and draws the
+    scheduled and proposed steps dashed, with a callout. The caption of the website's
+    daily chart names each future-dated change and says the proposal is not in force.
+  - [section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb) now
+    evaluates at a fixed Oct 30, 2026, so its numbers are unchanged, and checks its Jan 1
+    and Feb 1, 2027 figures against the published daily file.
+  - All five validators pass. The tracker app has not been refreshed yet.
+  - If USTR has not acted as Feb 1, 2027 approaches, the assumed date has to be moved
+    before it arrives.
+- **Earlier the same day the proposals were reviewed and staged off**; the rest of this
+  entry records that work. On Nov 25, 2026
   USTR made determinations and proposed actions in 14 of its 16 investigations of
   structural excess capacity and production: China, the EU, Japan, Korea, Switzerland,
   Taiwan, Bangladesh, Cambodia, Indonesia, Malaysia, Thailand, India, Singapore and
   Vietnam. Every rate is "up to", there is no effective date, and comments run to Jan 5,
-  2027, so nothing enters the published series: `country-by-time.csv` and
-  `daily-tariff-latest-data.csv` are unchanged. See the "Proposed, not enacted" section of
-  [METHODOLOGY.md](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+  2027. At that stage nothing entered the published series.
 - Saved the 14 pre-publication notices and the March initiation notice in
   `tariff-lists/sources/` (`301-secp-proposed-*.pdf`, `301-secp-initiation.pdf`).
 - Added [extract-301-secp.py](code/extract-301-secp.py), which writes

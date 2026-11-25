@@ -44,7 +44,9 @@ Run these in order after any change to a tariff action or list:
 
 1. [code/make-tariff-by-country-by-time.ipynb](code/make-tariff-by-country-by-time.ipynb)
    builds the country-by-date panel and writes [country-by-time.csv](country-by-time.csv)
-   and [daily-tariff-latest-data.csv](daily-tariff-latest-data.csv).
+   and [daily-tariff-latest-data.csv](daily-tariff-latest-data.csv). The daily file runs
+   60 days past the run date (`BUFFER_DAYS`), or 30 days past the last policy date if that
+   is later (`TAIL_DAYS`).
 2. [code/plot-tariff-by-country-by-time.ipynb](code/plot-tariff-by-country-by-time.ipynb)
    reads those files and writes:
    - the website charts in [docs](docs);
@@ -55,6 +57,12 @@ Run these in order after any change to a tariff action or list:
    [data/NIPA-imports.csv](data/NIPA-imports.csv) for the long-run tariff history. The
    README chart's event labels are the `EVENTS` list in its "README header figure" cell.
    Each label reads its rate from the data, so only a new action needs a new entry.
+
+   Policy dates after the run date are handled separately. The README chart stops its
+   solid line at the run date and draws later changes dashed, with callouts from the
+   `FUTURE_EVENTS` list. The website's daily chart describes each future date in its
+   caption, using the `FUTURE_NOTES` dictionary. A new future date needs an entry in both;
+   once a date has passed, move its callout to `EVENTS`.
 3. Refresh the tracker app. Its ETL, `TRI-tracker-update.ipynb` in the
    `how-restrictive-us-trade` repository, reads the two CSVs from step 1 from local disk.
    Re-run it, then redeploy the app.
@@ -118,11 +126,18 @@ period, so a later rate change for one economy is a new row with its own dates.
 
 **An announced or proposed action** is built and validated but switched off behind a
 flag, so going live is a flag flip. `LABOR_301_LIVE` (now `True`), `CHINA_30FOR30_LIVE`
-(now `False`) and `SECP_301_LIVE` (now `False`) follow this pattern. The go-live checklists
-are in METHODOLOGY.md, for the
+(now `False`) and `SECP_301_LIVE` (now `True`) follow this pattern. The checklists are in
+METHODOLOGY.md, for the
 [30-for-30 list](METHODOLOGY.md#announced-not-enacted--us-china-30-for-30-list-staged-off)
 and the
-[excess-capacity action](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+[excess-capacity action](METHODOLOGY.md#proposed--section-301-structural-excess-capacity-in-the-series-from-an-assumed-date).
+
+**The excess-capacity action is live from an assumed date.** It is a proposal, not law,
+and no notice proposes a date. `SECP_301_EFFECTIVE_DATE` (now `"2027-02-01"`) is the one
+setting: the regimes take it as their effective date, and `date_strings` takes its panel
+date from it. To move the date, change that setting and re-run the main notebook. While
+both the old and the new date are in the future, no row describing law in force changes.
+Setting `SECP_301_LIVE = False` removes the action and its panel date together.
 
 **A scenario does not edit the registry.** `tariff_imports` takes an optional `actions`
 list, so a what-if is the registry plus extra entries:
@@ -132,8 +147,10 @@ actions = TARIFF_ACTIONS + secp_actions(rates="agreement", effective_date="2026-
 lines = tariff_imports(df, cty, rate, date, actions=actions)
 ```
 
-`secp_actions()` returns a fresh list each time. The older analysis notebooks swap the
-global `TARIFF_ACTIONS` instead; new ones should pass `actions`.
+`secp_actions()` returns a fresh list each time. Evaluate a scenario at a date before the
+assumed one, as here, so that the registry's own copy of the action is not yet in force.
+The older analysis notebooks swap the global `TARIFF_ACTIONS` instead; new ones should
+pass `actions`.
 
 Each new list should get a `validate-*.py` guardrail that pins its code counts and
 quoted magnitudes, so a silent change cannot move the published numbers unnoticed.
@@ -153,7 +170,7 @@ commit. Figures go to [figures](figures).
 | [section301-labor-overview.ipynb](code/analysis/section301-labor-overview.ipynb) | The final forced-labor action: the Section 122 → labor transition, and the proposal → final change split into rate, net-of-MFN cap and exemption effects |
 | [section122-to-301labor-transition.ipynb](code/analysis/section122-to-301labor-transition.ipynb) | The same transition under the June 5 **proposal**; kept as a record, superseded by the overview |
 | [china-30for30-analysis.ipynb](code/analysis/china-30for30-analysis.ipynb) | China's rate if the 30-for-30 list were excluded from the labor duty (staged off) |
-| [section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb) | The Nov 25, 2026 **proposed** excess-capacity tariffs on 14 economies (staged off): rates by economy and nationally as written, with agreements and under the stated alternatives, and the sensitivity to China's Section 232 treatment |
+| [section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb) | The Nov 25, 2026 **proposed** excess-capacity tariffs on 14 economies, which the series carries from an assumed Feb 1, 2027: rates by economy and nationally as written, with agreements and under the stated alternatives, and the sensitivity to China's Section 232 treatment. Evaluated at Oct 30, 2026 rates |
 | [section-122-analysis.ipynb](code/analysis/section-122-analysis.ipynb) | Section 122 surcharge exemption coverage and the shift at the Supreme Court ruling |
 | [metals-restructuring-analysis.ipynb](code/analysis/metals-restructuring-analysis.ipynb) | Coverage and impact of the Apr 6, 2026 Section 232 metals tiers |
 | [annex-ii-revision.ipynb](code/analysis/annex-ii-revision.ipynb) | Old vs. corrected series for the Oct 27, 2026 reciprocal-tariff Annex II fix; a record, compares against commit `aa4e228`. Do not re-run |

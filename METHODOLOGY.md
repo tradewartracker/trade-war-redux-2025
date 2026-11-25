@@ -44,16 +44,30 @@ a single number for all partners. It also covers the 2018–19 Section 301 dutie
 which are part of the 2024 baseline rather than modeled as actions.
 
 **Dates.** The engine evaluates the panel only on policy dates, the days an action takes
-effect (`date_strings` in the main notebook; 25 dates as of Oct 28, 2026). The daily
+effect (`date_strings` in the main notebook; 27 dates as of Nov 25, 2026). The daily
 series in `daily-tariff-latest-data.csv` carries each value forward to the next policy
-date. It runs 60 days past the latest run; days after the run assume no further change.
-Steps scheduled beyond that window, such as the Jan 1, 2027 timber increase and the
-expiry of the metals Annex III rate, are registered in the code but not yet added to the
-panel.
+date. It runs 60 days past the latest run, or 30 days past the last policy date if that is
+later, so a future-dated step shows as a level rather than as a single last point.
+
+**Future-dated rows.** Two of the policy dates are after the latest run, and their rows are
+not law in force.
+
+- **Jan 1, 2027 is scheduled.** The Section 232 rates on upholstered furniture and kitchen
+  cabinets step up under Proclamation 10976, which is already in force. National average
+  11.46% → 11.50%.
+- **Feb 1, 2027 is assumed.** From that date the series includes the Section 301
+  excess-capacity tariffs that USTR proposed on Nov 25, 2026. They are not in force, no
+  notice proposes a date, and the rates are the proposed ceilings. National average
+  11.50% → 14.39%. See the
+  [proposed excess-capacity action](#proposed--section-301-structural-excess-capacity-in-the-series-from-an-assumed-date).
+
+Otherwise, days after the run assume no further change. One later scheduled step, the
+expiry of the metals Annex III rate on Jan 1, 2028, is registered in the code but not yet
+added to the panel.
 
 ## 2. Tariff actions and how they stack
 
-The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS` registry applied chronologically. Each action carries its effective date, legal authority, executive order/proclamation reference, and a short description. Actions are split into three phases: **Phase 1** resets country-level base rates (IEEPA / Section 122 layer); **Phase 2** stamps sector-specific tariffs and product exemptions on top; **Phase 3** applies stacked country actions (Section 301 and Section 338), which *add* to the rate already in place rather than replacing it, and carve out goods already subject to Section 232. A fourth phase, for caps on the all-in Section 301 rate, exists in the engine but holds no action in force; it is described under the [proposed excess-capacity action](#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS` registry applied chronologically. Each action carries its effective date, legal authority, executive order/proclamation reference, and a short description. Actions are split into three phases: **Phase 1** resets country-level base rates (IEEPA / Section 122 layer); **Phase 2** stamps sector-specific tariffs and product exemptions on top; **Phase 3** applies stacked country actions (Section 301 and Section 338), which *add* to the rate already in place rather than replacing it, and carve out goods already subject to Section 232. A fourth phase, for caps on the all-in Section 301 rate, holds one action that is not in force: the proposed excess-capacity tariffs, which enter the panel from an assumed date. It is described under the [proposed excess-capacity action](#proposed--section-301-structural-excess-capacity-in-the-series-from-an-assumed-date).
 
 ### Phase 1 — Country-level base rates
 
@@ -83,7 +97,7 @@ The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS`
 | Apr 11, 2025 | IEEPA | Amendment to EO 14257 | Consumer electronics (phones, laptops, etc.) exempt from reciprocal tariffs; China/HK still pay fentanyl |
 | Jun 3, 2025 | Section 232 | Proclamation 10947 | Steel and aluminum tariffs raised to 50%; UK remains at 25% per bilateral deal |
 | Aug 7, 2025 | Section 232 / IEEPA | Proclamation 10962, Proc 10908 amendments, EO 14323 Annex | Copper at 50%; auto deal rates for Japan, EU, South Korea at 15%; Brazil exemptions. Brazil's two duties keep separate lists: Annex II and electronics remove only the 10% reciprocal, EO 14323's Annex I removes only the 40% |
-| Oct 14, 2025 | Section 232 | Proclamation 10976 | Timber/lumber: softwood 10% (all countries); upholstered wooden furniture and completed kitchen cabinets/vanities 25% (UK 10%, Japan 15%, EU 15%). Steps up Jan 1 2027 — furniture 30%, cabinets 50% (registered, not surfaced in `date_strings`). Autos take precedence per clause 6 |
+| Oct 14, 2025 | Section 232 | Proclamation 10976 | Timber/lumber: softwood 10% (all countries); upholstered wooden furniture and completed kitchen cabinets/vanities 25% (UK 10%, Japan 15%, EU 15%). Steps up Jan 1, 2027 — furniture 30%, cabinets 50% (a scheduled step; in the panel as a future-dated row since Nov 25, 2026). Autos take precedence per clause 6 |
 | Nov 1, 2025 | IEEPA | EO 14357 | China/HK Annex II and electronics goods pay only the fentanyl duty, now 10% |
 | Nov 14, 2025 | IEEPA | EO 14360, EO 14361 | Annex II widened to agricultural goods; China/HK keep the 10% fentanyl duty on them; Brazil's 40% lifted on the EO 14361 list (238 subheadings + 11 described articles, retroactive to Nov 13) |
 | Dec 4, 2025 | Section 232 | ITA notice (90 FR 55964) | South Korea auto deal at 15% |
@@ -224,7 +238,7 @@ False`, placeholder date) so going live is a flag flip when the implementing not
   suffixes; then set `CHINA_30FOR30_EFFECTIVE_DATE`, flip `CHINA_30FOR30_LIVE`, add the date
   to `date_strings`, re-run the main notebook, refresh the downstream TRI-tracker.
 
-### Proposed, not enacted — Section 301 structural excess capacity (staged off)
+### Proposed — Section 301 structural excess capacity (in the series from an assumed date)
 
 On Mar 11, 2026 USTR self-initiated 16 Section 301(b) investigations of "structural excess
 capacity and production in manufacturing sectors" (Dockets USTR–2026–0067/0068). On
@@ -236,11 +250,18 @@ of the panel.
 
 **These are proposals, not actions.** Each notice proposes "to consider applying" a tariff
 "up to" a rate. None has an effective date or a chapter 99 heading. Comments and requests
-to appear are due Jan 5, 2027, and the hearing is Jan 25, 2027. Nothing is in force, so
-nothing enters the published series. The action is extracted, validated and wired as
-**staged-off** regimes (`SECP_301_LIVE = False`, placeholder date Feb 1, 2027). The
+to appear are due Jan 5, 2027, and the hearing is Jan 25, 2027. Nothing is in force. The
 sources are the 14 pre-publication notices in
 [tariff-lists/sources](tariff-lists/sources) (`301-secp-proposed-*.pdf`).
+
+**In the series from an assumed date.** Since Nov 25, 2026 the published series includes
+the proposals at the rates as written from **Feb 1, 2027**, so that it shows where rates
+are headed (`SECP_301_LIVE = True`). The date is an assumption: it is the first of the
+month after the hearing, and no notice proposes one. Rows from Feb 1, 2027 on are
+therefore a projection, not law. Every row before that date is unchanged. Before Nov 25,
+2026 the tracker's rule was to keep announced and proposed actions out of the series
+until an implementing notice was published; the U.S.-China 30-for-30 list above still
+follows that rule.
 
 **Proposed rates.** Every rate is on all goods of the economy, "net of existing Section 301
 tariffs", so the forced-labor duty already in place counts toward it. The table is
@@ -288,7 +309,7 @@ base rates, Section 232 and Section 338 duties.
   passenger vehicles and parts, medium and heavy vehicles and parts, wood products,
   patented pharmaceuticals and semiconductors. **China's notice does not mention
   Section 232.** Read as written, its duty reaches Chinese Section 232 goods, on top of
-  their Section 232 rate. The staged default follows the text (`SECP_CHINA_EXEMPT_232 =
+  their Section 232 rate. The model follows the text (`SECP_CHINA_EXEMPT_232 =
   False`); the carve-out is a one-argument variant.
 - **The annex.** Every notice carries the same 2,121-code list, in the format of the labor
   notice (HTSUS, description, scope limitation). It is the 2,113 codes of labor Annex II
@@ -316,9 +337,14 @@ printed, built by [extract-301-secp.py](code/extract-301-secp.py) and guarded by
 
 **Modeling choices.**
 
-- **The staged rate is the proposed rate as written**, including India 25, Singapore 20 and
-  Vietnam 35. The agreement and alternative rates are columns of the same CSV and are run
-  as scenarios.
+- **The date is assumed.** Feb 1, 2027 is one setting in the engine
+  (`SECP_301_EFFECTIVE_DATE`), and the same setting supplies the panel date. An effective
+  date entered in an economy's CSV row overrides it. If USTR has not acted as the date
+  approaches, the setting has to be moved before the date arrives; otherwise the series
+  would show a duty in force that is not.
+- **The rate in the series is the proposed rate as written**, including India 25,
+  Singapore 20 and Vietnam 35. The agreement and alternative rates are columns of the same
+  CSV and are run as scenarios.
 - **Netting against MFN follows the labor duty.** The EU, Japan, Switzerland and Taiwan are
   netted per HS10 against the statutory column-1 rate. **Korea is modeled flat**, although
   its notice says "net of MFN", for the reason given under the labor action; one setting
@@ -332,9 +358,11 @@ printed, built by [extract-301-secp.py](code/extract-301-secp.py) and guarded by
   deal-based 15% rate is not clear from the text. It is recorded in the CSV
   (`adjustment_terminates`) and left out of the engine.
 
-**Size if enacted as written** (2024 weights, at Oct 30, 2026 rates): the national average
-goes **11.46% → 14.36% (+2.89 points)**, almost exactly its last level under the IEEPA
-tariffs (14.28% on Feb 7, 2026).
+**Size as written** (2024 weights). In the published series the step lands on Feb 1, 2027,
+after the Jan 1 timber increase, and takes the national average from **11.50% to 14.39%
+(+2.89 points)**. The scenarios below are evaluated at Oct 30, 2026 rates, before the
+timber increase, where the same step is **11.46% → 14.36%**, almost exactly the last level
+under the IEEPA tariffs (14.28% on Feb 7, 2026).
 
 | Scenario | National average | Step |
 |---|---|---|
@@ -349,17 +377,23 @@ Taiwan +1.2, Switzerland +0.9, Japan +0.9, Korea +0.6. China contributes 1.34 of
 points, Vietnam 0.55 and the EU 0.41. Detail, figures and sensitivities are in
 [section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb).
 
-**Go-live checklist.**
+**Until the final notices publish.** Revisit the assumed date after the Jan 25, 2027
+hearing. If no final action is in sight, move `SECP_301_EFFECTIVE_DATE` later and re-run
+the main notebook before Feb 1, 2027 arrives. Because the date is still in the future,
+moving it changes no row that describes law in force.
+
+**When the final notices publish.**
 
 1. Save the final notices and re-run `extract-301-secp.py` on them (`--prefix`,
    `--suffix -FINAL`).
 2. Diff them against the proposal: `validate-301-secp.py --diff-economies … --diff-annex …`.
-3. Put each economy's effective date, and any end date, in its CSV row. A later change for
-   one economy is a new row, not new code.
+3. Put each economy's effective date, and any end date, in its CSV row; these override the
+   assumed date. A later change for one economy is a new row, not new code.
 4. Settle, from the chapter 99 headings: China's Section 232 treatment, Korea's netting,
    the EU termination, and whether Mexico or Norway has been added.
-5. Flip `SECP_301_LIVE`, add the date to `date_strings`, re-run the main notebook, refresh
-   the downstream TRI-tracker.
+5. Put the real date or dates in `date_strings` in place of the assumed one, re-run the
+   main notebook, and check that every row before the first changed date is identical.
+   Then refresh the downstream TRI-tracker.
 
 ## 3. Actions not yet incorporated
 

@@ -5,8 +5,9 @@ imports, evaluated at today's rates (latest policy date Oct 30, 2026).*
 
 **Bottom line.** USTR has proposed, but not imposed, new Section 301 tariffs on 14
 economies. If they took effect as written, the average U.S. tariff would rise from 11.5% to
-14.4%, about where it stood before the Supreme Court ended the IEEPA tariffs. The published
-series does not change until a final notice sets the rates and a date.
+14.4%, about where it stood before the Supreme Court ended the IEEPA tariffs. To show where
+rates are headed, the tracker's published series now includes the proposals from an assumed
+date, Feb 1, 2027. Nothing before that date changes.
 
 ## 1. What the action is
 
@@ -104,9 +105,10 @@ responds to the investigation's findings.
    aluminum, autos and other Section 232 goods, 19% of Chinese imports. If the final notice
    exempts them, as it does for the other 13, China's step is +6.2 instead of +10.0 and the
    national step +2.4 instead of +2.9. This is the largest single uncertainty.
-3. **Timing.** The action cannot precede the Jan 25, 2027 hearing. One scheduled step lands
-   first: the Jan 1, 2027 increase in the Section 232 rates on furniture and cabinets
-   (+0.04 points), which is not yet in the published panel.
+3. **Timing.** The action cannot precede the Jan 25, 2027 hearing, and no notice proposes
+   a date. The series assumes Feb 1, 2027. If USTR has not acted as that date approaches,
+   the assumed date has to be moved before it arrives. One scheduled step lands first: the
+   Jan 1, 2027 increase in the Section 232 rates on furniture and cabinets (+0.04 points).
 4. **Mexico and Norway.** No determination yet.
 5. **Two unclear clauses.** Korea's notice says "net of MFN", but the model treats Korea as
    flat, as it does for the forced-labor duty (0.01 points nationally). The EU notice
@@ -115,9 +117,10 @@ responds to the investigation's findings.
 
 **Limits of the model**
 
-6. **Staged off.** The action is built and validated but switched off
-   (`SECP_301_LIVE = False`, placeholder date Feb 1, 2027). Going live means diffing the
-   final notices against the proposal, entering the dates, and flipping the flag.
+6. **A projection in the published series.** From Feb 1, 2027 the series carries the
+   proposals as written (14.39%, against 11.50% in January). Those rows are the tracker's
+   assumption, not law. When the final notices publish, their rates and dates replace the
+   assumed ones, after a diff of the final notices against the proposal.
 7. **Indonesia.** Palm oil is exempt from the new duty in the model, but still pays the
    10% forced-labor duty it is legally exempt from. That existing overstatement, 0.9
    points on Indonesia, is unchanged.
@@ -130,6 +133,7 @@ responds to the investigation's findings.
 
 **Where things are.** The analysis is in
 [code/analysis/section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb);
-the method and go-live checklist are in
-[METHODOLOGY.md](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
-The action is switched off in the engine, and the two published data files are unchanged.
+the method and the checklist for the final notices are in
+[METHODOLOGY.md](METHODOLOGY.md#proposed--section-301-structural-excess-capacity-in-the-series-from-an-assumed-date).
+Both published data files carry the proposals from Feb 1, 2027; every earlier row is
+unchanged.

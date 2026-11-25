@@ -14,8 +14,18 @@ code is in [TECHNICAL-README.md](TECHNICAL-README.md). Every change to the data 
 
 ![U.S. average tariff rate, 2025–2026](figures/tariff-fig.png)
 
-**Updated Oct 28, 2026.** The average U.S. tariff rate is **11.5%**, up from 2.3% before
-2025. It peaked at 28.3% on Apr 9, 2025.
+**Updated Nov 25, 2026.** The average U.S. tariff rate is **11.5%**, up from 2.3% before
+2025. It peaked at 28.3% on Apr 9, 2025. The dashed part of the chart is not in force: it
+shows a small increase scheduled for Jan 1, 2027 and then the Section 301 tariffs proposed
+on Nov 25, 2026, which would take the average to **14.4%**.
+
+> [!IMPORTANT]
+> **The series now looks ahead.** From Feb 1, 2027 both data files include the Section 301
+> tariffs that USTR proposed on Nov 25, 2026 for 14 economies. These tariffs are not in
+> force. The rates are the proposed ceilings, and the date is an assumption, because no
+> notice proposes one. Every row before Feb 1, 2027 is law in force or, for Jan 1, 2027,
+> a step already scheduled by proclamation. See
+> [What happened](#2-what-happened).
 
 > [!NOTE]
 > **Recent revisions.** On Oct 28, 2026 Slovakia, which had been counted twice, was
@@ -61,6 +71,9 @@ Three things follow from this design.
   collected. In exchange, every move in the series is a change in policy.
 - **It changes only on the days a policy takes effect** and is flat in between.
 
+Rows dated after the latest update look ahead. They hold changes already scheduled in law
+and, from Feb 1, 2027, one proposal that is not in force (see the next section).
+
 ## 2. What happened
 
 | Date | What happened | Average tariff |
@@ -82,6 +95,8 @@ Three things follow from this design.
 | Jul 22–24, 2026 | Brazil Section 301 (25%); forced-labor duties replace the expiring surcharge | 11.2% |
 | Aug 22, 2026 | Section 338 duties on Canada | 11.4% |
 | Sep 15 and Oct 30, 2026 | Canadian baskets amended | 11.5% |
+| *Jan 1, 2027 (scheduled)* | *Section 232 rates on furniture and kitchen cabinets step up* | *11.5%* |
+| *Feb 1, 2027 (assumed date)* | *Proposed Section 301 tariffs on 14 economies for excess capacity; not in force* | *14.4%* |
 
 The record falls into three periods, each defined by the legal authority behind the
 tariffs. Underneath all three sit the Section 232 sector tariffs on steel, aluminum, autos
@@ -115,14 +130,20 @@ instrument has been published, so the list is not in the series. If the U.S. lis
 fully excluded from the forced-labor duty, the national average would fall by about 0.12
 points.
 
-**Proposed but not in force.** On Nov 25, 2026 USTR proposed Section 301 tariffs on 14
-economies for structural excess capacity in manufacturing: China, the EU, Japan, Korea,
-Switzerland, Taiwan, India, Vietnam and six others. Each proposal sets an all-in Section
-301 rate of "up to" 15% to 35%, counting the forced-labor duty already in place. There is
-no effective date, and comments run to Jan 5, 2027, so the proposals are not in the series.
-If they took effect as written, the national average would rise by about 2.9 points, to
-14.4%, close to its level before the Supreme Court ruling. The details are in
-[METHODOLOGY.md](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+**Proposed, and in the series from an assumed date.** On Nov 25, 2026 USTR proposed
+Section 301 tariffs on 14 economies for structural excess capacity in manufacturing: China,
+the EU, Japan, Korea, Switzerland, Taiwan, India, Vietnam and six others. Each proposal sets
+an all-in Section 301 rate of "up to" 15% to 35%, counting the forced-labor duty already in
+place. Nothing is in force. Comments run to Jan 5, 2027, a hearing follows on Jan 25, and
+no effective date has been proposed. To show where rates are headed, the series includes
+the proposals at the rates as written from an assumed date, Feb 1, 2027. They raise the
+national average by about 2.9 points, to 14.4%, close to its level before the Supreme Court
+ruling. The final notices will replace the assumed date and rates. The details are in
+[METHODOLOGY.md](METHODOLOGY.md#proposed--section-301-structural-excess-capacity-in-the-series-from-an-assumed-date).
+
+**Scheduled.** On Jan 1, 2027 the Section 232 rate on upholstered furniture rises from 25%
+to 30% and the rate on kitchen cabinets from 25% to 50%, under a proclamation already in
+force. This adds 0.04 points.
 
 | Authority | What it allows | Status |
 |---|---|---|
@@ -145,7 +166,7 @@ Every action, with its legal reference, is listed in
 | **Section 232 goods take their sector rate** and are exempt from the other tariffs, as the legal texts provide. The exception: from Sep 15, 2026 the Canadian alcohol and autos baskets apply on top of Section 232. | Follows the law. |
 | **Exemptions that depend on end use** (civil aircraft, pharmaceuticals, auto parts) apply to the whole tariff code, because import data cannot tell end uses apart. | Mixed: some goods are over-exempted, others overcharged. |
 | **Three Section 232 sectors are not modeled**: heavy trucks and buses, semiconductors, and patented pharmaceuticals. Their product lists are not available. | Those goods miss their Section 232 duty but pay Section 301 and 338 duties they should be exempt from. |
-| **Only actions in legal force count.** Announced or proposed actions are built and checked but switched off until an implementing notice is published. | None. |
+| **Actions in legal force, plus one proposal.** Announced or proposed actions are normally built and checked but switched off until an implementing notice is published. The exception is the Section 301 excess-capacity proposal of Nov 25, 2026, which enters at its proposed rates from an assumed Feb 1, 2027. | None before Feb 1, 2027. From that date about 2.9 points of the average are a proposal, not law. |
 | **Dates are taken literally.** Grace periods for goods already in transit are ignored. | Overstates the first days after an increase. |
 
 The full list of choices and limitations, with size estimates, is in
@@ -161,8 +182,11 @@ The full list of choices and limitations, with size estimates, is in
 - A partner's total tariff rate is `effective tariff` plus `2024 tariff`.
 - `country-by-time.csv` has rows only on policy dates. Between them a partner's rate is the
   one on the latest earlier date.
-- The daily file runs 60 days past the latest update. Days after the update assume no
-  further change.
+- The daily file runs 60 days past the latest update, or 30 days past the last policy date
+  if that is later.
+- Rows dated after the latest update are not in force yet. Jan 1, 2027 is a scheduled
+  step. Rows from Feb 1, 2027 include the proposed Section 301 tariffs at an assumed date.
+  Otherwise days after the update assume no further change.
 - The tariff codes covered by every action are in [tariff-lists](tariff-lists), and the
   legal texts they come from are in [tariff-lists/sources](tariff-lists/sources).
 
