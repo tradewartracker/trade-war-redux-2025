@@ -1,0 +1,15 @@
+economy,cty_code,proposed_rate_pct,agreement_rate_pct,alternative_rate_pct,net_of_mfn,alternative_net_of_mfn,annex_a_rate_pct,alternative_ignores_annexes,exempt_232,effective_date,end_date,adjustment_terminates,comment_docket,hearing_docket,basis,source
+China,5700,20.0,,40.0,False,False,10.0,True,False,,,,USTR-2026-0278,USTR-2026-0741,20% net of the forced-labor 301 duty on goods outside the annexes; up to 10% on Annex A goods; Annex B (30-for-30 list) exempt. Alternative: 40% net of the labor duty on all goods. The notice does not mention Section 232.,301-secp-proposed-china.pdf
+European Union,0003,15.0,,20.0,True,True,,False,True,,,2028-12-01,USTR-2026-0730,USTR-2026-0741,"15% all-in, net of MFN and existing 301 (Framework Agreement); alternative 20%. 'This adjustment' is proposed to terminate Dec 1, 2028 - not acted on by the engine.",301-secp-proposed-eu.pdf
+Japan,5880,15.0,,20.0,True,True,,False,True,,,,USTR-2026-0733,USTR-2026-0741,"15% all-in, net of MFN and existing 301; alternative 20%.",301-secp-proposed-japan.pdf
+South Korea,5800,15.0,,25.0,True,True,,False,True,,,,USTR-2026-0734,USTR-2026-0741,"15% all-in, net of MFN and existing 301; alternative 25%. The engine models Korea flat, as it does the labor duty.",301-secp-proposed-korea.pdf
+Switzerland,4419,15.0,,20.0,True,True,,False,True,,,,USTR-2026-0737,USTR-2026-0741,"15% all-in, net of MFN and existing 301; alternative 20%.",301-secp-proposed-switzerland.pdf
+Taiwan,5830,15.0,,25.0,True,False,,False,True,,,,USTR-2026-0738,USTR-2026-0741,"15% all-in, net of MFN and existing 301; alternative 25%, net of existing 301 only.",301-secp-proposed-taiwan.pdf
+Bangladesh,5380,18.0,,20.0,False,False,,False,True,,,,USTR-2026-0727,USTR-2026-0741,18% net of existing 301; alternative 20%.,301-secp-proposed-bangladesh.pdf
+Cambodia,5550,18.0,,25.0,False,False,,False,True,,,,USTR-2026-0729,USTR-2026-0741,18% net of existing 301; alternative 25%.,301-secp-proposed-cambodia.pdf
+Indonesia,5600,18.0,,25.0,False,False,,False,True,,,,USTR-2026-0732,USTR-2026-0741,18% net of existing 301; alternative 25%.,301-secp-proposed-indonesia.pdf
+Malaysia,5570,18.0,,25.0,False,False,,False,True,,,,USTR-2026-0735,USTR-2026-0741,18% net of existing 301; alternative 25%.,301-secp-proposed-malaysia.pdf
+Thailand,5490,18.0,,25.0,False,False,,False,True,,,,USTR-2026-0739,USTR-2026-0741,18% net of existing 301; alternative 25%.,301-secp-proposed-thailand.pdf
+India,5330,25.0,17.0,,False,False,,False,True,,,,USTR-2026-0731,USTR-2026-0741,25% net of existing 301; 17% if India reaches a responsive Agreement on Reciprocal Trade.,301-secp-proposed-india.pdf
+Singapore,5590,20.0,10.0,,False,False,,False,True,,,,USTR-2026-0736,USTR-2026-0741,"20% net of existing 301; 10% if Singapore concludes a responsive agreement (below the 12.5% labor duty, so the new duty would be zero).",301-secp-proposed-singapore.pdf
+Vietnam,5520,35.0,20.0,,False,False,,False,True,,,,USTR-2026-0740,USTR-2026-0741,35% net of existing 301; 20% if Vietnam reaches a responsive Agreement on Reciprocal Trade.,301-secp-proposed-vietnam.pdf
