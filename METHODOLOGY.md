@@ -53,7 +53,7 @@ panel.
 
 ## 2. Tariff actions and how they stack
 
-The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS` registry applied chronologically. Each action carries its effective date, legal authority, executive order/proclamation reference, and a short description. Actions are split into three phases: **Phase 1** resets country-level base rates (IEEPA / Section 122 layer); **Phase 2** stamps sector-specific tariffs and product exemptions on top; **Phase 3** applies stacked country actions (Section 301 and Section 338), which *add* to the rate already in place rather than replacing it, and carve out goods already subject to Section 232.
+The notebook encodes U.S. tariff policy changes in a structured `TARIFF_ACTIONS` registry applied chronologically. Each action carries its effective date, legal authority, executive order/proclamation reference, and a short description. Actions are split into three phases: **Phase 1** resets country-level base rates (IEEPA / Section 122 layer); **Phase 2** stamps sector-specific tariffs and product exemptions on top; **Phase 3** applies stacked country actions (Section 301 and Section 338), which *add* to the rate already in place rather than replacing it, and carve out goods already subject to Section 232. A fourth phase, for caps on the all-in Section 301 rate, exists in the engine but holds no action in force; it is described under the [proposed excess-capacity action](#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
 
 ### Phase 1 — Country-level base rates
 
@@ -224,6 +224,143 @@ False`, placeholder date) so going live is a flag flip when the implementing not
   suffixes; then set `CHINA_30FOR30_EFFECTIVE_DATE`, flip `CHINA_30FOR30_LIVE`, add the date
   to `date_strings`, re-run the main notebook, refresh the downstream TRI-tracker.
 
+### Proposed, not enacted — Section 301 structural excess capacity (staged off)
+
+On Mar 11, 2026 USTR self-initiated 16 Section 301(b) investigations of "structural excess
+capacity and production in manufacturing sectors" (Dockets USTR–2026–0067/0068). On
+**Nov 25, 2026** it made determinations and **proposed** actions in 14 of them: China, the
+European Union, Japan, Korea, Switzerland, Taiwan, Bangladesh, Cambodia, Indonesia,
+Malaysia, Thailand, India, Singapore and Vietnam. It made no determination for Mexico or
+Norway. The 14 economies are all in the panel and supplied $1,921B of 2024 imports, 59.9%
+of the panel.
+
+**These are proposals, not actions.** Each notice proposes "to consider applying" a tariff
+"up to" a rate. None has an effective date or a chapter 99 heading. Comments and requests
+to appear are due Jan 5, 2027, and the hearing is Jan 25, 2027. Nothing is in force, so
+nothing enters the published series. The action is extracted, validated and wired as
+**staged-off** regimes (`SECP_301_LIVE = False`, placeholder date Feb 1, 2027). The
+sources are the 14 pre-publication notices in
+[tariff-lists/sources](tariff-lists/sources) (`301-secp-proposed-*.pdf`).
+
+**Proposed rates.** Every rate is on all goods of the economy, "net of existing Section 301
+tariffs", so the forced-labor duty already in place counts toward it. The table is
+[301-secp-economies.csv](tariff-lists/301-secp-economies.csv).
+
+| Economy | Labor 301 now | Proposed | Other rate in the notice |
+|---|---|---|---|
+| EU | 10, incl. MFN | 15, incl. MFN | 20 if consultations fail |
+| Japan, Switzerland | 12.5, incl. MFN | 15, incl. MFN | 20 if consultations fail |
+| Korea | 12.5 | 15, incl. MFN | 25 if consultations fail |
+| Taiwan | 10, incl. MFN | 15, incl. MFN | 25 if consultations fail, MFN not netted |
+| Bangladesh | 10 | 18 | 20 if consultations fail |
+| Cambodia, Indonesia, Malaysia | 10 | 18 | 25 if consultations fail |
+| Thailand | 12.5 | 18 | 25 if consultations fail |
+| India | 10 | 25 | 17 with a responsive agreement |
+| Singapore | 12.5 | 20 | 10 with a responsive agreement |
+| Vietnam | 12.5 | 35 | 20 with a responsive agreement |
+| China | 12.5 | 20; Annex A goods 10; Annex B exempt | 40 on all goods |
+
+The last column runs in two directions. Eleven notices, China's included, say the proposed
+rate "accounts for" the commitments in an existing deal or framework, and name the higher
+rate USTR would consider if it finds those commitments or the ongoing consultations
+"unsatisfactory". India, Singapore and Vietnam are the reverse: the proposed rate is the
+rate without a deal, and the notice names the lower rate USTR would consider if the economy
+concludes an Agreement on Reciprocal Trade "responsive to the determinations in this
+investigation". Vietnam's 20 is the rate in its Oct 26, 2025 framework. Singapore's 10 is
+below its 12.5 labor duty, so the top-up would be zero.
+
+**Phase 4: a cap, not an add-on.** "Net of existing Section 301 tariffs" means the new duty
+tops a product up to the stated rate. On each HS10 line it is
+
+    max(0, cap − MFN (where the notice nets it) − Section 301 duty already on the line)
+
+so the action pins the all-in rate. If the labor duty on a line later changes or ends, the
+top-up moves the other way and no rate has to be re-derived. The engine runs these caps in
+a separate last phase, for two reasons. A top-up depends on everything stacked before it,
+so inside Phase 3 it would depend on list position; a separate phase leaves Phase 3
+additive and order-free. And the cap nets against a running `s301` column, the Section 301
+duty Phase 3 has put on each line, rather than against the tariff column, which also holds
+base rates, Section 232 and Section 338 duties.
+
+**Exemptions.**
+
+- **Section 232 goods** are exempt in 13 notices, which name steel, aluminum, copper,
+  passenger vehicles and parts, medium and heavy vehicles and parts, wood products,
+  patented pharmaceuticals and semiconductors. **China's notice does not mention
+  Section 232.** Read as written, its duty reaches Chinese Section 232 goods, on top of
+  their Section 232 rate. The staged default follows the text (`SECP_CHINA_EXEMPT_232 =
+  False`); the carve-out is a one-argument variant.
+- **The annex.** Every notice carries the same 2,121-code list, in the format of the labor
+  notice (HTSUS, description, scope limitation). It is the 2,113 codes of labor Annex II
+  Part A, with identical scope flags, plus 8: agglomerated iron ore (2601.12.00) and seven
+  10-digit lines (seeds for sowing, one nonconiferous wood line, sintered neodymium
+  magnets). Scope flags follow the labor convention: unconditional and pharmaceutical codes
+  are applied flat, aircraft and "Ex" codes are not applied.
+- **Country-specific Part II.** Seven notices add a second part: EU 45 codes, Switzerland
+  134, Taiwan 118, Bangladesh 87, Cambodia 157, Indonesia 148, Malaysia 104. These track,
+  but do not equal, each economy's country part of the labor notice. They are modeled for
+  this action. Only Indonesia's matters: it covers 9.2% of Indonesian imports, mostly palm
+  oil, and ignoring it would overstate Indonesia's step by 0.74 points. The labor duty's
+  own country parts remain unmodeled, so those goods escape the new duty but still pay the
+  labor duty in the model.
+- **China's annexes are different.** Annex A is the common list, but its goods are not
+  exempt: they pay up to 10%. Since the labor duty exempts them, this is a new 10% on goods
+  that pay no Section 301 duty today (26.8% of Chinese imports). Annex B, the exemption, is
+  exactly the 77-code 30-for-30 U.S. import list, with the same eight "Ex" rows; the engine
+  reuses its form of that list, with the juvenile-furniture ex-outs resolved to HTS10. Hong
+  Kong is not covered.
+
+All of it is in [301-secp-annex.csv](tariff-lists/301-secp-annex.csv), every annex row as
+printed, built by [extract-301-secp.py](code/extract-301-secp.py) and guarded by
+[validate-301-secp.py](code/validate-301-secp.py).
+
+**Modeling choices.**
+
+- **The staged rate is the proposed rate as written**, including India 25, Singapore 20 and
+  Vietnam 35. The agreement and alternative rates are columns of the same CSV and are run
+  as scenarios.
+- **Netting against MFN follows the labor duty.** The EU, Japan, Switzerland and Taiwan are
+  netted per HS10 against the statutory column-1 rate. **Korea is modeled flat**, although
+  its notice says "net of MFN", for the reason given under the labor action; one setting
+  (`NET_OF_MFN_CTY`) drives both duties, so the two halves of one all-in rate cannot
+  diverge. Netting Korea's top-up would lower its step from +0.61 to +0.38 points.
+- **The China 30-for-30 staging is separate.** The notice uses the list as an exemption
+  from the new duty. It does not reduce the labor duty, which is what the staged
+  `CHINA_30FOR30` regime models. Both can be live at once.
+- **The EU termination clause is not acted on.** The EU notice proposes that "this
+  adjustment terminate on December 1, 2028". Whether that ends the duty or only the
+  deal-based 15% rate is not clear from the text. It is recorded in the CSV
+  (`adjustment_terminates`) and left out of the engine.
+
+**Size if enacted as written** (2024 weights, at Oct 30, 2026 rates): the national average
+goes **11.46% → 14.36% (+2.89 points)**, almost exactly its last level under the IEEPA
+tariffs (14.28% on Feb 7, 2026).
+
+| Scenario | National average | Step |
+|---|---|---|
+| Proposed, as written | 14.36% | +2.89 |
+| India 17, Singapore 10, Vietnam 20 (agreements) | 13.83% | +2.37 |
+| Every stated alternative (China 40 on all goods) | 18.39% | +6.92 |
+| Proposed, with China's Section 232 goods carved out | 13.85% | +2.39 |
+
+Steps by economy, as written: Vietnam +12.5, China +10.0, India +8.1, Bangladesh +8.0,
+Cambodia +7.1, Indonesia +5.6, Malaysia +3.7, Singapore +2.9, Thailand +2.6, EU +2.2,
+Taiwan +1.2, Switzerland +0.9, Japan +0.9, Korea +0.6. China contributes 1.34 of the 2.89
+points, Vietnam 0.55 and the EU 0.41. Detail, figures and sensitivities are in
+[section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb).
+
+**Go-live checklist.**
+
+1. Save the final notices and re-run `extract-301-secp.py` on them (`--prefix`,
+   `--suffix -FINAL`).
+2. Diff them against the proposal: `validate-301-secp.py --diff-economies … --diff-annex …`.
+3. Put each economy's effective date, and any end date, in its CSV row. A later change for
+   one economy is a new row, not new code.
+4. Settle, from the chapter 99 headings: China's Section 232 treatment, Korea's netting,
+   the EU termination, and whether Mexico or Norway has been added.
+5. Flip `SECP_301_LIVE`, add the date to `date_strings`, re-run the main notebook, refresh
+   the downstream TRI-tracker.
+
 ## 3. Actions not yet incorporated
 
 The following Section 232 actions require product-level HS code lists not yet available and are excluded from the current model:
@@ -260,3 +397,7 @@ The Oct 27, 2026 correction of the reciprocal-tariff Annex II left three items o
 1. **Canada and Mexico Annex II goods are on hold.** Annex II exempts goods only from the reciprocal tariff, which never applied to Canada or Mexico (EO 14257 s.3(d)–(e)). Under the model's USMCA-adjusted rates their Annex II goods would pay the same rate as their other goods, not 0%. Until that is decided they keep the pre-correction treatment, [annex-II-exemptions-legacy.csv](tariff-lists/annex-II-exemptions-legacy.csv) matched on HS10 from Apr 11 (`_apply_annex_ii_camx_legacy`), so their published rates do not move. Applying the USMCA-adjusted rate to those goods raises Canada by about 1.9 pp in May 2025 and 6.2 pp from Nov 14, 2025, mostly on energy. Non-USMCA Canadian energy and potash paid 10% under the fentanyl order rather than the full rate, so the natural refinement is 0.35 × 10% for those goods.
 2. **The electronics exemption starts on Apr 11, but it applied from Apr 5.** CBP applied the Apr 11 memorandum to entries from Apr 5, with refunds by post-summary correction. The model taxes those goods on the Apr 5 and Apr 9–10 panel dates.
 3. **The Geneva reduction takes effect May 12 in the model, but by law on May 14** (EO 14298). The model drops China from 145% to 30% two days early.
+
+The Nov 25, 2026 work on the proposed excess-capacity action found one problem in the forced-labor list. Fixing it changes the published series from Jul 24, 2026.
+
+1. **Seven 10-digit lines are missing from the labor exemption list.** Annex II Part A of the final forced-labor notice lists seven statistical lines printed as, for example, `8505.11.0070`: sweet corn, flax, rape (two lines) and sunflower seeds for sowing, one nonconiferous wood line (4407.99.0295) and sintered neodymium-iron-boron magnets (8505.11.0070). [301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv) holds only the 2,113 eight-digit codes, so the model charges these goods the labor duty. They are $0.30B of 2024 panel imports, mostly magnets, or about 0.001 points on the national average. The excess-capacity annex lists the same seven lines and its CSV includes them; `validate-301-secp.py` pins the difference.

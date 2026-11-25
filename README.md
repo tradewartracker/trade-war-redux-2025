@@ -115,6 +115,15 @@ instrument has been published, so the list is not in the series. If the U.S. lis
 fully excluded from the forced-labor duty, the national average would fall by about 0.12
 points.
 
+**Proposed but not in force.** On Nov 25, 2026 USTR proposed Section 301 tariffs on 14
+economies for structural excess capacity in manufacturing: China, the EU, Japan, Korea,
+Switzerland, Taiwan, India, Vietnam and six others. Each proposal sets an all-in Section
+301 rate of "up to" 15% to 35%, counting the forced-labor duty already in place. There is
+no effective date, and comments run to Jan 5, 2027, so the proposals are not in the series.
+If they took effect as written, the national average would rise by about 2.9 points, to
+14.4%, close to its level before the Supreme Court ruling. The details are in
+[METHODOLOGY.md](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+
 | Authority | What it allows | Status |
 |---|---|---|
 | IEEPA | Measures against threats under a declared national emergency | Ruled not to authorize tariffs, Feb 20, 2026 |
@@ -165,7 +174,7 @@ The full list of choices and limitations, with size estimates, is in
   draws the tracker's charts and the chart above.
 - [code/analysis](code/analysis) holds notebooks that examine individual actions: the
   Brazil and forced-labor Section 301 actions, the Section 338 actions against Canada, the
-  U.S.-China list and the Section 122 surcharge.
+  U.S.-China list, the proposed excess-capacity tariffs and the Section 122 surcharge.
 - [tariff-lists](tariff-lists) holds the product lists extracted from each legal text.
   The texts themselves are in [tariff-lists/sources](tariff-lists/sources), and the
   scripts that extract and validate the lists are in [code](code).

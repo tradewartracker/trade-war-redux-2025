@@ -82,7 +82,7 @@ nbformat.write(nb, path)
 
 Every action is an entry in the `TARIFF_ACTIONS` registry of the main notebook: an
 effective date, legal authority, reference, description and an apply function. The engine
-applies them in three phases, described in
+applies them in phases, described in
 [METHODOLOGY.md](METHODOLOGY.md#2-tariff-actions-and-how-they-stack).
 
 **A stacked country action (Section 301 or 338)** needs no new logic:
@@ -107,17 +107,40 @@ the plot notebook, which builds chart captions from the registry.
 existing entry an `end_date` (the last day it applies) and start a new entry the next day
 with its own lists. Editing in place would rewrite every earlier date in the panel.
 
+**A cap on the all-in Section 301 rate** is an action whose rate is stated "net of existing
+Section 301 tariffs". It tops each line up to a cap instead of adding a fixed amount, so it
+runs in Phase 4, after every stacked action, and nets against the running `s301` column
+that Phase 3 maintains. `_make_cap_apply` builds the apply function from a regime with a
+`cap`, `net_of_mfn`, exemption lists and optional `tiers`. The proposed excess-capacity
+action is the only user: `build_secp_regimes()` generates one regime per row of
+[301-secp-economies.csv](tariff-lists/301-secp-economies.csv). A row is one economy for one
+period, so a later rate change for one economy is a new row with its own dates.
+
 **An announced or proposed action** is built and validated but switched off behind a
-flag, so going live is a flag flip. `LABOR_301_LIVE` (now `True`) and
-`CHINA_30FOR30_LIVE` (now `False`) follow this pattern. The 30-for-30 go-live checklist is
-in [METHODOLOGY.md](METHODOLOGY.md#announced-not-enacted--us-china-30-for-30-list-staged-off).
+flag, so going live is a flag flip. `LABOR_301_LIVE` (now `True`), `CHINA_30FOR30_LIVE`
+(now `False`) and `SECP_301_LIVE` (now `False`) follow this pattern. The go-live checklists
+are in METHODOLOGY.md, for the
+[30-for-30 list](METHODOLOGY.md#announced-not-enacted--us-china-30-for-30-list-staged-off)
+and the
+[excess-capacity action](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+
+**A scenario does not edit the registry.** `tariff_imports` takes an optional `actions`
+list, so a what-if is the registry plus extra entries:
+
+```python
+actions = TARIFF_ACTIONS + secp_actions(rates="agreement", effective_date="2026-10-30")
+lines = tariff_imports(df, cty, rate, date, actions=actions)
+```
+
+`secp_actions()` returns a fresh list each time. The older analysis notebooks swap the
+global `TARIFF_ACTIONS` instead; new ones should pass `actions`.
 
 Each new list should get a `validate-*.py` guardrail that pins its code counts and
 quoted magnitudes, so a silent change cannot move the published numbers unnoticed.
 
 ## Analysis notebooks
 
-Each answers one question about one action. Five of them load the engine by executing the
+Each answers one question about one action. Six of them load the engine by executing the
 code cells of the main notebook up to `tariff_imports`, so they must be run after it.
 `section-122-analysis` and `metals-restructuring-analysis` carry their own partial copies
 of the engine, and `annex-ii-revision` compares the published CSVs with an earlier
@@ -130,6 +153,7 @@ commit. Figures go to [figures](figures).
 | [section301-labor-overview.ipynb](code/analysis/section301-labor-overview.ipynb) | The final forced-labor action: the Section 122 → labor transition, and the proposal → final change split into rate, net-of-MFN cap and exemption effects |
 | [section122-to-301labor-transition.ipynb](code/analysis/section122-to-301labor-transition.ipynb) | The same transition under the June 5 **proposal**; kept as a record, superseded by the overview |
 | [china-30for30-analysis.ipynb](code/analysis/china-30for30-analysis.ipynb) | China's rate if the 30-for-30 list were excluded from the labor duty (staged off) |
+| [section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb) | The Nov 25, 2026 **proposed** excess-capacity tariffs on 14 economies (staged off): rates by economy and nationally as written, with agreements and under the stated alternatives, and the sensitivity to China's Section 232 treatment |
 | [section-122-analysis.ipynb](code/analysis/section-122-analysis.ipynb) | Section 122 surcharge exemption coverage and the shift at the Supreme Court ruling |
 | [metals-restructuring-analysis.ipynb](code/analysis/metals-restructuring-analysis.ipynb) | Coverage and impact of the Apr 6, 2026 Section 232 metals tiers |
 | [annex-ii-revision.ipynb](code/analysis/annex-ii-revision.ipynb) | Old vs. corrected series for the Oct 27, 2026 reciprocal-tariff Annex II fix; a record, compares against commit `aa4e228`. Do not re-run |
@@ -176,6 +200,21 @@ checks; each exits non-zero on failure.
   lists. Baseline mode checks the provisional economy tiers and exemption list; diff mode
   (`--diff-economies … --diff-exemptions …`) reports what a new notice changed against
   them. Usage: `python code/validate-301-labor.py`
+- [extract-301-secp.py](code/extract-301-secp.py): the 14 proposed excess-capacity notices
+  of Nov 25, 2026 (`tariff-lists/sources/301-secp-proposed-*.pdf`). Writes
+  [301-secp-economies.csv](tariff-lists/301-secp-economies.csv), one row per economy per
+  period with the proposed, agreement and alternative rates, and
+  [301-secp-annex.csv](tariff-lists/301-secp-annex.csv), every annex row as printed (30,564
+  rows). The rates are entered in the script's `ECONOMIES` table and each is pinned to a
+  phrase that must appear in the notice; the annex row counts are pinned in `EXPECT_ROWS`.
+  For the final notices, pass `--prefix` and `--suffix -FINAL`.
+  Usage: `python code/extract-301-secp.py`
+- [validate-301-secp.py](code/validate-301-secp.py): guardrail for the excess-capacity
+  lists. Baseline mode pins the economy table, checks that all 14 notices carry one common
+  list equal to the labor Part A list plus 8 codes, that China's Annex B is the 30-for-30
+  list, and the share of 2024 trade each list covers. Diff mode
+  (`--diff-economies … --diff-annex …`) reports what the final notices changed.
+  Usage: `python code/validate-301-secp.py`
 - [validate-timber.py](code/validate-timber.py): guardrail for the Section 232 timber list
   ([timber-232.csv](tariff-lists/timber-232.csv)) and its Canada impact.
   Usage: `python code/validate-timber.py`

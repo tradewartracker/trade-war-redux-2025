@@ -15,6 +15,58 @@ that had already been published.
 | Oct 27, 2026 | Product exemptions from the reciprocal tariffs (EO 14257 Annex II) matched on 8-digit codes and completed; April 2025 dates corrected; China at 145% during the pause. | Apr 5, 2025 – Feb 19, 2026 | Apr 5–8, 2025: down 11–17 points. Apr 9 – May 11: up at most 1.2. May 12 – Nov 13: down about 1–2 (Aug 7: 18.9% → 17.1%). Nov 14 – Feb 19, 2026: up 0.07. |
 | Jul 23, 2026 | Section 232 timber and lumber tariffs (in force since Oct 14, 2025) added. | Oct 14, 2025 onward | About +0.03 points; Vietnam +0.80, Cambodia +0.59, Canada +0.18. |
 
+## 2026-11-25
+
+- **Proposed Section 301 excess-capacity tariffs reviewed and staged off.** On Nov 25, 2026
+  USTR made determinations and proposed actions in 14 of its 16 investigations of
+  structural excess capacity and production: China, the EU, Japan, Korea, Switzerland,
+  Taiwan, Bangladesh, Cambodia, Indonesia, Malaysia, Thailand, India, Singapore and
+  Vietnam. Every rate is "up to", there is no effective date, and comments run to Jan 5,
+  2027, so nothing enters the published series: `country-by-time.csv` and
+  `daily-tariff-latest-data.csv` are unchanged. See the "Proposed, not enacted" section of
+  [METHODOLOGY.md](METHODOLOGY.md#proposed-not-enacted--section-301-structural-excess-capacity-staged-off).
+- Saved the 14 pre-publication notices and the March initiation notice in
+  `tariff-lists/sources/` (`301-secp-proposed-*.pdf`, `301-secp-initiation.pdf`).
+- Added [extract-301-secp.py](code/extract-301-secp.py), which writes
+  [301-secp-economies.csv](tariff-lists/301-secp-economies.csv) (one row per economy per
+  period; proposed, agreement and alternative rates) and
+  [301-secp-annex.csv](tariff-lists/301-secp-annex.csv) (every annex row as printed), and
+  [validate-301-secp.py](code/validate-301-secp.py), with a diff mode for the final
+  notices.
+  - Every notice carries the same 2,121-code list: the labor Annex II Part A list, with
+    identical scope flags, plus 8 codes. Seven notices add a country-specific Part II.
+  - China's Annex A is that list at a lower rate (up to 10%), not an exemption. Its
+    Annex B is exactly the 30-for-30 U.S. import list.
+- Main notebook:
+  - **New Phase 4, caps on the all-in Section 301 rate.** The proposed rates are "net of
+    existing Section 301 tariffs", so the duty tops each line up to a cap: `max(0, cap −
+    MFN where netted − 301 already on the line)`. `_make_cap_apply` builds the apply
+    function. Phase 3 now keeps a running `s301` column for it to net against; the tariff
+    column is computed exactly as before.
+  - `build_secp_regimes()` generates one cap regime per CSV row and `secp_actions()` turns
+    them into registry entries. They are appended only when `SECP_301_LIVE` is True
+    (default False; placeholder date Feb 1, 2027).
+  - `tariff_imports` takes an optional `actions` list, so a scenario is the registry plus
+    extra entries and no global is edited.
+  - Checked: with the flag off the engine reproduces `country-by-time.csv` byte for byte
+    and `daily-tariff-latest-data.csv` on all of its rows. The main notebook was not
+    re-run, so its saved outputs and both data files are those of Oct 28.
+- Added [section301-secp-overview.ipynb](code/analysis/section301-secp-overview.ipynb).
+  If the proposals took effect as written, at today's rates and 2024 weights, the national
+  average would go 11.46% → 14.36% (+2.89 points), about its last level under the IEEPA
+  tariffs (14.28% on Feb 7, 2026).
+  - With agreements for India, Singapore and Vietnam: 13.83% (+2.37). Under every stated
+    alternative: 18.39% (+6.92).
+  - Largest steps: Vietnam +12.5, China +10.0, India +8.1, Bangladesh +8.0, Cambodia +7.1.
+  - China's notice does not exempt Section 232 goods. The staged default follows the text;
+    carving them out gives China +6.2 instead of +10.0 and the national step +2.39.
+- Logged a new open issue: [301-labor-part-a.csv](tariff-lists/301-labor-part-a.csv) lacks
+  seven 10-digit lines that the final forced-labor notice exempts ($0.30B of 2024 imports,
+  about 0.001 points nationally). Not corrected; see
+  [open issues](METHODOLOGY.md#5-open-issues).
+- Added [section-301-excess-capacity-memo.md](section-301-excess-capacity-memo.md), a short
+  summary of the proposal, its effect on rates and the open questions.
+
 ## 2026-10-28
 
 - **Slovakia removed as a separate partner.** [eu-list.csv](data/eu-list.csv) gave Slovakia
